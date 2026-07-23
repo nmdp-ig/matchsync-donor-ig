@@ -10,6 +10,7 @@ This page lists the example instances included in the NMDP Donor Patient IG and 
 | [ExampleDeferredDonor](Patient-ExampleDeferredDonor.html) | [NMDPDonorPatient](StructureDefinition-nmdp-donor-patient.html) | A donor who is temporarily deferred from donation |
 | [ExampleDonorNoGrid](Patient-ExampleDonorNoGrid.html) | [NMDPDonorPatient](StructureDefinition-nmdp-donor-patient.html) | A newly registered donor without a GRID |
 | [ExampleDeceasedDonor](Patient-ExampleDeceasedDonor.html) | [NMDPDonorPatient](StructureDefinition-nmdp-donor-patient.html) | A deceased donor demonstrating the deceased[x] element |
+| [ExampleNMDPDonorCenter](Organization-ExampleNMDPDonorCenter.html) | [NMDPOrganization](StructureDefinition-nmdp-organization.html) | An NMDP donor center demonstrating the NMDPOrganization profile |
 
 ### ExampleNMDPDonor
 
@@ -47,6 +48,16 @@ This example demonstrates the `deceased[x]` element:
 - **deceasedDateTime** — date of death (`2025-06-15`)
 - **Donor Status** — `#unavailable`
 - **Both identifiers** — NMDP Donor ID and GRID present
+
+### ExampleNMDPDonorCenter
+
+This example demonstrates the NMDPOrganization profile for donor centers:
+
+- **NMDP Center ID** — the required center identifier
+- **Organization type** — center-type code from NMDPCenterTypeVS
+- **Active status** — required boolean indicating operational status
+
+This represents a typical donor center in the NMDP network that manages donor registrations.
 
 ## Using Examples for Validation
 
