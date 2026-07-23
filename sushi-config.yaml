@@ -1,0 +1,33 @@
+id: nmdp.fhir.donor-patient
+canonical: http://fhir.nmdp.org/ig/donor-patient
+name: NMDPDonorPatient
+title: NMDP Donor Patient Implementation Guide
+description: >-
+  FHIR Implementation Guide for NMDP donor demographics, identifiers,
+  and registration data used by the FHIR Donor API.
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2024+
+releaseLabel: ci-build
+license: Apache-2.0
+jurisdiction: urn:iso:std:iso:3166#US "United States of America"
+publisher:
+  name: National Marrow Donor Program (NMDP)
+  url: https://www.nmdp.org
+  email: fhir@nmdp.org
+
+dependencies:
+  hl7.fhir.us.core: 6.1.0
+
+pages:
+  index.md:
+    title: Home
+
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
+
+parameters:
+  show-hierarchies: true
+  excludettl: true
