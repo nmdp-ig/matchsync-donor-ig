@@ -10,6 +10,7 @@ This page lists the example instances included in the NMDP Donor Patient IG and 
 | [ExampleDeferredDonor](Patient-ExampleDeferredDonor.html) | [NMDPDonorPatient](StructureDefinition-nmdp-donor-patient.html) | A donor who is temporarily deferred from donation |
 | [ExampleDonorNoGrid](Patient-ExampleDonorNoGrid.html) | [NMDPDonorPatient](StructureDefinition-nmdp-donor-patient.html) | A newly registered donor without a GRID |
 | [ExampleDeceasedDonor](Patient-ExampleDeceasedDonor.html) | [NMDPDonorPatient](StructureDefinition-nmdp-donor-patient.html) | A deceased donor demonstrating the deceased[x] element |
+| [ExampleDonorOrder](ServiceRequest-ExampleDonorOrder.html) | [NMDPDonorOrder](StructureDefinition-nmdp-donor-order.html) | A confirmatory typing order demonstrating the NMDPDonorOrder profile |
 | [ExampleNMDPDonorCenter](Organization-ExampleNMDPDonorCenter.html) | [NMDPOrganization](StructureDefinition-nmdp-organization.html) | An NMDP donor center demonstrating the NMDPOrganization profile |
 
 ### ExampleNMDPDonor
@@ -48,6 +49,18 @@ This example demonstrates the `deceased[x]` element:
 - **deceasedDateTime** — date of death (`2025-06-15`)
 - **Donor Status** — `#unavailable`
 - **Both identifiers** — NMDP Donor ID and GRID present
+
+### ExampleDonorOrder
+
+This example demonstrates the NMDPDonorOrder profile for donor workup orders:
+
+- **NMDP Order ID** (`ORD-2026-001234`) — the required order identifier
+- **Order type** — `#ct` (Confirmatory Typing) from NMDPOrderTypeVS
+- **Subject** — references ExampleNMDPDonor (the donor being tested)
+- **Requester** — the transplant center that initiated the order
+- **Performer** — the donor center performing the work
+
+This represents a typical confirmatory typing order placed by a transplant center during donor workup.
 
 ### ExampleNMDPDonorCenter
 
