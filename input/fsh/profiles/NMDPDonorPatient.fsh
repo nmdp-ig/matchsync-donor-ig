@@ -1,5 +1,5 @@
 Profile: NMDPDonorPatient
-Parent: Patient
+Parent: USCorePatientProfile
 Id: nmdp-donor-patient
 Title: "NMDP Donor Patient"
 Description: "A profile representing a hematopoietic cell donor registered in the NMDP registry."
@@ -24,12 +24,22 @@ Description: "A profile representing a hematopoietic cell donor registered in th
 * identifier[grid] ^definition = "The ISBT 128 Global Registration Identifier for Donors."
 
 * name 1..* MS
+* name.family MS
+* name.given MS
 * gender 1..1 MS
 * birthDate 1..1 MS
+* deceased[x] 0..1 MS
+* deceased[x] ^short = "Indicates if the donor is deceased"
+* deceased[x] ^definition = "Indicates if the donor is deceased, either as a boolean flag or a dateTime of death."
+* communication 0..* MS
+* communication.language 1..1 MS
+
+* managingOrganization 0..1 MS
+* managingOrganization only Reference(NMDPOrganization)
+* managingOrganization ^short = "Donor center managing this donor"
+* managingOrganization ^definition = "The NMDP-affiliated organization (typically a donor center) that manages this donor's registration."
 
 * extension contains
-    $us-core-race named race 0..1 and
-    $us-core-ethnicity named ethnicity 0..1 and
     DonorStatus named donorStatus 0..1
 * extension[race] ^short = "US Core Race"
 * extension[ethnicity] ^short = "US Core Ethnicity"

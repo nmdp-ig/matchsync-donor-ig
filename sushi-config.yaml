@@ -23,9 +23,18 @@ dependencies:
 pages:
   index.md:
     title: Home
+  conventions.md:
+    title: Conventions
+  identifiers.md:
+    title: Identifiers
+  examples.md:
+    title: Examples
 
 menu:
   Home: index.html
+  Conventions: conventions.html
+  Identifiers: identifiers.html
+  Examples: examples.html
   Artifacts: artifacts.html
 
 parameters:
