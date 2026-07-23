@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nmdp-ig/donor-patient-ig.git"
+    "url": "https://github.com/ericbfriday/nmdp-donor-patient-ig.git"
   },
   "engines": {
     "node": ">=22"
