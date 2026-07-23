@@ -19,6 +19,7 @@ Alias: $nmdp-tc = http://terminology.nmdp.org/codesystem/transplant-center
 Alias: $nmdp-cc = http://terminology.nmdp.org/codesystem/collection-center
 Alias: $nmdp-ac = http://terminology.nmdp.org/codesystem/apheresis-center
 Alias: $cibmtr-tc = http://terminology.cibmtr.org/codesystem/transplant-center
+Alias: $nmdp-order-type = http://terminology.nmdp.org/codesystem/order-type
 Alias: $cibmtr-subject-type = http://terminology.cibmtr.org/codesystem/subject-type
 
 // === NMDP Extension Base ===
