@@ -28,6 +28,8 @@ Alias: $nmdp-ext = http://fhir.nmdp.org/StructureDefinition
 // === External Systems ===
 Alias: $loinc = http://loinc.org
 Alias: $sct = http://snomed.info/sct
+Alias: $glstring = http://glstring.org
+Alias: $hgnc = http://www.genenames.org/geneId
 Alias: $us-core-race = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
 Alias: $us-core-ethnicity = http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity
 Alias: $cdc-race-ethnicity = urn:oid:2.16.840.1.113883.6.238
