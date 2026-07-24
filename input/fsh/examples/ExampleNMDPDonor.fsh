@@ -12,7 +12,10 @@ Description: "An example donor registered in the NMDP registry."
 * name[0].given[1] = "James"
 * gender = #male
 * birthDate = "1985-03-15"
-* extension[donorStatus].valueCode = #active
+* deceasedBoolean = false
+* managingOrganization = Reference(ExampleNMDPDonorCenter)
+* communication[0].language = urn:ietf:bcp:47#en "English"
+* extension[donorStatus].extension[status].valueCode = #active
 * extension[race].extension[ombCategory].valueCoding = $cdc-race-ethnicity#2106-3 "White"
 * extension[race].extension[text].valueString = "White"
 * extension[ethnicity].extension[ombCategory].valueCoding = $cdc-race-ethnicity#2186-5 "Not Hispanic or Latino"
