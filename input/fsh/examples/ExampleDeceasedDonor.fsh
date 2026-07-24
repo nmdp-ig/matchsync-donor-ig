@@ -12,4 +12,4 @@ Description: "A donor who is deceased, demonstrating the deceased[x] element wit
 * gender = #male
 * birthDate = "1970-04-10"
 * deceasedDateTime = "2025-06-15"
-* extension[donorStatus].valueCode = #unavailable
+* extension[donorStatus].valueCode = #permanently-unavailable
