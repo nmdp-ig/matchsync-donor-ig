@@ -9,5 +9,5 @@ Description: "A newly registered donor who has an NMDP Donor ID but has not yet 
 * name[0].given[0] = "Adaeze"
 * gender = #female
 * birthDate = "1998-11-02"
-* extension[donorStatus].valueCode = #active
+* extension[donorStatus].extension[status].valueCode = #active
 * communication[0].language = urn:ietf:bcp:47#en "English"
