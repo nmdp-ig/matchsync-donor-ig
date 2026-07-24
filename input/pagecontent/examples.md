@@ -12,6 +12,10 @@ This page lists the example instances included in the NMDP Donor Patient IG and 
 | [ExampleDeceasedDonor](Patient-ExampleDeceasedDonor.html) | [NMDPDonorPatient](StructureDefinition-nmdp-donor-patient.html) | A deceased donor demonstrating the deceased[x] element |
 | [ExampleDonorOrder](ServiceRequest-ExampleDonorOrder.html) | [NMDPDonorOrder](StructureDefinition-nmdp-donor-order.html) | A confirmatory typing order demonstrating the NMDPDonorOrder profile |
 | [ExampleNMDPDonorCenter](Organization-ExampleNMDPDonorCenter.html) | [NMDPOrganization](StructureDefinition-nmdp-organization.html) | An NMDP donor center demonstrating the NMDPOrganization profile |
+| [ExampleHLAGenotypeA](Observation-ExampleHLAGenotypeA.html) | [NMDPHLAGenotype](StructureDefinition-nmdp-hla-genotype.html) | HLA-A genotype (HLA-A\*02:01+HLA-A\*03:01) |
+| [ExampleHLAGenotypeB](Observation-ExampleHLAGenotypeB.html) | [NMDPHLAGenotype](StructureDefinition-nmdp-hla-genotype.html) | HLA-B genotype (HLA-B\*07:02:01+HLA-B\*44:02:01) |
+| [ExampleHLAGenotypeC](Observation-ExampleHLAGenotypeC.html) | [NMDPHLAGenotype](StructureDefinition-nmdp-hla-genotype.html) | HLA-C genotype (HLA-C\*07:02:01+HLA-C\*05:01:01) |
+| [ExampleHLAGenotypeDRB1](Observation-ExampleHLAGenotypeDRB1.html) | [NMDPHLAGenotype](StructureDefinition-nmdp-hla-genotype.html) | HLA-DRB1 genotype (HLA-DRB1\*15:01:01+HLA-DRB1\*03:01:01) |
 
 ### ExampleNMDPDonor
 
@@ -71,6 +75,42 @@ This example demonstrates the NMDPOrganization profile for donor centers:
 - **Active status** — required boolean indicating operational status
 
 This represents a typical donor center in the NMDP network that manages donor registrations.
+
+### HLA Genotype Examples
+
+The following examples demonstrate the NMDPHLAGenotype profile for different HLA loci. Each observation represents a single-locus genotype expressed as a GL String Code.
+
+#### ExampleHLAGenotypeA
+
+- **Locus** — HLA-A (HGNC:4931)
+- **GL String** — `hla#3.59.0#HLA-A*02:01+HLA-A*03:01`
+- **Subject** — references ExampleNMDPDonor
+
+#### ExampleHLAGenotypeB
+
+- **Locus** — HLA-B (HGNC:4932)
+- **GL String** — `hla#3.59.0#HLA-B*07:02:01+HLA-B*44:02:01`
+- **Subject** — references ExampleNMDPDonor
+
+#### ExampleHLAGenotypeC
+
+- **Locus** — HLA-C (HGNC:4933)
+- **GL String** — `hla#3.59.0#HLA-C*07:02:01+HLA-C*05:01:01`
+- **Subject** — references ExampleNMDPDonor
+
+#### ExampleHLAGenotypeDRB1
+
+- **Locus** — HLA-DRB1 (HGNC:4948)
+- **GL String** — `hla#3.59.0#HLA-DRB1*15:01:01+HLA-DRB1*03:01:01`
+- **Subject** — references ExampleNMDPDonor
+
+All HLA genotype examples share the same structure:
+
+- **Status** — `#final` (typing is complete)
+- **Category** — `laboratory` (an HLA typing is a lab result)
+- **Code** — LOINC 84413-4 "Genotype display name"
+- **Value** — GL String from http://glstring.org encoding allele pairs with `+` separator
+- **Gene studied component** — HGNC gene ID from NMDPHLAGeneNameCS identifying which locus
 
 ## Using Examples for Validation
 
