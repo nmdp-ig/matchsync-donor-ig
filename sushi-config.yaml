@@ -31,6 +31,10 @@ pages:
     title: Capability Statement
   order-workflow.md:
     title: Order Workflow
+  security-and-privacy.md:
+    title: Security and Privacy
+  related-specifications.md:
+    title: Related Specifications
   examples.md:
     title: Examples
 
@@ -40,6 +44,8 @@ menu:
   Identifiers: identifiers.html
   Capability Statement: capability-statement.html
   Order Workflow: order-workflow.html
+  Security and Privacy: security-and-privacy.html
+  Related Specifications: related-specifications.html
   Examples: examples.html
   Artifacts: artifacts.html
 
