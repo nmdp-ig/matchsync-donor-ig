@@ -8,3 +8,9 @@ output/
 temp/
 template/
 *.log
+
+# GitHub Actions publication staging
+publication/
+fhir-ig-history-template/
+ig-registry/
+tmp/

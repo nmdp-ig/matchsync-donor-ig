@@ -1,0 +1,17 @@
+{
+  "website": {
+    "style": "fhir.layout",
+    "url": "https://nmdp-ig.github.io/matchsync-donor-ig",
+    "server": "apache",
+    "org": "NMDP",
+    "index-template": "index.template",
+    "clone-xml-json": "true"
+  },
+  "layout-rules": [
+    {
+      "npm": "nmdp.fhir.matchsync.donor",
+      "canonical": "http://fhir.nmdp.org/ig/matchsync-donor",
+      "destination": "/matchsync-donor"
+    }
+  ]
+}

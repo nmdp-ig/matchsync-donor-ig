@@ -1,0 +1,209 @@
+# Build the FHIR IG with the official HL7 Publisher, publish GitHub Pages,
+# and keep generated publication output on deploy-ready.
+#
+# One-time repository setup:
+#   Settings > Pages > Source: GitHub Actions
+#   Settings > Actions > General > Workflow permissions: Read and write
+
+name: Build & Publish IG
+
+on:
+  push:
+    branches:
+      - main
+      - "feature/**"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+env:
+  IG_PUBLICATION_PATH: publication/web-root/matchsync-donor
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      # qligier/fhir-ig-action wraps the HL7 IG Publisher, installs Jekyll and
+      # SUSHI, and registers Publisher/SUSHI problem matchers in GitHub.
+      - name: Build IG with FHIR tooling
+        uses: qligier/fhir-ig-action@a88e852d0e97fe86d280ab8b175baa77154d99e0 # v0.3.0
+        with:
+          ig-publisher: "2.3.3"
+          sushi: "3.12.1"
+
+      - name: Read IG metadata
+        id: meta
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(awk -F': *' '$1 == "version" { print $2; exit }' sushi-config.yaml)"
+          canonical="$(awk -F': *' '$1 == "canonical" { print $2; exit }' sushi-config.yaml)"
+          if [[ -z "${version}" || -z "${canonical}" ]]; then
+            echo "version and canonical are required in sushi-config.yaml" >&2
+            exit 1
+          fi
+          echo "version=${version}" >> "${GITHUB_OUTPUT}"
+          echo "canonical=${canonical}" >> "${GITHUB_OUTPUT}"
+          echo "Building ${canonical} version ${version}"
+
+      - name: Fetch publication dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          fetch_at() {
+            local destination="$1"
+            local repository="$2"
+            local revision="$3"
+            git -c init.defaultBranch=main init "${destination}"
+            git -C "${destination}" remote add origin "${repository}"
+            git -C "${destination}" fetch --depth 1 origin "${revision}"
+            git -C "${destination}" checkout --detach "${revision}"
+          }
+
+          fetch_at \
+            fhir-ig-history-template \
+            https://github.com/HL7/fhir-ig-history-template.git \
+            8a90b35a2d839cc463eaf3d1c04a02ea60abb998
+          fetch_at \
+            ig-registry \
+            https://github.com/FHIR/ig-registry.git \
+            503a1f64153a2c5b3b357a8a7ddb29a6e4e1fdab
+
+      - name: Prepare publication tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          web_root="${IG_PUBLICATION_PATH}"
+          mkdir -p "${web_root}" tmp
+          rm -rf tmp/existing-deploy
+
+          # Preserve previously generated version directories when available.
+          if git clone --single-branch --branch deploy-ready --depth 1 --no-tags \
+            "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" tmp/existing-deploy 2>/dev/null; then
+            previous_root="tmp/existing-deploy/${IG_PUBLICATION_PATH}"
+            if [[ -d "${previous_root}" ]]; then
+              for directory in "${previous_root}"/0.*; do
+                if [[ -d "${directory}" ]]; then
+                  cp -R "${directory}" "${web_root}/"
+                fi
+              done
+            fi
+          fi
+
+          # The history template provides history.html and related assets.
+          for item in fhir-ig-history-template/*; do
+            cp -R "${item}" "${web_root}/"
+          done
+          mkdir -p "${web_root}/templates"
+          cp input/history/*.template "${web_root}/templates/"
+
+          # The current Publisher output is the root demo site and is also
+          # copied to a versioned directory for history navigation.
+          cp -R output/. "${web_root}/"
+          mkdir -p "${web_root}/${{ steps.meta.outputs.version }}"
+          cp -R output/. "${web_root}/${{ steps.meta.outputs.version }}/"
+
+      - name: Update publication history
+        shell: bash
+        run: |
+          set -euo pipefail
+          web_root="${IG_PUBLICATION_PATH}"
+          cp publish-setup.json "${web_root}/publish-setup.json"
+          cp package-list.json "${web_root}/package-list.json"
+          echo "y" | java -Xmx4g -jar input-cache/publisher.jar \
+            -publish-update \
+            -folder "${web_root}" \
+            -registry ig-registry/fhir-ig-list.json \
+            -history fhir-ig-history-template \
+            -templates "${web_root}/templates"
+
+      - name: Save publication tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf tmp/pub-output
+          mkdir -p tmp
+          cp -R "${IG_PUBLICATION_PATH}" tmp/pub-output
+
+      - name: Upload QA artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ig-output
+          path: |
+            output/qa.html
+            output/qa.json
+            output/qa.txt
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Upload Pages artifact
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.IG_PUBLICATION_PATH }}/
+
+      - name: Commit publication to deploy-ready
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf tmp/deploy-repo
+
+          if git clone --single-branch --branch deploy-ready --depth 1 --no-tags \
+            "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            tmp/deploy-repo; then
+            :
+          else
+            rm -rf tmp/deploy-repo
+            git clone --depth 1 --no-tags \
+              "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+              tmp/deploy-repo
+            git -C tmp/deploy-repo switch --orphan deploy-ready
+          fi
+
+          cd tmp/deploy-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git rm -rf . 2>/dev/null || true
+          mkdir -p publication/web-root/matchsync-donor
+          cp -R ../pub-output/. publication/web-root/matchsync-donor/
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "deploy-ready is already up to date"
+            exit 0
+          fi
+
+          git commit -m "Publication build from ${GITHUB_SHA} (v${{ steps.meta.outputs.version }})"
+          git push origin deploy-ready
+
+  deploy:
+    needs: build
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
