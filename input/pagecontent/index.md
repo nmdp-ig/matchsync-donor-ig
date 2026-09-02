@@ -1,11 +1,29 @@
-# MatchSync Donor Implementation Guide
+# NMDP Donor Patient Implementation Guide
 
-This is the starter Implementation Guide for MatchSync donor data. It currently contains one minimal Patient profile and a synthetic example instance so that the SUSHI and FHIR IG Publisher toolchain can be validated end to end.
+This Implementation Guide defines the FHIR profiles for representing hematopoietic cell donors in the NMDP (National Marrow Donor Program / Be The Match) registry.
 
 ## Scope
 
-The guide is intentionally small while the source model and publication requirements are being defined. Add profiles, extensions, value sets, examples, and narrative pages under `input/` as the guide evolves.
+The Donor Patient IG covers:
 
-## Build output
+- **Donor demographics** — name, date of birth, gender, race, ethnicity
+- **Donor identifiers** — NMDP Donor ID, GRID (Global Registration Identifier for Donors)
+- **Donor status** — active, inactive, deferred, unavailable
 
-Run SUSHI and the FHIR IG Publisher from the repository root. Generated files are written to `fsh-generated/`, `input-cache/`, and `output/`; these directories are not source and must not be committed to `main`.
+## Profiles
+
+| Profile | Base Resource | Description |
+|---------|--------------|-------------|
+| [NMDPDonorPatient](StructureDefinition-nmdp-donor-patient.html) | Patient | A hematopoietic cell donor registered in the NMDP registry |
+
+## Extensions
+
+| Extension | Context | Description |
+|-----------|---------|-------------|
+| [DonorStatus](StructureDefinition-donor-status.html) | Patient | The registration status of a donor |
+
+## Dependencies
+
+This IG depends on:
+- [FHIR R4 (4.0.1)](http://hl7.org/fhir/R4/)
+- [US Core 6.1.0](http://hl7.org/fhir/us/core/STU6.1/)

@@ -1,21 +1,54 @@
-id: nmdp.fhir.matchsync.donor
-canonical: http://fhir.nmdp.org/ig/matchsync-donor
-name: MatchSyncDonorIG
-title: MatchSync Donor Implementation Guide
+id: nmdp.fhir.donor-patient
+canonical: http://fhir.nmdp.org/ig/donor-patient
+name: NMDPDonorPatient
+title: NMDP Donor Patient Implementation Guide
+description: >-
+  FHIR Implementation Guide for NMDP donor demographics, identifiers,
+  and registration data used by the FHIR Donor API.
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
-copyrightYear: 2026+
+copyrightYear: 2024+
 releaseLabel: ci-build
 license: Apache-2.0
+jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 publisher:
-  name: NMDP
-  url: https://www.nmdp.org/
-description: A starter FHIR Implementation Guide for MatchSync donor data.
+  name: National Marrow Donor Program (NMDP)
+  url: https://www.nmdp.org
+  email: fhir@nmdp.org
+
+dependencies:
+  hl7.fhir.us.core: 6.1.0
+
+pages:
+  index.md:
+    title: Home
+  conventions.md:
+    title: Conventions
+  identifiers.md:
+    title: Identifiers
+  capability-statement.md:
+    title: Capability Statement
+  order-workflow.md:
+    title: Order Workflow
+  security-and-privacy.md:
+    title: Security and Privacy
+  related-specifications.md:
+    title: Related Specifications
+  examples.md:
+    title: Examples
 
 menu:
   Home: index.html
+  Conventions: conventions.html
+  Identifiers: identifiers.html
+  Capability Statement: capability-statement.html
+  Order Workflow: order-workflow.html
+  Security and Privacy: security-and-privacy.html
+  Related Specifications: related-specifications.html
+  Examples: examples.html
   Artifacts: artifacts.html
-  Table of Contents: toc.html
-  Support:
-    "FHIR Specification": new-tab {{site.data.fhir.path}}index.html
+
+parameters:
+  show-hierarchies: true
+  excludettl: true
