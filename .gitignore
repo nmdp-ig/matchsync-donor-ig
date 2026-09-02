@@ -1,4 +1,4 @@
-.DS_Store
+# Dependencies
 node_modules/
 
 # SUSHI and FHIR IG Publisher output
@@ -7,10 +7,21 @@ input-cache/
 output/
 temp/
 template/
-*.log
 
 # GitHub Actions publication staging
 publication/
 fhir-ig-history-template/
 ig-registry/
 tmp/
+
+# Logs, OS, and IDE files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local development container configuration
+.devcontainer/

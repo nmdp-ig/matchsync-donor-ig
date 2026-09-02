@@ -1,30 +1,30 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/bash
+publisher_jar=publisher.jar
+input_cache_path=./input-cache/
+echo Checking internet connection...
+curl -sSf tx.fhir.org > /dev/null
 
-ROOT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-cd "${ROOT_DIR}"
-
-if ! command -v sushi >/dev/null 2>&1; then
-  printf '%s\n' 'SUSHI is required. Install it with: npm install -g fsh-sushi@3.12.1' >&2
-  exit 1
+if [ $? -eq 0 ]; then
+	echo "Online"
+	txoption=""
+else
+	echo "Offline"
+	txoption="-tx n/a"
 fi
 
-if command -v ruby >/dev/null 2>&1; then
-  GEM_BIN="$(ruby -rrubygems -e 'print Gem.bindir')"
-  if [[ -d "${GEM_BIN}" ]]; then
-    export PATH="${GEM_BIN}:${PATH}"
-  fi
-fi
+echo "$txoption"
 
-if ! command -v jekyll >/dev/null 2>&1; then
-  printf '%s\n' 'Jekyll is required. Install Ruby 3.3+ and run: gem install jekyll -v 4.3.3' >&2
-  exit 1
-fi
+export JAVA_TOOL_OPTIONS="$JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8"
 
-if [[ ! -f input-cache/publisher.jar ]]; then
-  printf '%s\n' 'input-cache/publisher.jar is missing. Run ./_updatePublisher.sh first.' >&2
-  exit 1
-fi
+publisher=$input_cache_path/$publisher_jar
+if test -f "$publisher"; then
+	java -jar $publisher -ig . $txoption $*
 
-sushi .
-java -Xmx4g -jar input-cache/publisher.jar publisher -ig ig.ini
+else
+	publisher=../$publisher_jar
+	if test -f "$publisher"; then
+		java -jar $publisher -ig . $txoption $*
+	else
+		echo IG Publisher NOT FOUND in input-cache or parent folder.  Please run _updatePublisher.  Aborting...
+	fi
+fi
