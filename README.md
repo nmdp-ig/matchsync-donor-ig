@@ -60,7 +60,7 @@ Do not commit `fsh-generated/`, `input-cache/`, `output/`, `temp/`, or `template
 
 ## GitHub Actions publication
 
-`.github/workflows/ig-build-publish.yml` runs for pushes to `main` (including merged pull requests), pushes to `feature/**`, pull requests targeting `main`, and manual dispatches. It uses the pinned [`qligier/fhir-ig-action`](https://github.com/qligier/fhir-ig-action) wrapper around the official HL7 FHIR IG Publisher, SUSHI `3.12.1`, and IG Publisher `2.3.3`.
+`.github/workflows/ig-build-publish.yml` runs for pushes to `main` (including merged pull requests), pushes to `feature/**`, pull requests targeting `main`, and manual dispatches. It sets up Java 17, Ruby 3.3 with Jekyll `4.3.3`, Node.js 20, SUSHI `3.12.1`, and IG Publisher `2.3.3` directly in the workflow.
 
 For a push to `main`, the workflow:
 

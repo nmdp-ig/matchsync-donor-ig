@@ -37,13 +37,49 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v4
 
-      # qligier/fhir-ig-action wraps the HL7 IG Publisher, installs Jekyll and
-      # SUSHI, and registers Publisher/SUSHI problem matchers in GitHub.
-      - name: Build IG with FHIR tooling
-        uses: qligier/fhir-ig-action@a88e852d0e97fe86d280ab8b175baa77154d99e0 # v0.3.0
+      - name: Set up Java
+        uses: actions/setup-java@v4
         with:
-          ig-publisher: "2.3.3"
-          sushi: "3.12.1"
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Install Jekyll
+        shell: bash
+        run: gem install jekyll -v 4.3.3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install SUSHI
+        shell: bash
+        run: npm install --global fsh-sushi@3.12.1
+
+      - name: Run SUSHI
+        shell: bash
+        run: sushi .
+
+      - name: Download IG Publisher
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p input-cache
+          curl --fail --location --retry 3 \
+            --output input-cache/publisher.jar \
+            https://github.com/HL7/fhir-ig-publisher/releases/download/2.3.3/publisher.jar
+          test -s input-cache/publisher.jar
+
+      - name: Build IG with FHIR Publisher
+        shell: bash
+        run: |
+          set -euo pipefail
+          java -Xmx4g -jar input-cache/publisher.jar publisher -ig ig.ini
 
       - name: Read IG metadata
         id: meta
