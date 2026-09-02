@@ -1,0 +1,21 @@
+id: nmdp.fhir.matchsync.donor
+canonical: http://fhir.nmdp.org/ig/matchsync-donor
+name: MatchSyncDonorIG
+title: MatchSync Donor Implementation Guide
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2026+
+releaseLabel: ci-build
+license: Apache-2.0
+publisher:
+  name: NMDP
+  url: https://www.nmdp.org/
+description: A starter FHIR Implementation Guide for MatchSync donor data.
+
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
+  Table of Contents: toc.html
+  Support:
+    "FHIR Specification": new-tab {{site.data.fhir.path}}index.html
