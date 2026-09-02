@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="ExampleDonorOrder"/>
+  <meta>
+    <profile value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest ExampleDonorOrder</b></p><a name="ExampleDonorOrder"> </a><a name="hcExampleDonorOrder"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-nmdp-donor-order.html">NMDP Donor Order</a></p></div><p><b>identifier</b>: <code>http://terminology.nmdp.org/identifier/order</code>/ORD-2026-001234</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://terminology.nmdp.org/codesystem/order-type ct}">Confirmatory Typing</span></p><p><b>subject</b>: <a href="Patient-ExampleNMDPDonor.html">Marcus James Reynolds  Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)</a></p><p><b>authoredOn</b>: 2026-07-15</p><p><b>requester</b>: <a href="Organization-ExampleNMDPDonorCenter.html">Organization Minneapolis Blood Center</a></p><p><b>performer</b>: <a href="Organization-ExampleNMDPDonorCenter.html">Organization Minneapolis Blood Center</a></p></div>
+  </text>
+  <identifier>
+    <system value="http://terminology.nmdp.org/identifier/order"/>
+    <value value="ORD-2026-001234"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://terminology.nmdp.org/codesystem/order-type"/>
+      <code value="ct"/>
+      <display value="Confirmatory Typing"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ExampleNMDPDonor"/>
+  </subject>
+  <authoredOn value="2026-07-15"/>
+  <requester>
+    <reference value="Organization/ExampleNMDPDonorCenter"/>
+  </requester>
+  <performer>
+    <reference value="Organization/ExampleNMDPDonorCenter"/>
+  </performer>
+</ServiceRequest>

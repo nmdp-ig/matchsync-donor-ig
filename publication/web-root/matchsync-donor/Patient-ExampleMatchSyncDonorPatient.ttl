@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://fhir.nmdp.org/ig/matchsync-donor/Patient/ExampleMatchSyncDonorPatient> a fhir:Patient ;
+<http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleMatchSyncDonorPatient> a fhir:Patient ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:Resource.id [ fhir:value "ExampleMatchSyncDonorPatient"] ;
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://fhir.nmdp.org/ig/matchsync-donor/StructureDefinition/matchsync-donor-patient" ;
+       fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/matchsync-donor-patient" ;
        fhir:index 0 ;
-       fhir:link <http://fhir.nmdp.org/ig/matchsync-donor/StructureDefinition/matchsync-donor-patient>
+       fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/matchsync-donor-patient>
      ]
   ] ;
   fhir:DomainResource.text [
@@ -31,7 +31,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://fhir.nmdp.org/ig/matchsync-donor/Patient/ExampleMatchSyncDonorPatient.ttl> a owl:Ontology ;
+<http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleMatchSyncDonorPatient.ttl> a owl:Ontology ;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

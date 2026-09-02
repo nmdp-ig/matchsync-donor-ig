@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>MatchSync Donor Patient - Examples - MatchSync Donor Implementation Guide v0.1.0</title>
+    <title>MatchSync Donor Patient - Examples - NMDP Donor Patient Implementation Guide v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -45,8 +45,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2.1"}
-    h3,h4,h5,h6{--heading-prefix:"2.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"9.2"}
+    h3,h4,h5,h6{--heading-prefix:"9.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -54,9 +54,13 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">MatchSync Donor Implementation Guide</span>
+          <p><span style="font-size:12pt;font-weight:bold">NMDP Donor Patient Implementation Guide</span>
             <br/>
             <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
 
 
             </span>
@@ -87,20 +91,28 @@
     <a href="index.html">Home</a>
   </li>
   <li>
-    <a href="artifacts.html">Artifacts</a>
+    <a href="conventions.html">Conventions</a>
   </li>
   <li>
-    <a href="toc.html">Table of Contents</a>
+    <a href="identifiers.html">Identifiers</a>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Specification</a>
-      </li>
-    </ul>
+  <li>
+    <a href="capability-statement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="security-and-privacy.html">Security and Privacy</a>
+  </li>
+  <li>
+    <a href="related-specifications.html">Related Specifications</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -127,7 +139,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 6" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MatchSync Donor Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/matchsync-donor/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">NMDP Donor Patient Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/donor-patient/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -189,12 +201,6 @@
     </li>
   
 
-
-  
-    <li>
-      <a href="StructureDefinition-matchsync-donor-patient.profile.ttl.html">TTL</a>
-    </li>
-  
 
 
 </ul>
@@ -264,7 +270,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org/">NMDP</a>.  Package nmdp.fhir.matchsync.donor#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 17:06+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

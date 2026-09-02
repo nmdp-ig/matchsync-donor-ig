@@ -1,0 +1,86 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-hla-gene-name> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "nmdp-hla-gene-name"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nmdp-hla-gene-name</b></p><a name=\"nmdp-hla-gene-name\"> </a><a name=\"hcnmdp-hla-gene-name\"> </a><p>This case-sensitive code system <code>http://terminology.nmdp.org/codesystem/hla-gene-name</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">HGNC:4931<a name=\"nmdp-hla-gene-name-HGNC.584931\"> </a></td><td>HLA-A</td><td>Human Leukocyte Antigen class I, locus A</td></tr><tr><td style=\"white-space:nowrap\">HGNC:4932<a name=\"nmdp-hla-gene-name-HGNC.584932\"> </a></td><td>HLA-B</td><td>Human Leukocyte Antigen class I, locus B</td></tr><tr><td style=\"white-space:nowrap\">HGNC:4933<a name=\"nmdp-hla-gene-name-HGNC.584933\"> </a></td><td>HLA-C</td><td>Human Leukocyte Antigen class I, locus C</td></tr><tr><td style=\"white-space:nowrap\">HGNC:4948<a name=\"nmdp-hla-gene-name-HGNC.584948\"> </a></td><td>HLA-DRB1</td><td>Human Leukocyte Antigen class II, DR beta 1</td></tr><tr><td style=\"white-space:nowrap\">HGNC:4944<a name=\"nmdp-hla-gene-name-HGNC.584944\"> </a></td><td>HLA-DQB1</td><td>Human Leukocyte Antigen class II, DQ beta 1</td></tr><tr><td style=\"white-space:nowrap\">HGNC:4940<a name=\"nmdp-hla-gene-name-HGNC.584940\"> </a></td><td>HLA-DPB1</td><td>Human Leukocyte Antigen class II, DP beta 1</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://terminology.nmdp.org/codesystem/hla-gene-name"] ;
+  fhir:CodeSystem.version [ fhir:value "0.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "NMDPHLAGeneNameCS"] ;
+  fhir:CodeSystem.title [ fhir:value "NMDP HLA Gene Name Code System"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-02T19:29:11+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "National Marrow Donor Program (NMDP)"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "National Marrow Donor Program (NMDP)" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.nmdp.org" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "fhir@nmdp.org" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "HGNC Gene IDs for HLA loci used in donor typing. Subset of HGNC relevant to NMDP operations."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "US" ] ;
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "6"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HGNC:4931" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HLA-A" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Human Leukocyte Antigen class I, locus A" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HGNC:4932" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HLA-B" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Human Leukocyte Antigen class I, locus B" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HGNC:4933" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HLA-C" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Human Leukocyte Antigen class I, locus C" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HGNC:4948" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HLA-DRB1" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Human Leukocyte Antigen class II, DR beta 1" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HGNC:4944" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HLA-DQB1" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Human Leukocyte Antigen class II, DQ beta 1" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "HGNC:4940" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "HLA-DPB1" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Human Leukocyte Antigen class II, DP beta 1" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-hla-gene-name.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

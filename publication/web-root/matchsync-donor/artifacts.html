@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Artifacts Summary - MatchSync Donor Implementation Guide v0.1.0</title>
+    <title>Artifacts Summary - NMDP Donor Patient Implementation Guide v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2"}
-    h3,h4,h5,h6{--heading-prefix:"2.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -50,9 +50,13 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">MatchSync Donor Implementation Guide</span>
+          <p><span style="font-size:12pt;font-weight:bold">NMDP Donor Patient Implementation Guide</span>
             <br/>
             <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
 
 
             </span>
@@ -83,20 +87,28 @@
     <a href="index.html">Home</a>
   </li>
   <li>
-    <a href="artifacts.html">Artifacts</a>
+    <a href="conventions.html">Conventions</a>
   </li>
   <li>
-    <a href="toc.html">Table of Contents</a>
+    <a href="identifiers.html">Identifiers</a>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Specification</a>
-      </li>
-    </ul>
+  <li>
+    <a href="capability-statement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="security-and-privacy.html">Security and Privacy</a>
+  </li>
+  <li>
+    <a href="related-specifications.html">Related Specifications</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -130,7 +142,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MatchSync Donor Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/matchsync-donor/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">NMDP Donor Patient Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/donor-patient/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Artifacts Summary</h2>
   
   
@@ -142,10 +154,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Structures: Resource Profiles</a>
+         <a href="#1">Behavior: Capability Statements</a>
       </li>
       <li>
-         <a href="#2">Example: Example Instances</a>
+         <a href="#2">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#4">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#6">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -154,6 +178,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:html="http://www.w3.org/1999/xhtml">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
+   <h3>Behavior: Capability Statements </h3>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-NMDPDonorAPICapabilityStatement.html"
+                  title="CapabilityStatement/NMDPDonorAPICapabilityStatement">NMDP Donor API Capability Statement</a>
+            </td>
+            <td>
+<p>Describes the expected capabilities of the NMDP Donor API FHIR server, including supported resources, interactions, and search parameters.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
    <h3>Structures: Resource Profiles </h3>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -168,9 +209,198 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>A minimal Patient profile used as the starting point for MatchSync donor data.</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-donor-order.html"
+                  title="StructureDefinition/nmdp-donor-order">NMDP Donor Order</a>
+            </td>
+            <td>
+<p>A profile representing a donor workup or collection order in the NMDP system. Orders include confirmatory typing (CT), infectious disease markers (IDM), and stem cell collection.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-donor-patient.html"
+                  title="StructureDefinition/nmdp-donor-patient">NMDP Donor Patient</a>
+            </td>
+            <td>
+<p>A profile representing a hematopoietic cell donor registered in the NMDP registry.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-donor-specimen.html"
+                  title="StructureDefinition/nmdp-donor-specimen">NMDP Donor Specimen</a>
+            </td>
+            <td>
+<p>A profile representing a testing specimen (blood tube, buccal swab, etc.) collected from a donor for HLA typing or infectious disease marker testing. Specimens are identified by Order Number + Donor GRID rather than individual specimen IDs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-hla-genotype.html"
+                  title="StructureDefinition/nmdp-hla-genotype">NMDP HLA Genotype Observation</a>
+            </td>
+            <td>
+<p>A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-idm-order.html"
+                  title="StructureDefinition/nmdp-idm-order">NMDP IDM Order</a>
+            </td>
+            <td>
+<p>A profile for Infectious Disease Marker (IDM) orders. IDM testing is required for donor clearance before stem cell collection.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-organization.html"
+                  title="StructureDefinition/nmdp-organization">NMDP Organization</a>
+            </td>
+            <td>
+<p>An organization participating in the NMDP network (donor centers, transplant centers, collection centers, apheresis centers).</p>
+</td>
+         </tr>
       </tbody>
    </table>
-   <a name="2"> </a>
+   <a name="3"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-donor-status.html"
+                  title="StructureDefinition/donor-status">Donor Status</a>
+            </td>
+            <td>
+<p>The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nmdp-glstring-vs.html" title="ValueSet/nmdp-glstring-vs">GL String Code Value Set</a>
+            </td>
+            <td>
+<p>Genotype List String Codes from glstring.org. Codes represent HLA genotypes in GL String format (e.g., hla#3.25.0#HLA-A<em>01:01:01:01+HLA-A</em>01:02).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nmdp-center-type-vs.html"
+                  title="ValueSet/nmdp-center-type-vs">NMDP Center Type ValueSet</a>
+            </td>
+            <td>
+<p>All center types in the NMDP network.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nmdp-donor-status-vs.html"
+                  title="ValueSet/nmdp-donor-status-vs">NMDP Donor Status ValueSet</a>
+            </td>
+            <td>
+<p>All registry status codes for NMDP registered donors. Maps to ODS
+enterprise donor status values (AV, TU, AC, DE).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nmdp-hla-gene-name-vs.html"
+                  title="ValueSet/nmdp-hla-gene-name-vs">NMDP HLA Gene Name Value Set</a>
+            </td>
+            <td>
+<p>HLA gene names (HGNC IDs) for loci typed in NMDP donor operations.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nmdp-order-type-vs.html"
+                  title="ValueSet/nmdp-order-type-vs">NMDP Order Type Value Set</a>
+            </td>
+            <td>
+<p>All codes from the NMDP Order Type code system.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nmdp-specimen-type-vs.html"
+                  title="ValueSet/nmdp-specimen-type-vs">NMDP Specimen Type Value Set</a>
+            </td>
+            <td>
+<p>All specimen type codes for donor testing samples in the NMDP system.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nmdp-center-type.html"
+                  title="CodeSystem/nmdp-center-type">NMDP Center Type</a>
+            </td>
+            <td>
+<p>Types of centers in the NMDP network.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nmdp-donor-status.html"
+                  title="CodeSystem/nmdp-donor-status">NMDP Donor Status</a>
+            </td>
+            <td>
+<p>Status codes for NMDP registered donors. These codes represent the
+enterprise Registry Status maintained by NMDP, indicating a donor's availability
+for patient search, matching, and product request activities. Source: ODS
+DonorWithSampleResponse (v05).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nmdp-hla-gene-name.html"
+                  title="CodeSystem/nmdp-hla-gene-name">NMDP HLA Gene Name Code System</a>
+            </td>
+            <td>
+<p>HGNC Gene IDs for HLA loci used in donor typing. Subset of HGNC relevant to NMDP operations.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nmdp-order-type.html"
+                  title="CodeSystem/nmdp-order-type">NMDP Order Type Code System</a>
+            </td>
+            <td>
+<p>Codes identifying the type of donor workup or collection order in the NMDP system.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nmdp-specimen-type.html"
+                  title="CodeSystem/nmdp-specimen-type">NMDP Specimen Type Code System</a>
+            </td>
+            <td>
+<p>Codes identifying the type of specimen collected from a donor for HLA typing or infectious disease marker testing.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -178,11 +408,118 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="Patient-ExampleDeceasedDonor.html"
+                  title="Patient/ExampleDeceasedDonor">Example Deceased Donor</a>
+            </td>
+            <td>
+<p>A donor who is deceased, demonstrating the deceased[x] element with a dateTime value.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ExampleDeferredDonor.html"
+                  title="Patient/ExampleDeferredDonor">Example Deferred Donor</a>
+            </td>
+            <td>
+<p>A donor who is temporarily unavailable (e.g., post-collection with a future available date).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ExampleDonorOrder.html"
+                  title="ServiceRequest/ExampleDonorOrder">Example Donor CT Order</a>
+            </td>
+            <td>
+<p>An example confirmatory typing order for an NMDP donor.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-ExampleDonorSpecimen.html"
+                  title="Specimen/ExampleDonorSpecimen">Example Donor Specimen</a>
+            </td>
+            <td>
+<p>An example blood specimen (EDTA tube) collected from a donor for HLA confirmatory typing.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ExampleDonorNoGrid.html"
+                  title="Patient/ExampleDonorNoGrid">Example Donor Without GRID</a>
+            </td>
+            <td>
+<p>A newly registered donor who has an NMDP Donor ID but has not yet been assigned a GRID.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleHLAGenotypeA.html"
+                  title="Observation/ExampleHLAGenotypeA">Example HLA-A Genotype</a>
+            </td>
+            <td>
+<p>An example HLA-A genotype observation showing a donor typed as HLA-A<em>02:01+HLA-A</em>03:01.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleHLAGenotypeB.html"
+                  title="Observation/ExampleHLAGenotypeB">Example HLA-B Genotype</a>
+            </td>
+            <td>
+<p>An example HLA-B genotype observation showing a donor typed as HLA-B<em>07:02:01+HLA-B</em>44:02:01.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleHLAGenotypeC.html"
+                  title="Observation/ExampleHLAGenotypeC">Example HLA-C Genotype</a>
+            </td>
+            <td>
+<p>An example HLA-C genotype observation showing a donor typed as HLA-C<em>07:02:01+HLA-C</em>05:01:01.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleHLAGenotypeDRB1.html"
+                  title="Observation/ExampleHLAGenotypeDRB1">Example HLA-DRB1 Genotype</a>
+            </td>
+            <td>
+<p>An example HLA-DRB1 genotype observation showing a donor typed as HLA-DRB1<em>15:01:01+HLA-DRB1</em>03:01:01.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ExampleIDMOrder.html"
+                  title="ServiceRequest/ExampleIDMOrder">Example IDM Order</a>
+            </td>
+            <td>
+<p>An example infectious disease marker testing order for a donor prior to collection.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Patient-ExampleMatchSyncDonorPatient.html"
                   title="Patient/ExampleMatchSyncDonorPatient">Example MatchSync Donor Patient</a>
             </td>
             <td>
 <p>A synthetic example patient used to demonstrate the starter profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ExampleNMDPDonor.html" title="Patient/ExampleNMDPDonor">Example NMDP Donor</a>
+            </td>
+            <td>
+<p>An example donor registered in the NMDP registry.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-ExampleNMDPDonorCenter.html"
+                  title="Organization/ExampleNMDPDonorCenter">Example NMDP Donor Center</a>
+            </td>
+            <td>
+<p>An example donor center in the NMDP network.</p>
 </td>
          </tr>
       </tbody>
@@ -205,7 +542,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org/">NMDP</a>.  Package nmdp.fhir.matchsync.donor#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 17:06+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

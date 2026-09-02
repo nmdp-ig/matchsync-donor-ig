@@ -1,4 +1,4 @@
-# Home - MatchSync Donor Implementation Guide v0.1.0
+# Home - NMDP Donor Patient Implementation Guide v0.1.0
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,20 +7,39 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://fhir.nmdp.org/ig/matchsync-donor/ImplementationGuide/nmdp.fhir.matchsync.donor | *Version*:0.1.0 |
-| Draft as of 2026-09-02 | *Computable Name*:MatchSyncDonorIG |
+| *Official URL*:http://fhir.nmdp.org/ig/donor-patient/ImplementationGuide/nmdp.fhir.donor-patient | *Version*:0.1.0 |
+| Draft as of 2026-09-02 | *Computable Name*:NMDPDonorPatient |
 
-# MatchSync Donor Implementation Guide
+# NMDP Donor Patient Implementation Guide
 
-This is the starter Implementation Guide for MatchSync donor data. It currently contains one minimal Patient profile and a synthetic example instance so that the SUSHI and FHIR IG Publisher toolchain can be validated end to end.
+This Implementation Guide defines the FHIR profiles for representing hematopoietic cell donors in the NMDP (National Marrow Donor Program / Be The Match) registry.
 
 ## Scope
 
-The guide is intentionally small while the source model and publication requirements are being defined. Add profiles, extensions, value sets, examples, and narrative pages under `input/` as the guide evolves.
+The Donor Patient IG covers:
 
-## Build output
+* **Donor demographics** — name, date of birth, gender, race, ethnicity
+* **Donor identifiers** — NMDP Donor ID, GRID (Global Registration Identifier for Donors)
+* **Donor status** — active, inactive, deferred, unavailable
 
-Run SUSHI and the FHIR IG Publisher from the repository root. Generated files are written to `fsh-generated/`, `input-cache/`, and `output/`; these directories are not source and must not be committed to `main`.
+## Profiles
+
+| | | |
+| :--- | :--- | :--- |
+| [NMDPDonorPatient](StructureDefinition-nmdp-donor-patient.md) | Patient | A hematopoietic cell donor registered in the NMDP registry |
+
+## Extensions
+
+| | | |
+| :--- | :--- | :--- |
+| [DonorStatus](StructureDefinition-donor-status.md) | Patient | The registration status of a donor |
+
+## Dependencies
+
+This IG depends on:
+
+* [FHIR R4 (4.0.1)](http://hl7.org/fhir/R4/)
+* [US Core 6.1.0](http://hl7.org/fhir/us/core/STU6.1/)
 
 
 
@@ -29,23 +48,34 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
 ```json
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "nmdp.fhir.matchsync.donor",
-  "url" : "http://fhir.nmdp.org/ig/matchsync-donor/ImplementationGuide/nmdp.fhir.matchsync.donor",
+  "id" : "nmdp.fhir.donor-patient",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/ImplementationGuide/nmdp.fhir.donor-patient",
   "version" : "0.1.0",
-  "name" : "MatchSyncDonorIG",
-  "title" : "MatchSync Donor Implementation Guide",
+  "name" : "NMDPDonorPatient",
+  "title" : "NMDP Donor Patient Implementation Guide",
   "status" : "draft",
-  "date" : "2026-09-02T17:06:24+00:00",
-  "publisher" : "NMDP",
+  "date" : "2026-09-02T19:29:11+00:00",
+  "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
-    "name" : "NMDP",
+    "name" : "National Marrow Donor Program (NMDP)",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.nmdp.org/"
+      "value" : "https://www.nmdp.org"
+    },
+    {
+      "system" : "email",
+      "value" : "fhir@nmdp.org"
     }]
   }],
-  "description" : "A starter FHIR Implementation Guide for MatchSync donor data.",
-  "packageId" : "nmdp.fhir.matchsync.donor",
+  "description" : "FHIR Implementation Guide for NMDP donor demographics, identifiers, and registration data used by the FHIR Donor API.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US",
+      "display" : "United States of America"
+    }]
+  }],
+  "packageId" : "nmdp.fhir.donor-patient",
   "license" : "Apache-2.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [{
@@ -67,6 +97,12 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
     "version" : "5.3.0"
+  },
+  {
+    "id" : "hl7_fhir_us_core",
+    "uri" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+    "packageId" : "hl7.fhir.us.core",
+    "version" : "6.1.0"
   }],
   "definition" : {
     "extension" : [{
@@ -76,7 +112,7 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
       },
       {
         "url" : "value",
-        "valueString" : "2026+"
+        "valueString" : "2024+"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -88,6 +124,28 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
       {
         "url" : "value",
         "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "show-hierarchies"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludettl"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -175,7 +233,7 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
       },
       {
         "url" : "value",
-        "valueString" : "http://fhir.nmdp.org/ig/matchsync-donor/history.html"
+        "valueString" : "http://fhir.nmdp.org/ig/donor-patient/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -355,7 +413,7 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
       },
       {
         "url" : "value",
-        "valueString" : "2026+"
+        "valueString" : "2024+"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -367,6 +425,28 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
       {
         "url" : "value",
         "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "show-hierarchies"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludettl"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -454,7 +534,7 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
       },
       {
         "url" : "value",
-        "valueString" : "http://fhir.nmdp.org/ig/matchsync-donor/history.html"
+        "valueString" : "http://fhir.nmdp.org/ig/donor-patient/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -626,6 +706,182 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-donor-status.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/donor-status"
+      },
+      "name" : "Donor Status",
+      "description" : "The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-ExampleDeceasedDonor.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/ExampleDeceasedDonor"
+      },
+      "name" : "Example Deceased Donor",
+      "description" : "A donor who is deceased, demonstrating the deceased[x] element with a dateTime value.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-ExampleDeferredDonor.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/ExampleDeferredDonor"
+      },
+      "name" : "Example Deferred Donor",
+      "description" : "A donor who is temporarily unavailable (e.g., post-collection with a future available date).",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-ExampleDonorOrder.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ExampleDonorOrder"
+      },
+      "name" : "Example Donor CT Order",
+      "description" : "An example confirmatory typing order for an NMDP donor.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Specimen-ExampleDonorSpecimen.html"
+      }],
+      "reference" : {
+        "reference" : "Specimen/ExampleDonorSpecimen"
+      },
+      "name" : "Example Donor Specimen",
+      "description" : "An example blood specimen (EDTA tube) collected from a donor for HLA confirmatory typing.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-specimen"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-ExampleDonorNoGrid.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/ExampleDonorNoGrid"
+      },
+      "name" : "Example Donor Without GRID",
+      "description" : "A newly registered donor who has an NMDP Donor ID but has not yet been assigned a GRID.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ExampleHLAGenotypeA.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleHLAGenotypeA"
+      },
+      "name" : "Example HLA-A Genotype",
+      "description" : "An example HLA-A genotype observation showing a donor typed as HLA-A*02:01+HLA-A*03:01.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ExampleHLAGenotypeB.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleHLAGenotypeB"
+      },
+      "name" : "Example HLA-B Genotype",
+      "description" : "An example HLA-B genotype observation showing a donor typed as HLA-B*07:02:01+HLA-B*44:02:01.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ExampleHLAGenotypeC.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleHLAGenotypeC"
+      },
+      "name" : "Example HLA-C Genotype",
+      "description" : "An example HLA-C genotype observation showing a donor typed as HLA-C*07:02:01+HLA-C*05:01:01.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ExampleHLAGenotypeDRB1.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleHLAGenotypeDRB1"
+      },
+      "name" : "Example HLA-DRB1 Genotype",
+      "description" : "An example HLA-DRB1 genotype observation showing a donor typed as HLA-DRB1*15:01:01+HLA-DRB1*03:01:01.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-ExampleIDMOrder.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ExampleIDMOrder"
+      },
+      "name" : "Example IDM Order",
+      "description" : "An example infectious disease marker testing order for a donor prior to collection.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-idm-order"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       },
       {
@@ -637,7 +893,55 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
       },
       "name" : "Example MatchSync Donor Patient",
       "description" : "A synthetic example patient used to demonstrate the starter profile.",
-      "exampleCanonical" : "http://fhir.nmdp.org/ig/matchsync-donor/StructureDefinition/matchsync-donor-patient"
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/matchsync-donor-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-ExampleNMDPDonor.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/ExampleNMDPDonor"
+      },
+      "name" : "Example NMDP Donor",
+      "description" : "An example donor registered in the NMDP registry.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-ExampleNMDPDonorCenter.html"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleNMDPDonorCenter"
+      },
+      "name" : "Example NMDP Donor Center",
+      "description" : "An example donor center in the NMDP network.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-nmdp-glstring-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nmdp-glstring-vs"
+      },
+      "name" : "GL String Code Value Set",
+      "description" : "Genotype List String Codes from glstring.org. Codes represent HLA genotypes in GL String format (e.g., hla#3.25.0#HLA-A*01:01:01:01+HLA-A*01:02).",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -653,6 +957,278 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
       },
       "name" : "MatchSync Donor Patient",
       "description" : "A minimal Patient profile used as the starting point for MatchSync donor data.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-nmdp-center-type.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nmdp-center-type"
+      },
+      "name" : "NMDP Center Type",
+      "description" : "Types of centers in the NMDP network.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-nmdp-center-type-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nmdp-center-type-vs"
+      },
+      "name" : "NMDP Center Type ValueSet",
+      "description" : "All center types in the NMDP network.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-NMDPDonorAPICapabilityStatement.html"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/NMDPDonorAPICapabilityStatement"
+      },
+      "name" : "NMDP Donor API Capability Statement",
+      "description" : "Describes the expected capabilities of the NMDP Donor API FHIR server, including supported resources, interactions, and search parameters.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-donor-order.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-donor-order"
+      },
+      "name" : "NMDP Donor Order",
+      "description" : "A profile representing a donor workup or collection order in the NMDP system. Orders include confirmatory typing (CT), infectious disease markers (IDM), and stem cell collection.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-donor-patient.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-donor-patient"
+      },
+      "name" : "NMDP Donor Patient",
+      "description" : "A profile representing a hematopoietic cell donor registered in the NMDP registry.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-donor-specimen.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-donor-specimen"
+      },
+      "name" : "NMDP Donor Specimen",
+      "description" : "A profile representing a testing specimen (blood tube, buccal swab, etc.) collected from a donor for HLA typing or infectious disease marker testing. Specimens are identified by Order Number + Donor GRID rather than individual specimen IDs.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-nmdp-donor-status.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nmdp-donor-status"
+      },
+      "name" : "NMDP Donor Status",
+      "description" : "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-nmdp-donor-status-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nmdp-donor-status-vs"
+      },
+      "name" : "NMDP Donor Status ValueSet",
+      "description" : "All registry status codes for NMDP registered donors. Maps to ODS\nenterprise donor status values (AV, TU, AC, DE).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-nmdp-hla-gene-name.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nmdp-hla-gene-name"
+      },
+      "name" : "NMDP HLA Gene Name Code System",
+      "description" : "HGNC Gene IDs for HLA loci used in donor typing. Subset of HGNC relevant to NMDP operations.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-nmdp-hla-gene-name-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nmdp-hla-gene-name-vs"
+      },
+      "name" : "NMDP HLA Gene Name Value Set",
+      "description" : "HLA gene names (HGNC IDs) for loci typed in NMDP donor operations.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-hla-genotype.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-hla-genotype"
+      },
+      "name" : "NMDP HLA Genotype Observation",
+      "description" : "A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-idm-order.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-idm-order"
+      },
+      "name" : "NMDP IDM Order",
+      "description" : "A profile for Infectious Disease Marker (IDM) orders. IDM testing is required for donor clearance before stem cell collection.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-nmdp-order-type.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nmdp-order-type"
+      },
+      "name" : "NMDP Order Type Code System",
+      "description" : "Codes identifying the type of donor workup or collection order in the NMDP system.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-nmdp-order-type-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nmdp-order-type-vs"
+      },
+      "name" : "NMDP Order Type Value Set",
+      "description" : "All codes from the NMDP Order Type code system.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-organization.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-organization"
+      },
+      "name" : "NMDP Organization",
+      "description" : "An organization participating in the NMDP network (donor centers, transplant centers, collection centers, apheresis centers).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-nmdp-specimen-type.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nmdp-specimen-type"
+      },
+      "name" : "NMDP Specimen Type Code System",
+      "description" : "Codes identifying the type of specimen collected from a donor for HLA typing or infectious disease marker testing.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-nmdp-specimen-type-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nmdp-specimen-type-vs"
+      },
+      "name" : "NMDP Specimen Type Value Set",
+      "description" : "All specimen type codes for donor testing samples in the NMDP system.",
       "exampleBoolean" : false
     }],
     "page" : {
@@ -670,6 +1246,69 @@ Run SUSHI and the FHIR IG Publisher from the repository root. Generated files ar
         }],
         "nameUrl" : "index.html",
         "title" : "Home",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "conventions.html"
+        }],
+        "nameUrl" : "conventions.html",
+        "title" : "Conventions",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "identifiers.html"
+        }],
+        "nameUrl" : "identifiers.html",
+        "title" : "Identifiers",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "capability-statement.html"
+        }],
+        "nameUrl" : "capability-statement.html",
+        "title" : "Capability Statement",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "order-workflow.html"
+        }],
+        "nameUrl" : "order-workflow.html",
+        "title" : "Order Workflow",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "security-and-privacy.html"
+        }],
+        "nameUrl" : "security-and-privacy.html",
+        "title" : "Security and Privacy",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "related-specifications.html"
+        }],
+        "nameUrl" : "related-specifications.html",
+        "title" : "Related Specifications",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "examples.html"
+        }],
+        "nameUrl" : "examples.html",
+        "title" : "Examples",
         "generation" : "markdown"
       }]
     },

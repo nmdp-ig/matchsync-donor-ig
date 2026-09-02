@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Examples - NMDP Donor Patient Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">NMDP Donor Patient Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="conventions.html">Conventions</a>
+  </li>
+  <li>
+    <a href="identifiers.html">Identifiers</a>
+  </li>
+  <li>
+    <a href="capability-statement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="security-and-privacy.html">Security and Privacy</a>
+  </li>
+  <li>
+    <a href="related-specifications.html">Related Specifications</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Examples</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">NMDP Donor Patient Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/donor-patient/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Examples</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#examples" id="markdown-toc-examples">Examples</a>    <ul>
+      <li><a href="#example-instances" id="markdown-toc-example-instances">Example Instances</a>        <ul>
+          <li><a href="#examplenmdpdonor" id="markdown-toc-examplenmdpdonor">ExampleNMDPDonor</a></li>
+          <li><a href="#exampledeferreddonor" id="markdown-toc-exampledeferreddonor">ExampleDeferredDonor</a></li>
+          <li><a href="#exampledonornogrid" id="markdown-toc-exampledonornogrid">ExampleDonorNoGrid</a></li>
+          <li><a href="#exampledeceaseddonor" id="markdown-toc-exampledeceaseddonor">ExampleDeceasedDonor</a></li>
+          <li><a href="#exampledonororder" id="markdown-toc-exampledonororder">ExampleDonorOrder</a></li>
+          <li><a href="#examplenmdpdonorcenter" id="markdown-toc-examplenmdpdonorcenter">ExampleNMDPDonorCenter</a></li>
+          <li><a href="#hla-genotype-examples" id="markdown-toc-hla-genotype-examples">HLA Genotype Examples</a></li>
+        </ul>
+      </li>
+      <li><a href="#using-examples-for-validation" id="markdown-toc-using-examples-for-validation">Using Examples for Validation</a>        <ul>
+          <li><a href="#validate-with-the-fhir-validator" id="markdown-toc-validate-with-the-fhir-validator">Validate with the FHIR Validator</a></li>
+          <li><a href="#validate-with-sushi" id="markdown-toc-validate-with-sushi">Validate with SUSHI</a></li>
+          <li><a href="#write-your-own-examples" id="markdown-toc-write-your-own-examples">Write Your Own Examples</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="examples">Examples</h1>
+
+<p>This page lists the example instances included in the NMDP Donor Patient IG and describes how to use them for validation testing.</p>
+
+<h2 id="example-instances">Example Instances</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Profile</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="Patient-ExampleNMDPDonor.html">ExampleNMDPDonor</a></td>
+      <td><a href="StructureDefinition-nmdp-donor-patient.html">NMDPDonorPatient</a></td>
+      <td>A complete donor registration with all required fields populated</td>
+    </tr>
+    <tr>
+      <td><a href="Patient-ExampleDeferredDonor.html">ExampleDeferredDonor</a></td>
+      <td><a href="StructureDefinition-nmdp-donor-patient.html">NMDPDonorPatient</a></td>
+      <td>A donor who is temporarily deferred from donation</td>
+    </tr>
+    <tr>
+      <td><a href="Patient-ExampleDonorNoGrid.html">ExampleDonorNoGrid</a></td>
+      <td><a href="StructureDefinition-nmdp-donor-patient.html">NMDPDonorPatient</a></td>
+      <td>A newly registered donor without a GRID</td>
+    </tr>
+    <tr>
+      <td><a href="Patient-ExampleDeceasedDonor.html">ExampleDeceasedDonor</a></td>
+      <td><a href="StructureDefinition-nmdp-donor-patient.html">NMDPDonorPatient</a></td>
+      <td>A deceased donor demonstrating the deceased[x] element</td>
+    </tr>
+    <tr>
+      <td><a href="ServiceRequest-ExampleDonorOrder.html">ExampleDonorOrder</a></td>
+      <td><a href="StructureDefinition-nmdp-donor-order.html">NMDPDonorOrder</a></td>
+      <td>A confirmatory typing order demonstrating the NMDPDonorOrder profile</td>
+    </tr>
+    <tr>
+      <td><a href="Organization-ExampleNMDPDonorCenter.html">ExampleNMDPDonorCenter</a></td>
+      <td><a href="StructureDefinition-nmdp-organization.html">NMDPOrganization</a></td>
+      <td>An NMDP donor center demonstrating the NMDPOrganization profile</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleHLAGenotypeA.html">ExampleHLAGenotypeA</a></td>
+      <td><a href="StructureDefinition-nmdp-hla-genotype.html">NMDPHLAGenotype</a></td>
+      <td>HLA-A genotype (HLA-A*02:01+HLA-A*03:01)</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleHLAGenotypeB.html">ExampleHLAGenotypeB</a></td>
+      <td><a href="StructureDefinition-nmdp-hla-genotype.html">NMDPHLAGenotype</a></td>
+      <td>HLA-B genotype (HLA-B*07:02:01+HLA-B*44:02:01)</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleHLAGenotypeC.html">ExampleHLAGenotypeC</a></td>
+      <td><a href="StructureDefinition-nmdp-hla-genotype.html">NMDPHLAGenotype</a></td>
+      <td>HLA-C genotype (HLA-C*07:02:01+HLA-C*05:01:01)</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleHLAGenotypeDRB1.html">ExampleHLAGenotypeDRB1</a></td>
+      <td><a href="StructureDefinition-nmdp-hla-genotype.html">NMDPHLAGenotype</a></td>
+      <td>HLA-DRB1 genotype (HLA-DRB1*15:01:01+HLA-DRB1*03:01:01)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="examplenmdpdonor">ExampleNMDPDonor</h3>
+
+<p>This example demonstrates a fully conformant NMDP donor Patient resource including:</p>
+
+<ul>
+  <li><strong>NMDP Donor ID</strong> (<code class="language-plaintext highlighter-rouge">1234567</code>) — the required registry identifier</li>
+  <li><strong>GRID</strong> (<code class="language-plaintext highlighter-rouge">AAAA1111111</code>) — the optional ISBT 128 global identifier</li>
+  <li><strong>Demographics</strong> — name, gender, and date of birth (all required by the profile)</li>
+  <li><strong>Race/Ethnicity</strong> — US Core race and ethnicity extensions</li>
+</ul>
+
+<p>The example represents a typical adult donor registered in the NMDP Be The Match registry.</p>
+
+<h3 id="exampledeferreddonor">ExampleDeferredDonor</h3>
+
+<p>This example demonstrates a donor who is temporarily deferred:</p>
+
+<ul>
+  <li><strong>Donor Status</strong> — <code class="language-plaintext highlighter-rouge">#deferred</code> indicating temporary unavailability</li>
+  <li><strong>No GRID</strong> — demonstrates that GRID is optional</li>
+  <li><strong>Race/Ethnicity</strong> — Asian race and Hispanic or Latino ethnicity</li>
+</ul>
+
+<h3 id="exampledonornogrid">ExampleDonorNoGrid</h3>
+
+<p>This example demonstrates a newly registered donor who has not yet been assigned a GRID:</p>
+
+<ul>
+  <li><strong>NMDP Donor ID only</strong> — no GRID slice present</li>
+  <li><strong>Donor Status</strong> — <code class="language-plaintext highlighter-rouge">#active</code></li>
+  <li><strong>Communication</strong> — English language preference</li>
+</ul>
+
+<p>This is common for donors early in the registration process before international identifiers are assigned.</p>
+
+<h3 id="exampledeceaseddonor">ExampleDeceasedDonor</h3>
+
+<p>This example demonstrates the <code class="language-plaintext highlighter-rouge">deceased[x]</code> element:</p>
+
+<ul>
+  <li><strong>deceasedDateTime</strong> — date of death (<code class="language-plaintext highlighter-rouge">2025-06-15</code>)</li>
+  <li><strong>Donor Status</strong> — <code class="language-plaintext highlighter-rouge">#unavailable</code></li>
+  <li><strong>Both identifiers</strong> — NMDP Donor ID and GRID present</li>
+</ul>
+
+<h3 id="exampledonororder">ExampleDonorOrder</h3>
+
+<p>This example demonstrates the NMDPDonorOrder profile for donor workup orders:</p>
+
+<ul>
+  <li><strong>NMDP Order ID</strong> (<code class="language-plaintext highlighter-rouge">ORD-2026-001234</code>) — the required order identifier</li>
+  <li><strong>Order type</strong> — <code class="language-plaintext highlighter-rouge">#ct</code> (Confirmatory Typing) from NMDPOrderTypeVS</li>
+  <li><strong>Subject</strong> — references ExampleNMDPDonor (the donor being tested)</li>
+  <li><strong>Requester</strong> — the transplant center that initiated the order</li>
+  <li><strong>Performer</strong> — the donor center performing the work</li>
+</ul>
+
+<p>This represents a typical confirmatory typing order placed by a transplant center during donor workup.</p>
+
+<h3 id="examplenmdpdonorcenter">ExampleNMDPDonorCenter</h3>
+
+<p>This example demonstrates the NMDPOrganization profile for donor centers:</p>
+
+<ul>
+  <li><strong>NMDP Center ID</strong> — the required center identifier</li>
+  <li><strong>Organization type</strong> — center-type code from NMDPCenterTypeVS</li>
+  <li><strong>Active status</strong> — required boolean indicating operational status</li>
+</ul>
+
+<p>This represents a typical donor center in the NMDP network that manages donor registrations.</p>
+
+<h3 id="hla-genotype-examples">HLA Genotype Examples</h3>
+
+<p>The following examples demonstrate the NMDPHLAGenotype profile for different HLA loci. Each observation represents a single-locus genotype expressed as a GL String Code.</p>
+
+<h4 id="examplehlagenotypea">ExampleHLAGenotypeA</h4>
+
+<ul>
+  <li><strong>Locus</strong> — HLA-A (HGNC:4931)</li>
+  <li><strong>GL String</strong> — <code class="language-plaintext highlighter-rouge">hla#3.59.0#HLA-A*02:01+HLA-A*03:01</code></li>
+  <li><strong>Subject</strong> — references ExampleNMDPDonor</li>
+</ul>
+
+<h4 id="examplehlagenotypeb">ExampleHLAGenotypeB</h4>
+
+<ul>
+  <li><strong>Locus</strong> — HLA-B (HGNC:4932)</li>
+  <li><strong>GL String</strong> — <code class="language-plaintext highlighter-rouge">hla#3.59.0#HLA-B*07:02:01+HLA-B*44:02:01</code></li>
+  <li><strong>Subject</strong> — references ExampleNMDPDonor</li>
+</ul>
+
+<h4 id="examplehlagenotypec">ExampleHLAGenotypeC</h4>
+
+<ul>
+  <li><strong>Locus</strong> — HLA-C (HGNC:4933)</li>
+  <li><strong>GL String</strong> — <code class="language-plaintext highlighter-rouge">hla#3.59.0#HLA-C*07:02:01+HLA-C*05:01:01</code></li>
+  <li><strong>Subject</strong> — references ExampleNMDPDonor</li>
+</ul>
+
+<h4 id="examplehlagenotypedrb1">ExampleHLAGenotypeDRB1</h4>
+
+<ul>
+  <li><strong>Locus</strong> — HLA-DRB1 (HGNC:4948)</li>
+  <li><strong>GL String</strong> — <code class="language-plaintext highlighter-rouge">hla#3.59.0#HLA-DRB1*15:01:01+HLA-DRB1*03:01:01</code></li>
+  <li><strong>Subject</strong> — references ExampleNMDPDonor</li>
+</ul>
+
+<p>All HLA genotype examples share the same structure:</p>
+
+<ul>
+  <li><strong>Status</strong> — <code class="language-plaintext highlighter-rouge">#final</code> (typing is complete)</li>
+  <li><strong>Category</strong> — <code class="language-plaintext highlighter-rouge">laboratory</code> (an HLA typing is a lab result)</li>
+  <li><strong>Code</strong> — LOINC 84413-4 "Genotype display name"</li>
+  <li><strong>Value</strong> — GL String from http://glstring.org encoding allele pairs with <code class="language-plaintext highlighter-rouge">+</code> separator</li>
+  <li><strong>Gene studied component</strong> — HGNC gene ID from NMDPHLAGeneNameCS identifying which locus</li>
+</ul>
+
+<h2 id="using-examples-for-validation">Using Examples for Validation</h2>
+
+<h3 id="validate-with-the-fhir-validator">Validate with the FHIR Validator</h3>
+
+<p>You can validate resources against this IG's profiles using the <a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator">HL7 FHIR Validator</a>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java <span class="nt">-jar</span> validator_cli.jar patient-resource.json <span class="se">\</span>
+  <span class="nt">-ig</span> nmdp.fhir.donor-patient#0.1.0 <span class="se">\</span>
+  <span class="nt">-profile</span> http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient
+</code></pre></div></div>
+
+<h3 id="validate-with-sushi">Validate with SUSHI</h3>
+
+<p>During development, running SUSHI validates that example instances conform to their declared profiles:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pnpm sushi
+</code></pre></div></div>
+
+<p>SUSHI will report errors if an example instance violates constraints defined in its profile (missing required fields, invalid value set bindings, etc.).</p>
+
+<h3 id="write-your-own-examples">Write Your Own Examples</h3>
+
+<p>To add a new example, create a <code class="language-plaintext highlighter-rouge">.fsh</code> file in <code class="language-plaintext highlighter-rouge">input/fsh/examples/</code>:</p>
+
+<pre><code class="language-fsh">Instance: ExampleNewDonor
+InstanceOf: NMDPDonorPatient
+Usage: #example
+Title: "Example New Donor"
+Description: "Description of what this example demonstrates."
+* identifier[nmdpDonorId].system = $nmdp-donor
+* identifier[nmdpDonorId].value = "9999999"
+* name[0].family = "Smith"
+* name[0].given[0] = "Jane"
+* gender = #female
+* birthDate = "1990-01-01"
+</code></pre>
+
+<p>Key requirements:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">InstanceOf</code> must reference a profile defined in this IG</li>
+  <li><code class="language-plaintext highlighter-rouge">Usage: #example</code> marks it as an example (included in the IG narrative but not as a conformance resource)</li>
+  <li>All required elements per the profile must be populated</li>
+  <li>Use aliases from <code class="language-plaintext highlighter-rouge">aliases.fsh</code> for system URIs</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

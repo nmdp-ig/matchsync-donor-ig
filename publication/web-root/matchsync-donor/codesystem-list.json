@@ -1,3 +1,42 @@
 {
-  "codeSystems" : []
+  "codeSystems" : [{
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "NMDPCenterTypeCS",
+    "title" : "NMDP Center Type",
+    "description" : "Types of centers in the NMDP network."
+  },
+  {
+    "url" : "http://terminology.nmdp.org/codesystem/donor-status",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "NMDPDonorStatusCS",
+    "title" : "NMDP Donor Status",
+    "description" : "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05)."
+  },
+  {
+    "url" : "http://terminology.nmdp.org/codesystem/hla-gene-name",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPHLAGeneNameCS",
+    "title" : "NMDP HLA Gene Name Code System",
+    "description" : "HGNC Gene IDs for HLA loci used in donor typing. Subset of HGNC relevant to NMDP operations."
+  },
+  {
+    "url" : "http://terminology.nmdp.org/codesystem/order-type",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPOrderTypeCS",
+    "title" : "NMDP Order Type Code System",
+    "description" : "Codes identifying the type of donor workup or collection order in the NMDP system."
+  },
+  {
+    "url" : "http://terminology.nmdp.org/codesystem/specimen-type",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPSpecimenTypeCS",
+    "title" : "NMDP Specimen Type Code System",
+    "description" : "Codes identifying the type of specimen collected from a donor for HLA typing or infectious disease marker testing."
+  }]
 }

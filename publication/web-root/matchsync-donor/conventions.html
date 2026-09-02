@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Conventions - NMDP Donor Patient Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">NMDP Donor Patient Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="conventions.html">Conventions</a>
+  </li>
+  <li>
+    <a href="identifiers.html">Identifiers</a>
+  </li>
+  <li>
+    <a href="capability-statement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="security-and-privacy.html">Security and Privacy</a>
+  </li>
+  <li>
+    <a href="related-specifications.html">Related Specifications</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Conventions</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">NMDP Donor Patient Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/donor-patient/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Conventions</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#conventions" id="markdown-toc-conventions">Conventions</a>    <ul>
+      <li><a href="#namespace-conventions" id="markdown-toc-namespace-conventions">Namespace Conventions</a></li>
+      <li><a href="#naming-patterns" id="markdown-toc-naming-patterns">Naming Patterns</a></li>
+      <li><a href="#fsh-file-organization" id="markdown-toc-fsh-file-organization">FSH File Organization</a></li>
+      <li><a href="#alias-usage" id="markdown-toc-alias-usage">Alias Usage</a>        <ul>
+          <li><a href="#identifier-system-aliases" id="markdown-toc-identifier-system-aliases">Identifier System Aliases</a></li>
+          <li><a href="#code-system-aliases" id="markdown-toc-code-system-aliases">Code System Aliases</a></li>
+          <li><a href="#external-system-aliases" id="markdown-toc-external-system-aliases">External System Aliases</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="conventions">Conventions</h1>
+
+<p>This page describes the naming conventions, namespace patterns, and file organization used in the NMDP Donor Patient Implementation Guide.</p>
+
+<h2 id="namespace-conventions">Namespace Conventions</h2>
+
+<p>NMDP FHIR artifacts follow a consistent URI structure across three namespace prefixes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Prefix</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Identifier systems</td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/donor</code></td>
+    </tr>
+    <tr>
+      <td>Code systems</td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/codesystem/</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/codesystem/donor-center</code></td>
+    </tr>
+    <tr>
+      <td>Extensions</td>
+      <td><code class="language-plaintext highlighter-rouge">http://fhir.nmdp.org/StructureDefinition/</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://fhir.nmdp.org/StructureDefinition/donor-status</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Profiles and other StructureDefinitions published in this IG use the IG canonical as their base:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/&lt;id&gt;
+</code></pre></div></div>
+
+<h2 id="naming-patterns">Naming Patterns</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artifact Type</th>
+      <th>FSH Name Pattern</th>
+      <th>Id Pattern</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Profile</td>
+      <td>PascalCase (<code class="language-plaintext highlighter-rouge">NMDPDonorPatient</code>)</td>
+      <td>kebab-case (<code class="language-plaintext highlighter-rouge">nmdp-donor-patient</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">NMDPDonorPatient</code></td>
+    </tr>
+    <tr>
+      <td>Extension</td>
+      <td>PascalCase (<code class="language-plaintext highlighter-rouge">DonorStatus</code>)</td>
+      <td>kebab-case (<code class="language-plaintext highlighter-rouge">donor-status</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">DonorStatus</code></td>
+    </tr>
+    <tr>
+      <td>CodeSystem</td>
+      <td>PascalCase + <code class="language-plaintext highlighter-rouge">CS</code> suffix (<code class="language-plaintext highlighter-rouge">NMDPDonorStatusCS</code>)</td>
+      <td>kebab-case (<code class="language-plaintext highlighter-rouge">nmdp-donor-status</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">NMDPDonorStatusCS</code></td>
+    </tr>
+    <tr>
+      <td>ValueSet</td>
+      <td>PascalCase + <code class="language-plaintext highlighter-rouge">VS</code> suffix (<code class="language-plaintext highlighter-rouge">NMDPDonorStatusVS</code>)</td>
+      <td>kebab-case + <code class="language-plaintext highlighter-rouge">-vs</code> suffix (<code class="language-plaintext highlighter-rouge">nmdp-donor-status-vs</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">NMDPDonorStatusVS</code></td>
+    </tr>
+    <tr>
+      <td>Example</td>
+      <td><code class="language-plaintext highlighter-rouge">Example</code> prefix (<code class="language-plaintext highlighter-rouge">ExampleNMDPDonor</code>)</td>
+      <td>auto-generated from name</td>
+      <td><code class="language-plaintext highlighter-rouge">ExampleNMDPDonor</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="fsh-file-organization">FSH File Organization</h2>
+
+<p>FSH source files are organized into subdirectories by artifact type:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>input/fsh/
+├── aliases.fsh          # Shared alias definitions
+├── profiles/            # StructureDefinition profiles
+│   └── NMDPDonorPatient.fsh
+├── extensions/          # Extension definitions
+│   └── DonorStatus.fsh
+├── examples/            # Example instances
+│   └── ExampleNMDPDonor.fsh
+├── valuesets/           # ValueSet definitions
+│   └── NMDPDonorStatus.fsh
+└── codesystems/         # CodeSystem definitions
+    └── NMDPDonorStatus.fsh
+</code></pre></div></div>
+
+<p>Each file contains a single primary artifact. File names match the FSH artifact name.</p>
+
+<h2 id="alias-usage">Alias Usage</h2>
+
+<p>All canonical URIs referenced across FSH files are defined as aliases in <code class="language-plaintext highlighter-rouge">input/fsh/aliases.fsh</code>. This provides a single source of truth for system URIs and avoids hard-coding URLs in profile, extension, or example definitions.</p>
+
+<h3 id="identifier-system-aliases">Identifier System Aliases</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alias</th>
+      <th>URI</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-donor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/donor</code></td>
+      <td>NMDP Donor ID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-cbu</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/cbu</code></td>
+      <td>Cord Blood Unit ID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-recipient</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/recipient</code></td>
+      <td>Recipient ID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-local-id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/local-id</code></td>
+      <td>Local ID (center-specific)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-order</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/order</code></td>
+      <td>Order ID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-hmlid</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/hmlid</code></td>
+      <td>HML message ID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-specimen</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/specimen</code></td>
+      <td>Specimen ID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$isbt-grid</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://www.isbt128.org/uri/GRID</code></td>
+      <td>ISBT 128 GRID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$cibmtr-crid</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.cibmtr.org/identifier/CRID</code></td>
+      <td>CIBMTR CRID</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="code-system-aliases">Code System Aliases</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alias</th>
+      <th>URI</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-center-type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/codesystem/center-type</code></td>
+      <td>Center type codes</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-donor-center</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/codesystem/donor-center</code></td>
+      <td>Donor center codes</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-tc</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/codesystem/transplant-center</code></td>
+      <td>Transplant center codes</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-cc</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/codesystem/collection-center</code></td>
+      <td>Collection center codes</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$nmdp-ac</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/codesystem/apheresis-center</code></td>
+      <td>Apheresis center codes</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$cibmtr-tc</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.cibmtr.org/codesystem/transplant-center</code></td>
+      <td>CIBMTR transplant center codes</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$cibmtr-subject-type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.cibmtr.org/codesystem/subject-type</code></td>
+      <td>CIBMTR subject type codes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="external-system-aliases">External System Aliases</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alias</th>
+      <th>URI</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$loinc</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://loinc.org</code></td>
+      <td>LOINC</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$sct</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://snomed.info/sct</code></td>
+      <td>SNOMED CT</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$us-core-race</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/us/core/StructureDefinition/us-core-race</code></td>
+      <td>US Core Race extension</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$us-core-ethnicity</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity</code></td>
+      <td>US Core Ethnicity extension</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>When adding new canonical URIs, define an alias in <code class="language-plaintext highlighter-rouge">aliases.fsh</code> first, then reference it by alias name in all other FSH files.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

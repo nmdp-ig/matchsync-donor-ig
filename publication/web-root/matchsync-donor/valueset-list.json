@@ -1,3 +1,56 @@
 {
-  "codeSystems" : []
+  "codeSystems" : [{
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-center-type-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "NMDPCenterTypeVS",
+    "title" : "NMDP Center Type ValueSet",
+    "description" : "All center types in the NMDP network.",
+    "systems" : ["http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type"]
+  },
+  {
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "NMDPDonorStatusVS",
+    "title" : "NMDP Donor Status ValueSet",
+    "description" : "All registry status codes for NMDP registered donors. Maps to ODS\nenterprise donor status values (AV, TU, AC, DE).",
+    "systems" : ["http://terminology.nmdp.org/codesystem/donor-status"]
+  },
+  {
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-glstring-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPGLStringVS",
+    "title" : "GL String Code Value Set",
+    "description" : "Genotype List String Codes from glstring.org. Codes represent HLA genotypes in GL String format (e.g., hla#3.25.0#HLA-A*01:01:01:01+HLA-A*01:02).",
+    "systems" : ["http://glstring.org"]
+  },
+  {
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-gene-name-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPHLAGeneNameVS",
+    "title" : "NMDP HLA Gene Name Value Set",
+    "description" : "HLA gene names (HGNC IDs) for loci typed in NMDP donor operations.",
+    "systems" : ["http://terminology.nmdp.org/codesystem/hla-gene-name"]
+  },
+  {
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-order-type-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPOrderTypeVS",
+    "title" : "NMDP Order Type Value Set",
+    "description" : "All codes from the NMDP Order Type code system.",
+    "systems" : ["http://terminology.nmdp.org/codesystem/order-type"]
+  },
+  {
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-specimen-type-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPSpecimenTypeVS",
+    "title" : "NMDP Specimen Type Value Set",
+    "description" : "All specimen type codes for donor testing samples in the NMDP system.",
+    "systems" : ["http://terminology.nmdp.org/codesystem/specimen-type"]
+  }]
 }

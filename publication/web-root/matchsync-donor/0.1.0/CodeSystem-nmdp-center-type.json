@@ -1,0 +1,62 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "nmdp-center-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nmdp-center-type</b></p><a name=\"nmdp-center-type\"> </a><a name=\"hcnmdp-center-type\"> </a><p>This case-sensitive code system <code>http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">donor-center<a name=\"nmdp-center-type-donor-center\"> </a></td><td>Donor Center</td><td>A center that recruits and manages donors.</td></tr><tr><td style=\"white-space:nowrap\">transplant-center<a name=\"nmdp-center-type-transplant-center\"> </a></td><td>Transplant Center</td><td>A center that performs transplants.</td></tr><tr><td style=\"white-space:nowrap\">collection-center<a name=\"nmdp-center-type-collection-center\"> </a></td><td>Collection Center</td><td>A center that collects stem cells or marrow.</td></tr><tr><td style=\"white-space:nowrap\">apheresis-center<a name=\"nmdp-center-type-apheresis-center\"> </a></td><td>Apheresis Center</td><td>A center that performs apheresis procedures.</td></tr><tr><td style=\"white-space:nowrap\">cord-blood-bank<a name=\"nmdp-center-type-cord-blood-bank\"> </a></td><td>Cord Blood Bank</td><td>A facility that stores cord blood units.</td></tr></table></div>"
+  },
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type",
+  "version" : "0.1.0",
+  "name" : "NMDPCenterTypeCS",
+  "title" : "NMDP Center Type",
+  "status" : "draft",
+  "date" : "2026-09-02T19:29:11+00:00",
+  "publisher" : "National Marrow Donor Program (NMDP)",
+  "contact" : [{
+    "name" : "National Marrow Donor Program (NMDP)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nmdp.org"
+    },
+    {
+      "system" : "email",
+      "value" : "fhir@nmdp.org"
+    }]
+  }],
+  "description" : "Types of centers in the NMDP network.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US",
+      "display" : "United States of America"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "donor-center",
+    "display" : "Donor Center",
+    "definition" : "A center that recruits and manages donors."
+  },
+  {
+    "code" : "transplant-center",
+    "display" : "Transplant Center",
+    "definition" : "A center that performs transplants."
+  },
+  {
+    "code" : "collection-center",
+    "display" : "Collection Center",
+    "definition" : "A center that collects stem cells or marrow."
+  },
+  {
+    "code" : "apheresis-center",
+    "display" : "Apheresis Center",
+    "definition" : "A center that performs apheresis procedures."
+  },
+  {
+    "code" : "cord-blood-bank",
+    "display" : "Cord Blood Bank",
+    "definition" : "A facility that stores cord blood units."
+  }]
+}

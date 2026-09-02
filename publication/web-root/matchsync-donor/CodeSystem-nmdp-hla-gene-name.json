@@ -1,0 +1,67 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "nmdp-hla-gene-name",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nmdp-hla-gene-name</b></p><a name=\"nmdp-hla-gene-name\"> </a><a name=\"hcnmdp-hla-gene-name\"> </a><p>This case-sensitive code system <code>http://terminology.nmdp.org/codesystem/hla-gene-name</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">HGNC:4931<a name=\"nmdp-hla-gene-name-HGNC.584931\"> </a></td><td>HLA-A</td><td>Human Leukocyte Antigen class I, locus A</td></tr><tr><td style=\"white-space:nowrap\">HGNC:4932<a name=\"nmdp-hla-gene-name-HGNC.584932\"> </a></td><td>HLA-B</td><td>Human Leukocyte Antigen class I, locus B</td></tr><tr><td style=\"white-space:nowrap\">HGNC:4933<a name=\"nmdp-hla-gene-name-HGNC.584933\"> </a></td><td>HLA-C</td><td>Human Leukocyte Antigen class I, locus C</td></tr><tr><td style=\"white-space:nowrap\">HGNC:4948<a name=\"nmdp-hla-gene-name-HGNC.584948\"> </a></td><td>HLA-DRB1</td><td>Human Leukocyte Antigen class II, DR beta 1</td></tr><tr><td style=\"white-space:nowrap\">HGNC:4944<a name=\"nmdp-hla-gene-name-HGNC.584944\"> </a></td><td>HLA-DQB1</td><td>Human Leukocyte Antigen class II, DQ beta 1</td></tr><tr><td style=\"white-space:nowrap\">HGNC:4940<a name=\"nmdp-hla-gene-name-HGNC.584940\"> </a></td><td>HLA-DPB1</td><td>Human Leukocyte Antigen class II, DP beta 1</td></tr></table></div>"
+  },
+  "url" : "http://terminology.nmdp.org/codesystem/hla-gene-name",
+  "version" : "0.1.0",
+  "name" : "NMDPHLAGeneNameCS",
+  "title" : "NMDP HLA Gene Name Code System",
+  "status" : "active",
+  "date" : "2026-09-02T19:29:11+00:00",
+  "publisher" : "National Marrow Donor Program (NMDP)",
+  "contact" : [{
+    "name" : "National Marrow Donor Program (NMDP)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nmdp.org"
+    },
+    {
+      "system" : "email",
+      "value" : "fhir@nmdp.org"
+    }]
+  }],
+  "description" : "HGNC Gene IDs for HLA loci used in donor typing. Subset of HGNC relevant to NMDP operations.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US",
+      "display" : "United States of America"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 6,
+  "concept" : [{
+    "code" : "HGNC:4931",
+    "display" : "HLA-A",
+    "definition" : "Human Leukocyte Antigen class I, locus A"
+  },
+  {
+    "code" : "HGNC:4932",
+    "display" : "HLA-B",
+    "definition" : "Human Leukocyte Antigen class I, locus B"
+  },
+  {
+    "code" : "HGNC:4933",
+    "display" : "HLA-C",
+    "definition" : "Human Leukocyte Antigen class I, locus C"
+  },
+  {
+    "code" : "HGNC:4948",
+    "display" : "HLA-DRB1",
+    "definition" : "Human Leukocyte Antigen class II, DR beta 1"
+  },
+  {
+    "code" : "HGNC:4944",
+    "display" : "HLA-DQB1",
+    "definition" : "Human Leukocyte Antigen class II, DQ beta 1"
+  },
+  {
+    "code" : "HGNC:4940",
+    "display" : "HLA-DPB1",
+    "definition" : "Human Leukocyte Antigen class II, DP beta 1"
+  }]
+}

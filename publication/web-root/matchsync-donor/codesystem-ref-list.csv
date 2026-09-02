@@ -1,1 +1,6 @@
 URL,Version,Status,OIDs,Name,Title,Description,Used
+http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type,0.1.0,draft,,NMDPCenterTypeCS,NMDP Center Type,"Types of centers in the NMDP network.","ValueSet/nmdp-center-type-vs"
+http://terminology.nmdp.org/codesystem/donor-status,0.1.0,draft,,NMDPDonorStatusCS,NMDP Donor Status,"Status codes for NMDP registered donors. These codes represent the enterprise Registry Status maintained by NMDP, indicating a donor's availability for patient search, matching, and product request activities. Source: ODS DonorWithSampleResponse (v05).","ValueSet/nmdp-donor-status-vs"
+http://terminology.nmdp.org/codesystem/hla-gene-name,0.1.0,active,,NMDPHLAGeneNameCS,NMDP HLA Gene Name Code System,"HGNC Gene IDs for HLA loci used in donor typing. Subset of HGNC relevant to NMDP operations.","ValueSet/nmdp-hla-gene-name-vs"
+http://terminology.nmdp.org/codesystem/order-type,0.1.0,active,,NMDPOrderTypeCS,NMDP Order Type Code System,"Codes identifying the type of donor workup or collection order in the NMDP system.","ValueSet/nmdp-order-type-vs"
+http://terminology.nmdp.org/codesystem/specimen-type,0.1.0,active,,NMDPSpecimenTypeCS,NMDP Specimen Type Code System,"Codes identifying the type of specimen collected from a donor for HLA typing or infectious disease marker testing.","ValueSet/nmdp-specimen-type-vs"

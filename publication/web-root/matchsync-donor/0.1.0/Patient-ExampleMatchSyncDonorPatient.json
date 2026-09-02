@@ -2,7 +2,7 @@
   "resourceType" : "Patient",
   "id" : "ExampleMatchSyncDonorPatient",
   "meta" : {
-    "profile" : ["http://fhir.nmdp.org/ig/matchsync-donor/StructureDefinition/matchsync-donor-patient"]
+    "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/matchsync-donor-patient"]
   },
   "text" : {
     "status" : "generated",

@@ -1,0 +1,39 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "nmdp-hla-gene-name-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet nmdp-hla-gene-name-vs</b></p><a name=\"nmdp-hla-gene-name-vs\"> </a><a name=\"hcnmdp-hla-gene-name-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-nmdp-hla-gene-name.html\"><code>http://terminology.nmdp.org/codesystem/hla-gene-name</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-gene-name-vs",
+  "version" : "0.1.0",
+  "name" : "NMDPHLAGeneNameVS",
+  "title" : "NMDP HLA Gene Name Value Set",
+  "status" : "active",
+  "date" : "2026-09-02T19:29:11+00:00",
+  "publisher" : "National Marrow Donor Program (NMDP)",
+  "contact" : [{
+    "name" : "National Marrow Donor Program (NMDP)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nmdp.org"
+    },
+    {
+      "system" : "email",
+      "value" : "fhir@nmdp.org"
+    }]
+  }],
+  "description" : "HLA gene names (HGNC IDs) for loci typed in NMDP donor operations.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US",
+      "display" : "United States of America"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.nmdp.org/codesystem/hla-gene-name"
+    }]
+  }
+}

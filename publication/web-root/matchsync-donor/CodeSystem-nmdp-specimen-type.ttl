@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-specimen-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "nmdp-specimen-type"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nmdp-specimen-type</b></p><a name=\"nmdp-specimen-type\"> </a><a name=\"hcnmdp-specimen-type\"> </a><p>This case-sensitive code system <code>http://terminology.nmdp.org/codesystem/specimen-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">blood-acd<a name=\"nmdp-specimen-type-blood-acd\"> </a></td><td>Blood (ACD)</td><td>Whole blood collected in an ACD (Acid Citrate Dextrose) anticoagulant tube.</td></tr><tr><td style=\"white-space:nowrap\">blood-edta<a name=\"nmdp-specimen-type-blood-edta\"> </a></td><td>Blood (EDTA)</td><td>Whole blood collected in an EDTA anticoagulant tube.</td></tr><tr><td style=\"white-space:nowrap\">blood-no-anticoagulant<a name=\"nmdp-specimen-type-blood-no-anticoagulant\"> </a></td><td>Blood (No Anticoagulant)</td><td>Whole blood collected without anticoagulant.</td></tr><tr><td style=\"white-space:nowrap\">blood-sodium-heparin<a name=\"nmdp-specimen-type-blood-sodium-heparin\"> </a></td><td>Blood (Sodium Heparin)</td><td>Whole blood collected in a sodium heparin anticoagulant tube.</td></tr><tr><td style=\"white-space:nowrap\">buccal-swab<a name=\"nmdp-specimen-type-buccal-swab\"> </a></td><td>Buccal Swab</td><td>Buccal epithelial cells collected via oral swab.</td></tr><tr><td style=\"white-space:nowrap\">hair-root<a name=\"nmdp-specimen-type-hair-root\"> </a></td><td>Hair Root</td><td>Hair follicle root sample for DNA extraction.</td></tr><tr><td style=\"white-space:nowrap\">saliva<a name=\"nmdp-specimen-type-saliva\"> </a></td><td>Saliva</td><td>Saliva sample for DNA extraction.</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://terminology.nmdp.org/codesystem/specimen-type"] ;
+  fhir:CodeSystem.version [ fhir:value "0.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "NMDPSpecimenTypeCS"] ;
+  fhir:CodeSystem.title [ fhir:value "NMDP Specimen Type Code System"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-02T19:29:11+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "National Marrow Donor Program (NMDP)"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "National Marrow Donor Program (NMDP)" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.nmdp.org" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "fhir@nmdp.org" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Codes identifying the type of specimen collected from a donor for HLA typing or infectious disease marker testing."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "US" ] ;
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "7"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "blood-acd" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Blood (ACD)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Whole blood collected in an ACD (Acid Citrate Dextrose) anticoagulant tube." ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "blood-edta" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Blood (EDTA)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Whole blood collected in an EDTA anticoagulant tube." ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "blood-no-anticoagulant" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Blood (No Anticoagulant)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Whole blood collected without anticoagulant." ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "blood-sodium-heparin" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Blood (Sodium Heparin)" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Whole blood collected in a sodium heparin anticoagulant tube." ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "buccal-swab" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Buccal Swab" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Buccal epithelial cells collected via oral swab." ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "hair-root" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hair Root" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Hair follicle root sample for DNA extraction." ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "saliva" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Saliva" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Saliva sample for DNA extraction." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-specimen-type.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

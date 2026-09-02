@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Home - MatchSync Donor Implementation Guide v0.1.0</title>
+    <title>Home - NMDP Donor Patient Implementation Guide v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -50,9 +50,13 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">MatchSync Donor Implementation Guide</span>
+          <p><span style="font-size:12pt;font-weight:bold">NMDP Donor Patient Implementation Guide</span>
             <br/>
             <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
 
 
             </span>
@@ -83,20 +87,28 @@
     <a href="index.html">Home</a>
   </li>
   <li>
-    <a href="artifacts.html">Artifacts</a>
+    <a href="conventions.html">Conventions</a>
   </li>
   <li>
-    <a href="toc.html">Table of Contents</a>
+    <a href="identifiers.html">Identifiers</a>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Specification</a>
-      </li>
-    </ul>
+  <li>
+    <a href="capability-statement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="security-and-privacy.html">Security and Privacy</a>
+  </li>
+  <li>
+    <a href="related-specifications.html">Related Specifications</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -130,7 +142,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MatchSync Donor Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/matchsync-donor/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">NMDP Donor Patient Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/donor-patient/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Home</h2>
   
 
@@ -142,10 +154,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <table class="colsd">
 
     <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://fhir.nmdp.org/ig/matchsync-donor/ImplementationGuide/nmdp.fhir.matchsync.donor<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://fhir.nmdp.org/ig/matchsync-donor/ImplementationGuide/nmdp.fhir.matchsync.donor"/></span>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://fhir.nmdp.org/ig/donor-patient/ImplementationGuide/nmdp.fhir.donor-patient<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://fhir.nmdp.org/ig/donor-patient/ImplementationGuide/nmdp.fhir.donor-patient"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://fhir.nmdp.org/ig/matchsync-donor/ImplementationGuide/nmdp.fhir.matchsync.donor|0.1.0"/></span>
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://fhir.nmdp.org/ig/donor-patient/ImplementationGuide/nmdp.fhir.donor-patient|0.1.0"/></span>
       </td>
     </tr>
 
@@ -168,7 +180,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-      <td><i>Computable Name</i>: <span style="font-family: monospace;">MatchSyncDonorIG</span></td>
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">NMDPDonorPatient</span></td>
     </tr>
 
 
@@ -188,17 +200,65 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<h1 id="matchsync-donor-implementation-guide">MatchSync Donor Implementation Guide</h1>
+<h1 id="nmdp-donor-patient-implementation-guide">NMDP Donor Patient Implementation Guide</h1>
 
-<p>This is the starter Implementation Guide for MatchSync donor data. It currently contains one minimal Patient profile and a synthetic example instance so that the SUSHI and FHIR IG Publisher toolchain can be validated end to end.</p>
+<p>This Implementation Guide defines the FHIR profiles for representing hematopoietic cell donors in the NMDP (National Marrow Donor Program / Be The Match) registry.</p>
 
 <h2 id="scope">Scope</h2>
 
-<p>The guide is intentionally small while the source model and publication requirements are being defined. Add profiles, extensions, value sets, examples, and narrative pages under <code class="language-plaintext highlighter-rouge">input/</code> as the guide evolves.</p>
+<p>The Donor Patient IG covers:</p>
 
-<h2 id="build-output">Build output</h2>
+<ul>
+  <li><strong>Donor demographics</strong> — name, date of birth, gender, race, ethnicity</li>
+  <li><strong>Donor identifiers</strong> — NMDP Donor ID, GRID (Global Registration Identifier for Donors)</li>
+  <li><strong>Donor status</strong> — active, inactive, deferred, unavailable</li>
+</ul>
 
-<p>Run SUSHI and the FHIR IG Publisher from the repository root. Generated files are written to <code class="language-plaintext highlighter-rouge">fsh-generated/</code>, <code class="language-plaintext highlighter-rouge">input-cache/</code>, and <code class="language-plaintext highlighter-rouge">output/</code>; these directories are not source and must not be committed to <code class="language-plaintext highlighter-rouge">main</code>.</p>
+<h2 id="profiles">Profiles</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Base Resource</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-nmdp-donor-patient.html">NMDPDonorPatient</a></td>
+      <td>Patient</td>
+      <td>A hematopoietic cell donor registered in the NMDP registry</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="extensions">Extensions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Extension</th>
+      <th>Context</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-donor-status.html">DonorStatus</a></td>
+      <td>Patient</td>
+      <td>The registration status of a donor</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>This IG depends on:</p>
+<ul>
+  <li><a href="http://hl7.org/fhir/R4/">FHIR R4 (4.0.1)</a></li>
+  <li><a href="http://hl7.org/fhir/us/core/STU6.1/">US Core 6.1.0</a></li>
+</ul>
 
 
 
@@ -219,7 +279,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org/">NMDP</a>.  Package nmdp.fhir.matchsync.donor#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 17:06+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

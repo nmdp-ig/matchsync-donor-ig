@@ -1,4 +1,4 @@
-# MatchSync Donor Patient - MatchSync Donor Implementation Guide v0.1.0
+# MatchSync Donor Patient - NMDP Donor Patient Implementation Guide v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://fhir.nmdp.org/ig/matchsync-donor/StructureDefinition/matchsync-donor-patient | *Version*:0.1.0 |
+| *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/matchsync-donor-patient | *Version*:0.1.0 |
 | Draft as of 2026-09-02 | *Computable Name*:MatchSyncDonorPatient |
 
  
@@ -18,7 +18,7 @@ A minimal Patient profile used as the starting point for MatchSync donor data.
 
 * Examples for this Profile: [Patient/ExampleMatchSyncDonorPatient](Patient-ExampleMatchSyncDonorPatient.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/nmdp.fhir.matchsync.donor|current/StructureDefinition/StructureDefinition-matchsync-donor-patient.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/nmdp.fhir.donor-patient|current/StructureDefinition/StructureDefinition-matchsync-donor-patient.json)
 
 ### Formal Views of Profile Content
 
@@ -36,21 +36,32 @@ Other representations of profile: [CSV](StructureDefinition-matchsync-donor-pati
 {
   "resourceType" : "StructureDefinition",
   "id" : "matchsync-donor-patient",
-  "url" : "http://fhir.nmdp.org/ig/matchsync-donor/StructureDefinition/matchsync-donor-patient",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/matchsync-donor-patient",
   "version" : "0.1.0",
   "name" : "MatchSyncDonorPatient",
   "title" : "MatchSync Donor Patient",
   "status" : "draft",
-  "date" : "2026-09-02T17:06:24+00:00",
-  "publisher" : "NMDP",
+  "date" : "2026-09-02T19:29:11+00:00",
+  "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
-    "name" : "NMDP",
+    "name" : "National Marrow Donor Program (NMDP)",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.nmdp.org/"
+      "value" : "https://www.nmdp.org"
+    },
+    {
+      "system" : "email",
+      "value" : "fhir@nmdp.org"
     }]
   }],
   "description" : "A minimal Patient profile used as the starting point for MatchSync donor data.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US",
+      "display" : "United States of America"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "rim",

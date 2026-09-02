@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="ExampleNMDPDonorCenter"/>
+  <meta>
+    <profile value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization ExampleNMDPDonorCenter</b></p><a name="ExampleNMDPDonorCenter"> </a><a name="hcExampleNMDPDonorCenter"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-nmdp-organization.html">NMDP Organization</a></p></div><p><b>identifier</b>: <code>http://terminology.nmdp.org/codesystem/donor-center</code>/12345</p><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes:{http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type donor-center}">Donor Center</span></p><p><b>name</b>: Minneapolis Blood Center</p></div>
+  </text>
+  <identifier>
+    <system value="http://terminology.nmdp.org/codesystem/donor-center"/>
+    <value value="12345"/>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type"/>
+      <code value="donor-center"/>
+      <display value="Donor Center"/>
+    </coding>
+  </type>
+  <name value="Minneapolis Blood Center"/>
+</Organization>

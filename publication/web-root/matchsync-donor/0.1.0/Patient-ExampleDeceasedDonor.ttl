@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleDeceasedDonor> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleDeceasedDonor"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleDeceasedDonor</b></p><a name=\"ExampleDeceasedDonor\"> </a><a name=\"hcExampleDeceasedDonor\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-patient.html\">NMDP Donor Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Erik Johansson  Male, DoB: 1970-04-10 ( http://terminology.nmdp.org/identifier/donor#5551234)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">2025-06-15</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://www.isbt128.org/uri/GRID</code>/BBBB2222222</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.\">Donor Status:</td><td colspan=\"3\"><ul><li>status: permanently-unavailable</li></ul></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "status" ] ;
+       fhir:Extension.valueCode [ fhir:value "permanently-unavailable" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status" ]
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://terminology.nmdp.org/identifier/donor" ] ;
+     fhir:Identifier.value [ fhir:value "5551234" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.system [ fhir:value "http://www.isbt128.org/uri/GRID" ] ;
+     fhir:Identifier.value [ fhir:value "BBBB2222222" ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.family [ fhir:value "Johansson" ] ;
+     fhir:HumanName.given [
+       fhir:value "Erik" ;
+       fhir:index 0
+     ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.birthDate [ fhir:value "1970-04-10"^^xsd:date] ;
+  fhir:Patient.deceasedDateTime [ fhir:value "2025-06-15"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleDeceasedDonor.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nmdp-specimen-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nmdp-specimen-type</b></p><a name="nmdp-specimen-type"> </a><a name="hcnmdp-specimen-type"> </a><p>This case-sensitive code system <code>http://terminology.nmdp.org/codesystem/specimen-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">blood-acd<a name="nmdp-specimen-type-blood-acd"> </a></td><td>Blood (ACD)</td><td>Whole blood collected in an ACD (Acid Citrate Dextrose) anticoagulant tube.</td></tr><tr><td style="white-space:nowrap">blood-edta<a name="nmdp-specimen-type-blood-edta"> </a></td><td>Blood (EDTA)</td><td>Whole blood collected in an EDTA anticoagulant tube.</td></tr><tr><td style="white-space:nowrap">blood-no-anticoagulant<a name="nmdp-specimen-type-blood-no-anticoagulant"> </a></td><td>Blood (No Anticoagulant)</td><td>Whole blood collected without anticoagulant.</td></tr><tr><td style="white-space:nowrap">blood-sodium-heparin<a name="nmdp-specimen-type-blood-sodium-heparin"> </a></td><td>Blood (Sodium Heparin)</td><td>Whole blood collected in a sodium heparin anticoagulant tube.</td></tr><tr><td style="white-space:nowrap">buccal-swab<a name="nmdp-specimen-type-buccal-swab"> </a></td><td>Buccal Swab</td><td>Buccal epithelial cells collected via oral swab.</td></tr><tr><td style="white-space:nowrap">hair-root<a name="nmdp-specimen-type-hair-root"> </a></td><td>Hair Root</td><td>Hair follicle root sample for DNA extraction.</td></tr><tr><td style="white-space:nowrap">saliva<a name="nmdp-specimen-type-saliva"> </a></td><td>Saliva</td><td>Saliva sample for DNA extraction.</td></tr></table></div>
+  </text>
+  <url value="http://terminology.nmdp.org/codesystem/specimen-type"/>
+  <version value="0.1.0"/>
+  <name value="NMDPSpecimenTypeCS"/>
+  <title value="NMDP Specimen Type Code System"/>
+  <status value="active"/>
+  <date value="2026-09-02T19:29:11+00:00"/>
+  <publisher value="National Marrow Donor Program (NMDP)"/>
+  <contact>
+    <name value="National Marrow Donor Program (NMDP)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nmdp.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@nmdp.org"/>
+    </telecom>
+  </contact>
+  <description value="Codes identifying the type of specimen collected from a donor for HLA typing or infectious disease marker testing."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="7"/>
+  <concept>
+    <code value="blood-acd"/>
+    <display value="Blood (ACD)"/>
+    <definition value="Whole blood collected in an ACD (Acid Citrate Dextrose) anticoagulant tube."/>
+  </concept>
+  <concept>
+    <code value="blood-edta"/>
+    <display value="Blood (EDTA)"/>
+    <definition value="Whole blood collected in an EDTA anticoagulant tube."/>
+  </concept>
+  <concept>
+    <code value="blood-no-anticoagulant"/>
+    <display value="Blood (No Anticoagulant)"/>
+    <definition value="Whole blood collected without anticoagulant."/>
+  </concept>
+  <concept>
+    <code value="blood-sodium-heparin"/>
+    <display value="Blood (Sodium Heparin)"/>
+    <definition value="Whole blood collected in a sodium heparin anticoagulant tube."/>
+  </concept>
+  <concept>
+    <code value="buccal-swab"/>
+    <display value="Buccal Swab"/>
+    <definition value="Buccal epithelial cells collected via oral swab."/>
+  </concept>
+  <concept>
+    <code value="hair-root"/>
+    <display value="Hair Root"/>
+    <definition value="Hair follicle root sample for DNA extraction."/>
+  </concept>
+  <concept>
+    <code value="saliva"/>
+    <display value="Saliva"/>
+    <definition value="Saliva sample for DNA extraction."/>
+  </concept>
+</CodeSystem>

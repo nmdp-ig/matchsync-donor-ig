@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/ServiceRequest/ExampleDonorOrder> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleDonorOrder"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ExampleDonorOrder</b></p><a name=\"ExampleDonorOrder\"> </a><a name=\"hcExampleDonorOrder\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-order.html\">NMDP Donor Order</a></p></div><p><b>identifier</b>: <code>http://terminology.nmdp.org/identifier/order</code>/ORD-2026-001234</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://terminology.nmdp.org/codesystem/order-type ct}\">Confirmatory Typing</span></p><p><b>subject</b>: <a href=\"Patient-ExampleNMDPDonor.html\">Marcus James Reynolds  Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)</a></p><p><b>authoredOn</b>: 2026-07-15</p><p><b>requester</b>: <a href=\"Organization-ExampleNMDPDonorCenter.html\">Organization Minneapolis Blood Center</a></p><p><b>performer</b>: <a href=\"Organization-ExampleNMDPDonorCenter.html\">Organization Minneapolis Blood Center</a></p></div>"
+  ] ;
+  fhir:ServiceRequest.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://terminology.nmdp.org/identifier/order" ] ;
+     fhir:Identifier.value [ fhir:value "ORD-2026-001234" ]
+  ] ;
+  fhir:ServiceRequest.status [ fhir:value "active"] ;
+  fhir:ServiceRequest.intent [ fhir:value "order"] ;
+  fhir:ServiceRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.nmdp.org/codesystem/order-type" ] ;
+       fhir:Coding.code [ fhir:value "ct" ] ;
+       fhir:Coding.display [ fhir:value "Confirmatory Typing" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.subject [
+     fhir:link <http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleNMDPDonor> ;
+     fhir:Reference.reference [ fhir:value "Patient/ExampleNMDPDonor" ]
+  ] ;
+  fhir:ServiceRequest.authoredOn [ fhir:value "2026-07-15"^^xsd:date] ;
+  fhir:ServiceRequest.requester [
+     fhir:link <http://fhir.nmdp.org/ig/donor-patient/Organization/ExampleNMDPDonorCenter> ;
+     fhir:Reference.reference [ fhir:value "Organization/ExampleNMDPDonorCenter" ]
+  ] ;
+  fhir:ServiceRequest.performer [
+     fhir:index 0 ;
+     fhir:link <http://fhir.nmdp.org/ig/donor-patient/Organization/ExampleNMDPDonorCenter> ;
+     fhir:Reference.reference [ fhir:value "Organization/ExampleNMDPDonorCenter" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/ServiceRequest/ExampleDonorOrder.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

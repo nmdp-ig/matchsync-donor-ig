@@ -1,14 +1,147 @@
 [{
-  "id" : "nmdp.fhir.matchsync.donor",
-  "type" : "ImplementationGuide",
-  "url" : "http://fhir.nmdp.org/ig/matchsync-donor/ImplementationGuide/nmdp.fhir.matchsync.donor",
+  "id" : "NMDPDonorAPICapabilityStatement",
+  "type" : "CapabilityStatement",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/CapabilityStatement/nmdp-donor-api",
   "version" : "0.1.0",
-  "name" : "MatchSyncDonorIG"
+  "name" : "NMDPDonorAPICapabilityStatement"
+},
+{
+  "id" : "nmdp-center-type",
+  "type" : "CodeSystem",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type",
+  "version" : "0.1.0",
+  "name" : "NMDPCenterTypeCS"
+},
+{
+  "id" : "nmdp.fhir.donor-patient",
+  "type" : "ImplementationGuide",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/ImplementationGuide/nmdp.fhir.donor-patient",
+  "version" : "0.1.0",
+  "name" : "NMDPDonorPatient"
+},
+{
+  "id" : "donor-status",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status",
+  "version" : "0.1.0",
+  "name" : "DonorStatus"
 },
 {
   "id" : "matchsync-donor-patient",
   "type" : "StructureDefinition",
-  "url" : "http://fhir.nmdp.org/ig/matchsync-donor/StructureDefinition/matchsync-donor-patient",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/matchsync-donor-patient",
   "version" : "0.1.0",
   "name" : "MatchSyncDonorPatient"
+},
+{
+  "id" : "nmdp-donor-order",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order",
+  "version" : "0.1.0",
+  "name" : "NMDPDonorOrder"
+},
+{
+  "id" : "nmdp-donor-patient",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient",
+  "version" : "0.1.0",
+  "name" : "NMDPDonorPatient"
+},
+{
+  "id" : "nmdp-donor-specimen",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-specimen",
+  "version" : "0.1.0",
+  "name" : "NMDPDonorSpecimen"
+},
+{
+  "id" : "nmdp-hla-genotype",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype",
+  "version" : "0.1.0",
+  "name" : "NMDPHLAGenotype"
+},
+{
+  "id" : "nmdp-idm-order",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-idm-order",
+  "version" : "0.1.0",
+  "name" : "NMDPIDMOrder"
+},
+{
+  "id" : "nmdp-organization",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization",
+  "version" : "0.1.0",
+  "name" : "NMDPOrganization"
+},
+{
+  "id" : "nmdp-center-type-vs",
+  "type" : "ValueSet",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-center-type-vs",
+  "version" : "0.1.0",
+  "name" : "NMDPCenterTypeVS"
+},
+{
+  "id" : "nmdp-donor-status-vs",
+  "type" : "ValueSet",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs",
+  "version" : "0.1.0",
+  "name" : "NMDPDonorStatusVS"
+},
+{
+  "id" : "nmdp-glstring-vs",
+  "type" : "ValueSet",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-glstring-vs",
+  "version" : "0.1.0",
+  "name" : "NMDPGLStringVS"
+},
+{
+  "id" : "nmdp-hla-gene-name-vs",
+  "type" : "ValueSet",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-gene-name-vs",
+  "version" : "0.1.0",
+  "name" : "NMDPHLAGeneNameVS"
+},
+{
+  "id" : "nmdp-order-type-vs",
+  "type" : "ValueSet",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-order-type-vs",
+  "version" : "0.1.0",
+  "name" : "NMDPOrderTypeVS"
+},
+{
+  "id" : "nmdp-specimen-type-vs",
+  "type" : "ValueSet",
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-specimen-type-vs",
+  "version" : "0.1.0",
+  "name" : "NMDPSpecimenTypeVS"
+},
+{
+  "id" : "nmdp-donor-status",
+  "type" : "CodeSystem",
+  "url" : "http://terminology.nmdp.org/codesystem/donor-status",
+  "version" : "0.1.0",
+  "name" : "NMDPDonorStatusCS"
+},
+{
+  "id" : "nmdp-hla-gene-name",
+  "type" : "CodeSystem",
+  "url" : "http://terminology.nmdp.org/codesystem/hla-gene-name",
+  "version" : "0.1.0",
+  "name" : "NMDPHLAGeneNameCS"
+},
+{
+  "id" : "nmdp-order-type",
+  "type" : "CodeSystem",
+  "url" : "http://terminology.nmdp.org/codesystem/order-type",
+  "version" : "0.1.0",
+  "name" : "NMDPOrderTypeCS"
+},
+{
+  "id" : "nmdp-specimen-type",
+  "type" : "CodeSystem",
+  "url" : "http://terminology.nmdp.org/codesystem/specimen-type",
+  "version" : "0.1.0",
+  "name" : "NMDPSpecimenTypeCS"
 }]

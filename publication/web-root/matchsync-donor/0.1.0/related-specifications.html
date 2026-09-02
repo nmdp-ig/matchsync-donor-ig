@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Related Specifications - NMDP Donor Patient Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">NMDP Donor Patient Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="conventions.html">Conventions</a>
+  </li>
+  <li>
+    <a href="identifiers.html">Identifiers</a>
+  </li>
+  <li>
+    <a href="capability-statement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="security-and-privacy.html">Security and Privacy</a>
+  </li>
+  <li>
+    <a href="related-specifications.html">Related Specifications</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Related Specifications</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">NMDP Donor Patient Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/donor-patient/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Related Specifications</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#related-specifications" id="markdown-toc-related-specifications">Related Specifications</a>    <ul>
+      <li><a href="#hl7-genomics-reporting-ig" id="markdown-toc-hl7-genomics-reporting-ig">HL7 Genomics Reporting IG</a>        <ul>
+          <li><a href="#rationale" id="markdown-toc-rationale">Rationale</a></li>
+          <li><a href="#semantic-compatibility" id="markdown-toc-semantic-compatibility">Semantic Compatibility</a></li>
+          <li><a href="#nmdp-hla-reporting-ig" id="markdown-toc-nmdp-hla-reporting-ig">NMDP HLA Reporting IG</a></li>
+        </ul>
+      </li>
+      <li><a href="#us-core-610" id="markdown-toc-us-core-610">US Core 6.1.0</a></li>
+      <li><a href="#isbt-128" id="markdown-toc-isbt-128">ISBT 128</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="related-specifications">Related Specifications</h1>
+
+<p>This page documents the relationship between the NMDP Donor Patient IG and other relevant specifications. Where this IG maintains semantic compatibility with external standards, it does so through shared coding systems and conventions rather than formal package dependencies.</p>
+
+<h2 id="hl7-genomics-reporting-ig">HL7 Genomics Reporting IG</h2>
+
+<p>This IG does <strong>NOT</strong> declare a formal dependency on the <a href="http://hl7.org/fhir/uv/genomics-reporting/">HL7 Genomics Reporting IG</a> (<code class="language-plaintext highlighter-rouge">hl7.fhir.uv.genomics-reporting</code>).</p>
+
+<h3 id="rationale">Rationale</h3>
+
+<p>The Donor Patient IG provides a read-only summary of donor HLA for search and discovery use cases. The HL7 Genomics Reporting IG is designed for full genotyping laboratory reports with DiagnosticReport, Specimen, and Task profiles that exceed the scope of this IG. Adding the dependency would introduce unnecessary complexity and weight for a donor demographics API.</p>
+
+<h3 id="semantic-compatibility">Semantic Compatibility</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">NMDPHLAGenotype</code> profile in this IG maintains semantic compatibility with the HL7 Genomics Reporting IG and the NMDP HLA Reporting IG through shared coding systems:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coding System</th>
+      <th>Use in This IG</th>
+      <th>Shared With</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">84413-4</code> (Genotype display name)</td>
+      <td><code class="language-plaintext highlighter-rouge">Observation.code</code> for HLA genotype observations</td>
+      <td>HL7 Genomics Reporting IG Genotype profile</td>
+    </tr>
+    <tr>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">48018-6</code> (Gene studied)</td>
+      <td><code class="language-plaintext highlighter-rouge">Observation.component</code> for gene/locus identification</td>
+      <td>HL7 Genomics Reporting IG</td>
+    </tr>
+    <tr>
+      <td>GL String Code (<code class="language-plaintext highlighter-rouge">http://glstring.org</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">Observation.value</code> encoding of HLA genotype strings</td>
+      <td>NMDP HLA Reporting IG, HL7 Genomics Reporting IG</td>
+    </tr>
+    <tr>
+      <td>HGNC gene identifiers (e.g., <code class="language-plaintext highlighter-rouge">HGNC:4931</code> for HLA-A)</td>
+      <td>Locus identification in gene studied component</td>
+      <td>HL7 Genomics Reporting IG, NMDP HLA Reporting IG</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Data produced by this IG is interoperable with systems that consume HL7 Genomics Reporting IG or NMDP HLA Reporting IG data, without requiring a formal package dependency.</p>
+
+<h3 id="nmdp-hla-reporting-ig">NMDP HLA Reporting IG</h3>
+
+<p>The <a href="https://fhir.nmdp.org/ig/hla-reporting/">NMDP HLA Reporting IG</a> (<code class="language-plaintext highlighter-rouge">https://fhir.nmdp.org/ig/hla-reporting/</code>) is the full HLA genotyping and allele-level reporting specification published by NMDP. It further constrains the HL7 Genomics Reporting IG for HLA-specific use cases, including:</p>
+
+<ul>
+  <li>HLA Genotype Observation (per-locus)</li>
+  <li>HLA Allele Observation</li>
+  <li>HLA DiagnosticReport (grouping report for a complete typing)</li>
+  <li>GL String Code value sets</li>
+</ul>
+
+<p>The Donor Patient IG's <code class="language-plaintext highlighter-rouge">NMDPHLAGenotype</code> profile is intentionally simpler — it provides a per-locus genotype summary without the full DiagnosticReport wrapper or allele-level detail. If future versions of this IG require full typing reports, the dependency on the HLA Reporting IG may be revisited.</p>
+
+<h2 id="us-core-610">US Core 6.1.0</h2>
+
+<p>This IG declares a formal dependency on <a href="http://hl7.org/fhir/us/core/">US Core 6.1.0</a> (<code class="language-plaintext highlighter-rouge">hl7.fhir.us.core#6.1.0</code>).</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">NMDPDonorPatient</code> profile extends <code class="language-plaintext highlighter-rouge">USCorePatientProfile</code>, inheriting its requirements for:</p>
+
+<ul>
+  <li>Patient identifiers (MRN, SSN patterns)</li>
+  <li>Name, gender, birthDate</li>
+  <li>Race and ethnicity extensions</li>
+  <li>US-realm address constraints</li>
+</ul>
+
+<p>See <a href="https://github.com/ericbfriday/nmdp-donor-patient-ig/blob/main/docs/adr/0005-extend-uscore-patient.md">ADR-0005</a> for the decision rationale.</p>
+
+<h2 id="isbt-128">ISBT 128</h2>
+
+<p>The <a href="https://www.iccbba.org/tech-library/iccbba-documents/databases-702/grid-database">ISBT 128</a> standard defines the Global Registration Identifier for Donors (GRID), used in this IG as a donor identifier:</p>
+
+<ul>
+  <li><strong>System URI:</strong> <code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/grid</code></li>
+  <li><strong>Format:</strong> 19-character alphanumeric string with a check character</li>
+  <li><strong>Purpose:</strong> Internationally unique, persistent identifier for donors across registries worldwide</li>
+  <li><strong>Issuing authority:</strong> World Marrow Donor Association (WMDA) via ICCBBA</li>
+</ul>
+
+<p>The GRID enables unambiguous donor identification across international registry boundaries without exposing registry-internal identifiers.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Identifiers - NMDP Donor Patient Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">NMDP Donor Patient Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="conventions.html">Conventions</a>
+  </li>
+  <li>
+    <a href="identifiers.html">Identifiers</a>
+  </li>
+  <li>
+    <a href="capability-statement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="security-and-privacy.html">Security and Privacy</a>
+  </li>
+  <li>
+    <a href="related-specifications.html">Related Specifications</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Identifiers</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">NMDP Donor Patient Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/donor-patient/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Identifiers</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#identifiers" id="markdown-toc-identifiers">Identifiers</a>    <ul>
+      <li><a href="#identifier-systems-on-nmdpdonorpatient" id="markdown-toc-identifier-systems-on-nmdpdonorpatient">Identifier Systems on NMDPDonorPatient</a></li>
+      <li><a href="#identifier-descriptions" id="markdown-toc-identifier-descriptions">Identifier Descriptions</a>        <ul>
+          <li><a href="#nmdp-donor-id" id="markdown-toc-nmdp-donor-id">NMDP Donor ID</a></li>
+          <li><a href="#grid-global-registration-identifier-for-donors" id="markdown-toc-grid-global-registration-identifier-for-donors">GRID (Global Registration Identifier for Donors)</a></li>
+        </ul>
+      </li>
+      <li><a href="#additional-identifier-systems-aliasesfsh" id="markdown-toc-additional-identifier-systems-aliasesfsh">Additional Identifier Systems (aliases.fsh)</a></li>
+      <li><a href="#phi-sensitivity" id="markdown-toc-phi-sensitivity">PHI Sensitivity</a>        <ul>
+          <li><a href="#indirect-identifier--nmdp-donor-id" id="markdown-toc-indirect-identifier--nmdp-donor-id">Indirect Identifier — NMDP Donor ID</a></li>
+          <li><a href="#direct-identifier--grid" id="markdown-toc-direct-identifier--grid">Direct Identifier — GRID</a></li>
+          <li><a href="#implementation-guidance" id="markdown-toc-implementation-guidance">Implementation Guidance</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="identifiers">Identifiers</h1>
+
+<p>This page describes the identifier systems used in the NMDP Donor Patient IG, their cardinality, and PHI sensitivity classification.</p>
+
+<h2 id="identifier-systems-on-nmdpdonorpatient">Identifier Systems on NMDPDonorPatient</h2>
+
+<p>The <a href="StructureDefinition-nmdp-donor-patient.html">NMDPDonorPatient</a> profile requires at least one identifier and defines two named slices:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>System URI</th>
+      <th>Cardinality</th>
+      <th>Example Value</th>
+      <th>PHI Sensitivity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>NMDP Donor ID</td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/donor</code></td>
+      <td>1..1 (MS)</td>
+      <td><code class="language-plaintext highlighter-rouge">1234567</code></td>
+      <td>Indirect identifier</td>
+    </tr>
+    <tr>
+      <td>GRID</td>
+      <td><code class="language-plaintext highlighter-rouge">http://www.isbt128.org/uri/GRID</code></td>
+      <td>0..1 (MS)</td>
+      <td><code class="language-plaintext highlighter-rouge">AAAA1111111</code></td>
+      <td>Direct identifier</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The identifier slice is <code class="language-plaintext highlighter-rouge">open</code>, allowing additional identifier systems beyond the two named slices.</p>
+
+<h2 id="identifier-descriptions">Identifier Descriptions</h2>
+
+<h3 id="nmdp-donor-id">NMDP Donor ID</h3>
+
+<p>The unique numeric identifier assigned to a donor by the National Marrow Donor Program upon registration. Every donor in the NMDP registry has exactly one Donor ID.</p>
+
+<ul>
+  <li><strong>System:</strong> <code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/donor</code></li>
+  <li><strong>Format:</strong> Numeric string (typically 7 digits)</li>
+  <li><strong>Assigned by:</strong> NMDP at time of registration</li>
+  <li><strong>Cardinality:</strong> 1..1 (required)</li>
+</ul>
+
+<h3 id="grid-global-registration-identifier-for-donors">GRID (Global Registration Identifier for Donors)</h3>
+
+<p>The ISBT 128 Global Registration Identifier for Donors — a globally unique identifier that follows the donor across registries and international borders.</p>
+
+<ul>
+  <li><strong>System:</strong> <code class="language-plaintext highlighter-rouge">http://www.isbt128.org/uri/GRID</code></li>
+  <li><strong>Format:</strong> 4 alpha characters + 7 numeric characters (e.g., <code class="language-plaintext highlighter-rouge">AAAA1111111</code>)</li>
+  <li><strong>Assigned by:</strong> WMDA via the national registry</li>
+  <li><strong>Cardinality:</strong> 0..1 (optional but must-support)</li>
+</ul>
+
+<h2 id="additional-identifier-systems-aliasesfsh">Additional Identifier Systems (aliases.fsh)</h2>
+
+<p>The following identifier systems are defined in <code class="language-plaintext highlighter-rouge">aliases.fsh</code> for use in related profiles and future IG expansion:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>System URI</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CBU ID</td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/cbu</code></td>
+      <td>Cord Blood Unit identifier</td>
+    </tr>
+    <tr>
+      <td>Recipient ID</td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/recipient</code></td>
+      <td>Transplant recipient identifier</td>
+    </tr>
+    <tr>
+      <td>Local ID</td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/local-id</code></td>
+      <td>Center-specific local identifier</td>
+    </tr>
+    <tr>
+      <td>Order ID</td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/order</code></td>
+      <td>Search/workup order identifier</td>
+    </tr>
+    <tr>
+      <td>HML ID</td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/hmlid</code></td>
+      <td>HML message identifier</td>
+    </tr>
+    <tr>
+      <td>Specimen ID</td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/specimen</code></td>
+      <td>Specimen identifier</td>
+    </tr>
+    <tr>
+      <td>CIBMTR CRID</td>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.cibmtr.org/identifier/CRID</code></td>
+      <td>CIBMTR Center Research ID</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="phi-sensitivity">PHI Sensitivity</h2>
+
+<p>Implementers <strong>MUST</strong> handle donor identifiers according to their PHI classification:</p>
+
+<h3 id="indirect-identifier--nmdp-donor-id">Indirect Identifier — NMDP Donor ID</h3>
+
+<p>The NMDP Donor ID is classified as an <strong>indirect identifier</strong>. On its own, it does not identify an individual. However, when combined with demographic information (name, date of birth, address), it becomes Protected Health Information (PHI) under HIPAA.</p>
+
+<ul>
+  <li>On its own: Not PHI</li>
+  <li>Combined with demographics: PHI</li>
+  <li>Access control: Standard system-level access controls</li>
+</ul>
+
+<h3 id="direct-identifier--grid">Direct Identifier — GRID</h3>
+
+<p>The GRID is classified as a <strong>direct patient identifier</strong>. Because it is globally unique to a single individual and can be used to re-identify a person across registries, it is always considered PHI regardless of context.</p>
+
+<ul>
+  <li>Always PHI regardless of accompanying data</li>
+  <li>Access control: Requires appropriate authorization and audit logging</li>
+  <li>Transmission: Must be encrypted in transit and at rest</li>
+</ul>
+
+<h3 id="implementation-guidance">Implementation Guidance</h3>
+
+<ol>
+  <li><strong>Logging:</strong> Never log GRID values in plain text. NMDP Donor IDs may be logged for operational purposes but should be excluded from broadly accessible log aggregation.</li>
+  <li><strong>API responses:</strong> Include identifiers only when the consumer has appropriate authorization. Consider identifier-specific scoping in SMART on FHIR access tokens.</li>
+  <li><strong>Storage:</strong> Both identifier types should be encrypted at rest in production systems.</li>
+  <li><strong>De-identification:</strong> When de-identifying data for research, both the NMDP Donor ID and GRID must be removed or replaced with opaque tokens.</li>
+</ol>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/Specimen/ExampleDonorSpecimen> a fhir:Specimen ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleDonorSpecimen"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-specimen" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-specimen>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen ExampleDonorSpecimen</b></p><a name=\"ExampleDonorSpecimen\"> </a><a name=\"hcExampleDonorSpecimen\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-specimen.html\">NMDP Donor Specimen</a></p></div><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://terminology.nmdp.org/codesystem/specimen-type blood-edta}\">Blood (EDTA)</span></p><p><b>subject</b>: <a href=\"Patient-ExampleNMDPDonor.html\">Marcus James Reynolds  Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)</a></p><p><b>request</b>: <a href=\"ServiceRequest-ExampleDonorOrder.html\">ServiceRequest Confirmatory Typing</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2026-07-16 09:30:00+0000</td></tr></table></div>"
+  ] ;
+  fhir:Specimen.status [ fhir:value "available"] ;
+  fhir:Specimen.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.nmdp.org/codesystem/specimen-type" ] ;
+       fhir:Coding.code [ fhir:value "blood-edta" ] ;
+       fhir:Coding.display [ fhir:value "Blood (EDTA)" ]
+     ]
+  ] ;
+  fhir:Specimen.subject [
+     fhir:link <http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleNMDPDonor> ;
+     fhir:Reference.reference [ fhir:value "Patient/ExampleNMDPDonor" ]
+  ] ;
+  fhir:Specimen.request [
+     fhir:index 0 ;
+     fhir:link <http://fhir.nmdp.org/ig/donor-patient/ServiceRequest/ExampleDonorOrder> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/ExampleDonorOrder" ]
+  ] ;
+  fhir:Specimen.collection [
+     fhir:Specimen.collection.collectedDateTime [ fhir:value "2026-07-16T09:30:00Z"^^xsd:dateTime ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/Specimen/ExampleDonorSpecimen.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

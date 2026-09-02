@@ -1,6 +1,7 @@
 {
   "version" : "0.1.0",
   "fhirVersion" : ["4.0.1"],
-  "date" : "20260902170624",
-  "name" : "nmdp.fhir.matchsync.donor"
+  "date" : "20260902192911",
+  "name" : "nmdp.fhir.donor-patient",
+  "jurisdiction" : "urn:iso:std:iso:3166#US"
 }

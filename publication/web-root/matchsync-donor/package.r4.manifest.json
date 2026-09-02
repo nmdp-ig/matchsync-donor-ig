@@ -1,6 +1,6 @@
 {
   "version" : "0.1.0",
-  "date" : "20260902170624",
+  "date" : "20260902192911",
   "notForPublication" : true,
-  "name" : "nmdp.fhir.matchsync.donor.r4"
+  "name" : "nmdp.fhir.donor-patient.r4"
 }

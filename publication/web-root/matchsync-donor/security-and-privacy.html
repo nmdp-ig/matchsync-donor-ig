@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Security and Privacy - NMDP Donor Patient Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">NMDP Donor Patient Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="conventions.html">Conventions</a>
+  </li>
+  <li>
+    <a href="identifiers.html">Identifiers</a>
+  </li>
+  <li>
+    <a href="capability-statement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="security-and-privacy.html">Security and Privacy</a>
+  </li>
+  <li>
+    <a href="related-specifications.html">Related Specifications</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Security and Privacy</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">NMDP Donor Patient Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/donor-patient/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Security and Privacy</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#security-and-privacy" id="markdown-toc-security-and-privacy">Security and Privacy</a>    <ul>
+      <li><a href="#identifier-sensitivity-classification" id="markdown-toc-identifier-sensitivity-classification">Identifier Sensitivity Classification</a>        <ul>
+          <li><a href="#bundle-level-phi" id="markdown-toc-bundle-level-phi">Bundle-Level PHI</a></li>
+          <li><a href="#hla-as-genetic-data" id="markdown-toc-hla-as-genetic-data">HLA as Genetic Data</a></li>
+        </ul>
+      </li>
+      <li><a href="#data-governance" id="markdown-toc-data-governance">Data Governance</a>        <ul>
+          <li><a href="#nmdp-information-classification-framework" id="markdown-toc-nmdp-information-classification-framework">NMDP Information Classification Framework</a></li>
+          <li><a href="#donor-identifying-information" id="markdown-toc-donor-identifying-information">Donor-Identifying Information</a></li>
+          <li><a href="#regulatory-jurisdiction" id="markdown-toc-regulatory-jurisdiction">Regulatory Jurisdiction</a></li>
+        </ul>
+      </li>
+      <li><a href="#access-control-recommendations" id="markdown-toc-access-control-recommendations">Access Control Recommendations</a>        <ul>
+          <li><a href="#minimum-necessary-principle" id="markdown-toc-minimum-necessary-principle">Minimum Necessary Principle</a></li>
+          <li><a href="#transplant-center-scoped-authorization" id="markdown-toc-transplant-center-scoped-authorization">Transplant Center-Scoped Authorization</a></li>
+          <li><a href="#transport-security" id="markdown-toc-transport-security">Transport Security</a></li>
+          <li><a href="#audit-requirements" id="markdown-toc-audit-requirements">Audit Requirements</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="security-and-privacy">Security and Privacy</h1>
+
+<p>This page documents the sensitivity classification of identifiers and data elements in the NMDP Donor Patient IG, along with data governance policies and access control recommendations for implementers.</p>
+
+<h2 id="identifier-sensitivity-classification">Identifier Sensitivity Classification</h2>
+
+<p>NMDP identifiers have nuanced sensitivity classifications. The NMDP Security Architecture team made a formal determination in 2016 that NMDP Donor IDs (DID), Recipient IDs (RID), and CRIDs are "re-identification numbers" — they are not PHI in isolation, but <strong>become PHI when combined with health information</strong> in a FHIR Bundle or API response.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identifier System URI</th>
+      <th>Classification</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/donor-id</code></td>
+      <td>PHI when combined with health info</td>
+      <td>Re-identification number per 2016 Security Architecture ruling. De-identified in isolation; constitutes PHI when bundled with demographics or HLA data.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/grid</code></td>
+      <td>PII/PHI in operational practice</td>
+      <td>Internationally unique identifier (ISBT 128). Treated as PII/PHI in all NMDP systems due to global uniqueness and linkability to an individual.</td>
+    </tr>
+    <tr>
+      <td>HLA typing data (GL String values)</td>
+      <td>GDPR Article 9 genetic data</td>
+      <td>Not HIPAA PHI by itself, but classified as genetic data under GDPR Article 9 for international donors. NMDP recognizes HLA can be re-identifying.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/center-id</code></td>
+      <td>Internal Use</td>
+      <td>Does not identify an individual. Lower sensitivity; used to identify transplant centers and donor centers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="bundle-level-phi">Bundle-Level PHI</h3>
+
+<p>A Donor API response Bundle constitutes PHI in aggregate, even though individual identifiers (such as a Donor ID alone) may be considered de-identified in isolation. When a Donor ID appears alongside demographics, HLA typing, or blood type within a FHIR Bundle, the entire Bundle must be protected as PHI.</p>
+
+<h3 id="hla-as-genetic-data">HLA as Genetic Data</h3>
+
+<p>For donors from jurisdictions covered by GDPR (e.g., European registries), HLA typing data is classified as "genetic data" under Article 9 and requires additional protections including explicit consent for processing. NMDP exempts HLA strings from de-identification requirements in non-production environments due to testing needs, but production data must be handled as sensitive genetic information.</p>
+
+<h2 id="data-governance">Data Governance</h2>
+
+<h3 id="nmdp-information-classification-framework">NMDP Information Classification Framework</h3>
+
+<p>NMDP policy P00096 (Information Security Policy) defines four data classification levels:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Description</th>
+      <th>Entitlement Review</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Public</strong></td>
+      <td>No access restrictions. Published research, public website content.</td>
+      <td>None required</td>
+    </tr>
+    <tr>
+      <td><strong>Internal Use</strong></td>
+      <td>NMDP employees only. Internal documentation, org charts.</td>
+      <td>None required</td>
+    </tr>
+    <tr>
+      <td><strong>Confidential</strong></td>
+      <td>Restricted access, role-based. Competitive data, non-PHI business records.</td>
+      <td>Annually</td>
+    </tr>
+    <tr>
+      <td><strong>Confidential: Personal Medical</strong></td>
+      <td>PHI/PII — highest restriction. Donor/patient identifying info combined with health data.</td>
+      <td>Semi-annually</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="donor-identifying-information">Donor-Identifying Information</h3>
+
+<p>NMDP defines "Donor-Identifying Information" broadly — it includes registry, managing donor center, location, gender, age, ABO/Rh type, HLA type, infectious disease marker results, health history, and photographs. Per NMDP policy, <strong>Donor-Identifying Information is always classified as Personal Medical Information</strong> (the highest sensitivity level).</p>
+
+<h3 id="regulatory-jurisdiction">Regulatory Jurisdiction</h3>
+
+<p>The Donor API falls under multiple regulatory frameworks:</p>
+
+<ul>
+  <li><strong>HIPAA</strong> — Health information of US donors</li>
+  <li><strong>HRSA</strong> — Federal grant requirements for the C.W. Bill Young Cell Transplantation Program</li>
+  <li><strong>FDA</strong> — Regulatory compliance for donor eligibility and selection</li>
+  <li><strong>GDPR</strong> — International donors; HLA is genetic data under Article 9</li>
+</ul>
+
+<h2 id="access-control-recommendations">Access Control Recommendations</h2>
+
+<h3 id="minimum-necessary-principle">Minimum Necessary Principle</h3>
+
+<p>Implementers SHOULD apply the HIPAA minimum necessary standard: request and return only the data elements required for the specific use case. The Donor API supports this through:</p>
+
+<ul>
+  <li>Scoped search parameters that limit returned results</li>
+  <li>Profile-level constraints that define which elements are required vs. optional</li>
+  <li>Role-based access that restricts endpoint availability</li>
+</ul>
+
+<h3 id="transplant-center-scoped-authorization">Transplant Center-Scoped Authorization</h3>
+
+<p>Access to the Donor API is protected by OAuth 2.0 (Okta). Each transplant center (TC) receives individual credentials with access tokens that scope data access:</p>
+
+<ul>
+  <li>Tokens carry TC-specific claims that limit which donor records are accessible</li>
+  <li>Authorization is scoped to the transplant center's own searches and orders</li>
+  <li>All access is logged with: timestamp, operation result, username, accessed method, user role, and patient/donor ID</li>
+</ul>
+
+<h3 id="transport-security">Transport Security</h3>
+
+<p>The Donor API transmits data over the Internet to transplant centers. Per NMDP's Data Protection Matrix, <strong>TLS 1.2+ is mandatory</strong> for any transmission of Confidential Health/Personal Information across the Internet.</p>
+
+<h3 id="audit-requirements">Audit Requirements</h3>
+
+<p>NMDP security requires structured audit logging for all PHI access in the following format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Timestamp | Result | Username | ID | Accessed Method | User Role | Patient/Donor ID
+</code></pre></div></div>
+
+<p>Implementers SHOULD maintain audit logs consistent with this format for all Donor API interactions.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

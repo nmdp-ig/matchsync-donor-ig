@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="nmdp-hla-gene-name-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet nmdp-hla-gene-name-vs</b></p><a name="nmdp-hla-gene-name-vs"> </a><a name="hcnmdp-hla-gene-name-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-nmdp-hla-gene-name.html"><code>http://terminology.nmdp.org/codesystem/hla-gene-name</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li></ul></div>
+  </text>
+  <url value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-gene-name-vs"/>
+  <version value="0.1.0"/>
+  <name value="NMDPHLAGeneNameVS"/>
+  <title value="NMDP HLA Gene Name Value Set"/>
+  <status value="active"/>
+  <date value="2026-09-02T19:29:11+00:00"/>
+  <publisher value="National Marrow Donor Program (NMDP)"/>
+  <contact>
+    <name value="National Marrow Donor Program (NMDP)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nmdp.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@nmdp.org"/>
+    </telecom>
+  </contact>
+  <description value="HLA gene names (HGNC IDs) for loci typed in NMDP donor operations."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://terminology.nmdp.org/codesystem/hla-gene-name"/>
+    </include>
+  </compose>
+</ValueSet>

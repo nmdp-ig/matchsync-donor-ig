@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nmdp-order-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nmdp-order-type</b></p><a name="nmdp-order-type"> </a><a name="hcnmdp-order-type"> </a><p>This case-sensitive code system <code>http://terminology.nmdp.org/codesystem/order-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">ct<a name="nmdp-order-type-ct"> </a></td><td>Confirmatory Typing</td><td>HLA confirmatory typing order to verify initial typing results.</td></tr><tr><td style="white-space:nowrap">idm<a name="nmdp-order-type-idm"> </a></td><td>Infectious Disease Markers</td><td>Infectious disease marker testing order for donor clearance.</td></tr><tr><td style="white-space:nowrap">collection<a name="nmdp-order-type-collection"> </a></td><td>Collection</td><td>Generic stem cell collection order.</td></tr><tr><td style="white-space:nowrap">pbsc<a name="nmdp-order-type-pbsc"> </a></td><td>Peripheral Blood Stem Cell</td><td>Peripheral blood stem cell collection via apheresis.</td></tr><tr><td style="white-space:nowrap">marrow<a name="nmdp-order-type-marrow"> </a></td><td>Bone Marrow</td><td>Bone marrow harvest collection.</td></tr></table></div>
+  </text>
+  <url value="http://terminology.nmdp.org/codesystem/order-type"/>
+  <version value="0.1.0"/>
+  <name value="NMDPOrderTypeCS"/>
+  <title value="NMDP Order Type Code System"/>
+  <status value="active"/>
+  <date value="2026-09-02T19:29:11+00:00"/>
+  <publisher value="National Marrow Donor Program (NMDP)"/>
+  <contact>
+    <name value="National Marrow Donor Program (NMDP)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nmdp.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@nmdp.org"/>
+    </telecom>
+  </contact>
+  <description value="Codes identifying the type of donor workup or collection order in the NMDP system."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <concept>
+    <code value="ct"/>
+    <display value="Confirmatory Typing"/>
+    <definition value="HLA confirmatory typing order to verify initial typing results."/>
+  </concept>
+  <concept>
+    <code value="idm"/>
+    <display value="Infectious Disease Markers"/>
+    <definition value="Infectious disease marker testing order for donor clearance."/>
+  </concept>
+  <concept>
+    <code value="collection"/>
+    <display value="Collection"/>
+    <definition value="Generic stem cell collection order."/>
+  </concept>
+  <concept>
+    <code value="pbsc"/>
+    <display value="Peripheral Blood Stem Cell"/>
+    <definition value="Peripheral blood stem cell collection via apheresis."/>
+  </concept>
+  <concept>
+    <code value="marrow"/>
+    <display value="Bone Marrow"/>
+    <definition value="Bone marrow harvest collection."/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "nmdp-center-type"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nmdp-center-type</b></p><a name=\"nmdp-center-type\"> </a><a name=\"hcnmdp-center-type\"> </a><p>This case-sensitive code system <code>http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">donor-center<a name=\"nmdp-center-type-donor-center\"> </a></td><td>Donor Center</td><td>A center that recruits and manages donors.</td></tr><tr><td style=\"white-space:nowrap\">transplant-center<a name=\"nmdp-center-type-transplant-center\"> </a></td><td>Transplant Center</td><td>A center that performs transplants.</td></tr><tr><td style=\"white-space:nowrap\">collection-center<a name=\"nmdp-center-type-collection-center\"> </a></td><td>Collection Center</td><td>A center that collects stem cells or marrow.</td></tr><tr><td style=\"white-space:nowrap\">apheresis-center<a name=\"nmdp-center-type-apheresis-center\"> </a></td><td>Apheresis Center</td><td>A center that performs apheresis procedures.</td></tr><tr><td style=\"white-space:nowrap\">cord-blood-bank<a name=\"nmdp-center-type-cord-blood-bank\"> </a></td><td>Cord Blood Bank</td><td>A facility that stores cord blood units.</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type"] ;
+  fhir:CodeSystem.version [ fhir:value "0.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "NMDPCenterTypeCS"] ;
+  fhir:CodeSystem.title [ fhir:value "NMDP Center Type"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-02T19:29:11+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "National Marrow Donor Program (NMDP)"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "National Marrow Donor Program (NMDP)" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.nmdp.org" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "fhir@nmdp.org" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Types of centers in the NMDP network."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "US" ] ;
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "5"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "donor-center" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Donor Center" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "A center that recruits and manages donors." ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "transplant-center" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Transplant Center" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "A center that performs transplants." ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "collection-center" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Collection Center" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "A center that collects stem cells or marrow." ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "apheresis-center" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Apheresis Center" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "A center that performs apheresis procedures." ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "cord-blood-bank" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cord Blood Bank" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "A facility that stores cord blood units." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

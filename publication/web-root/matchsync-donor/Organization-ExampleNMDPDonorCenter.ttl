@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/Organization/ExampleNMDPDonorCenter> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleNMDPDonorCenter"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ExampleNMDPDonorCenter</b></p><a name=\"ExampleNMDPDonorCenter\"> </a><a name=\"hcExampleNMDPDonorCenter\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-organization.html\">NMDP Organization</a></p></div><p><b>identifier</b>: <code>http://terminology.nmdp.org/codesystem/donor-center</code>/12345</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type donor-center}\">Donor Center</span></p><p><b>name</b>: Minneapolis Blood Center</p></div>"
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://terminology.nmdp.org/codesystem/donor-center" ] ;
+     fhir:Identifier.value [ fhir:value "12345" ]
+  ] ;
+  fhir:Organization.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Organization.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type" ] ;
+       fhir:Coding.code [ fhir:value "donor-center" ] ;
+       fhir:Coding.display [ fhir:value "Donor Center" ]
+     ]
+  ] ;
+  fhir:Organization.name [ fhir:value "Minneapolis Blood Center"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/Organization/ExampleNMDPDonorCenter.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

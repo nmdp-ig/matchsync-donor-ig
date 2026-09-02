@@ -1,22 +1,170 @@
-MatchSyncDonorIG : Validation Results
+NMDPDonorPatient : Validation Results
 =========================================
 
-err = 0, warn = 4, info = 3
+err = 15, warn = 55, info = 22
 $--
-Generated $--. FHIR version $-- for nmdp.fhir.matchsync.donor#$-- (canonical = http://fhir.nmdp.org/ig/matchsync-donor)
- Build Errors : 0 / 4 / 0
- /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ImplementationGuide-nmdp.fhir.matchsync.donor : 0 / 0 / 2
+Generated $--. FHIR version $-- for nmdp.fhir.donor-patient#$-- (canonical = http://fhir.nmdp.org/ig/donor-patient)
+ Build Errors : 1 / 4 / 0
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CapabilityStatement-NMDPDonorAPICapabilityStatement : 3 / 0 / 2
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-center-type : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-donor-status : 2 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-hla-gene-name : 2 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-order-type : 2 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-specimen-type : 2 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ImplementationGuide-nmdp.fhir.donor-patient : 4 / 2 / 2
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Observation-ExampleHLAGenotypeA : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Observation-ExampleHLAGenotypeB : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Observation-ExampleHLAGenotypeC : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Observation-ExampleHLAGenotypeDRB1 : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Organization-ExampleNMDPDonorCenter : 0 / 1 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleDeceasedDonor : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleDeferredDonor : 0 / 1 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleDonorNoGrid : 0 / 1 / 1
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleMatchSyncDonorPatient : 0 / 0 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleNMDPDonor : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ServiceRequest-ExampleDonorOrder : 0 / 1 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ServiceRequest-ExampleIDMOrder : 0 / 1 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Specimen-ExampleDonorSpecimen : 0 / 0 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-donor-status : 0 / 0 / 2
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-matchsync-donor-patient : 0 / 0 / 3
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-donor-order : 0 / 1 / 4
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-donor-patient : 0 / 0 / 4
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-donor-specimen : 0 / 3 / 2
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-hla-genotype : 0 / 3 / 6
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-idm-order : 0 / 1 / 3
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-organization : 0 / 0 / 4
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ValueSet-nmdp-center-type-vs : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ValueSet-nmdp-donor-status-vs : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ValueSet-nmdp-glstring-vs : 0 / 4 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ValueSet-nmdp-hla-gene-name-vs : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ValueSet-nmdp-order-type-vs : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ValueSet-nmdp-specimen-type-vs : 0 / 2 / 1
 </table>
 == n/a ==
+ERROR: capability-statement.html#/html/body/div/div/div/div/div/p/a at Line 180, column 9: The link 'CapabilityStatement-nmdp-donor-api.html' for "NMDP Donor API Capability Statement" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
-== fsh-generated/resources/ImplementationGuide-nmdp.fhir.matchsync.donor.json ==
-INFORMATION: Resource: The resource ImplementationGuide/nmdp.fhir.matchsync.donor could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/CapabilityStatement-NMDPDonorAPICapabilityStatement.json ==
+ERROR: CapabilityStatement.where(url = 'http://fhir.nmdp.org/ig/donor-patient/CapabilityStatement/nmdp-donor-api'): Conformance resource /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CapabilityStatement-NMDPDonorAPICapabilityStatement.json - the canonical URL (http://fhir.nmdp.org/ig/donor-patient/CapabilityStatement/NMDPDonorAPICapabilityStatement) does not match the URL (http://fhir.nmdp.org/ig/donor-patient/CapabilityStatement/nmdp-donor-api). Use the special-url parameter if you really mean for it not to match
+ERROR: CapabilityStatement.url: Resource id/url mismatch: NMDPDonorAPICapabilityStatement/http://fhir.nmdp.org/ig/donor-patient/CapabilityStatement/nmdp-donor-api
+INFORMATION: Resource: The resource CapabilityStatement/NMDPDonorAPICapabilityStatement could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+ERROR: /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CapabilityStatement-NMDPDonorAPICapabilityStatement: URL Mismatch http://fhir.nmdp.org/ig/donor-patient/CapabilityStatement/NMDPDonorAPICapabilityStatement vs http://fhir.nmdp.org/ig/donor-patient/CapabilityStatement/nmdp-donor-api
+== fsh-generated/resources/CodeSystem-nmdp-center-type.json ==
+WARNING: CodeSystem/nmdp-center-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: Resource: The resource CodeSystem/nmdp-center-type should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/CodeSystem-nmdp-donor-status.json ==
+ERROR: CodeSystem.where(url = 'http://terminology.nmdp.org/codesystem/donor-status'): Conformance resource /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-donor-status.json - the canonical URL (http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-donor-status) does not match the URL (http://terminology.nmdp.org/codesystem/donor-status). Use the special-url parameter if you really mean for it not to match
+WARNING: CodeSystem/nmdp-donor-status: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: Resource: The resource CodeSystem/nmdp-donor-status should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+ERROR: /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-donor-status: URL Mismatch http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-donor-status vs http://terminology.nmdp.org/codesystem/donor-status
+== fsh-generated/resources/CodeSystem-nmdp-hla-gene-name.json ==
+ERROR: CodeSystem.where(url = 'http://terminology.nmdp.org/codesystem/hla-gene-name'): Conformance resource /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-hla-gene-name.json - the canonical URL (http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-hla-gene-name) does not match the URL (http://terminology.nmdp.org/codesystem/hla-gene-name). Use the special-url parameter if you really mean for it not to match
+WARNING: CodeSystem/nmdp-hla-gene-name: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: Resource: The resource CodeSystem/nmdp-hla-gene-name should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+ERROR: /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-hla-gene-name: URL Mismatch http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-hla-gene-name vs http://terminology.nmdp.org/codesystem/hla-gene-name
+== fsh-generated/resources/CodeSystem-nmdp-order-type.json ==
+ERROR: CodeSystem.where(url = 'http://terminology.nmdp.org/codesystem/order-type'): Conformance resource /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-order-type.json - the canonical URL (http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-order-type) does not match the URL (http://terminology.nmdp.org/codesystem/order-type). Use the special-url parameter if you really mean for it not to match
+WARNING: CodeSystem/nmdp-order-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: Resource: The resource CodeSystem/nmdp-order-type should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+ERROR: /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-order-type: URL Mismatch http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-order-type vs http://terminology.nmdp.org/codesystem/order-type
+== fsh-generated/resources/CodeSystem-nmdp-specimen-type.json ==
+ERROR: CodeSystem.where(url = 'http://terminology.nmdp.org/codesystem/specimen-type'): Conformance resource /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-specimen-type.json - the canonical URL (http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-specimen-type) does not match the URL (http://terminology.nmdp.org/codesystem/specimen-type). Use the special-url parameter if you really mean for it not to match
+WARNING: CodeSystem/nmdp-specimen-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: Resource: The resource CodeSystem/nmdp-specimen-type should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+ERROR: /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-specimen-type: URL Mismatch http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-specimen-type vs http://terminology.nmdp.org/codesystem/specimen-type
+== fsh-generated/resources/ImplementationGuide-nmdp.fhir.donor-patient.json ==
+WARNING: /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ImplementationGuide-nmdp.fhir.donor-patient: Unknown Parameters: [show-hierarchies=true]
+ERROR: ImplementationGuide/nmdp.fhir.donor-patient: ImplementationGuide.definition.extension[2].extension[0].value.ofType(string): The System URI could not be determined for the code 'show-hierarchies' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2'
+ERROR: ImplementationGuide/nmdp.fhir.donor-patient: ImplementationGuide.definition.extension[2].extension[0].value.ofType(string): The value provided ('show-hierarchies') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2), and a code is required from this value set  (error message = The System URI could not be determined for the code 'show-hierarchies' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2'; The provided code '#show-hierarchies' was not found in the value set 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2')
+ERROR: ImplementationGuide/nmdp.fhir.donor-patient: ImplementationGuide.definition.extension[30].extension[0].value.ofType(code): The System URI could not be determined for the code 'show-hierarchies' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2'
+ERROR: ImplementationGuide/nmdp.fhir.donor-patient: ImplementationGuide.definition.extension[30].extension[0].value.ofType(code): The value provided ('show-hierarchies') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2), and a code is required from this value set  (error message = The System URI could not be determined for the code 'show-hierarchies' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2'; The provided code '#show-hierarchies' was not found in the value set 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2')
+WARNING: ImplementationGuide/nmdp.fhir.donor-patient: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 9.0.0. This reference is getting old and the more recent version should be considered
+INFORMATION: Resource: The resource ImplementationGuide/nmdp.fhir.donor-patient could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/Observation-ExampleHLAGenotypeA.json ==
+WARNING: Observation/ExampleHLAGenotypeA: Observation.value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://glstring.org' could not be found, so the code cannot be validated
+WARNING: Observation/ExampleHLAGenotypeA: Observation: Best Practice Recommendation: In general, all observations should have a performer
+== fsh-generated/resources/Observation-ExampleHLAGenotypeB.json ==
+WARNING: Observation/ExampleHLAGenotypeB: Observation.value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'http://glstring.org' could not be found, so the code cannot be validated
+WARNING: Observation/ExampleHLAGenotypeB: Observation: Best Practice Recommendation: In general, all observations should have a performer
+== fsh-generated/resources/Observation-ExampleHLAGenotypeC.json ==
+WARNING: Observation/ExampleHLAGenotypeC: Observation.value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'http://glstring.org' could not be found, so the code cannot be validated
+WARNING: Observation/ExampleHLAGenotypeC: Observation: Best Practice Recommendation: In general, all observations should have a performer
+== fsh-generated/resources/Observation-ExampleHLAGenotypeDRB1.json ==
+WARNING: Observation/ExampleHLAGenotypeDRB1: Observation.value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'http://glstring.org' could not be found, so the code cannot be validated
+WARNING: Observation/ExampleHLAGenotypeDRB1: Observation: Best Practice Recommendation: In general, all observations should have a performer
+== fsh-generated/resources/Organization-ExampleNMDPDonorCenter.json ==
+WARNING: Organization/ExampleNMDPDonorCenter: Organization.identifier[0].system: No definition could be found for URL value 'http://terminology.nmdp.org/codesystem/donor-center'
+== fsh-generated/resources/Patient-ExampleDeceasedDonor.json ==
+WARNING: Patient/ExampleDeceasedDonor: Patient.identifier[0].system: No definition could be found for URL value 'http://terminology.nmdp.org/identifier/donor'
+WARNING: Patient/ExampleDeceasedDonor: Patient.identifier[1].system: No definition could be found for URL value 'http://www.isbt128.org/uri/GRID'
+== fsh-generated/resources/Patient-ExampleDeferredDonor.json ==
+WARNING: Patient/ExampleDeferredDonor: Patient.identifier[0].system: No definition could be found for URL value 'http://terminology.nmdp.org/identifier/donor'
+== fsh-generated/resources/Patient-ExampleDonorNoGrid.json ==
+WARNING: Patient/ExampleDonorNoGrid: Patient.identifier[0].system: No definition could be found for URL value 'http://terminology.nmdp.org/identifier/donor'
 == fsh-generated/resources/Patient-ExampleMatchSyncDonorPatient.json ==
+== fsh-generated/resources/Patient-ExampleNMDPDonor.json ==
+WARNING: Patient/ExampleNMDPDonor: Patient.identifier[0].system: No definition could be found for URL value 'http://terminology.nmdp.org/identifier/donor'
+WARNING: Patient/ExampleNMDPDonor: Patient.identifier[1].system: No definition could be found for URL value 'http://www.isbt128.org/uri/GRID'
+== fsh-generated/resources/ServiceRequest-ExampleDonorOrder.json ==
+WARNING: ServiceRequest/ExampleDonorOrder: ServiceRequest.identifier[0].system: No definition could be found for URL value 'http://terminology.nmdp.org/identifier/order'
+== fsh-generated/resources/ServiceRequest-ExampleIDMOrder.json ==
+WARNING: ServiceRequest/ExampleIDMOrder: ServiceRequest.identifier[0].system: No definition could be found for URL value 'http://terminology.nmdp.org/identifier/order'
+== fsh-generated/resources/Specimen-ExampleDonorSpecimen.json ==
+== fsh-generated/resources/StructureDefinition-donor-status.json ==
+INFORMATION: Resource: The resource StructureDefinition/donor-status could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-matchsync-donor-patient.json ==
 INFORMATION: StructureDefinition/matchsync-donor-patient: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
 INFORMATION: Resource: The resource StructureDefinition/matchsync-donor-patient could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-nmdp-donor-order.json ==
+WARNING: StructureDefinition/nmdp-donor-order: StructureDefinition.snapshot.element[40].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.3.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType' to 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|3.0.0'
+INFORMATION: StructureDefinition/nmdp-donor-order: StructureDefinition.differential.element[1].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/nmdp-donor-order: StructureDefinition.snapshot.element[9].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: Resource: The resource StructureDefinition/nmdp-donor-order could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-nmdp-donor-patient.json ==
+INFORMATION: StructureDefinition/nmdp-donor-patient: StructureDefinition.differential.element[4].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/nmdp-donor-patient: StructureDefinition.snapshot.element[16].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: Resource: The resource StructureDefinition/nmdp-donor-patient could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-nmdp-donor-specimen.json ==
+WARNING: StructureDefinition/nmdp-donor-specimen: StructureDefinition.snapshot.element[28].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v2-0916'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.3.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v2-0916' to 'http://terminology.hl7.org/ValueSet/v2-0916|3.0.0'
+WARNING: StructureDefinition/nmdp-donor-specimen: StructureDefinition.snapshot.element[46].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v2-0371'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.3.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v2-0371' to 'http://terminology.hl7.org/ValueSet/v2-0371|3.0.0'
+WARNING: StructureDefinition/nmdp-donor-specimen: StructureDefinition.snapshot.element[47].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v2-0493'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.3.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v2-0493' to 'http://terminology.hl7.org/ValueSet/v2-0493|3.0.0'
+INFORMATION: Resource: The resource StructureDefinition/nmdp-donor-specimen could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-nmdp-hla-genotype.json ==
+WARNING: StructureDefinition/nmdp-hla-genotype: StructureDefinition.snapshot.element[22].definition: The markdown contains content that appears to be an embedded HTML tag starting at '<G'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
+WARNING: StructureDefinition/nmdp-hla-genotype: StructureDefinition.differential.element[8].definition: The markdown contains content that appears to be an embedded HTML tag starting at '<G'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
+INFORMATION: StructureDefinition/nmdp-hla-genotype: StructureDefinition.differential.element[2].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/nmdp-hla-genotype: StructureDefinition.differential.element[10].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/nmdp-hla-genotype: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/nmdp-hla-genotype: StructureDefinition.snapshot.element[42].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+WARNING: StructureDefinition/nmdp-hla-genotype: StructureDefinition.snapshot: The slice 'laboratory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+INFORMATION: Resource: The resource StructureDefinition/nmdp-hla-genotype could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-nmdp-idm-order.json ==
+WARNING: StructureDefinition/nmdp-idm-order: StructureDefinition.snapshot.element[40].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.3.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType' to 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|3.0.0'
+INFORMATION: StructureDefinition/nmdp-idm-order: StructureDefinition.snapshot.element[9].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: Resource: The resource StructureDefinition/nmdp-idm-order could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-nmdp-organization.json ==
+INFORMATION: StructureDefinition/nmdp-organization: StructureDefinition.differential.element[1].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/nmdp-organization: StructureDefinition.snapshot.element[9].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: Resource: The resource StructureDefinition/nmdp-organization could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-nmdp-center-type-vs.json ==
+WARNING: ValueSet/nmdp-center-type-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+WARNING: Resource: The resource ValueSet/nmdp-center-type-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-nmdp-donor-status-vs.json ==
+WARNING: ValueSet/nmdp-donor-status-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+WARNING: Resource: The resource ValueSet/nmdp-donor-status-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-nmdp-glstring-vs.json ==
+WARNING: ValueSet/nmdp-glstring-vs: ValueSet.compose.include[0].system: No definition could be found for URL value 'http://glstring.org'
+WARNING: ValueSet/nmdp-glstring-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+WARNING: Resource: The resource ValueSet/nmdp-glstring-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+WARNING: ValueSet.where(id = 'nmdp-glstring-vs'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://glstring.org' could not be found, so the value set cannot be expanded
+== fsh-generated/resources/ValueSet-nmdp-hla-gene-name-vs.json ==
+WARNING: ValueSet/nmdp-hla-gene-name-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+WARNING: Resource: The resource ValueSet/nmdp-hla-gene-name-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-nmdp-order-type-vs.json ==
+WARNING: ValueSet/nmdp-order-type-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+WARNING: Resource: The resource ValueSet/nmdp-order-type-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-nmdp-specimen-type-vs.json ==
+WARNING: ValueSet/nmdp-specimen-type-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+WARNING: Resource: The resource ValueSet/nmdp-specimen-type-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)

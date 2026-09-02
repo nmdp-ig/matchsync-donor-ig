@@ -1,4 +1,4 @@
-# Example MatchSync Donor Patient - MatchSync Donor Implementation Guide v0.1.0
+# Example MatchSync Donor Patient - NMDP Donor Patient Implementation Guide v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -25,7 +25,7 @@ John Smith (no stated gender), DoB Unknown
   "resourceType" : "Patient",
   "id" : "ExampleMatchSyncDonorPatient",
   "meta" : {
-    "profile" : ["http://fhir.nmdp.org/ig/matchsync-donor/StructureDefinition/matchsync-donor-patient"]
+    "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/matchsync-donor-patient"]
   },
   "active" : true,
   "name" : [{

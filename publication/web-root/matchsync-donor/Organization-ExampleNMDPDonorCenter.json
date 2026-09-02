@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Organization",
+  "id" : "ExampleNMDPDonorCenter",
+  "meta" : {
+    "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ExampleNMDPDonorCenter</b></p><a name=\"ExampleNMDPDonorCenter\"> </a><a name=\"hcExampleNMDPDonorCenter\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-organization.html\">NMDP Organization</a></p></div><p><b>identifier</b>: <code>http://terminology.nmdp.org/codesystem/donor-center</code>/12345</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type donor-center}\">Donor Center</span></p><p><b>name</b>: Minneapolis Blood Center</p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://terminology.nmdp.org/codesystem/donor-center",
+    "value" : "12345"
+  }],
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type",
+      "code" : "donor-center",
+      "display" : "Donor Center"
+    }]
+  }],
+  "name" : "Minneapolis Blood Center"
+}

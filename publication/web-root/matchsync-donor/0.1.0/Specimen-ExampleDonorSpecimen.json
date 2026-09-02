@@ -1,0 +1,28 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "ExampleDonorSpecimen",
+  "meta" : {
+    "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-specimen"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen ExampleDonorSpecimen</b></p><a name=\"ExampleDonorSpecimen\"> </a><a name=\"hcExampleDonorSpecimen\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-specimen.html\">NMDP Donor Specimen</a></p></div><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://terminology.nmdp.org/codesystem/specimen-type blood-edta}\">Blood (EDTA)</span></p><p><b>subject</b>: <a href=\"Patient-ExampleNMDPDonor.html\">Marcus James Reynolds  Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)</a></p><p><b>request</b>: <a href=\"ServiceRequest-ExampleDonorOrder.html\">ServiceRequest Confirmatory Typing</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2026-07-16 09:30:00+0000</td></tr></table></div>"
+  },
+  "status" : "available",
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.nmdp.org/codesystem/specimen-type",
+      "code" : "blood-edta",
+      "display" : "Blood (EDTA)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleNMDPDonor"
+  },
+  "request" : [{
+    "reference" : "ServiceRequest/ExampleDonorOrder"
+  }],
+  "collection" : {
+    "collectedDateTime" : "2026-07-16T09:30:00Z"
+  }
+}
