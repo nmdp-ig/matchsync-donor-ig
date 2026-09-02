@@ -1,0 +1,14 @@
+[{
+  "id" : "nmdp.fhir.matchsync.donor",
+  "type" : "ImplementationGuide",
+  "url" : "http://fhir.nmdp.org/ig/matchsync-donor/ImplementationGuide/nmdp.fhir.matchsync.donor",
+  "version" : "0.1.0",
+  "name" : "MatchSyncDonorIG"
+},
+{
+  "id" : "matchsync-donor-patient",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.nmdp.org/ig/matchsync-donor/StructureDefinition/matchsync-donor-patient",
+  "version" : "0.1.0",
+  "name" : "MatchSyncDonorPatient"
+}]

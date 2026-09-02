@@ -1,0 +1,16 @@
+{
+  "list": [
+    {
+      "version": "current",
+      "path": "https://nmdp-ig.github.io/matchsync-donor-ig",
+      "status": "ci-build",
+      "sequence": "ci-build",
+      "desc": "Continuous Integration Build (latest in version control) - Content subject to frequent changes"
+    }
+  ],
+  "package-id": "nmdp.fhir.matchsync.donor",
+  "canonical": "http://fhir.nmdp.org/ig/matchsync-donor",
+  "title": "MatchSync Donor Implementation Guide",
+  "category": "Research",
+  "introduction": "A starter FHIR Implementation Guide for MatchSync donor data."
+}

@@ -1,0 +1,22 @@
+MatchSyncDonorIG : Validation Results
+=========================================
+
+err = 0, warn = 4, info = 3
+IG Publisher Version: 2.3.3
+Generated Wed Sep 02 17:07:21 UTC 2026. FHIR version 4.0.1 for nmdp.fhir.matchsync.donor#0.1.0 (canonical = http://fhir.nmdp.org/ig/matchsync-donor)
+ Build Errors : 0 / 4 / 0
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ImplementationGuide-nmdp.fhir.matchsync.donor : 0 / 0 / 2
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleMatchSyncDonorPatient : 0 / 0 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-matchsync-donor-patient : 0 / 0 / 3
+</table>
+== n/a ==
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-nmdp.fhir.matchsync.donor.json ==
+INFORMATION: Resource: The resource ImplementationGuide/nmdp.fhir.matchsync.donor could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/Patient-ExampleMatchSyncDonorPatient.json ==
+== fsh-generated/resources/StructureDefinition-matchsync-donor-patient.json ==
+INFORMATION: StructureDefinition/matchsync-donor-patient: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
+INFORMATION: Resource: The resource StructureDefinition/matchsync-donor-patient could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
