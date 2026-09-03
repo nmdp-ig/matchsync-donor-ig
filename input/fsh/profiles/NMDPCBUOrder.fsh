@@ -1,8 +1,8 @@
-Profile: NMDPDonorOrder
+Profile: NMDPCBUOrder
 Parent: ServiceRequest
-Id: nmdp-donor-order
-Title: "NMDP Donor Order"
-Description: "A profile representing a donor workup order in the NMDP system. For donors, the ordered item is always confirmatory typing. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the donor Patient."
+Id: nmdp-cbu-order
+Title: "NMDP CBU Order"
+Description: "A profile representing a Cord Blood Unit (CBU) workup order in the NMDP system. CBU orders can include high resolution typing for individual loci or a full panel. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the CBU Patient."
 
 * identifier 1..* MS
 * identifier ^slicing.discriminator.type = #pattern
@@ -22,21 +22,21 @@ Description: "A profile representing a donor workup order in the NMDP system. Fo
 
 * code 1..1 MS
 * code from NMDPOrderTypeVS (extensible)
-* code ^short = "Type of order (e.g., confirmatory-typing)"
-* code ^definition = "The type of donor order. For donor orders this is always confirmatory typing (code: confirmatory-typing)."
+* code ^short = "Type of CBU order (A-HR, B-HR, C-HR, ABC-DRB1-DQB1-DPB1-HR)"
+* code ^definition = "The type of CBU order. Can include individual locus high resolution typing or a full panel. Multiple codes may be present in a single ServiceRequest."
 
 * subject 1..1 MS
 * subject only Reference(Patient)
 * subject ^short = "The recipient Patient this order is for"
-* subject ^definition = "The recipient Patient (identified by RID) that this donor order is associated with."
+* subject ^definition = "The recipient Patient (identified by RID) that this CBU order is associated with."
 
 * performer 0..* MS
 * performer only Reference(Patient)
-* performer ^short = "The donor Patient performing this order"
-* performer ^definition = "The donor Patient (identified by GRID) who will undergo the ordered procedure."
+* performer ^short = "The CBU Patient performing this order"
+* performer ^definition = "The CBU Patient (identified by cbu-source-id) that will undergo the ordered procedure."
 
 * authoredOn 1..1 MS
 * authoredOn ^short = "Order submitted date"
 
 * occurrenceDateTime 0..1 MS
-* occurrenceDateTime ^short = "Appointment date (CT draw appointment)"
+* occurrenceDateTime ^short = "CT sample ship date"

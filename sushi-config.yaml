@@ -31,6 +31,8 @@ pages:
     title: Capability Statement
   order-workflow.md:
     title: Order Workflow
+  connecting-to-the-donor-api.md:
+    title: Connecting to the Donor API
   security-and-privacy.md:
     title: Security and Privacy
   related-specifications.md:
@@ -44,6 +46,7 @@ menu:
   Identifiers: identifiers.html
   Capability Statement: capability-statement.html
   Order Workflow: order-workflow.html
+  Connecting to the Donor API: connecting-to-the-donor-api.html
   Security and Privacy: security-and-privacy.html
   Related Specifications: related-specifications.html
   Examples: examples.html

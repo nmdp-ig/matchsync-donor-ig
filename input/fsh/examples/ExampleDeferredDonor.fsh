@@ -2,16 +2,17 @@ Instance: ExampleDeferredDonor
 InstanceOf: NMDPDonorPatient
 Usage: #example
 Title: "Example Deferred Donor"
-Description: "A donor who is temporarily unavailable (e.g., post-collection with a future available date)."
-* identifier[nmdpDonorId].system = $nmdp-donor
-* identifier[nmdpDonorId].value = "7654321"
+Description: "A donor who is temporarily unavailable (e.g., post-collection)."
+* identifier[grid].system = $nmdp-id-grid
+* identifier[grid].value = "A1B2C3D4E5F60718293A4B5C6D7E8F90"
+* identifier[sourceId].system = $nmdp-id-source-id
+* identifier[sourceId].value = "SRC-76543"
 * name[0].family = "Chen"
 * name[0].given[0] = "Lisa"
 * gender = #female
 * birthDate = "1992-08-22"
-* extension[donorStatus].extension[status].valueCode = #temporarily-unavailable
-* extension[donorStatus].extension[availableDate].valueDate = "2027-03-15"
-* extension[race].extension[ombCategory].valueCoding = urn:oid:2.16.840.1.113883.6.238#2028-9 "Asian"
+* extension[donorStatus].valueString = "Temporarily Unavailable"
+* extension[race].extension[ombCategory].valueCoding = $cdc-race-ethnicity#2028-9 "Asian"
 * extension[race].extension[text].valueString = "Asian"
-* extension[ethnicity].extension[ombCategory].valueCoding = urn:oid:2.16.840.1.113883.6.238#2135-2 "Hispanic or Latino"
+* extension[ethnicity].extension[ombCategory].valueCoding = $cdc-race-ethnicity#2135-2 "Hispanic or Latino"
 * extension[ethnicity].extension[text].valueString = "Hispanic or Latino"
