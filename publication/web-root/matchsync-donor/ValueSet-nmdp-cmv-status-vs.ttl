@@ -17,7 +17,7 @@
   fhir:ValueSet.name [ fhir:value "NMDPCMVStatusVS"] ;
   fhir:ValueSet.title [ fhir:value "NMDP CMV Status Value Set"] ;
   fhir:ValueSet.status [ fhir:value "active"] ;
-  fhir:ValueSet.date [ fhir:value "2026-09-03T14:51:12+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-03T16:43:13+00:00"^^xsd:dateTime] ;
   fhir:ValueSet.publisher [ fhir:value "National Marrow Donor Program (NMDP)"] ;
   fhir:ValueSet.contact [
      fhir:index 0 ;

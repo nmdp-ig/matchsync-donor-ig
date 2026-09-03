@@ -50,7 +50,7 @@ LOINC codes for HLA locus-specific high resolution typing observations used in N
   "name" : "NMDPHLALocusLOINCVS",
   "title" : "NMDP HLA Locus LOINC Value Set",
   "status" : "active",
-  "date" : "2026-09-03T14:51:12+00:00",
+  "date" : "2026-09-03T16:43:13+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

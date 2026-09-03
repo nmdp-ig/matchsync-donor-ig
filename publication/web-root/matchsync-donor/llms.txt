@@ -3,15 +3,15 @@
 ## Pages
 
 * [Home](index.md)
+* [Security and Privacy](security-and-privacy.md)
 * [Examples](examples.md)
-* [Order Workflow](order-workflow.md)
-* [Capability Statement](capability-statement.md)
-* [Identifiers](identifiers.md)
+* [Related Specifications](related-specifications.md)
 * [Artifacts Summary](artifacts.md)
 * [Conventions](conventions.md)
 * [Connecting to the Donor API](connecting-to-the-donor-api.md)
-* [Security and Privacy](security-and-privacy.md)
-* [Related Specifications](related-specifications.md)
+* [Capability Statement](capability-statement.md)
+* [Identifiers](identifiers.md)
+* [Order Workflow](order-workflow.md)
 
 ## Resources
 
