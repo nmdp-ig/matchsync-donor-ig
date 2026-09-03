@@ -8,7 +8,7 @@
 
 Profile: [NMDP IDM Order](StructureDefinition-nmdp-idm-order.md)
 
-**identifier**: `http://terminology.nmdp.org/identifier/order`/ORD-2026-005678
+**identifier**: `http://nmdp.org/identifier/matchsource-order`/MS-ORD-2026-55678
 
 **status**: Active
 
@@ -16,13 +16,11 @@ Profile: [NMDP IDM Order](StructureDefinition-nmdp-idm-order.md)
 
 **code**: Infectious Disease Markers
 
-**subject**: [Marcus James Reynolds Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)](Patient-ExampleNMDPDonor.md)
+**subject**: [Maria Garcia Female, DoB: 1975-06-20 ( http://nmdp.org/identifier/rid#RID-9988776)](Patient-ExampleRecipientPatient.md)
 
 **authoredOn**: 2026-07-20
 
-**requester**: [Organization Minneapolis Blood Center](Organization-ExampleNMDPDonorCenter.md)
-
-**performer**: [Organization Minneapolis Blood Center](Organization-ExampleNMDPDonorCenter.md)
+**performer**: [Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)](Patient-ExampleNMDPDonor.md)
 
 
 
@@ -36,27 +34,24 @@ Profile: [NMDP IDM Order](StructureDefinition-nmdp-idm-order.md)
     "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-idm-order"]
   },
   "identifier" : [{
-    "system" : "http://terminology.nmdp.org/identifier/order",
-    "value" : "ORD-2026-005678"
+    "system" : "http://nmdp.org/identifier/matchsource-order",
+    "value" : "MS-ORD-2026-55678"
   }],
   "status" : "active",
   "intent" : "order",
   "code" : {
     "coding" : [{
-      "system" : "http://terminology.nmdp.org/codesystem/order-type",
+      "system" : "http://fhir.nmdp.org/CodeSystem/order-type",
       "code" : "idm",
       "display" : "Infectious Disease Markers"
     }]
   },
   "subject" : {
-    "reference" : "Patient/ExampleNMDPDonor"
+    "reference" : "Patient/ExampleRecipientPatient"
   },
   "authoredOn" : "2026-07-20",
-  "requester" : {
-    "reference" : "Organization/ExampleNMDPDonorCenter"
-  },
   "performer" : [{
-    "reference" : "Organization/ExampleNMDPDonorCenter"
+    "reference" : "Patient/ExampleNMDPDonor"
   }]
 }
 

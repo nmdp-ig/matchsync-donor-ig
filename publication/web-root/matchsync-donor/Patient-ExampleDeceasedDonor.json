@@ -6,28 +6,24 @@
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleDeceasedDonor</b></p><a name=\"ExampleDeceasedDonor\"> </a><a name=\"hcExampleDeceasedDonor\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-patient.html\">NMDP Donor Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Erik Johansson  Male, DoB: 1970-04-10 ( http://terminology.nmdp.org/identifier/donor#5551234)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">2025-06-15</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://www.isbt128.org/uri/GRID</code>/BBBB2222222</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.\">Donor Status:</td><td colspan=\"3\"><ul><li>status: permanently-unavailable</li></ul></td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleDeceasedDonor</b></p><a name=\"ExampleDeceasedDonor\"> </a><a name=\"hcExampleDeceasedDonor\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-patient.html\">NMDP Donor Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Erik Johansson  Male, DoB: 1970-04-10 ( http://nmdp.org/identifier/grid#3F7A1C9E5B2D8046AF13CE79B0D4E2A1)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://nmdp.org/identifier/source-id</code>/SRC-55123</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').\"><a href=\"StructureDefinition-donor-status.html\">Donor Status</a></td><td colspan=\"3\">Permanently Unavailable</td></tr></table></div>"
   },
   "extension" : [{
-    "extension" : [{
-      "url" : "status",
-      "valueCode" : "permanently-unavailable"
-    }],
-    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status"
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status",
+    "valueString" : "Permanently Unavailable"
   }],
   "identifier" : [{
-    "system" : "http://terminology.nmdp.org/identifier/donor",
-    "value" : "5551234"
+    "system" : "http://nmdp.org/identifier/grid",
+    "value" : "3F7A1C9E5B2D8046AF13CE79B0D4E2A1"
   },
   {
-    "system" : "http://www.isbt128.org/uri/GRID",
-    "value" : "BBBB2222222"
+    "system" : "http://nmdp.org/identifier/source-id",
+    "value" : "SRC-55123"
   }],
   "name" : [{
     "family" : "Johansson",
     "given" : ["Erik"]
   }],
   "gender" : "male",
-  "birthDate" : "1970-04-10",
-  "deceasedDateTime" : "2025-06-15"
+  "birthDate" : "1970-04-10"
 }

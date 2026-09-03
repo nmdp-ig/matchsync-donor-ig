@@ -1,7 +1,10 @@
 URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-abo-rh-type-vs,0.1.0,active,,NMDPABORhTypeVS,ABO/Rh Blood Type Value Set,"LOINC Answer List LL2972-9 codes for ABO and Rh blood group types.",,"LOINC"
 http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-center-type-vs,0.1.0,draft,,NMDPCenterTypeVS,NMDP Center Type ValueSet,"All center types in the NMDP network.",,"Internal"
+http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-cmv-status-vs,0.1.0,active,,NMDPCMVStatusVS,NMDP CMV Status Value Set,"Allowable text-based values for CMV IgG antibody presence status used in NMDP donor and CBU payloads.",,"Internal"
 http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs,0.1.0,draft,,NMDPDonorStatusVS,NMDP Donor Status ValueSet,"All registry status codes for NMDP registered donors. Maps to ODS enterprise donor status values (AV, TU, AC, DE).",,"Internal"
 http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-glstring-vs,0.1.0,active,,NMDPGLStringVS,GL String Code Value Set,"Genotype List String Codes from glstring.org. Codes represent HLA genotypes in GL String format (e.g., hla#3.25.0#HLA-A*01:01:01:01+HLA-A*01:02).",,"Other"
 http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-gene-name-vs,0.1.0,active,,NMDPHLAGeneNameVS,NMDP HLA Gene Name Value Set,"HLA gene names (HGNC IDs) for loci typed in NMDP donor operations.",,"Internal"
+http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-locus-loinc-vs,0.1.0,active,,NMDPHLALocusLOINCVS,NMDP HLA Locus LOINC Value Set,"LOINC codes for HLA locus-specific high resolution typing observations used in NMDP donor and CBU payloads.",,"LOINC"
 http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-order-type-vs,0.1.0,active,,NMDPOrderTypeVS,NMDP Order Type Value Set,"All codes from the NMDP Order Type code system.",,"Internal"
 http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-specimen-type-vs,0.1.0,active,,NMDPSpecimenTypeVS,NMDP Specimen Type Value Set,"All specimen type codes for donor testing samples in the NMDP system.",,"Internal"

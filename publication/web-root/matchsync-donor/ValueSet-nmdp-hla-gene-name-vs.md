@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-gene-name-vs | *Version*:0.1.0 |
-| Active as of 2026-09-02 | *Computable Name*:NMDPHLAGeneNameVS |
+| Active as of 2026-09-03 | *Computable Name*:NMDPHLAGeneNameVS |
 
  
 HLA gene names (HGNC IDs) for loci typed in NMDP donor operations. 
 
  **References** 
 
-* [NMDP HLA Genotype Observation](StructureDefinition-nmdp-hla-genotype.md)
+This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
 
 ### Logical Definition (CLD)
 
@@ -50,7 +50,7 @@ HLA gene names (HGNC IDs) for loci typed in NMDP donor operations.
   "name" : "NMDPHLAGeneNameVS",
   "title" : "NMDP HLA Gene Name Value Set",
   "status" : "active",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

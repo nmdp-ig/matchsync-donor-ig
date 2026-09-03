@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient | *Version*:0.1.0 |
-| Draft as of 2026-09-02 | *Computable Name*:NMDPDonorPatient |
+| Draft as of 2026-09-03 | *Computable Name*:NMDPDonorPatient |
 
  
-A profile representing a hematopoietic cell donor registered in the NMDP registry. 
+A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value. 
 
 **Usages:**
 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-patient.c
   "name" : "NMDPDonorPatient",
   "title" : "NMDP Donor Patient",
   "status" : "draft",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -56,7 +56,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-patient.c
       "value" : "fhir@nmdp.org"
     }]
   }],
-  "description" : "A profile representing a hematopoietic cell donor registered in the NMDP registry.",
+  "description" : "A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -101,22 +101,11 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-patient.c
       "path" : "Patient"
     },
     {
-      "id" : "Patient.extension:race",
-      "path" : "Patient.extension",
-      "sliceName" : "race",
-      "short" : "US Core Race"
-    },
-    {
-      "id" : "Patient.extension:ethnicity",
-      "path" : "Patient.extension",
-      "sliceName" : "ethnicity",
-      "short" : "US Core Ethnicity"
-    },
-    {
       "id" : "Patient.extension:donorStatus",
       "path" : "Patient.extension",
       "sliceName" : "donorStatus",
       "short" : "Donor registry status",
+      "definition" : "The current registration status of the donor (e.g., Available, Temporarily Unavailable, Active, Permanently Unavailable).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -137,34 +126,34 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-patient.c
       }
     },
     {
-      "id" : "Patient.identifier:nmdpDonorId",
-      "path" : "Patient.identifier",
-      "sliceName" : "nmdpDonorId",
-      "short" : "NMDP Donor ID",
-      "definition" : "The unique identifier assigned to a donor by the National Marrow Donor Program.",
-      "min" : 1,
-      "max" : "1",
-      "mustSupport" : true
-    },
-    {
-      "id" : "Patient.identifier:nmdpDonorId.system",
-      "path" : "Patient.identifier.system",
-      "patternUri" : "http://terminology.nmdp.org/identifier/donor"
-    },
-    {
       "id" : "Patient.identifier:grid",
       "path" : "Patient.identifier",
       "sliceName" : "grid",
-      "short" : "Global Registration Identifier for Donors (GRID)",
-      "definition" : "The ISBT 128 Global Registration Identifier for Donors.",
-      "min" : 0,
+      "short" : "NMDP GRID (Global Registration Identifier for Donors)",
+      "definition" : "The NMDP GRID identifier that uniquely identifies a donor. A 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. 99D0BA02660443B585D525525EB3F2D2. System: http://nmdp.org/identifier/grid",
+      "min" : 1,
       "max" : "1",
       "mustSupport" : true
     },
     {
       "id" : "Patient.identifier:grid.system",
       "path" : "Patient.identifier.system",
-      "patternUri" : "http://www.isbt128.org/uri/GRID"
+      "patternUri" : "http://nmdp.org/identifier/grid"
+    },
+    {
+      "id" : "Patient.identifier:sourceId",
+      "path" : "Patient.identifier",
+      "sliceName" : "sourceId",
+      "short" : "Donor source ID",
+      "definition" : "The source identifier for the donor in the originating registry. System: http://nmdp.org/identifier/source-id",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Patient.identifier:sourceId.system",
+      "path" : "Patient.identifier.system",
+      "patternUri" : "http://nmdp.org/identifier/source-id"
     },
     {
       "id" : "Patient.birthDate",
@@ -172,22 +161,10 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-patient.c
       "min" : 1
     },
     {
-      "id" : "Patient.deceased[x]",
-      "path" : "Patient.deceased[x]",
-      "short" : "Indicates if the donor is deceased",
-      "definition" : "Indicates if the donor is deceased, either as a boolean flag or a dateTime of death.",
-      "mustSupport" : true
-    },
-    {
-      "id" : "Patient.communication",
-      "path" : "Patient.communication",
-      "mustSupport" : true
-    },
-    {
       "id" : "Patient.managingOrganization",
       "path" : "Patient.managingOrganization",
-      "short" : "Donor center managing this donor",
-      "definition" : "The NMDP-affiliated organization (typically a donor center) that manages this donor's registration.",
+      "short" : "Donor center (ION/DC ID)",
+      "definition" : "The NMDP donor center (identified by ION/DC ID) responsible for this donor.",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization"]

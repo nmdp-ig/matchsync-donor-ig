@@ -10,14 +10,14 @@
   fhir:Resource.id [ fhir:value "nmdp-order-type-vs"] ;
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ] ;
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet nmdp-order-type-vs</b></p><a name=\"nmdp-order-type-vs\"> </a><a name=\"hcnmdp-order-type-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-nmdp-order-type.html\"><code>http://terminology.nmdp.org/codesystem/order-type</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet nmdp-order-type-vs</b></p><a name=\"nmdp-order-type-vs\"> </a><a name=\"hcnmdp-order-type-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-nmdp-order-type.html\"><code>http://fhir.nmdp.org/CodeSystem/order-type</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span></li></ul></div>"
   ] ;
   fhir:ValueSet.url [ fhir:value "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-order-type-vs"] ;
   fhir:ValueSet.version [ fhir:value "0.1.0"] ;
   fhir:ValueSet.name [ fhir:value "NMDPOrderTypeVS"] ;
   fhir:ValueSet.title [ fhir:value "NMDP Order Type Value Set"] ;
   fhir:ValueSet.status [ fhir:value "active"] ;
-  fhir:ValueSet.date [ fhir:value "2026-09-02T19:29:11+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-03T14:51:12+00:00"^^xsd:dateTime] ;
   fhir:ValueSet.publisher [ fhir:value "National Marrow Donor Program (NMDP)"] ;
   fhir:ValueSet.contact [
      fhir:index 0 ;
@@ -45,7 +45,7 @@
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0 ;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://terminology.nmdp.org/codesystem/order-type" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "http://fhir.nmdp.org/CodeSystem/order-type" ]
      ]
   ] .
 

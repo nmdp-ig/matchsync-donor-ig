@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order | *Version*:0.1.0 |
-| Draft as of 2026-09-02 | *Computable Name*:NMDPDonorOrder |
+| Draft as of 2026-09-03 | *Computable Name*:NMDPDonorOrder |
 
  
-A profile representing a donor workup or collection order in the NMDP system. Orders include confirmatory typing (CT), infectious disease markers (IDM), and stem cell collection. 
+A profile representing a donor workup order in the NMDP system. For donors, the ordered item is always confirmatory typing. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the donor Patient. 
 
 **Usages:**
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-order.csv
   "name" : "NMDPDonorOrder",
   "title" : "NMDP Donor Order",
   "status" : "draft",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -57,7 +57,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-order.csv
       "value" : "fhir@nmdp.org"
     }]
   }],
-  "description" : "A profile representing a donor workup or collection order in the NMDP system. Orders include confirmatory typing (CT), infectious disease markers (IDM), and stem cell collection.",
+  "description" : "A profile representing a donor workup order in the NMDP system. For donors, the ordered item is always confirmatory typing. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the donor Patient.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -115,23 +115,23 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-order.csv
       "mustSupport" : true
     },
     {
-      "id" : "ServiceRequest.identifier:nmdpOrderId",
+      "id" : "ServiceRequest.identifier:matchsourceOrder",
       "path" : "ServiceRequest.identifier",
-      "sliceName" : "nmdpOrderId",
-      "short" : "NMDP Order ID",
-      "definition" : "The unique identifier assigned to this order by the NMDP system.",
+      "sliceName" : "matchsourceOrder",
+      "short" : "MatchSource order number",
+      "definition" : "The order number assigned by the NMDP MatchSource system. System: http://nmdp.org/identifier/matchsource-order",
       "min" : 1,
       "max" : "1",
       "mustSupport" : true
     },
     {
-      "id" : "ServiceRequest.identifier:nmdpOrderId.system",
+      "id" : "ServiceRequest.identifier:matchsourceOrder.system",
       "path" : "ServiceRequest.identifier.system",
       "min" : 1,
-      "patternUri" : "http://terminology.nmdp.org/identifier/order"
+      "patternUri" : "http://nmdp.org/identifier/matchsource-order"
     },
     {
-      "id" : "ServiceRequest.identifier:nmdpOrderId.value",
+      "id" : "ServiceRequest.identifier:matchsourceOrder.value",
       "path" : "ServiceRequest.identifier.value",
       "min" : 1
     },
@@ -149,7 +149,9 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-order.csv
     {
       "id" : "ServiceRequest.code",
       "path" : "ServiceRequest.code",
-      "short" : "Type of order (CT, IDM, Collection, PBSC, Marrow)",
+      "short" : "Type of order (e.g., confirmatory-typing)",
+      "definition" : "The type of donor order. For donor orders this is always confirmatory typing (code: confirmatory-typing).",
+      "min" : 1,
       "mustSupport" : true,
       "binding" : {
         "strength" : "extensible",
@@ -159,8 +161,8 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-order.csv
     {
       "id" : "ServiceRequest.subject",
       "path" : "ServiceRequest.subject",
-      "short" : "The donor this order is for",
-      "definition" : "The donor (NMDPDonorPatient) this order is for. Constrained to Patient references.",
+      "short" : "The recipient Patient this order is for",
+      "definition" : "The recipient Patient (identified by RID) that this donor order is associated with.",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
@@ -168,32 +170,44 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-order.csv
       "mustSupport" : true
     },
     {
-      "id" : "ServiceRequest.authoredOn",
-      "path" : "ServiceRequest.authoredOn",
-      "short" : "When the order was created",
-      "min" : 1,
+      "id" : "ServiceRequest.occurrence[x]",
+      "path" : "ServiceRequest.occurrence[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "ServiceRequest.occurrence[x]:occurrenceDateTime",
+      "path" : "ServiceRequest.occurrence[x]",
+      "sliceName" : "occurrenceDateTime",
+      "short" : "Appointment date (CT draw appointment)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }],
       "mustSupport" : true
     },
     {
-      "id" : "ServiceRequest.requester",
-      "path" : "ServiceRequest.requester",
-      "short" : "Organization or practitioner who requested this order",
-      "definition" : "The transplant center or practitioner who initiated the donor workup or collection order.",
-      "type" : [{
-        "code" : "Reference",
-        "targetProfile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization",
-        "http://hl7.org/fhir/StructureDefinition/Practitioner"]
-      }],
+      "id" : "ServiceRequest.authoredOn",
+      "path" : "ServiceRequest.authoredOn",
+      "short" : "Order submitted date",
+      "min" : 1,
       "mustSupport" : true
     },
     {
       "id" : "ServiceRequest.performer",
       "path" : "ServiceRequest.performer",
-      "short" : "Organization performing the order",
-      "definition" : "The donor center, collection center, or lab performing this order.",
+      "short" : "The donor Patient performing this order",
+      "definition" : "The donor Patient (identified by GRID) who will undergo the ordered procedure.",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
       }],
       "mustSupport" : true
     }]

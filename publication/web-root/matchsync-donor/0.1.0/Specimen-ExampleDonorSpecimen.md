@@ -12,7 +12,7 @@ Profile: [NMDP Donor Specimen](StructureDefinition-nmdp-donor-specimen.md)
 
 **type**: Blood (EDTA)
 
-**subject**: [Marcus James Reynolds Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)](Patient-ExampleNMDPDonor.md)
+**subject**: [Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)](Patient-ExampleNMDPDonor.md)
 
 **request**: [ServiceRequest Confirmatory Typing](ServiceRequest-ExampleDonorOrder.md)
 

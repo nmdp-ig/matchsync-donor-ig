@@ -1,0 +1,28 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ExampleCBUHemoglobin",
+  "meta" : {
+    "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hemoglobin-observation"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleCBUHemoglobin</b></p><a name=\"ExampleCBUHemoglobin\"> </a><a name=\"hcExampleCBUHemoglobin\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-hemoglobin-observation.html\">NMDP Hemoglobin Observation</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 718-7}\">Hemoglobin [Mass/volume] in Blood</span></p><p><b>subject</b>: <a href=\"Patient-ExampleCBUPatient.html\">Unit20180415 CordUnit  Female, DoB: 2018-04-15 ( http://nmdp.org/identifier/cbu-source-id#CBU-SRC-20180415-001)</a></p><p><b>value</b>: 14.2 g/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeg/dL = 'g/dL')</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "718-7",
+      "display" : "Hemoglobin [Mass/volume] in Blood"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleCBUPatient"
+  },
+  "valueQuantity" : {
+    "value" : 14.2,
+    "unit" : "g/dL",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "g/dL"
+  }
+}

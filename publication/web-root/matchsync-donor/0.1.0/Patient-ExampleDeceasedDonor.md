@@ -8,16 +8,14 @@
 
 Profile: [NMDP Donor Patient](StructureDefinition-nmdp-donor-patient.md)
 
-Erik Johansson Male, DoB: 1970-04-10 ( http://terminology.nmdp.org/identifier/donor#5551234)
+Erik Johansson Male, DoB: 1970-04-10 ( http://nmdp.org/identifier/grid#3F7A1C9E5B2D8046AF13CE79B0D4E2A1)
 
 -------
 
 | | |
 | :--- | :--- |
-| Deceased: | 2025-06-15 |
-| Other Id: | `http://www.isbt128.org/uri/GRID`/BBBB2222222 |
-| Donor Status: | * status: permanently-unavailable
- |
+| Other Id: | `http://nmdp.org/identifier/source-id`/SRC-55123 |
+| [Donor Status](StructureDefinition-donor-status.md) | Permanently Unavailable |
 
 
 
@@ -31,27 +29,23 @@ Erik Johansson Male, DoB: 1970-04-10 ( http://terminology.nmdp.org/identifier/do
     "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"]
   },
   "extension" : [{
-    "extension" : [{
-      "url" : "status",
-      "valueCode" : "permanently-unavailable"
-    }],
-    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status"
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status",
+    "valueString" : "Permanently Unavailable"
   }],
   "identifier" : [{
-    "system" : "http://terminology.nmdp.org/identifier/donor",
-    "value" : "5551234"
+    "system" : "http://nmdp.org/identifier/grid",
+    "value" : "3F7A1C9E5B2D8046AF13CE79B0D4E2A1"
   },
   {
-    "system" : "http://www.isbt128.org/uri/GRID",
-    "value" : "BBBB2222222"
+    "system" : "http://nmdp.org/identifier/source-id",
+    "value" : "SRC-55123"
   }],
   "name" : [{
     "family" : "Johansson",
     "given" : ["Erik"]
   }],
   "gender" : "male",
-  "birthDate" : "1970-04-10",
-  "deceasedDateTime" : "2025-06-15"
+  "birthDate" : "1970-04-10"
 }
 
 ```

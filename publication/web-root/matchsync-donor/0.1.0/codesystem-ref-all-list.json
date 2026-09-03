@@ -1,5 +1,38 @@
 {
   "codeSystems" : [{
+    "url" : "http://fhir.nmdp.org/CodeSystem/cmv-status",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPCMVStatusCS",
+    "title" : "NMDP CMV Status Code System",
+    "description" : "Text-based status codes for CMV IgG antibody presence in donor and CBU testing.",
+    "uses" : {
+    },
+    "ValueSet-nmdp-cmv-status-vs.html" : "NMDP CMV Status Value Set"
+  },
+  {
+    "url" : "http://fhir.nmdp.org/CodeSystem/donor-status",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "NMDPDonorStatusCS",
+    "title" : "NMDP Donor Status",
+    "description" : "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05). In FHIR Donor API payloads, donor status is\nconveyed as a valueString on the donor-status extension.",
+    "uses" : {
+    },
+    "ValueSet-nmdp-donor-status-vs.html" : "NMDP Donor Status ValueSet"
+  },
+  {
+    "url" : "http://fhir.nmdp.org/CodeSystem/order-type",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPOrderTypeCS",
+    "title" : "NMDP Order Type Code System",
+    "description" : "Codes identifying the type of donor or CBU workup order in the NMDP system.",
+    "uses" : {
+    },
+    "ValueSet-nmdp-order-type-vs.html" : "NMDP Order Type Value Set"
+  },
+  {
     "url" : "http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-center-type",
     "version" : "0.1.0",
     "status" : "draft",
@@ -119,6 +152,18 @@
     "http://hl7.org/fhir/R4/valueset-observation-status.html" : "ObservationStatus"
   },
   {
+    "url" : "http://hl7.org/fhir/quantity-comparator",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "QuantityComparator",
+    "title" : "QuantityComparator",
+    "description" : "How the Quantity should be understood and represented.",
+    "oids" : ["2.16.840.1.113883.4.642.4.60"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-quantity-comparator.html" : "QuantityComparator"
+  },
+  {
     "url" : "http://hl7.org/fhir/request-intent",
     "version" : "4.0.1",
     "status" : "draft",
@@ -176,7 +221,9 @@
     "oids" : ["2.16.840.1.113883.6.1"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes"
+    "ValueSet-nmdp-hla-locus-loinc-vs.html" : "NMDP HLA Locus LOINC Value Set",
+    "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
+    "ValueSet-nmdp-abo-rh-type-vs.html" : "ABO/Rh Blood Type Value Set"
   },
   {
     "url" : "http://snomed.info/sct",
@@ -188,16 +235,16 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
-    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
     "http://hl7.org/fhir/R4/valueset-specimen-collection-method.html" : "FHIR Specimen Collection Method",
+    "http://hl7.org/fhir/R4/valueset-specimen-container-type.html" : "Specimen Container Type",
+    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
+    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
     "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
     "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
-    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
-    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-specimen-container-type.html" : "Specimen Container Type",
-    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
-    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes"
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/contactentity-type",
@@ -368,17 +415,6 @@
     "http://terminology.hl7.org/7.3.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType"
   },
   {
-    "url" : "http://terminology.nmdp.org/codesystem/donor-status",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "NMDPDonorStatusCS",
-    "title" : "NMDP Donor Status",
-    "description" : "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05).",
-    "uses" : {
-    },
-    "ValueSet-nmdp-donor-status-vs.html" : "NMDP Donor Status ValueSet"
-  },
-  {
     "url" : "http://terminology.nmdp.org/codesystem/hla-gene-name",
     "version" : "0.1.0",
     "status" : "active",
@@ -388,17 +424,6 @@
     "uses" : {
     },
     "ValueSet-nmdp-hla-gene-name-vs.html" : "NMDP HLA Gene Name Value Set"
-  },
-  {
-    "url" : "http://terminology.nmdp.org/codesystem/order-type",
-    "version" : "0.1.0",
-    "status" : "active",
-    "name" : "NMDPOrderTypeCS",
-    "title" : "NMDP Order Type Code System",
-    "description" : "Codes identifying the type of donor workup or collection order in the NMDP system.",
-    "uses" : {
-    },
-    "ValueSet-nmdp-order-type-vs.html" : "NMDP Order Type Value Set"
   },
   {
     "url" : "http://terminology.nmdp.org/codesystem/specimen-type",

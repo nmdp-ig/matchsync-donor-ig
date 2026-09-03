@@ -8,11 +8,11 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://terminology.nmdp.org/codesystem/order-type | *Version*:0.1.0 |
-| Active as of 2026-09-02 | *Computable Name*:NMDPOrderTypeCS |
+| *Official URL*:http://fhir.nmdp.org/CodeSystem/order-type | *Version*:0.1.0 |
+| Active as of 2026-09-03 | *Computable Name*:NMDPOrderTypeCS |
 
  
-Codes identifying the type of donor workup or collection order in the NMDP system. 
+Codes identifying the type of donor or CBU workup order in the NMDP system. 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -26,12 +26,12 @@ Codes identifying the type of donor workup or collection order in the NMDP syste
 {
   "resourceType" : "CodeSystem",
   "id" : "nmdp-order-type",
-  "url" : "http://terminology.nmdp.org/codesystem/order-type",
+  "url" : "http://fhir.nmdp.org/CodeSystem/order-type",
   "version" : "0.1.0",
   "name" : "NMDPOrderTypeCS",
   "title" : "NMDP Order Type Code System",
   "status" : "active",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -44,7 +44,7 @@ Codes identifying the type of donor workup or collection order in the NMDP syste
       "value" : "fhir@nmdp.org"
     }]
   }],
-  "description" : "Codes identifying the type of donor workup or collection order in the NMDP system.",
+  "description" : "Codes identifying the type of donor or CBU workup order in the NMDP system.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -54,9 +54,9 @@ Codes identifying the type of donor workup or collection order in the NMDP syste
   }],
   "caseSensitive" : true,
   "content" : "complete",
-  "count" : 5,
+  "count" : 9,
   "concept" : [{
-    "code" : "ct",
+    "code" : "confirmatory-typing",
     "display" : "Confirmatory Typing",
     "definition" : "HLA confirmatory typing order to verify initial typing results."
   },
@@ -79,6 +79,26 @@ Codes identifying the type of donor workup or collection order in the NMDP syste
     "code" : "marrow",
     "display" : "Bone Marrow",
     "definition" : "Bone marrow harvest collection."
+  },
+  {
+    "code" : "A-HR",
+    "display" : "HLA-A High Resolution",
+    "definition" : "HLA-A high resolution typing order for CBU."
+  },
+  {
+    "code" : "B-HR",
+    "display" : "HLA-B High Resolution",
+    "definition" : "HLA-B high resolution typing order for CBU."
+  },
+  {
+    "code" : "C-HR",
+    "display" : "HLA-C High Resolution",
+    "definition" : "HLA-C high resolution typing order for CBU."
+  },
+  {
+    "code" : "ABC-DRB1-DQB1-DPB1-HR",
+    "display" : "Full Panel High Resolution",
+    "definition" : "Full panel high resolution typing (HLA-A, B, C, DRB1, DQB1, DPB1) order for CBU."
   }]
 }
 

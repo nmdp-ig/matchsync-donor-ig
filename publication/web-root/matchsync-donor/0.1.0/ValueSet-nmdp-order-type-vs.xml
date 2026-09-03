@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="nmdp-order-type-vs"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet nmdp-order-type-vs</b></p><a name="nmdp-order-type-vs"> </a><a name="hcnmdp-order-type-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-nmdp-order-type.html"><code>http://terminology.nmdp.org/codesystem/order-type</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet nmdp-order-type-vs</b></p><a name="nmdp-order-type-vs"> </a><a name="hcnmdp-order-type-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-nmdp-order-type.html"><code>http://fhir.nmdp.org/CodeSystem/order-type</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li></ul></div>
   </text>
   <url value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-order-type-vs"/>
   <version value="0.1.0"/>
   <name value="NMDPOrderTypeVS"/>
   <title value="NMDP Order Type Value Set"/>
   <status value="active"/>
-  <date value="2026-09-02T19:29:11+00:00"/>
+  <date value="2026-09-03T14:51:12+00:00"/>
   <publisher value="National Marrow Donor Program (NMDP)"/>
   <contact>
     <name value="National Marrow Donor Program (NMDP)"/>
@@ -33,7 +33,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://terminology.nmdp.org/codesystem/order-type"/>
+      <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
     </include>
   </compose>
 </ValueSet>

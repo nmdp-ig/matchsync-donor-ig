@@ -9,9 +9,9 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status | *Version*:0.1.0 |
-| Draft as of 2026-09-02 | *Computable Name*:DonorStatus |
+| Draft as of 2026-09-03 | *Computable Name*:DonorStatus |
 
-The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.
+The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').
 
 **Context of Use**
 
@@ -32,8 +32,6 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 Other representations of profile: [CSV](StructureDefinition-donor-status.csv), [Excel](StructureDefinition-donor-status.xlsx), [Schematron](StructureDefinition-donor-status.sch) 
 
-#### Terminology Bindings
-
 #### Constraints
 
 
@@ -49,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-donor-status.csv), [
   "name" : "DonorStatus",
   "title" : "Donor Status",
   "status" : "draft",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -62,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-donor-status.csv), [
       "value" : "fhir@nmdp.org"
     }]
   }],
-  "description" : "The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.",
+  "description" : "The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -90,68 +88,12 @@ Other representations of profile: [CSV](StructureDefinition-donor-status.csv), [
       "id" : "Extension",
       "path" : "Extension",
       "short" : "Donor Status",
-      "definition" : "The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors."
+      "definition" : "The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable')."
     },
     {
       "id" : "Extension.extension",
       "path" : "Extension.extension",
-      "min" : 1
-    },
-    {
-      "id" : "Extension.extension:status",
-      "path" : "Extension.extension",
-      "sliceName" : "status",
-      "short" : "Donor registration status code",
-      "definition" : "The current registration status of the donor in the NMDP registry.",
-      "min" : 1,
-      "max" : "1"
-    },
-    {
-      "id" : "Extension.extension:status.extension",
-      "path" : "Extension.extension.extension",
       "max" : "0"
-    },
-    {
-      "id" : "Extension.extension:status.url",
-      "path" : "Extension.extension.url",
-      "fixedUri" : "status"
-    },
-    {
-      "id" : "Extension.extension:status.value[x]",
-      "path" : "Extension.extension.value[x]",
-      "type" : [{
-        "code" : "code"
-      }],
-      "binding" : {
-        "strength" : "required",
-        "valueSet" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs"
-      }
-    },
-    {
-      "id" : "Extension.extension:availableDate",
-      "path" : "Extension.extension",
-      "sliceName" : "availableDate",
-      "short" : "Date donor becomes available again",
-      "definition" : "The date when a temporarily unavailable donor is expected to become available again. Only meaningful when status is temporarily-unavailable.",
-      "min" : 0,
-      "max" : "1"
-    },
-    {
-      "id" : "Extension.extension:availableDate.extension",
-      "path" : "Extension.extension.extension",
-      "max" : "0"
-    },
-    {
-      "id" : "Extension.extension:availableDate.url",
-      "path" : "Extension.extension.url",
-      "fixedUri" : "availableDate"
-    },
-    {
-      "id" : "Extension.extension:availableDate.value[x]",
-      "path" : "Extension.extension.value[x]",
-      "type" : [{
-        "code" : "date"
-      }]
     },
     {
       "id" : "Extension.url",
@@ -161,7 +103,12 @@ Other representations of profile: [CSV](StructureDefinition-donor-status.csv), [
     {
       "id" : "Extension.value[x]",
       "path" : "Extension.value[x]",
-      "max" : "0"
+      "short" : "Donor registration status",
+      "definition" : "The current registration status of the donor in the NMDP registry as a human-readable string.",
+      "min" : 1,
+      "type" : [{
+        "code" : "string"
+      }]
     }]
   }
 }

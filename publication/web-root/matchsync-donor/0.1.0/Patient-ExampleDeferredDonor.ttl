@@ -17,20 +17,12 @@
   ] ;
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ] ;
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleDeferredDonor</b></p><a name=\"ExampleDeferredDonor\"> </a><a name=\"hcExampleDeferredDonor\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-patient.html\">NMDP Donor Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Lisa Chen  Female, DoB: 1992-08-22 ( http://terminology.nmdp.org/identifier/donor#7654321)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.\">US Core Ethnicity Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2135-2\">CDC Race and Ethnicity: 2135-2</a> (Hispanic or Latino)</li><li>text: Hispanic or Latino</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:#xA;#xA; - American Indian or Alaska Native#xA; - Asian#xA; - Black or African American#xA; - Native Hawaiian or Other Pacific Islander#xA; - White.\">US Core Race Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2028-9\">CDC Race and Ethnicity: 2028-9</a> (Asian)</li><li>text: Asian</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.\">Donor Status:</td><td colspan=\"3\"><ul><li>status: temporarily-unavailable</li><li>availableDate: 2027-03-15</li></ul></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleDeferredDonor</b></p><a name=\"ExampleDeferredDonor\"> </a><a name=\"hcExampleDeferredDonor\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-patient.html\">NMDP Donor Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Lisa Chen  Female, DoB: 1992-08-22 ( http://nmdp.org/identifier/grid#A1B2C3D4E5F60718293A4B5C6D7E8F90)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://nmdp.org/identifier/source-id</code>/SRC-76543</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.\">US Core Ethnicity Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2135-2\">CDC Race and Ethnicity: 2135-2</a> (Hispanic or Latino)</li><li>text: Hispanic or Latino</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:#xA;#xA; - American Indian or Alaska Native#xA; - Asian#xA; - Black or African American#xA; - Native Hawaiian or Other Pacific Islander#xA; - White.\">US Core Race Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2028-9\">CDC Race and Ethnicity: 2028-9</a> (Asian)</li><li>text: Asian</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').\"><a href=\"StructureDefinition-donor-status.html\">Donor Status</a></td><td colspan=\"3\">Temporarily Unavailable</td></tr></table></div>"
   ] ;
   fhir:DomainResource.extension [
      fhir:index 0 ;
-     fhir:Element.extension [
-       fhir:index 0 ;
-       fhir:Extension.url [ fhir:value "status" ] ;
-       fhir:Extension.valueCode [ fhir:value "temporarily-unavailable" ]
-     ], [
-       fhir:index 1 ;
-       fhir:Extension.url [ fhir:value "availableDate" ] ;
-       fhir:Extension.valueDate [ fhir:value "2027-03-15"^^xsd:date ]
-     ] ;
-     fhir:Extension.url [ fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status" ]
+     fhir:Extension.url [ fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status" ] ;
+     fhir:Extension.valueString [ fhir:value "Temporarily Unavailable" ]
   ], [
      fhir:index 1 ;
      fhir:Element.extension [
@@ -66,8 +58,12 @@
   ] ;
   fhir:Patient.identifier [
      fhir:index 0 ;
-     fhir:Identifier.system [ fhir:value "http://terminology.nmdp.org/identifier/donor" ] ;
-     fhir:Identifier.value [ fhir:value "7654321" ]
+     fhir:Identifier.system [ fhir:value "http://nmdp.org/identifier/grid" ] ;
+     fhir:Identifier.value [ fhir:value "A1B2C3D4E5F60718293A4B5C6D7E8F90" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.system [ fhir:value "http://nmdp.org/identifier/source-id" ] ;
+     fhir:Identifier.value [ fhir:value "SRC-76543" ]
   ] ;
   fhir:Patient.name [
      fhir:index 0 ;

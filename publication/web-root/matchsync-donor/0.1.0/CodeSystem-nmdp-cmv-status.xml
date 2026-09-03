@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nmdp-cmv-status"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nmdp-cmv-status</b></p><a name="nmdp-cmv-status"> </a><a name="hcnmdp-cmv-status"> </a><p>This case-insensitive code system <code>http://fhir.nmdp.org/CodeSystem/cmv-status</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">Positive<a name="nmdp-cmv-status-Positive"> </a></td><td>CMV IgG antibody detected.</td></tr><tr><td style="white-space:nowrap">Negative<a name="nmdp-cmv-status-Negative"> </a></td><td>CMV IgG antibody not detected.</td></tr><tr><td style="white-space:nowrap">Inconclusive<a name="nmdp-cmv-status-Inconclusive"> </a></td><td>CMV IgG antibody test result is inconclusive.</td></tr><tr><td style="white-space:nowrap">Untested<a name="nmdp-cmv-status-Untested"> </a></td><td>CMV IgG antibody testing has not been performed.</td></tr></table></div>
+  </text>
+  <url value="http://fhir.nmdp.org/CodeSystem/cmv-status"/>
+  <version value="0.1.0"/>
+  <name value="NMDPCMVStatusCS"/>
+  <title value="NMDP CMV Status Code System"/>
+  <status value="active"/>
+  <date value="2026-09-03T14:51:12+00:00"/>
+  <publisher value="National Marrow Donor Program (NMDP)"/>
+  <contact>
+    <name value="National Marrow Donor Program (NMDP)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nmdp.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@nmdp.org"/>
+    </telecom>
+  </contact>
+  <description value="Text-based status codes for CMV IgG antibody presence in donor and CBU testing."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="Positive"/>
+    <display value="Positive"/>
+    <definition value="CMV IgG antibody detected."/>
+  </concept>
+  <concept>
+    <code value="Negative"/>
+    <display value="Negative"/>
+    <definition value="CMV IgG antibody not detected."/>
+  </concept>
+  <concept>
+    <code value="Inconclusive"/>
+    <display value="Inconclusive"/>
+    <definition value="CMV IgG antibody test result is inconclusive."/>
+  </concept>
+  <concept>
+    <code value="Untested"/>
+    <display value="Untested"/>
+    <definition value="CMV IgG antibody testing has not been performed."/>
+  </concept>
+</CodeSystem>

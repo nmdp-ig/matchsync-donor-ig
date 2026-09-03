@@ -10,14 +10,14 @@
   fhir:Resource.id [ fhir:value "nmdp-donor-order"] ;
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ] ;
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition nmdp-donor-order</b></p><a name=\"nmdp-donor-order\"> </a><a name=\"hcnmdp-donor-order\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest\">ServiceRequest</a><a name=\"ServiceRequest\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/servicerequest.html\">ServiceRequest</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">A request for a service to be performed</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck13.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_slice.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Slice Definition\" class=\"hierarchy\"/> <a style=\"font-style: italic; font-style: italic\" href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.identifier\">Slices for identifier</a><a name=\"ServiceRequest.identifier\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000; font-style: italic\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-style: italic\"/><span style=\"font-style: italic\">1</span><span style=\"font-style: italic\">..</span><span style=\"opacity: 0.5; font-style: italic\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; font-style: italic; opacity: 0.5; font-style: italic\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5; font-style: italic\">Identifiers assigned to this order</span><br style=\"font-style: italic\"/><span style=\"font-weight:bold; font-style: italic\">Slice: </span><span style=\"font-style: italic\">Unordered, Open by pattern:system</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck125.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end_slicer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_slice_item.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Slice Item\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.identifier:nmdpOrderId\" title=\"Slice nmdpOrderId: The unique identifier assigned to this order by the NMDP system.\">identifier:nmdpOrderId</a><a name=\"ServiceRequest.identifier:nmdpOrderId\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">NMDP Order ID</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1250.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_slice.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.identifier:nmdpOrderId.system\">system</a><a name=\"ServiceRequest.identifier:nmdpOrderId.system\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#uri\">uri</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The namespace for the identifier value</span><br/><span style=\"font-weight:bold\">Required Pattern: </span><span style=\"color: darkgreen\">http://terminology.nmdp.org/identifier/order</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1240.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end_slice.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.identifier:nmdpOrderId.value\">value</a><a name=\"ServiceRequest.identifier:nmdpOrderId.value\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The value that is unique</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.status\">status</a><a name=\"ServiceRequest.status\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">draft | active | on-hold | revoked | completed | entered-in-error | unknown</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.intent\">intent</a><a name=\"ServiceRequest.intent\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option</span><br/><span style=\"font-weight:bold\">Required Pattern: </span><span style=\"color: darkgreen\">order</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.code\">code</a><a name=\"ServiceRequest.code\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Type of order (CT, IDM, Collection, PBSC, Marrow)<br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding: </span><a href=\"ValueSet-nmdp-order-type-vs.html\" title=\"http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-order-type-vs\" class=\"binding\">NMDP Order Type Value Set</a><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R4/terminologies.html#extensible\" title=\"To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.\" class=\"binding\">extensible</a><span title=\"null\" class=\"binding\">)</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.subject\" title=\"The donor (NMDPDonorPatient) this order is for. Constrained to Patient references.\">subject</a><a name=\"ServiceRequest.subject\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The donor this order is for</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.authoredOn\">authoredOn</a><a name=\"ServiceRequest.authoredOn\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">When the order was created</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.requester\" title=\"The transplant center or practitioner who initiated the donor workup or collection order.\">requester</a><a name=\"ServiceRequest.requester\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-nmdp-organization.html\">NMDP Organization</a> | <a href=\"http://hl7.org/fhir/R4/practitioner.html\">Practitioner</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Organization or practitioner who requested this order</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.performer\" title=\"The donor center, collection center, or lab performing this order.\">performer</a><a name=\"ServiceRequest.performer\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-nmdp-organization.html\">NMDP Organization</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Organization performing the order</td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition nmdp-donor-order</b></p><a name=\"nmdp-donor-order\"> </a><a name=\"hcnmdp-donor-order\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest\">ServiceRequest</a><a name=\"ServiceRequest\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/servicerequest.html\">ServiceRequest</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">A request for a service to be performed</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck13.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_slice.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Slice Definition\" class=\"hierarchy\"/> <a style=\"font-style: italic; font-style: italic\" href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.identifier\">Slices for identifier</a><a name=\"ServiceRequest.identifier\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000; font-style: italic\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-style: italic\"/><span style=\"font-style: italic\">1</span><span style=\"font-style: italic\">..</span><span style=\"opacity: 0.5; font-style: italic\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; font-style: italic; opacity: 0.5; font-style: italic\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5; font-style: italic\">Identifiers assigned to this order</span><br style=\"font-style: italic\"/><span style=\"font-weight:bold; font-style: italic\">Slice: </span><span style=\"font-style: italic\">Unordered, Open by pattern:system</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck125.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end_slicer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_slice_item.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Slice Item\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.identifier:matchsourceOrder\" title=\"Slice matchsourceOrder: The order number assigned by the NMDP MatchSource system. System: http://nmdp.org/identifier/matchsource-order\">identifier:matchsourceOrder</a><a name=\"ServiceRequest.identifier:matchsourceOrder\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">MatchSource order number</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1250.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_slice.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.identifier:matchsourceOrder.system\">system</a><a name=\"ServiceRequest.identifier:matchsourceOrder.system\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#uri\">uri</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The namespace for the identifier value</span><br/><span style=\"font-weight:bold\">Required Pattern: </span><span style=\"color: darkgreen\">http://nmdp.org/identifier/matchsource-order</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1240.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end_slice.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.identifier:matchsourceOrder.value\">value</a><a name=\"ServiceRequest.identifier:matchsourceOrder.value\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The value that is unique</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.status\">status</a><a name=\"ServiceRequest.status\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">draft | active | on-hold | revoked | completed | entered-in-error | unknown</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.intent\">intent</a><a name=\"ServiceRequest.intent\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option</span><br/><span style=\"font-weight:bold\">Required Pattern: </span><span style=\"color: darkgreen\">order</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.code\" title=\"The type of donor order. For donor orders this is always confirmatory typing (code: confirmatory-typing).\">code</a><a name=\"ServiceRequest.code\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Type of order (e.g., confirmatory-typing)<br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding: </span><a href=\"ValueSet-nmdp-order-type-vs.html\" title=\"http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-order-type-vs\" class=\"binding\">NMDP Order Type Value Set</a><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R4/terminologies.html#extensible\" title=\"To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.\" class=\"binding\">extensible</a><span title=\"null\" class=\"binding\">)</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.subject\" title=\"The recipient Patient (identified by RID) that this donor order is associated with.\">subject</a><a name=\"ServiceRequest.subject\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The recipient Patient this order is for</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck13.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_slice.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Slice Definition\" class=\"hierarchy\"/> <a style=\"font-style: italic; font-style: italic\" href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.occurrence[x]\">Slices for occurrence[x]</a><a name=\"ServiceRequest.occurrence_x_\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-style: italic\"/><span style=\"opacity: 0.5; font-style: italic\">0</span><span style=\"opacity: 0.5; font-style: italic\">..</span><span style=\"opacity: 0.5; font-style: italic\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; font-style: italic; opacity: 0.5; font-style: italic\" href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a><span style=\"opacity: 0.5; font-style: italic\">, </span><a style=\"opacity: 0.5; font-style: italic; opacity: 0.5; font-style: italic\" href=\"http://hl7.org/fhir/R4/datatypes.html#Period\">Period</a><span style=\"opacity: 0.5; font-style: italic\">, </span><a style=\"opacity: 0.5; font-style: italic; opacity: 0.5; font-style: italic\" href=\"http://hl7.org/fhir/R4/datatypes.html#Timing\">Timing</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5; font-style: italic\">When service should occur</span><br style=\"font-style: italic\"/><span style=\"font-weight:bold; font-style: italic\">Slice: </span><span style=\"font-style: italic\">Unordered, Open by type:$this</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end_slicer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_slice_item.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Slice Item\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.occurrence[x]:occurrenceDateTime\" title=\"Slice occurrenceDateTime\">occurrence[x]:occurrenceDateTime</a><a name=\"ServiceRequest.occurrence_x_:occurrenceDateTime\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Appointment date (CT draw appointment)</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.authoredOn\">authoredOn</a><a name=\"ServiceRequest.authoredOn\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Order submitted date</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-nmdp-donor-order-definitions.html#ServiceRequest.performer\" title=\"The donor Patient (identified by GRID) who will undergo the ordered procedure.\">performer</a><a name=\"ServiceRequest.performer\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The donor Patient performing this order</td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
   ] ;
   fhir:StructureDefinition.url [ fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order"] ;
   fhir:StructureDefinition.version [ fhir:value "0.1.0"] ;
   fhir:StructureDefinition.name [ fhir:value "NMDPDonorOrder"] ;
   fhir:StructureDefinition.title [ fhir:value "NMDP Donor Order"] ;
   fhir:StructureDefinition.status [ fhir:value "draft"] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-09-02T19:29:11+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-09-03T14:51:12+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "National Marrow Donor Program (NMDP)"] ;
   fhir:StructureDefinition.contact [
      fhir:index 0 ;
@@ -32,7 +32,7 @@
        fhir:ContactPoint.value [ fhir:value "fhir@nmdp.org" ]
      ]
   ] ;
-  fhir:StructureDefinition.description [ fhir:value "A profile representing a donor workup or collection order in the NMDP system. Orders include confirmatory typing (CT), infectious disease markers (IDM), and stem cell collection."] ;
+  fhir:StructureDefinition.description [ fhir:value "A profile representing a donor workup order in the NMDP system. For donors, the ordered item is always confirmatory typing. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the donor Patient."] ;
   fhir:StructureDefinition.jurisdiction [
      fhir:index 0 ;
      fhir:CodeableConcept.coding [
@@ -606,11 +606,11 @@
        ]
      ], [
        fhir:index 10 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier" ] ;
-       fhir:ElementDefinition.sliceName [ fhir:value "nmdpOrderId" ] ;
-       fhir:ElementDefinition.short [ fhir:value "NMDP Order ID" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "The unique identifier assigned to this order by the NMDP system." ] ;
+       fhir:ElementDefinition.sliceName [ fhir:value "matchsourceOrder" ] ;
+       fhir:ElementDefinition.short [ fhir:value "MatchSource order number" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The order number assigned by the NMDP MatchSource system. System: http://nmdp.org/identifier/matchsource-order" ] ;
        fhir:ElementDefinition.comment [ fhir:value "The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2).  For further discussion and examples see the resource notes section below." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
@@ -661,7 +661,7 @@
        ]
      ], [
        fhir:index 11 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId.id" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder.id" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier.id" ] ;
        fhir:ElementDefinition.representation [
          fhir:value "xmlAttr" ;
@@ -694,7 +694,7 @@
        ]
      ], [
        fhir:index 12 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId.extension" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder.extension" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier.extension" ] ;
        fhir:ElementDefinition.slicing [
          fhir:ElementDefinition.slicing.discriminator [
@@ -758,7 +758,7 @@
        ]
      ], [
        fhir:index 13 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId.use" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder.use" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier.use" ] ;
        fhir:ElementDefinition.short [ fhir:value "usual | official | temp | secondary | old (If known)" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The purpose of this identifier." ] ;
@@ -814,7 +814,7 @@
        ]
      ], [
        fhir:index 14 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId.type" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder.type" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier.type" ] ;
        fhir:ElementDefinition.short [ fhir:value "Description of identifier" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." ] ;
@@ -869,7 +869,7 @@
        ]
      ], [
        fhir:index 15 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId.system" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder.system" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "The namespace for the identifier value" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Establishes the namespace for the value - that is, a URL that describes a set values that are unique." ] ;
@@ -886,7 +886,7 @@
          fhir:index 0 ;
          fhir:ElementDefinition.type.code [ fhir:value "uri" ]
        ] ;
-       fhir:ElementDefinition.patternUri [ fhir:value "http://terminology.nmdp.org/identifier/order" ] ;
+       fhir:ElementDefinition.patternUri [ fhir:value "http://nmdp.org/identifier/matchsource-order" ] ;
        fhir:ElementDefinition.example [
          fhir:index 0 ;
          fhir:ElementDefinition.example.label [ fhir:value "General" ] ;
@@ -921,7 +921,7 @@
        ]
      ], [
        fhir:index 16 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId.value" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder.value" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier.value" ] ;
        fhir:ElementDefinition.short [ fhir:value "The value that is unique" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The portion of the identifier typically relevant to the user and which is unique within the context of the system." ] ;
@@ -971,7 +971,7 @@
        ]
      ], [
        fhir:index 17 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId.period" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder.period" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier.period" ] ;
        fhir:ElementDefinition.short [ fhir:value "Time period when id is/was valid for use" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Time period during which identifier is/was valid for use." ] ;
@@ -1015,7 +1015,7 @@
        ]
      ], [
        fhir:index 18 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId.assigner" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder.assigner" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier.assigner" ] ;
        fhir:ElementDefinition.short [ fhir:value "Organization that issued id (may be just text)" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Organization that issued/manages the identifier." ] ;
@@ -1637,14 +1637,14 @@
        fhir:index 29 ;
        fhir:Element.id [ fhir:value "ServiceRequest.code" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.code" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Type of order (CT, IDM, Collection, PBSC, Marrow)" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Type of order (e.g., confirmatory-typing)" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The type of donor order. For donor orders this is always confirmatory typing (code: confirmatory-typing)." ] ;
        fhir:ElementDefinition.comment [ fhir:value "Many laboratory and radiology procedure codes embed the specimen/organ system in the test order name, for example,  serum or serum/plasma glucose, or a chest x-ray. The specimen might not be recorded separately from the test code." ] ;
        fhir:ElementDefinition.alias [
          fhir:value "service requested" ;
          fhir:index 0
        ] ;
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "ServiceRequest.code" ] ;
@@ -1815,8 +1815,8 @@
        fhir:index 32 ;
        fhir:Element.id [ fhir:value "ServiceRequest.subject" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.subject" ] ;
-       fhir:ElementDefinition.short [ fhir:value "The donor this order is for" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "The donor (NMDPDonorPatient) this order is for. Constrained to Patient references." ] ;
+       fhir:ElementDefinition.short [ fhir:value "The recipient Patient this order is for" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The recipient Patient (identified by RID) that this donor order is associated with." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -1938,6 +1938,15 @@
        fhir:index 34 ;
        fhir:Element.id [ fhir:value "ServiceRequest.occurrence[x]" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.occurrence[x]" ] ;
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index 0 ;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "type" ] ;
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "$this" ]
+         ] ;
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ] ;
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ] ;
        fhir:ElementDefinition.short [ fhir:value "When service should occur" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The date/time at which the requested service should occur." ] ;
        fhir:ElementDefinition.alias [
@@ -1998,6 +2007,64 @@
        ]
      ], [
        fhir:index 35 ;
+       fhir:Element.id [ fhir:value "ServiceRequest.occurrence[x]:occurrenceDateTime" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ServiceRequest.occurrence[x]" ] ;
+       fhir:ElementDefinition.sliceName [ fhir:value "occurrenceDateTime" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Appointment date (CT draw appointment)" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The date/time at which the requested service should occur." ] ;
+       fhir:ElementDefinition.alias [
+         fhir:value "schedule" ;
+         fhir:index 0
+       ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ServiceRequest.occurrence[x]" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index 0 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index 0 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.occurrence[x]" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.planned" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "TQ1/TQ2, OBR-7/OBR-8" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
+       ], [
+         fhir:index 4 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "quick" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "Procedure.procedureSchedule" ]
+       ]
+     ], [
+       fhir:index 36 ;
        fhir:Element.id [ fhir:value "ServiceRequest.asNeeded[x]" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.asNeeded[x]" ] ;
        fhir:ElementDefinition.short [ fhir:value "Preconditions for service" ] ;
@@ -2053,10 +2120,10 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Proposal.prnReason.reason" ]
        ]
      ], [
-       fhir:index 36 ;
+       fhir:index 37 ;
        fhir:Element.id [ fhir:value "ServiceRequest.authoredOn" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.authoredOn" ] ;
-       fhir:ElementDefinition.short [ fhir:value "When the order was created" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Order submitted date" ] ;
        fhir:ElementDefinition.definition [ fhir:value "When the request transitioned to being actionable." ] ;
        fhir:ElementDefinition.alias [
          fhir:value "orderedOn" ;
@@ -2110,11 +2177,11 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Proposal.proposedAtTime" ]
        ]
      ], [
-       fhir:index 37 ;
+       fhir:index 38 ;
        fhir:Element.id [ fhir:value "ServiceRequest.requester" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.requester" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Organization or practitioner who requested this order" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "The transplant center or practitioner who initiated the donor workup or collection order." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Who/what is requesting service" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The individual who initiated the request and has responsibility for its activation." ] ;
        fhir:ElementDefinition.comment [ fhir:value "This not the dispatcher, but rather who is the authorizer.  This element is not intended to handle delegation which would generally be managed through the Provenance resource." ] ;
        fhir:ElementDefinition.alias [
          fhir:value "author" ;
@@ -2134,13 +2201,29 @@
          fhir:index 0 ;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ] ;
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization" ;
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1" ;
            fhir:index 0 ;
-           fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ;
+           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1" ;
            fhir:index 1 ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization|4.0.1" ;
+           fhir:index 2 ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization|4.0.1>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient|4.0.1" ;
+           fhir:index 3 ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient|4.0.1>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1" ;
+           fhir:index 4 ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Device|4.0.1" ;
+           fhir:index 5 ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Device|4.0.1>
          ]
        ] ;
        fhir:ElementDefinition.constraint [
@@ -2155,7 +2238,6 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ;
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
@@ -2180,7 +2262,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "ClinicalStatement.statementAuthor" ]
        ]
      ], [
-       fhir:index 38 ;
+       fhir:index 39 ;
        fhir:Element.id [ fhir:value "ServiceRequest.performerType" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.performerType" ] ;
        fhir:ElementDefinition.short [ fhir:value "Performer role" ] ;
@@ -2246,11 +2328,11 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=PRF].role[scoper.determinerCode=KIND].code" ]
        ]
      ], [
-       fhir:index 39 ;
+       fhir:index 40 ;
        fhir:Element.id [ fhir:value "ServiceRequest.performer" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.performer" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Organization performing the order" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "The donor center, collection center, or lab performing this order." ] ;
+       fhir:ElementDefinition.short [ fhir:value "The donor Patient performing this order" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The donor Patient (identified by GRID) who will undergo the ordered procedure." ] ;
        fhir:ElementDefinition.comment [ fhir:value "If multiple performers are present, it is interpreted as a list of *alternative* performers without any preference regardless of order.  If order of preference is needed use the [request-performerOrder extension](http://hl7.org/fhir/R4/extension-request-performerorder.html).  Use CareTeam to represent a group of performers (for example, Practitioner A *and* Practitioner B)." ] ;
        fhir:ElementDefinition.alias [
          fhir:value "request recipient" ;
@@ -2267,9 +2349,9 @@
          fhir:index 0 ;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ] ;
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization" ;
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient" ;
            fhir:index 0 ;
-           fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
          ]
        ] ;
        fhir:ElementDefinition.constraint [
@@ -2305,7 +2387,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]" ]
        ]
      ], [
-       fhir:index 40 ;
+       fhir:index 41 ;
        fhir:Element.id [ fhir:value "ServiceRequest.locationCode" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.locationCode" ] ;
        fhir:ElementDefinition.short [ fhir:value "Requested location" ] ;
@@ -2358,7 +2440,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=LOC].role[scoper.determinerCode=KIND].code" ]
        ]
      ], [
-       fhir:index 41 ;
+       fhir:index 42 ;
        fhir:Element.id [ fhir:value "ServiceRequest.locationReference" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.locationReference" ] ;
        fhir:ElementDefinition.short [ fhir:value "Requested location" ] ;
@@ -2403,7 +2485,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=LOC].role[scoper.determinerCode=INSTANCE]" ]
        ]
      ], [
-       fhir:index 42 ;
+       fhir:index 43 ;
        fhir:Element.id [ fhir:value "ServiceRequest.reasonCode" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.reasonCode" ] ;
        fhir:ElementDefinition.short [ fhir:value "Explanation/Justification for procedure or service" ] ;
@@ -2465,7 +2547,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".reasonCode" ]
        ]
      ], [
-       fhir:index 43 ;
+       fhir:index 44 ;
        fhir:Element.id [ fhir:value "ServiceRequest.reasonReference" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.reasonReference" ] ;
        fhir:ElementDefinition.short [ fhir:value "Explanation/Justification for service or service" ] ;
@@ -2531,7 +2613,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=RSON].target" ]
        ]
      ], [
-       fhir:index 44 ;
+       fhir:index 45 ;
        fhir:Element.id [ fhir:value "ServiceRequest.insurance" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.insurance" ] ;
        fhir:ElementDefinition.short [ fhir:value "Associated insurance coverage" ] ;
@@ -2584,7 +2666,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=COVBY].target" ]
        ]
      ], [
-       fhir:index 45 ;
+       fhir:index 46 ;
        fhir:Element.id [ fhir:value "ServiceRequest.supportingInfo" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.supportingInfo" ] ;
        fhir:ElementDefinition.short [ fhir:value "Additional clinical information" ] ;
@@ -2641,7 +2723,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=PERT].target" ]
        ]
      ], [
-       fhir:index 46 ;
+       fhir:index 47 ;
        fhir:Element.id [ fhir:value "ServiceRequest.specimen" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.specimen" ] ;
        fhir:ElementDefinition.short [ fhir:value "Procedure Samples" ] ;
@@ -2687,7 +2769,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=SPC].role" ]
        ]
      ], [
-       fhir:index 47 ;
+       fhir:index 48 ;
        fhir:Element.id [ fhir:value "ServiceRequest.bodySite" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.bodySite" ] ;
        fhir:ElementDefinition.short [ fhir:value "Location on Body" ] ;
@@ -2750,7 +2832,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Procedure.targetBodySite" ]
        ]
      ], [
-       fhir:index 48 ;
+       fhir:index 49 ;
        fhir:Element.id [ fhir:value "ServiceRequest.note" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.note" ] ;
        fhir:ElementDefinition.short [ fhir:value "Comments" ] ;
@@ -2798,7 +2880,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "ClinicalStatement.additionalText" ]
        ]
      ], [
-       fhir:index 49 ;
+       fhir:index 50 ;
        fhir:Element.id [ fhir:value "ServiceRequest.patientInstruction" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.patientInstruction" ] ;
        fhir:ElementDefinition.short [ fhir:value "Patient or consumer-oriented instructions" ] ;
@@ -2838,7 +2920,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".text" ]
        ]
      ], [
-       fhir:index 50 ;
+       fhir:index 51 ;
        fhir:Element.id [ fhir:value "ServiceRequest.relevantHistory" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.relevantHistory" ] ;
        fhir:ElementDefinition.short [ fhir:value "Request provenance" ] ;
@@ -2910,23 +2992,23 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 2 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier" ] ;
-       fhir:ElementDefinition.sliceName [ fhir:value "nmdpOrderId" ] ;
-       fhir:ElementDefinition.short [ fhir:value "NMDP Order ID" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "The unique identifier assigned to this order by the NMDP system." ] ;
+       fhir:ElementDefinition.sliceName [ fhir:value "matchsourceOrder" ] ;
+       fhir:ElementDefinition.short [ fhir:value "MatchSource order number" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The order number assigned by the NMDP MatchSource system. System: http://nmdp.org/identifier/matchsource-order" ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 3 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId.system" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder.system" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier.system" ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
-       fhir:ElementDefinition.patternUri [ fhir:value "http://terminology.nmdp.org/identifier/order" ]
+       fhir:ElementDefinition.patternUri [ fhir:value "http://nmdp.org/identifier/matchsource-order" ]
      ], [
        fhir:index 4 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.identifier:nmdpOrderId.value" ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.identifier:matchsourceOrder.value" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.identifier.value" ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ]
      ], [
@@ -2944,7 +3026,9 @@
        fhir:index 7 ;
        fhir:Element.id [ fhir:value "ServiceRequest.code" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.code" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Type of order (CT, IDM, Collection, PBSC, Marrow)" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Type of order (e.g., confirmatory-typing)" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The type of donor order. For donor orders this is always confirmatory typing (code: confirmatory-typing)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ] ;
@@ -2957,8 +3041,8 @@
        fhir:index 8 ;
        fhir:Element.id [ fhir:value "ServiceRequest.subject" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.subject" ] ;
-       fhir:ElementDefinition.short [ fhir:value "The donor this order is for" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "The donor (NMDPDonorPatient) this order is for. Constrained to Patient references." ] ;
+       fhir:ElementDefinition.short [ fhir:value "The recipient Patient this order is for" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The recipient Patient (identified by RID) that this donor order is associated with." ] ;
        fhir:ElementDefinition.type [
          fhir:index 0 ;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ] ;
@@ -2971,44 +3055,50 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 9 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.authoredOn" ] ;
-       fhir:ElementDefinition.path [ fhir:value "ServiceRequest.authoredOn" ] ;
-       fhir:ElementDefinition.short [ fhir:value "When the order was created" ] ;
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+       fhir:Element.id [ fhir:value "ServiceRequest.occurrence[x]" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ServiceRequest.occurrence[x]" ] ;
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index 0 ;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "type" ] ;
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "$this" ]
+         ] ;
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ] ;
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ]
      ], [
        fhir:index 10 ;
-       fhir:Element.id [ fhir:value "ServiceRequest.requester" ] ;
-       fhir:ElementDefinition.path [ fhir:value "ServiceRequest.requester" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Organization or practitioner who requested this order" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "The transplant center or practitioner who initiated the donor workup or collection order." ] ;
+       fhir:Element.id [ fhir:value "ServiceRequest.occurrence[x]:occurrenceDateTime" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ServiceRequest.occurrence[x]" ] ;
+       fhir:ElementDefinition.sliceName [ fhir:value "occurrenceDateTime" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Appointment date (CT draw appointment)" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.type [
          fhir:index 0 ;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ] ;
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization" ;
-           fhir:index 0 ;
-           fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ;
-           fhir:index 1 ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
-         ]
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
        ] ;
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 11 ;
+       fhir:Element.id [ fhir:value "ServiceRequest.authoredOn" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ServiceRequest.authoredOn" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Order submitted date" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 12 ;
        fhir:Element.id [ fhir:value "ServiceRequest.performer" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.performer" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Organization performing the order" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "The donor center, collection center, or lab performing this order." ] ;
+       fhir:ElementDefinition.short [ fhir:value "The donor Patient performing this order" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The donor Patient (identified by GRID) who will undergo the ordered procedure." ] ;
        fhir:ElementDefinition.type [
          fhir:index 0 ;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ] ;
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization" ;
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient" ;
            fhir:index 0 ;
-           fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
          ]
        ] ;
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]

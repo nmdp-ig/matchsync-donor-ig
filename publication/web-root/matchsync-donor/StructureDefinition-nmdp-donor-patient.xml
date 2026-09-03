@@ -5,18 +5,14 @@
   <text>
     <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition nmdp-donor-patient</b></p><a name="nmdp-donor-patient"> </a><a name="hcnmdp-donor-patient"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient">Patient</a><a name="Patient"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">USCorePatientProfile</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Information about an individual or animal receiving health care services</span></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck13.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Definition" class="hierarchy"/> Slices for extension<a name="Patient.extension"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Content/Rules for all slices</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck134.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.extension:race" title="Slice race">extension:race</a><a name="Patient.extension:race"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-race.html" title="Extension">USCoreRaceExtension</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">US Core Race</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck134.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.extension:ethnicity" title="Slice ethnicity">extension:ethnicity</a><a name="Patient.extension:ethnicity"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-ethnicity.html" title="Extension">USCoreEthnicityExtension</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">US Core Ethnicity</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.extension:donorStatus" title="Extension URL = http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status">extension:donorStatus</a><a name="Patient.extension:donorStatus"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">(Complex)</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Donor registry status<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-donor-status.html">http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.extension:donorStatus" title="Extension URL = http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status">extension:donorStatus</a><a name="Patient.extension:donorStatus"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Donor registry status<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-donor-status.html">http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status</a></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck13.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Definition" class="hierarchy"/> <a style="font-style: italic; font-style: italic" href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier">Slices for identifier</a><a name="Patient.identifier"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic"/><span style="opacity: 0.5; font-style: italic">1</span><span style="opacity: 0.5; font-style: italic">..</span><span style="opacity: 0.5; font-style: italic">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; font-style: italic; opacity: 0.5; font-style: italic" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5; font-style: italic">(USCDI) An identifier for this patient</span><br style="font-style: italic"/><span style="font-weight:bold; font-style: italic">Slice: </span><span style="font-style: italic">Unordered, Open by pattern:system</span></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck135.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:nmdpDonorId" title="Slice nmdpDonorId: The unique identifier assigned to a donor by the National Marrow Donor Program.">identifier:nmdpDonorId</a><a name="Patient.identifier:nmdpDonorId"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">NMDP Donor ID</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1340.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:nmdpDonorId.system">system</a><a name="Patient.identifier:nmdpDonorId.system"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">(USCDI) The namespace for the identifier value</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">http://terminology.nmdp.org/identifier/donor</span></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck125.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:grid" title="Slice grid: The ISBT 128 Global Registration Identifier for Donors.">identifier:grid</a><a name="Patient.identifier:grid"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Global Registration Identifier for Donors (GRID)</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1240.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:grid.system">system</a><a name="Patient.identifier:grid.system"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">(USCDI) The namespace for the identifier value</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">http://www.isbt128.org/uri/GRID</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck135.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:grid" title="Slice grid: The NMDP GRID identifier that uniquely identifies a donor. A 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. 99D0BA02660443B585D525525EB3F2D2. System: http://nmdp.org/identifier/grid">identifier:grid</a><a name="Patient.identifier:grid"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">NMDP GRID (Global Registration Identifier for Donors)</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1340.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:grid.system">system</a><a name="Patient.identifier:grid.system"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">(USCDI) The namespace for the identifier value</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">http://nmdp.org/identifier/grid</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck125.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:sourceId" title="Slice sourceId: The source identifier for the donor in the originating registry. System: http://nmdp.org/identifier/source-id">identifier:sourceId</a><a name="Patient.identifier:sourceId"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Donor source ID</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1240.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:sourceId.system">system</a><a name="Patient.identifier:sourceId.system"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">(USCDI) The namespace for the identifier value</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">http://nmdp.org/identifier/source-id</span></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.birthDate">birthDate</a><a name="Patient.birthDate"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#date">date</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">(USCDI) The date of birth for the individual</span></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.deceased[x]" title="Indicates if the donor is deceased, either as a boolean flag or a dateTime of death.">deceased[x]</a><a name="Patient.deceased_x_"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a><span style="opacity: 0.5">, </span><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Indicates if the donor is deceased</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.communication">communication</a><a name="Patient.communication"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#BackboneElement">BackboneElement</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">(USCDI) A language which may be used to communicate with the patient about his or her health</span></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.managingOrganization" title="The NMDP-affiliated organization (typically a donor center) that manages this donor's registration.">managingOrganization</a><a name="Patient.managingOrganization"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-nmdp-organization.html">NMDP Organization</a>)</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Donor center managing this donor</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="StructureDefinition-nmdp-donor-patient-definitions.html#Patient.managingOrganization" title="The NMDP donor center (identified by ION/DC ID) responsible for this donor.">managingOrganization</a><a name="Patient.managingOrganization"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-nmdp-organization.html">NMDP Organization</a>)</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Donor center (ION/DC ID)</td></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"/>
@@ -24,7 +20,7 @@
   <name value="NMDPDonorPatient"/>
   <title value="NMDP Donor Patient"/>
   <status value="draft"/>
-  <date value="2026-09-02T19:29:11+00:00"/>
+  <date value="2026-09-03T14:51:12+00:00"/>
   <publisher value="National Marrow Donor Program (NMDP)"/>
   <contact>
     <name value="National Marrow Donor Program (NMDP)"/>
@@ -37,7 +33,7 @@
       <value value="fhir@nmdp.org"/>
     </telecom>
   </contact>
-  <description value="A profile representing a hematopoietic cell donor registered in the NMDP registry."/>
+  <description value="A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -375,7 +371,7 @@
       </extension>
       <path value="Patient.extension"/>
       <sliceName value="race"/>
-      <short value="US Core Race"/>
+      <short value="(USCDI) US Core Race Extension"/>
       <definition value="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:&#xA;&#xA;   - American Indian or Alaska Native&#xA;   - Asian&#xA;   - Black or African American&#xA;   - Native Hawaiian or Other Pacific Islander&#xA;   - White."/>
       <min value="0"/>
       <max value="1"/>
@@ -407,6 +403,10 @@
       </constraint>
       <mustSupport value="false"/>
       <isModifier value="false"/>
+      <mapping>
+        <identity value="argonaut-dq-dstu2"/>
+        <map value="Patient.extension"/>
+      </mapping>
     </element>
     <element id="Patient.extension:ethnicity">
       <extension url="http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement">
@@ -414,7 +414,7 @@
       </extension>
       <path value="Patient.extension"/>
       <sliceName value="ethnicity"/>
-      <short value="US Core Ethnicity"/>
+      <short value="(USCDI) US Core ethnicity Extension"/>
       <definition value="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino."/>
       <min value="0"/>
       <max value="1"/>
@@ -446,6 +446,10 @@
       </constraint>
       <mustSupport value="false"/>
       <isModifier value="false"/>
+      <mapping>
+        <identity value="argonaut-dq-dstu2"/>
+        <map value="Patient.extension"/>
+      </mapping>
     </element>
     <element id="Patient.extension:tribalAffiliation">
       <extension url="http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement">
@@ -618,7 +622,7 @@
       <path value="Patient.extension"/>
       <sliceName value="donorStatus"/>
       <short value="Donor registry status"/>
-      <definition value="The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors."/>
+      <definition value="The current registration status of the donor (e.g., Available, Temporarily Unavailable, Active, Permanently Unavailable)."/>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -1086,405 +1090,16 @@
         <map value="./IdentifierIssuingAuthority"/>
       </mapping>
     </element>
-    <element id="Patient.identifier:nmdpDonorId">
-      <extension url="http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="Patient.identifier"/>
-      <sliceName value="nmdpDonorId"/>
-      <short value="NMDP Donor ID"/>
-      <definition value="The unique identifier assigned to a donor by the National Marrow Donor Program."/>
-      <requirements value="Patients are almost always assigned specific numerical identifiers."/>
-      <min value="1"/>
-      <max value="1"/>
-      <base>
-        <path value="Patient.identifier"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Identifier"/>
-      </type>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <mustSupport value="true"/>
-      <isModifier value="false"/>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="w5"/>
-        <map value="FiveWs.identifier"/>
-      </mapping>
-      <mapping>
-        <identity value="v2"/>
-        <map value="PID-3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="id"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value=".id"/>
-      </mapping>
-      <mapping>
-        <identity value="argonaut-dq-dstu2"/>
-        <map value="Patient.identifier"/>
-      </mapping>
-    </element>
-    <element id="Patient.identifier:nmdpDonorId.id">
-      <path value="Patient.identifier.id"/>
-      <representation value="xmlAttr"/>
-      <short value="Unique id for inter-element referencing"/>
-      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Element.id"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
-          <valueUrl value="string"/>
-        </extension>
-        <code value="http://hl7.org/fhirpath/System.String"/>
-      </type>
-      <isModifier value="false"/>
-      <isSummary value="false"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="Patient.identifier:nmdpDonorId.extension">
-      <path value="Patient.identifier.extension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <description value="Extensions are always sliced by (at least) url"/>
-        <rules value="open"/>
-      </slicing>
-      <short value="Additional content defined by implementations"/>
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-      <alias value="extensions"/>
-      <alias value="user content"/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="Element.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-      </type>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="ext-1"/>
-        <severity value="error"/>
-        <human value="Must have either extensions or value[x], not both"/>
-        <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-      </constraint>
-      <isModifier value="false"/>
-      <isSummary value="false"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="Patient.identifier:nmdpDonorId.use">
-      <path value="Patient.identifier.use"/>
-      <short value="usual | official | temp | secondary | old (If known)"/>
-      <definition value="The purpose of this identifier."/>
-      <comment value="Applications can assume that an identifier is permanent unless it explicitly says that it is temporary."/>
-      <requirements value="Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Identifier.use"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="code"/>
-      </type>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <isModifier value="true"/>
-      <isModifierReason value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary id for a permanent one."/>
-      <isSummary value="true"/>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierUse"/>
-        </extension>
-        <strength value="required"/>
-        <description value="Identifies the purpose for this identifier, if known ."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"/>
-      </binding>
-      <mapping>
-        <identity value="v2"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="Role.code or implied by context"/>
-      </mapping>
-    </element>
-    <element id="Patient.identifier:nmdpDonorId.type">
-      <path value="Patient.identifier.type"/>
-      <short value="Description of identifier"/>
-      <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose."/>
-      <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type."/>
-      <requirements value="Allows users to make use of identifiers when the identifier system is not known."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Identifier.type"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <isModifier value="false"/>
-      <isSummary value="true"/>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType"/>
-        </extension>
-        <strength value="extensible"/>
-        <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-type"/>
-      </binding>
-      <mapping>
-        <identity value="v2"/>
-        <map value="CX.5"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="Role.code or implied by context"/>
-      </mapping>
-    </element>
-    <element id="Patient.identifier:nmdpDonorId.system">
-      <extension url="http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="Patient.identifier.system"/>
-      <short value="(USCDI) The namespace for the identifier value"/>
-      <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique."/>
-      <comment value="Identifier.system is always case sensitive."/>
-      <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers."/>
-      <min value="1"/>
-      <max value="1"/>
-      <base>
-        <path value="Identifier.system"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="uri"/>
-      </type>
-      <patternUri value="http://terminology.nmdp.org/identifier/donor"/>
-      <example>
-        <label value="General"/>
-        <valueUri value="http://www.acme.com/identifiers/patient"/>
-      </example>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <mustSupport value="true"/>
-      <isModifier value="false"/>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="CX.4 / EI-2-4"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="II.root or Role.id.root"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="./IdentifierType"/>
-      </mapping>
-      <mapping>
-        <identity value="argonaut-dq-dstu2"/>
-        <map value="Patient.identifier.system"/>
-      </mapping>
-    </element>
-    <element id="Patient.identifier:nmdpDonorId.value">
-      <extension url="http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="Patient.identifier.value"/>
-      <short value="(USCDI) The value that is unique within the system."/>
-      <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system."/>
-      <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe."/>
-      <min value="1"/>
-      <max value="1"/>
-      <base>
-        <path value="Identifier.value"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-      </type>
-      <example>
-        <label value="General"/>
-        <valueString value="123456"/>
-      </example>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <mustSupport value="true"/>
-      <isModifier value="false"/>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="CX.1 / EI.1"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="./Value"/>
-      </mapping>
-      <mapping>
-        <identity value="argonaut-dq-dstu2"/>
-        <map value="Patient.identifier.value"/>
-      </mapping>
-    </element>
-    <element id="Patient.identifier:nmdpDonorId.period">
-      <path value="Patient.identifier.period"/>
-      <short value="Time period when id is/was valid for use"/>
-      <definition value="Time period during which identifier is/was valid for use."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Identifier.period"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="Period"/>
-      </type>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <isModifier value="false"/>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="CX.7 + CX.8"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="Role.effectiveTime or implied by context"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="./StartDate and ./EndDate"/>
-      </mapping>
-    </element>
-    <element id="Patient.identifier:nmdpDonorId.assigner">
-      <path value="Patient.identifier.assigner"/>
-      <short value="Organization that issued id (may be just text)"/>
-      <definition value="Organization that issued/manages the identifier."/>
-      <comment value="The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Identifier.assigner"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-      </type>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <isModifier value="false"/>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="CX.4 / (CX.4,CX.9,CX.10)"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="./IdentifierIssuingAuthority"/>
-      </mapping>
-    </element>
     <element id="Patient.identifier:grid">
       <extension url="http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement">
         <valueBoolean value="true"/>
       </extension>
       <path value="Patient.identifier"/>
       <sliceName value="grid"/>
-      <short value="Global Registration Identifier for Donors (GRID)"/>
-      <definition value="The ISBT 128 Global Registration Identifier for Donors."/>
+      <short value="NMDP GRID (Global Registration Identifier for Donors)"/>
+      <definition value="The NMDP GRID identifier that uniquely identifies a donor. A 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. 99D0BA02660443B585D525525EB3F2D2. System: http://nmdp.org/identifier/grid"/>
       <requirements value="Patients are almost always assigned specific numerical identifiers."/>
-      <min value="0"/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="Patient.identifier"/>
@@ -1705,7 +1320,7 @@
       <type>
         <code value="uri"/>
       </type>
-      <patternUri value="http://www.isbt128.org/uri/GRID"/>
+      <patternUri value="http://nmdp.org/identifier/grid"/>
       <example>
         <label value="General"/>
         <valueUri value="http://www.acme.com/identifiers/patient"/>
@@ -1826,6 +1441,395 @@
       </mapping>
     </element>
     <element id="Patient.identifier:grid.assigner">
+      <path value="Patient.identifier.assigner"/>
+      <short value="Organization that issued id (may be just text)"/>
+      <definition value="Organization that issued/manages the identifier."/>
+      <comment value="The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.assigner"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / (CX.4,CX.9,CX.10)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierIssuingAuthority"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier:sourceId">
+      <extension url="http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement">
+        <valueBoolean value="true"/>
+      </extension>
+      <path value="Patient.identifier"/>
+      <sliceName value="sourceId"/>
+      <short value="Donor source ID"/>
+      <definition value="The source identifier for the donor in the originating registry. System: http://nmdp.org/identifier/source-id"/>
+      <requirements value="Patients are almost always assigned specific numerical identifiers."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Patient.identifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.identifier"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="id"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="argonaut-dq-dstu2"/>
+        <map value="Patient.identifier"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier:sourceId.id">
+      <path value="Patient.identifier.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier:sourceId.extension">
+      <path value="Patient.identifier.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier:sourceId.use">
+      <path value="Patient.identifier.use"/>
+      <short value="usual | official | temp | secondary | old (If known)"/>
+      <definition value="The purpose of this identifier."/>
+      <comment value="Applications can assume that an identifier is permanent unless it explicitly says that it is temporary."/>
+      <requirements value="Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.use"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary id for a permanent one."/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierUse"/>
+        </extension>
+        <strength value="required"/>
+        <description value="Identifies the purpose for this identifier, if known ."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"/>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier:sourceId.type">
+      <path value="Patient.identifier.type"/>
+      <short value="Description of identifier"/>
+      <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose."/>
+      <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type."/>
+      <requirements value="Allows users to make use of identifiers when the identifier system is not known."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.type"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType"/>
+        </extension>
+        <strength value="extensible"/>
+        <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-type"/>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier:sourceId.system">
+      <extension url="http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement">
+        <valueBoolean value="true"/>
+      </extension>
+      <path value="Patient.identifier.system"/>
+      <short value="(USCDI) The namespace for the identifier value"/>
+      <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique."/>
+      <comment value="Identifier.system is always case sensitive."/>
+      <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.system"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <patternUri value="http://nmdp.org/identifier/source-id"/>
+      <example>
+        <label value="General"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
+      </example>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / EI-2-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.root or Role.id.root"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierType"/>
+      </mapping>
+      <mapping>
+        <identity value="argonaut-dq-dstu2"/>
+        <map value="Patient.identifier.system"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier:sourceId.value">
+      <extension url="http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement">
+        <valueBoolean value="true"/>
+      </extension>
+      <path value="Patient.identifier.value"/>
+      <short value="(USCDI) The value that is unique within the system."/>
+      <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system."/>
+      <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.value"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <example>
+        <label value="General"/>
+        <valueString value="123456"/>
+      </example>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.1 / EI.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Value"/>
+      </mapping>
+      <mapping>
+        <identity value="argonaut-dq-dstu2"/>
+        <map value="Patient.identifier.value"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier:sourceId.period">
+      <path value="Patient.identifier.period"/>
+      <short value="Time period when id is/was valid for use"/>
+      <definition value="Time period during which identifier is/was valid for use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.period"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Period"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.7 + CX.8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.effectiveTime or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./StartDate and ./EndDate"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier:sourceId.assigner">
       <path value="Patient.identifier.assigner"/>
       <short value="Organization that issued id (may be just text)"/>
       <definition value="Organization that issued/manages the identifier."/>
@@ -2791,8 +2795,8 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Patient.deceased[x]"/>
-      <short value="Indicates if the donor is deceased"/>
-      <definition value="Indicates if the donor is deceased, either as a boolean flag or a dateTime of death."/>
+      <short value="(USCDI) Indicates if the individual is deceased or not"/>
+      <definition value="Indicates if the individual is deceased or not."/>
       <comment value="If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive."/>
       <requirements value="The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive."/>
       <min value="0"/>
@@ -2816,7 +2820,6 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
-      <mustSupport value="true"/>
       <isModifier value="true"/>
       <isModifierReason value="This element is labeled as a modifier because once a patient is marked as deceased, the actions that are appropriate to perform on the patient may be significantly different."/>
       <isSummary value="true"/>
@@ -4038,7 +4041,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
-      <mustSupport value="true"/>
+      <mustSupport value="false"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
@@ -4296,8 +4299,8 @@
     </element>
     <element id="Patient.managingOrganization">
       <path value="Patient.managingOrganization"/>
-      <short value="Donor center managing this donor"/>
-      <definition value="The NMDP-affiliated organization (typically a donor center) that manages this donor's registration."/>
+      <short value="Donor center (ION/DC ID)"/>
+      <definition value="The NMDP donor center (identified by ION/DC ID) responsible for this donor."/>
       <comment value="There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association)."/>
       <requirements value="Need to know who recognizes this patient record, manages and updates it."/>
       <min value="0"/>
@@ -4564,20 +4567,11 @@
     <element id="Patient">
       <path value="Patient"/>
     </element>
-    <element id="Patient.extension:race">
-      <path value="Patient.extension"/>
-      <sliceName value="race"/>
-      <short value="US Core Race"/>
-    </element>
-    <element id="Patient.extension:ethnicity">
-      <path value="Patient.extension"/>
-      <sliceName value="ethnicity"/>
-      <short value="US Core Ethnicity"/>
-    </element>
     <element id="Patient.extension:donorStatus">
       <path value="Patient.extension"/>
       <sliceName value="donorStatus"/>
       <short value="Donor registry status"/>
+      <definition value="The current registration status of the donor (e.g., Available, Temporarily Unavailable, Active, Permanently Unavailable)."/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -4596,50 +4590,40 @@
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="Patient.identifier:nmdpDonorId">
-      <path value="Patient.identifier"/>
-      <sliceName value="nmdpDonorId"/>
-      <short value="NMDP Donor ID"/>
-      <definition value="The unique identifier assigned to a donor by the National Marrow Donor Program."/>
-      <min value="1"/>
-      <max value="1"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.identifier:nmdpDonorId.system">
-      <path value="Patient.identifier.system"/>
-      <patternUri value="http://terminology.nmdp.org/identifier/donor"/>
-    </element>
     <element id="Patient.identifier:grid">
       <path value="Patient.identifier"/>
       <sliceName value="grid"/>
-      <short value="Global Registration Identifier for Donors (GRID)"/>
-      <definition value="The ISBT 128 Global Registration Identifier for Donors."/>
-      <min value="0"/>
+      <short value="NMDP GRID (Global Registration Identifier for Donors)"/>
+      <definition value="The NMDP GRID identifier that uniquely identifies a donor. A 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. 99D0BA02660443B585D525525EB3F2D2. System: http://nmdp.org/identifier/grid"/>
+      <min value="1"/>
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Patient.identifier:grid.system">
       <path value="Patient.identifier.system"/>
-      <patternUri value="http://www.isbt128.org/uri/GRID"/>
+      <patternUri value="http://nmdp.org/identifier/grid"/>
+    </element>
+    <element id="Patient.identifier:sourceId">
+      <path value="Patient.identifier"/>
+      <sliceName value="sourceId"/>
+      <short value="Donor source ID"/>
+      <definition value="The source identifier for the donor in the originating registry. System: http://nmdp.org/identifier/source-id"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Patient.identifier:sourceId.system">
+      <path value="Patient.identifier.system"/>
+      <patternUri value="http://nmdp.org/identifier/source-id"/>
     </element>
     <element id="Patient.birthDate">
       <path value="Patient.birthDate"/>
       <min value="1"/>
     </element>
-    <element id="Patient.deceased[x]">
-      <path value="Patient.deceased[x]"/>
-      <short value="Indicates if the donor is deceased"/>
-      <definition value="Indicates if the donor is deceased, either as a boolean flag or a dateTime of death."/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.communication">
-      <path value="Patient.communication"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Patient.managingOrganization">
       <path value="Patient.managingOrganization"/>
-      <short value="Donor center managing this donor"/>
-      <definition value="The NMDP-affiliated organization (typically a donor center) that manages this donor's registration."/>
+      <short value="Donor center (ION/DC ID)"/>
+      <definition value="The NMDP donor center (identified by ION/DC ID) responsible for this donor."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization"/>

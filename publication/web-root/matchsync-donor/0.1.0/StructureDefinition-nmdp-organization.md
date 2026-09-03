@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization | *Version*:0.1.0 |
-| Draft as of 2026-09-02 | *Computable Name*:NMDPOrganization |
+| Draft as of 2026-09-03 | *Computable Name*:NMDPOrganization |
 
  
 An organization participating in the NMDP network (donor centers, transplant centers, collection centers, apheresis centers). 
 
 **Usages:**
 
-* Refer to this Profile: [NMDP Donor Order](StructureDefinition-nmdp-donor-order.md) and [NMDP Donor Patient](StructureDefinition-nmdp-donor-patient.md)
+* Refer to this Profile: [NMDP Donor Patient](StructureDefinition-nmdp-donor-patient.md)
 * Examples for this Profile: [Minneapolis Blood Center](Organization-ExampleNMDPDonorCenter.md)
 * CapabilityStatements using this Profile: [NMDP Donor API Capability Statement](CapabilityStatement-NMDPDonorAPICapabilityStatement.md)
 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-organization.cs
   "name" : "NMDPOrganization",
   "title" : "NMDP Organization",
   "status" : "draft",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

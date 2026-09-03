@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="ExampleCBUOrder"/>
+  <meta>
+    <profile value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-order"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest ExampleCBUOrder</b></p><a name="ExampleCBUOrder"> </a><a name="hcExampleCBUOrder"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-nmdp-cbu-order.html">NMDP CBU Order</a></p></div><p><b>identifier</b>: <code>http://nmdp.org/identifier/matchsource-order</code>/MS-ORD-2026-99887</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://fhir.nmdp.org/CodeSystem/order-type A-HR}">HLA-A High Resolution</span></p><p><b>subject</b>: <a href="Patient-ExampleRecipientPatient.html">Maria Garcia  Female, DoB: 1975-06-20 ( http://nmdp.org/identifier/rid#RID-9988776)</a></p><p><b>occurrence</b>: 2026-08-10 10:00:00+0000</p><p><b>authoredOn</b>: 2026-08-01 14:30:00+0000</p><p><b>performer</b>: <a href="Patient-ExampleCBUPatient.html">Unit20180415 CordUnit  Female, DoB: 2018-04-15 ( http://nmdp.org/identifier/cbu-source-id#CBU-SRC-20180415-001)</a></p></div>
+  </text>
+  <identifier>
+    <system value="http://nmdp.org/identifier/matchsource-order"/>
+    <value value="MS-ORD-2026-99887"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
+      <code value="A-HR"/>
+      <display value="HLA-A High Resolution"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ExampleRecipientPatient"/>
+  </subject>
+  <occurrenceDateTime value="2026-08-10T10:00:00Z"/>
+  <authoredOn value="2026-08-01T14:30:00Z"/>
+  <performer>
+    <reference value="Patient/ExampleCBUPatient"/>
+  </performer>
+</ServiceRequest>

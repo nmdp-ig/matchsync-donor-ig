@@ -1,5 +1,17 @@
 {
   "codeSystems" : [{
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-abo-rh-type-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPABORhTypeVS",
+    "title" : "ABO/Rh Blood Type Value Set",
+    "description" : "LOINC Answer List LL2972-9 codes for ABO and Rh blood group types.",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation"
+  },
+  {
     "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-center-type-vs",
     "version" : "0.1.0",
     "status" : "draft",
@@ -12,16 +24,22 @@
     "StructureDefinition-nmdp-organization.html" : "NMDP Organization"
   },
   {
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-cmv-status-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPCMVStatusVS",
+    "title" : "NMDP CMV Status Value Set",
+    "description" : "Allowable text-based values for CMV IgG antibody presence status used in NMDP donor and CBU payloads.",
+    "systems" : ["http://fhir.nmdp.org/CodeSystem/cmv-status"]
+  },
+  {
     "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs",
     "version" : "0.1.0",
     "status" : "draft",
     "name" : "NMDPDonorStatusVS",
     "title" : "NMDP Donor Status ValueSet",
     "description" : "All registry status codes for NMDP registered donors. Maps to ODS\nenterprise donor status values (AV, TU, AC, DE).",
-    "systems" : ["http://terminology.nmdp.org/codesystem/donor-status"],
-    "uses" : {
-    },
-    "StructureDefinition-donor-status.html" : "Donor Status"
+    "systems" : ["http://fhir.nmdp.org/CodeSystem/donor-status"]
   },
   {
     "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-glstring-vs",
@@ -42,7 +60,16 @@
     "name" : "NMDPHLAGeneNameVS",
     "title" : "NMDP HLA Gene Name Value Set",
     "description" : "HLA gene names (HGNC IDs) for loci typed in NMDP donor operations.",
-    "systems" : ["http://terminology.nmdp.org/codesystem/hla-gene-name"],
+    "systems" : ["http://terminology.nmdp.org/codesystem/hla-gene-name"]
+  },
+  {
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-locus-loinc-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPHLALocusLOINCVS",
+    "title" : "NMDP HLA Locus LOINC Value Set",
+    "description" : "LOINC codes for HLA locus-specific high resolution typing observations used in NMDP donor and CBU payloads.",
+    "systems" : ["http://loinc.org"],
     "uses" : {
     },
     "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
@@ -54,9 +81,10 @@
     "name" : "NMDPOrderTypeVS",
     "title" : "NMDP Order Type Value Set",
     "description" : "All codes from the NMDP Order Type code system.",
-    "systems" : ["http://terminology.nmdp.org/codesystem/order-type"],
+    "systems" : ["http://fhir.nmdp.org/CodeSystem/order-type"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order"
   },
   {

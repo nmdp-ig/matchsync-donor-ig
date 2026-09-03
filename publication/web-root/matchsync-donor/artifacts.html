@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9"}
-    h3,h4,h5,h6{--heading-prefix:"9.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -97,6 +97,9 @@
   </li>
   <li>
     <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="connecting-to-the-donor-api.html">Connecting to the Donor API</a>
   </li>
   <li>
     <a href="security-and-privacy.html">Security and Privacy</a>
@@ -211,11 +214,56 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-abo-rh-observation.html"
+                  title="StructureDefinition/nmdp-abo-rh-observation">NMDP ABO/Rh Observation</a>
+            </td>
+            <td>
+<p>An observation representing a donor or CBU's ABO and Rh blood group type. Uses LOINC 882-1 and valueCodeableConcept with codes from LOINC Answer List LL2972-9.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-body-weight-observation.html"
+                  title="StructureDefinition/nmdp-body-weight-observation">NMDP Body Weight Observation</a>
+            </td>
+            <td>
+<p>An observation representing a donor's body weight. Uses LOINC 29463-7 and valueQuantity in kg.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-cbu-order.html"
+                  title="StructureDefinition/nmdp-cbu-order">NMDP CBU Order</a>
+            </td>
+            <td>
+<p>A profile representing a Cord Blood Unit (CBU) workup order in the NMDP system. CBU orders can include high resolution typing for individual loci or a full panel. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the CBU Patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-cmv-observation.html"
+                  title="StructureDefinition/nmdp-cmv-observation">NMDP CMV Observation</a>
+            </td>
+            <td>
+<p>An observation representing a donor or CBU's CMV IgG antibody presence status. Uses LOINC 22244-8 and valueCodeableConcept with text-only values (Positive, Negative, Inconclusive, Untested).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-cbu-patient.html"
+                  title="StructureDefinition/nmdp-cbu-patient">NMDP Cord Blood Unit (CBU) Patient</a>
+            </td>
+            <td>
+<p>A profile representing a Cord Blood Unit (CBU) in the NMDP registry. CBUs are identified by having a cbu-source-id identifier (no GRID). CBUs are not tied to a real person — they represent a cord blood unit. The Patient.id should be the CBU source ID.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-nmdp-donor-order.html"
                   title="StructureDefinition/nmdp-donor-order">NMDP Donor Order</a>
             </td>
             <td>
-<p>A profile representing a donor workup or collection order in the NMDP system. Orders include confirmatory typing (CT), infectious disease markers (IDM), and stem cell collection.</p>
+<p>A profile representing a donor workup order in the NMDP system. For donors, the ordered item is always confirmatory typing. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the donor Patient.</p>
 </td>
          </tr>
          <tr>
@@ -224,7 +272,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/nmdp-donor-patient">NMDP Donor Patient</a>
             </td>
             <td>
-<p>A profile representing a hematopoietic cell donor registered in the NMDP registry.</p>
+<p>A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value.</p>
 </td>
          </tr>
          <tr>
@@ -242,7 +290,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/nmdp-hla-genotype">NMDP HLA Genotype Observation</a>
             </td>
             <td>
-<p>A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code.</p>
+<p>A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code. The Observation.code uses a locus-specific LOINC code identifying which HLA gene was typed.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nmdp-hemoglobin-observation.html"
+                  title="StructureDefinition/nmdp-hemoglobin-observation">NMDP Hemoglobin Observation</a>
+            </td>
+            <td>
+<p>An observation representing a CBU's hemoglobin level. Uses LOINC 718-7 (Hemoglobin [Mass/volume] in Blood) and valueQuantity in g/dL.</p>
 </td>
          </tr>
          <tr>
@@ -273,11 +330,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-cbu-status.html"
+                  title="StructureDefinition/cbu-status">CBU Status</a>
+            </td>
+            <td>
+<p>The availability status of a Cord Blood Unit (CBU) in the NMDP registry. Conveyed as a simple string value (e.g., 'Available').</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-donor-status.html"
                   title="StructureDefinition/donor-status">Donor Status</a>
             </td>
             <td>
-<p>The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.</p>
+<p>The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').</p>
 </td>
          </tr>
       </tbody>
@@ -290,10 +356,28 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-nmdp-abo-rh-type-vs.html"
+                  title="ValueSet/nmdp-abo-rh-type-vs">ABO/Rh Blood Type Value Set</a>
+            </td>
+            <td>
+<p>LOINC Answer List LL2972-9 codes for ABO and Rh blood group types.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-nmdp-glstring-vs.html" title="ValueSet/nmdp-glstring-vs">GL String Code Value Set</a>
             </td>
             <td>
 <p>Genotype List String Codes from glstring.org. Codes represent HLA genotypes in GL String format (e.g., hla#3.25.0#HLA-A<em>01:01:01:01+HLA-A</em>01:02).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nmdp-cmv-status-vs.html"
+                  title="ValueSet/nmdp-cmv-status-vs">NMDP CMV Status Value Set</a>
+            </td>
+            <td>
+<p>Allowable text-based values for CMV IgG antibody presence status used in NMDP donor and CBU payloads.</p>
 </td>
          </tr>
          <tr>
@@ -326,6 +410,15 @@ enterprise donor status values (AV, TU, AC, DE).</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-nmdp-hla-locus-loinc-vs.html"
+                  title="ValueSet/nmdp-hla-locus-loinc-vs">NMDP HLA Locus LOINC Value Set</a>
+            </td>
+            <td>
+<p>LOINC codes for HLA locus-specific high resolution typing observations used in NMDP donor and CBU payloads.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-nmdp-order-type-vs.html"
                   title="ValueSet/nmdp-order-type-vs">NMDP Order Type Value Set</a>
             </td>
@@ -352,6 +445,15 @@ enterprise donor status values (AV, TU, AC, DE).</p>
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-nmdp-cmv-status.html"
+                  title="CodeSystem/nmdp-cmv-status">NMDP CMV Status Code System</a>
+            </td>
+            <td>
+<p>Text-based status codes for CMV IgG antibody presence in donor and CBU testing.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-nmdp-center-type.html"
                   title="CodeSystem/nmdp-center-type">NMDP Center Type</a>
             </td>
@@ -368,7 +470,8 @@ enterprise donor status values (AV, TU, AC, DE).</p>
 <p>Status codes for NMDP registered donors. These codes represent the
 enterprise Registry Status maintained by NMDP, indicating a donor's availability
 for patient search, matching, and product request activities. Source: ODS
-DonorWithSampleResponse (v05).</p>
+DonorWithSampleResponse (v05). In FHIR Donor API payloads, donor status is
+conveyed as a valueString on the donor-status extension.</p>
 </td>
          </tr>
          <tr>
@@ -386,7 +489,7 @@ DonorWithSampleResponse (v05).</p>
                   title="CodeSystem/nmdp-order-type">NMDP Order Type Code System</a>
             </td>
             <td>
-<p>Codes identifying the type of donor workup or collection order in the NMDP system.</p>
+<p>Codes identifying the type of donor or CBU workup order in the NMDP system.</p>
 </td>
          </tr>
          <tr>
@@ -408,11 +511,37 @@ DonorWithSampleResponse (v05).</p>
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-ExampleCBUHemoglobin.html"
+                  title="Observation/ExampleCBUHemoglobin">Example CBU Hemoglobin Observation</a>
+            </td>
+            <td>
+<p>An example hemoglobin observation for a Cord Blood Unit (14.2 g/dL).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ExampleCBUOrder.html"
+                  title="ServiceRequest/ExampleCBUOrder">Example CBU Order</a>
+            </td>
+            <td>
+<p>An example high resolution typing order for a Cord Blood Unit. Subject is the recipient, performer is the CBU.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ExampleCBUPatient.html" title="Patient/ExampleCBUPatient">Example CBU Patient</a>
+            </td>
+            <td>
+<p>An example Cord Blood Unit (CBU) registered in the NMDP registry, demonstrating all CBU identifier slices and demographics.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Patient-ExampleDeceasedDonor.html"
                   title="Patient/ExampleDeceasedDonor">Example Deceased Donor</a>
             </td>
             <td>
-<p>A donor who is deceased, demonstrating the deceased[x] element with a dateTime value.</p>
+<p>A donor who is deceased, demonstrating the donor-status extension with Permanently Unavailable.</p>
 </td>
          </tr>
          <tr>
@@ -421,7 +550,34 @@ DonorWithSampleResponse (v05).</p>
                   title="Patient/ExampleDeferredDonor">Example Deferred Donor</a>
             </td>
             <td>
-<p>A donor who is temporarily unavailable (e.g., post-collection with a future available date).</p>
+<p>A donor who is temporarily unavailable (e.g., post-collection).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleDonorABORh.html"
+                  title="Observation/ExampleDonorABORh">Example Donor ABO/Rh Observation</a>
+            </td>
+            <td>
+<p>An example ABO/Rh blood group observation for a donor (O Positive).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleDonorBodyWeight.html"
+                  title="Observation/ExampleDonorBodyWeight">Example Donor Body Weight Observation</a>
+            </td>
+            <td>
+<p>An example body weight observation for a donor (82 kg).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleDonorCMV.html"
+                  title="Observation/ExampleDonorCMV">Example Donor CMV Observation</a>
+            </td>
+            <td>
+<p>An example CMV IgG antibody observation for a donor (Negative).</p>
 </td>
          </tr>
          <tr>
@@ -430,7 +586,7 @@ DonorWithSampleResponse (v05).</p>
                   title="ServiceRequest/ExampleDonorOrder">Example Donor CT Order</a>
             </td>
             <td>
-<p>An example confirmatory typing order for an NMDP donor.</p>
+<p>An example confirmatory typing order for an NMDP donor. Subject is the recipient, performer is the donor.</p>
 </td>
          </tr>
          <tr>
@@ -445,10 +601,10 @@ DonorWithSampleResponse (v05).</p>
          <tr>
             <td style="column-width:30%">
                <a href="Patient-ExampleDonorNoGrid.html"
-                  title="Patient/ExampleDonorNoGrid">Example Donor Without GRID</a>
+                  title="Patient/ExampleDonorNoGrid">Example Donor With GRID Only</a>
             </td>
             <td>
-<p>A newly registered donor who has an NMDP Donor ID but has not yet been assigned a GRID.</p>
+<p>A donor with a GRID identifier and no source ID yet assigned.</p>
 </td>
          </tr>
          <tr>
@@ -466,7 +622,7 @@ DonorWithSampleResponse (v05).</p>
                   title="Observation/ExampleHLAGenotypeB">Example HLA-B Genotype</a>
             </td>
             <td>
-<p>An example HLA-B genotype observation showing a donor typed as HLA-B<em>07:02:01+HLA-B</em>44:02:01.</p>
+<p>An example HLA-B genotype observation showing a donor typed as HLA-B<em>07:02+HLA-B</em>44:02.</p>
 </td>
          </tr>
          <tr>
@@ -475,7 +631,7 @@ DonorWithSampleResponse (v05).</p>
                   title="Observation/ExampleHLAGenotypeC">Example HLA-C Genotype</a>
             </td>
             <td>
-<p>An example HLA-C genotype observation showing a donor typed as HLA-C<em>07:02:01+HLA-C</em>05:01:01.</p>
+<p>An example HLA-C genotype observation showing a donor typed as HLA-C<em>07:01+HLA-C</em>05:01.</p>
 </td>
          </tr>
          <tr>
@@ -484,7 +640,7 @@ DonorWithSampleResponse (v05).</p>
                   title="Observation/ExampleHLAGenotypeDRB1">Example HLA-DRB1 Genotype</a>
             </td>
             <td>
-<p>An example HLA-DRB1 genotype observation showing a donor typed as HLA-DRB1<em>15:01:01+HLA-DRB1</em>03:01:01.</p>
+<p>An example HLA-DRB1 genotype observation showing a donor typed as HLA-DRB1<em>15:01+HLA-DRB1</em>03:01.</p>
 </td>
          </tr>
          <tr>
@@ -522,6 +678,15 @@ DonorWithSampleResponse (v05).</p>
 <p>An example donor center in the NMDP network.</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ExampleRecipientPatient.html"
+                  title="Patient/ExampleRecipientPatient">Example Recipient Patient</a>
+            </td>
+            <td>
+<p>An example recipient patient identified by RID and local ID. Used as the subject of donor and CBU orders.</p>
+</td>
+         </tr>
       </tbody>
    </table>
 </div>
@@ -542,7 +707,7 @@ DonorWithSampleResponse (v05).</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 14:51+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

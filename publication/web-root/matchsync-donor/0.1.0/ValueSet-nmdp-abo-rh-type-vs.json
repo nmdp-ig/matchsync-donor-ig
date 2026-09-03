@@ -1,0 +1,71 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "nmdp-abo-rh-type-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet nmdp-abo-rh-type-vs</b></p><a name=\"nmdp-abo-rh-type-vs\"> </a><a name=\"hcnmdp-abo-rh-type-vs\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/LA21321-7/\">LA21321-7</a></td><td>O Pos</td></tr><tr><td><a href=\"https://loinc.org/LA21322-5/\">LA21322-5</a></td><td>O Neg</td></tr><tr><td><a href=\"https://loinc.org/LA21327-4/\">LA21327-4</a></td><td>B Pos</td></tr><tr><td><a href=\"https://loinc.org/LA21328-2/\">LA21328-2</a></td><td>B Neg</td></tr><tr><td><a href=\"https://loinc.org/LA21323-3/\">LA21323-3</a></td><td>AB Pos</td></tr><tr><td><a href=\"https://loinc.org/LA21324-1/\">LA21324-1</a></td><td>AB Neg</td></tr><tr><td><a href=\"https://loinc.org/LA21325-8/\">LA21325-8</a></td><td>A Pos</td></tr><tr><td><a href=\"https://loinc.org/LA21326-6/\">LA21326-6</a></td><td>A Neg</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-abo-rh-type-vs",
+  "version" : "0.1.0",
+  "name" : "NMDPABORhTypeVS",
+  "title" : "ABO/Rh Blood Type Value Set",
+  "status" : "active",
+  "date" : "2026-09-03T14:51:12+00:00",
+  "publisher" : "National Marrow Donor Program (NMDP)",
+  "contact" : [{
+    "name" : "National Marrow Donor Program (NMDP)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nmdp.org"
+    },
+    {
+      "system" : "email",
+      "value" : "fhir@nmdp.org"
+    }]
+  }],
+  "description" : "LOINC Answer List LL2972-9 codes for ABO and Rh blood group types.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US",
+      "display" : "United States of America"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LA21321-7",
+        "display" : "O Pos"
+      },
+      {
+        "code" : "LA21322-5",
+        "display" : "O Neg"
+      },
+      {
+        "code" : "LA21327-4",
+        "display" : "B Pos"
+      },
+      {
+        "code" : "LA21328-2",
+        "display" : "B Neg"
+      },
+      {
+        "code" : "LA21323-3",
+        "display" : "AB Pos"
+      },
+      {
+        "code" : "LA21324-1",
+        "display" : "AB Neg"
+      },
+      {
+        "code" : "LA21325-8",
+        "display" : "A Pos"
+      },
+      {
+        "code" : "LA21326-6",
+        "display" : "A Neg"
+      }]
+    }]
+  }
+}

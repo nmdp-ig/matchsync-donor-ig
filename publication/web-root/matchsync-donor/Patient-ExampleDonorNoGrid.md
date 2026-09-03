@@ -1,22 +1,20 @@
-# Example Donor Without GRID - NMDP Donor Patient Implementation Guide v0.1.0
+# Example Donor With GRID Only - NMDP Donor Patient Implementation Guide v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Example Donor Without GRID**
+* **Example Donor With GRID Only**
 
-## Example Patient: Example Donor Without GRID
+## Example Patient: Example Donor With GRID Only
 
 Profile: [NMDP Donor Patient](StructureDefinition-nmdp-donor-patient.md)
 
-Adaeze Okafor Female, DoB: 1998-11-02 ( http://terminology.nmdp.org/identifier/donor#9876543)
+Adaeze Okafor Female, DoB: 1998-11-02 ( http://nmdp.org/identifier/grid#7C4E9A21D0B53F86E1A2C3D4B5F60798)
 
 -------
 
 | | |
 | :--- | :--- |
-| Language: | English |
-| Donor Status: | * status: active
- |
+| [Donor Status](StructureDefinition-donor-status.md) | Active |
 
 
 
@@ -30,31 +28,19 @@ Adaeze Okafor Female, DoB: 1998-11-02 ( http://terminology.nmdp.org/identifier/d
     "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"]
   },
   "extension" : [{
-    "extension" : [{
-      "url" : "status",
-      "valueCode" : "active"
-    }],
-    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status"
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status",
+    "valueString" : "Active"
   }],
   "identifier" : [{
-    "system" : "http://terminology.nmdp.org/identifier/donor",
-    "value" : "9876543"
+    "system" : "http://nmdp.org/identifier/grid",
+    "value" : "7C4E9A21D0B53F86E1A2C3D4B5F60798"
   }],
   "name" : [{
     "family" : "Okafor",
     "given" : ["Adaeze"]
   }],
   "gender" : "female",
-  "birthDate" : "1998-11-02",
-  "communication" : [{
-    "language" : {
-      "coding" : [{
-        "system" : "urn:ietf:bcp:47",
-        "code" : "en",
-        "display" : "English"
-      }]
-    }
-  }]
+  "birthDate" : "1998-11-02"
 }
 
 ```

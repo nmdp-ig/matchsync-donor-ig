@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "NMDPDonorPatient"] ;
   fhir:ImplementationGuide.title [ fhir:value "NMDP Donor Patient Implementation Guide"] ;
   fhir:ImplementationGuide.status [ fhir:value "draft"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-09-02T19:29:11+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-09-03T14:51:12+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "National Marrow Donor Program (NMDP)"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;
@@ -745,6 +745,34 @@
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-abo-rh-type-vs> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/nmdp-abo-rh-type-vs" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ABO/Rh Blood Type Value Set" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "LOINC Answer List LL2972-9 codes for ABO and Rh blood group types." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/cbu-status> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cbu-status" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CBU Status" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The availability status of a Cord Blood Unit (CBU) in the NMDP registry. Conveyed as a simple string value (e.g., 'Available')." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
@@ -752,10 +780,61 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/donor-status" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Donor Status" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable')." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 1 ;
+       fhir:index 3 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/Observation/ExampleCBUHemoglobin> ;
+         fhir:Reference.reference [ fhir:value "Observation/ExampleCBUHemoglobin" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example CBU Hemoglobin Observation" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example hemoglobin observation for a Cord Blood Unit (14.2 g/dL)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hemoglobin-observation" ;
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hemoglobin-observation>
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/ServiceRequest/ExampleCBUOrder> ;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/ExampleCBUOrder" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example CBU Order" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example high resolution typing order for a Cord Blood Unit. Subject is the recipient, performer is the CBU." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-order" ;
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-order>
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleCBUPatient> ;
+         fhir:Reference.reference [ fhir:value "Patient/ExampleCBUPatient" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example CBU Patient" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example Cord Blood Unit (CBU) registered in the NMDP registry, demonstrating all CBU identifier slices and demographics." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-patient" ;
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-patient>
+       ]
+     ], [
+       fhir:index 6 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -766,13 +845,13 @@
          fhir:Reference.reference [ fhir:value "Patient/ExampleDeceasedDonor" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Deceased Donor" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A donor who is deceased, demonstrating the deceased[x] element with a dateTime value." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A donor who is deceased, demonstrating the donor-status extension with Permanently Unavailable." ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient" ;
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient>
        ]
      ], [
-       fhir:index 2 ;
+       fhir:index 7 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -783,13 +862,64 @@
          fhir:Reference.reference [ fhir:value "Patient/ExampleDeferredDonor" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Deferred Donor" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A donor who is temporarily unavailable (e.g., post-collection with a future available date)." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A donor who is temporarily unavailable (e.g., post-collection)." ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient" ;
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient>
        ]
      ], [
-       fhir:index 3 ;
+       fhir:index 8 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/Observation/ExampleDonorABORh> ;
+         fhir:Reference.reference [ fhir:value "Observation/ExampleDonorABORh" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Donor ABO/Rh Observation" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example ABO/Rh blood group observation for a donor (O Positive)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-abo-rh-observation" ;
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-abo-rh-observation>
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/Observation/ExampleDonorBodyWeight> ;
+         fhir:Reference.reference [ fhir:value "Observation/ExampleDonorBodyWeight" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Donor Body Weight Observation" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example body weight observation for a donor (82 kg)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-body-weight-observation" ;
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-body-weight-observation>
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/Observation/ExampleDonorCMV> ;
+         fhir:Reference.reference [ fhir:value "Observation/ExampleDonorCMV" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Donor CMV Observation" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example CMV IgG antibody observation for a donor (Negative)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cmv-observation" ;
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cmv-observation>
+       ]
+     ], [
+       fhir:index 11 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -800,13 +930,13 @@
          fhir:Reference.reference [ fhir:value "ServiceRequest/ExampleDonorOrder" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Donor CT Order" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example confirmatory typing order for an NMDP donor." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example confirmatory typing order for an NMDP donor. Subject is the recipient, performer is the donor." ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order" ;
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order>
        ]
      ], [
-       fhir:index 4 ;
+       fhir:index 12 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -823,7 +953,7 @@
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-specimen>
        ]
      ], [
-       fhir:index 5 ;
+       fhir:index 13 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -833,14 +963,14 @@
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleDonorNoGrid> ;
          fhir:Reference.reference [ fhir:value "Patient/ExampleDonorNoGrid" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Donor Without GRID" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A newly registered donor who has an NMDP Donor ID but has not yet been assigned a GRID." ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Donor With GRID Only" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A donor with a GRID identifier and no source ID yet assigned." ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient" ;
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient>
        ]
      ], [
-       fhir:index 6 ;
+       fhir:index 14 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -857,7 +987,7 @@
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype>
        ]
      ], [
-       fhir:index 7 ;
+       fhir:index 15 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -868,13 +998,13 @@
          fhir:Reference.reference [ fhir:value "Observation/ExampleHLAGenotypeB" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example HLA-B Genotype" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example HLA-B genotype observation showing a donor typed as HLA-B*07:02:01+HLA-B*44:02:01." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example HLA-B genotype observation showing a donor typed as HLA-B*07:02+HLA-B*44:02." ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype" ;
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype>
        ]
      ], [
-       fhir:index 8 ;
+       fhir:index 16 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -885,13 +1015,13 @@
          fhir:Reference.reference [ fhir:value "Observation/ExampleHLAGenotypeC" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example HLA-C Genotype" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example HLA-C genotype observation showing a donor typed as HLA-C*07:02:01+HLA-C*05:01:01." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example HLA-C genotype observation showing a donor typed as HLA-C*07:01+HLA-C*05:01." ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype" ;
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype>
        ]
      ], [
-       fhir:index 9 ;
+       fhir:index 17 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -902,13 +1032,13 @@
          fhir:Reference.reference [ fhir:value "Observation/ExampleHLAGenotypeDRB1" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example HLA-DRB1 Genotype" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example HLA-DRB1 genotype observation showing a donor typed as HLA-DRB1*15:01:01+HLA-DRB1*03:01:01." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example HLA-DRB1 genotype observation showing a donor typed as HLA-DRB1*15:01+HLA-DRB1*03:01." ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype" ;
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype>
        ]
      ], [
-       fhir:index 10 ;
+       fhir:index 18 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -925,7 +1055,7 @@
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-idm-order>
        ]
      ], [
-       fhir:index 11 ;
+       fhir:index 19 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -942,7 +1072,7 @@
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/matchsync-donor-patient>
        ]
      ], [
-       fhir:index 12 ;
+       fhir:index 20 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -959,7 +1089,7 @@
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient>
        ]
      ], [
-       fhir:index 13 ;
+       fhir:index 21 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -976,7 +1106,21 @@
          fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization>
        ]
      ], [
-       fhir:index 14 ;
+       fhir:index 22 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleRecipientPatient> ;
+         fhir:Reference.reference [ fhir:value "Patient/ExampleRecipientPatient" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example Recipient Patient" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An example recipient patient identified by RID and local ID. Used as the subject of donor and CBU orders." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 23 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -990,7 +1134,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Genotype List String Codes from glstring.org. Codes represent HLA genotypes in GL String format (e.g., hla#3.25.0#HLA-A*01:01:01:01+HLA-A*01:02)." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 15 ;
+       fhir:index 24 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1004,7 +1148,49 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A minimal Patient profile used as the starting point for MatchSync donor data." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 16 ;
+       fhir:index 25 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-abo-rh-observation> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/nmdp-abo-rh-observation" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP ABO/Rh Observation" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An observation representing a donor or CBU's ABO and Rh blood group type. Uses LOINC 882-1 and valueCodeableConcept with codes from LOINC Answer List LL2972-9." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 26 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-body-weight-observation> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/nmdp-body-weight-observation" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP Body Weight Observation" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An observation representing a donor's body weight. Uses LOINC 29463-7 and valueQuantity in kg." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 27 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-order> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/nmdp-cbu-order" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP CBU Order" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A profile representing a Cord Blood Unit (CBU) workup order in the NMDP system. CBU orders can include high resolution typing for individual loci or a full panel. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the CBU Patient." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 28 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1018,7 +1204,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Types of centers in the NMDP network." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 17 ;
+       fhir:index 29 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1032,7 +1218,63 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "All center types in the NMDP network." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 18 ;
+       fhir:index 30 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cmv-observation> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/nmdp-cmv-observation" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP CMV Observation" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An observation representing a donor or CBU's CMV IgG antibody presence status. Uses LOINC 22244-8 and valueCodeableConcept with text-only values (Positive, Negative, Inconclusive, Untested)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 31 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-cmv-status> ;
+         fhir:Reference.reference [ fhir:value "CodeSystem/nmdp-cmv-status" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP CMV Status Code System" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Text-based status codes for CMV IgG antibody presence in donor and CBU testing." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 32 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-cmv-status-vs> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/nmdp-cmv-status-vs" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP CMV Status Value Set" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Allowable text-based values for CMV IgG antibody presence status used in NMDP donor and CBU payloads." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 33 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-patient> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/nmdp-cbu-patient" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP Cord Blood Unit (CBU) Patient" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A profile representing a Cord Blood Unit (CBU) in the NMDP registry. CBUs are identified by having a cbu-source-id identifier (no GRID). CBUs are not tied to a real person — they represent a cord blood unit. The Patient.id should be the CBU source ID." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 34 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1046,7 +1288,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Describes the expected capabilities of the NMDP Donor API FHIR server, including supported resources, interactions, and search parameters." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 19 ;
+       fhir:index 35 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1057,10 +1299,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/nmdp-donor-order" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP Donor Order" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A profile representing a donor workup or collection order in the NMDP system. Orders include confirmatory typing (CT), infectious disease markers (IDM), and stem cell collection." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A profile representing a donor workup order in the NMDP system. For donors, the ordered item is always confirmatory typing. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the donor Patient." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 20 ;
+       fhir:index 36 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1071,10 +1313,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/nmdp-donor-patient" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP Donor Patient" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A profile representing a hematopoietic cell donor registered in the NMDP registry." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 21 ;
+       fhir:index 37 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1088,7 +1330,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A profile representing a testing specimen (blood tube, buccal swab, etc.) collected from a donor for HLA typing or infectious disease marker testing. Specimens are identified by Order Number + Donor GRID rather than individual specimen IDs." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 22 ;
+       fhir:index 38 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1099,10 +1341,10 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/nmdp-donor-status" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP Donor Status" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05)." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05). In FHIR Donor API payloads, donor status is\nconveyed as a valueString on the donor-status extension." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 23 ;
+       fhir:index 39 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1116,7 +1358,21 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "All registry status codes for NMDP registered donors. Maps to ODS\nenterprise donor status values (AV, TU, AC, DE)." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 24 ;
+       fhir:index 40 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hemoglobin-observation> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/nmdp-hemoglobin-observation" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP Hemoglobin Observation" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An observation representing a CBU's hemoglobin level. Uses LOINC 718-7 (Hemoglobin [Mass/volume] in Blood) and valueQuantity in g/dL." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 41 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1130,7 +1386,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "HGNC Gene IDs for HLA loci used in donor typing. Subset of HGNC relevant to NMDP operations." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 25 ;
+       fhir:index 42 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1144,7 +1400,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "HLA gene names (HGNC IDs) for loci typed in NMDP donor operations." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 26 ;
+       fhir:index 43 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1155,10 +1411,24 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/nmdp-hla-genotype" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP HLA Genotype Observation" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code. The Observation.code uses a locus-specific LOINC code identifying which HLA gene was typed." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 27 ;
+       fhir:index 44 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-locus-loinc-vs> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/nmdp-hla-locus-loinc-vs" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP HLA Locus LOINC Value Set" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "LOINC codes for HLA locus-specific high resolution typing observations used in NMDP donor and CBU payloads." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 45 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1172,7 +1442,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A profile for Infectious Disease Marker (IDM) orders. IDM testing is required for donor clearance before stem cell collection." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 28 ;
+       fhir:index 46 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1183,10 +1453,10 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/nmdp-order-type" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "NMDP Order Type Code System" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes identifying the type of donor workup or collection order in the NMDP system." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes identifying the type of donor or CBU workup order in the NMDP system." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 29 ;
+       fhir:index 47 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1200,7 +1470,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "All codes from the NMDP Order Type code system." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 30 ;
+       fhir:index 48 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1214,7 +1484,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "An organization participating in the NMDP network (donor centers, transplant centers, collection centers, apheresis centers)." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 31 ;
+       fhir:index 49 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1228,7 +1498,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes identifying the type of specimen collected from a donor for HLA typing or infectious disease marker testing." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 32 ;
+       fhir:index 50 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1306,13 +1576,23 @@
          fhir:Element.extension [
            fhir:index 0 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "connecting-to-the-donor-api.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "connecting-to-the-donor-api.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Connecting to the Donor API" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 6 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "security-and-privacy.html" ]
          ] ;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "security-and-privacy.html" ] ;
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Security and Privacy" ] ;
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 6 ;
+         fhir:index 7 ;
          fhir:Element.extension [
            fhir:index 0 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
@@ -1322,7 +1602,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Related Specifications" ] ;
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 7 ;
+         fhir:index 8 ;
          fhir:Element.extension [
            fhir:index 0 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;

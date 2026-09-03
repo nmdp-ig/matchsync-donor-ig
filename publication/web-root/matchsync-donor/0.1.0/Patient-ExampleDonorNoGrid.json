@@ -6,32 +6,20 @@
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleDonorNoGrid</b></p><a name=\"ExampleDonorNoGrid\"> </a><a name=\"hcExampleDonorNoGrid\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-patient.html\">NMDP Donor Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Adaeze Okafor  Female, DoB: 1998-11-02 ( http://terminology.nmdp.org/identifier/donor#9876543)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Language spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes:{urn:ietf:bcp:47 en}\">English</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.\">Donor Status:</td><td colspan=\"3\"><ul><li>status: active</li></ul></td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleDonorNoGrid</b></p><a name=\"ExampleDonorNoGrid\"> </a><a name=\"hcExampleDonorNoGrid\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-patient.html\">NMDP Donor Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Adaeze Okafor  Female, DoB: 1998-11-02 ( http://nmdp.org/identifier/grid#7C4E9A21D0B53F86E1A2C3D4B5F60798)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').\"><a href=\"StructureDefinition-donor-status.html\">Donor Status</a></td><td colspan=\"3\">Active</td></tr></table></div>"
   },
   "extension" : [{
-    "extension" : [{
-      "url" : "status",
-      "valueCode" : "active"
-    }],
-    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status"
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status",
+    "valueString" : "Active"
   }],
   "identifier" : [{
-    "system" : "http://terminology.nmdp.org/identifier/donor",
-    "value" : "9876543"
+    "system" : "http://nmdp.org/identifier/grid",
+    "value" : "7C4E9A21D0B53F86E1A2C3D4B5F60798"
   }],
   "name" : [{
     "family" : "Okafor",
     "given" : ["Adaeze"]
   }],
   "gender" : "female",
-  "birthDate" : "1998-11-02",
-  "communication" : [{
-    "language" : {
-      "coding" : [{
-        "system" : "urn:ietf:bcp:47",
-        "code" : "en",
-        "display" : "English"
-      }]
-    }
-  }]
+  "birthDate" : "1998-11-02"
 }

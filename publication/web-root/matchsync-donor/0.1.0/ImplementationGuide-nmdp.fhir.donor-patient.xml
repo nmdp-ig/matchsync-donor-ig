@@ -11,7 +11,7 @@
   <name value="NMDPDonorPatient"/>
   <title value="NMDP Donor Patient Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-09-02T19:29:11+00:00"/>
+  <date value="2026-09-03T14:51:12+00:00"/>
   <publisher value="National Marrow Donor Program (NMDP)"/>
   <contact>
     <name value="National Marrow Donor Program (NMDP)"/>
@@ -494,14 +494,69 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nmdp-abo-rh-type-vs"/>
+      </reference>
+      <name value="ABO/Rh Blood Type Value Set"/>
+      <description value="LOINC Answer List LL2972-9 codes for ABO and Rh blood group types."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cbu-status"/>
+      </reference>
+      <name value="CBU Status"/>
+      <description value="The availability status of a Cord Blood Unit (CBU) in the NMDP registry. Conveyed as a simple string value (e.g., 'Available')."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
         <reference value="StructureDefinition/donor-status"/>
       </reference>
       <name value="Donor Status"/>
-      <description value="The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors."/>
+      <description value="The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable')."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleCBUHemoglobin"/>
+      </reference>
+      <name value="Example CBU Hemoglobin Observation"/>
+      <description value="An example hemoglobin observation for a Cord Blood Unit (14.2 g/dL)."/>
+      <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hemoglobin-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ExampleCBUOrder"/>
+      </reference>
+      <name value="Example CBU Order"/>
+      <description value="An example high resolution typing order for a Cord Blood Unit. Subject is the recipient, performer is the CBU."/>
+      <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-order"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ExampleCBUPatient"/>
+      </reference>
+      <name value="Example CBU Patient"/>
+      <description value="An example Cord Blood Unit (CBU) registered in the NMDP registry, demonstrating all CBU identifier slices and demographics."/>
+      <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-patient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -511,7 +566,7 @@
         <reference value="Patient/ExampleDeceasedDonor"/>
       </reference>
       <name value="Example Deceased Donor"/>
-      <description value="A donor who is deceased, demonstrating the deceased[x] element with a dateTime value."/>
+      <description value="A donor who is deceased, demonstrating the donor-status extension with Permanently Unavailable."/>
       <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"/>
     </resource>
     <resource>
@@ -522,8 +577,41 @@
         <reference value="Patient/ExampleDeferredDonor"/>
       </reference>
       <name value="Example Deferred Donor"/>
-      <description value="A donor who is temporarily unavailable (e.g., post-collection with a future available date)."/>
+      <description value="A donor who is temporarily unavailable (e.g., post-collection)."/>
       <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleDonorABORh"/>
+      </reference>
+      <name value="Example Donor ABO/Rh Observation"/>
+      <description value="An example ABO/Rh blood group observation for a donor (O Positive)."/>
+      <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-abo-rh-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleDonorBodyWeight"/>
+      </reference>
+      <name value="Example Donor Body Weight Observation"/>
+      <description value="An example body weight observation for a donor (82 kg)."/>
+      <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-body-weight-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleDonorCMV"/>
+      </reference>
+      <name value="Example Donor CMV Observation"/>
+      <description value="An example CMV IgG antibody observation for a donor (Negative)."/>
+      <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cmv-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -533,7 +621,7 @@
         <reference value="ServiceRequest/ExampleDonorOrder"/>
       </reference>
       <name value="Example Donor CT Order"/>
-      <description value="An example confirmatory typing order for an NMDP donor."/>
+      <description value="An example confirmatory typing order for an NMDP donor. Subject is the recipient, performer is the donor."/>
       <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order"/>
     </resource>
     <resource>
@@ -554,8 +642,8 @@
       <reference>
         <reference value="Patient/ExampleDonorNoGrid"/>
       </reference>
-      <name value="Example Donor Without GRID"/>
-      <description value="A newly registered donor who has an NMDP Donor ID but has not yet been assigned a GRID."/>
+      <name value="Example Donor With GRID Only"/>
+      <description value="A donor with a GRID identifier and no source ID yet assigned."/>
       <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"/>
     </resource>
     <resource>
@@ -577,7 +665,7 @@
         <reference value="Observation/ExampleHLAGenotypeB"/>
       </reference>
       <name value="Example HLA-B Genotype"/>
-      <description value="An example HLA-B genotype observation showing a donor typed as HLA-B*07:02:01+HLA-B*44:02:01."/>
+      <description value="An example HLA-B genotype observation showing a donor typed as HLA-B*07:02+HLA-B*44:02."/>
       <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"/>
     </resource>
     <resource>
@@ -588,7 +676,7 @@
         <reference value="Observation/ExampleHLAGenotypeC"/>
       </reference>
       <name value="Example HLA-C Genotype"/>
-      <description value="An example HLA-C genotype observation showing a donor typed as HLA-C*07:02:01+HLA-C*05:01:01."/>
+      <description value="An example HLA-C genotype observation showing a donor typed as HLA-C*07:01+HLA-C*05:01."/>
       <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"/>
     </resource>
     <resource>
@@ -599,7 +687,7 @@
         <reference value="Observation/ExampleHLAGenotypeDRB1"/>
       </reference>
       <name value="Example HLA-DRB1 Genotype"/>
-      <description value="An example HLA-DRB1 genotype observation showing a donor typed as HLA-DRB1*15:01:01+HLA-DRB1*03:01:01."/>
+      <description value="An example HLA-DRB1 genotype observation showing a donor typed as HLA-DRB1*15:01+HLA-DRB1*03:01."/>
       <exampleCanonical value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"/>
     </resource>
     <resource>
@@ -648,6 +736,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ExampleRecipientPatient"/>
+      </reference>
+      <name value="Example Recipient Patient"/>
+      <description value="An example recipient patient identified by RID and local ID. Used as the subject of donor and CBU orders."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -666,6 +765,39 @@
       </reference>
       <name value="MatchSync Donor Patient"/>
       <description value="A minimal Patient profile used as the starting point for MatchSync donor data."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/nmdp-abo-rh-observation"/>
+      </reference>
+      <name value="NMDP ABO/Rh Observation"/>
+      <description value="An observation representing a donor or CBU's ABO and Rh blood group type. Uses LOINC 882-1 and valueCodeableConcept with codes from LOINC Answer List LL2972-9."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/nmdp-body-weight-observation"/>
+      </reference>
+      <name value="NMDP Body Weight Observation"/>
+      <description value="An observation representing a donor's body weight. Uses LOINC 29463-7 and valueQuantity in kg."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/nmdp-cbu-order"/>
+      </reference>
+      <name value="NMDP CBU Order"/>
+      <description value="A profile representing a Cord Blood Unit (CBU) workup order in the NMDP system. CBU orders can include high resolution typing for individual loci or a full panel. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the CBU Patient."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -692,6 +824,50 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/nmdp-cmv-observation"/>
+      </reference>
+      <name value="NMDP CMV Observation"/>
+      <description value="An observation representing a donor or CBU's CMV IgG antibody presence status. Uses LOINC 22244-8 and valueCodeableConcept with text-only values (Positive, Negative, Inconclusive, Untested)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nmdp-cmv-status"/>
+      </reference>
+      <name value="NMDP CMV Status Code System"/>
+      <description value="Text-based status codes for CMV IgG antibody presence in donor and CBU testing."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nmdp-cmv-status-vs"/>
+      </reference>
+      <name value="NMDP CMV Status Value Set"/>
+      <description value="Allowable text-based values for CMV IgG antibody presence status used in NMDP donor and CBU payloads."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/nmdp-cbu-patient"/>
+      </reference>
+      <name value="NMDP Cord Blood Unit (CBU) Patient"/>
+      <description value="A profile representing a Cord Blood Unit (CBU) in the NMDP registry. CBUs are identified by having a cbu-source-id identifier (no GRID). CBUs are not tied to a real person — they represent a cord blood unit. The Patient.id should be the CBU source ID."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CapabilityStatement"/>
       </extension>
       <reference>
@@ -709,7 +885,7 @@
         <reference value="StructureDefinition/nmdp-donor-order"/>
       </reference>
       <name value="NMDP Donor Order"/>
-      <description value="A profile representing a donor workup or collection order in the NMDP system. Orders include confirmatory typing (CT), infectious disease markers (IDM), and stem cell collection."/>
+      <description value="A profile representing a donor workup order in the NMDP system. For donors, the ordered item is always confirmatory typing. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the donor Patient."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -720,7 +896,7 @@
         <reference value="StructureDefinition/nmdp-donor-patient"/>
       </reference>
       <name value="NMDP Donor Patient"/>
-      <description value="A profile representing a hematopoietic cell donor registered in the NMDP registry."/>
+      <description value="A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -742,7 +918,7 @@
         <reference value="CodeSystem/nmdp-donor-status"/>
       </reference>
       <name value="NMDP Donor Status"/>
-      <description value="Status codes for NMDP registered donors. These codes represent the&#xA;enterprise Registry Status maintained by NMDP, indicating a donor's availability&#xA;for patient search, matching, and product request activities. Source: ODS&#xA;DonorWithSampleResponse (v05)."/>
+      <description value="Status codes for NMDP registered donors. These codes represent the&#xA;enterprise Registry Status maintained by NMDP, indicating a donor's availability&#xA;for patient search, matching, and product request activities. Source: ODS&#xA;DonorWithSampleResponse (v05). In FHIR Donor API payloads, donor status is&#xA;conveyed as a valueString on the donor-status extension."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -754,6 +930,17 @@
       </reference>
       <name value="NMDP Donor Status ValueSet"/>
       <description value="All registry status codes for NMDP registered donors. Maps to ODS&#xA;enterprise donor status values (AV, TU, AC, DE)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/nmdp-hemoglobin-observation"/>
+      </reference>
+      <name value="NMDP Hemoglobin Observation"/>
+      <description value="An observation representing a CBU's hemoglobin level. Uses LOINC 718-7 (Hemoglobin [Mass/volume] in Blood) and valueQuantity in g/dL."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -786,7 +973,18 @@
         <reference value="StructureDefinition/nmdp-hla-genotype"/>
       </reference>
       <name value="NMDP HLA Genotype Observation"/>
-      <description value="A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code."/>
+      <description value="A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code. The Observation.code uses a locus-specific LOINC code identifying which HLA gene was typed."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nmdp-hla-locus-loinc-vs"/>
+      </reference>
+      <name value="NMDP HLA Locus LOINC Value Set"/>
+      <description value="LOINC codes for HLA locus-specific high resolution typing observations used in NMDP donor and CBU payloads."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -808,7 +1006,7 @@
         <reference value="CodeSystem/nmdp-order-type"/>
       </reference>
       <name value="NMDP Order Type Code System"/>
-      <description value="Codes identifying the type of donor workup or collection order in the NMDP system."/>
+      <description value="Codes identifying the type of donor or CBU workup order in the NMDP system."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -900,6 +1098,14 @@
         </extension>
         <nameUrl value="order-workflow.html"/>
         <title value="Order Workflow"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="connecting-to-the-donor-api.html"/>
+        </extension>
+        <nameUrl value="connecting-to-the-donor-api.html"/>
+        <title value="Connecting to the Donor API"/>
         <generation value="markdown"/>
       </page>
       <page>

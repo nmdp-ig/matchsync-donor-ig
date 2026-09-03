@@ -1,11 +1,296 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="70a073c1-ce11-43d4-9f4f-fa478a4f8c69"/>
+  <id value="154ec2ce-174d-468a-95c9-0a9c84f4e561"/>
   <meta>
-    <lastUpdated value="2026-09-02T19:29:11.560+00:00"/>
+    <lastUpdated value="2026-09-03T14:51:12.807+00:00"/>
   </meta>
   <type value="collection"/>
+  <entry>
+    <fullUrl value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-abo-rh-type-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on Loinc v2.82
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://loinc.org|2.82" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 8 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-LA21321-7"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/LA21321-7/">LA21321-7</a>
+                </td>
+                <td>O Pos</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;LA21321-7&quot;, &quot;display&quot;: &quot;O Pos&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;LA21321-7&quot;&gt;&lt;display value=&quot;O Pos&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-LA21322-5"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/LA21322-5/">LA21322-5</a>
+                </td>
+                <td>O Neg</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;LA21322-5&quot;, &quot;display&quot;: &quot;O Neg&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;LA21322-5&quot;&gt;&lt;display value=&quot;O Neg&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-LA21327-4"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/LA21327-4/">LA21327-4</a>
+                </td>
+                <td>B Pos</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;LA21327-4&quot;, &quot;display&quot;: &quot;B Pos&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;LA21327-4&quot;&gt;&lt;display value=&quot;B Pos&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-LA21328-2"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/LA21328-2/">LA21328-2</a>
+                </td>
+                <td>B Neg</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;LA21328-2&quot;, &quot;display&quot;: &quot;B Neg&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;LA21328-2&quot;&gt;&lt;display value=&quot;B Neg&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-LA21323-3"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/LA21323-3/">LA21323-3</a>
+                </td>
+                <td>AB Pos</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;LA21323-3&quot;, &quot;display&quot;: &quot;AB Pos&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;LA21323-3&quot;&gt;&lt;display value=&quot;AB Pos&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-LA21324-1"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/LA21324-1/">LA21324-1</a>
+                </td>
+                <td>AB Neg</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;LA21324-1&quot;, &quot;display&quot;: &quot;AB Neg&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;LA21324-1&quot;&gt;&lt;display value=&quot;AB Neg&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-LA21325-8"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/LA21325-8/">LA21325-8</a>
+                </td>
+                <td>A Pos</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;LA21325-8&quot;, &quot;display&quot;: &quot;A Pos&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;LA21325-8&quot;&gt;&lt;display value=&quot;A Pos&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-LA21326-6"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/LA21326-6/">LA21326-6</a>
+                </td>
+                <td>A Neg</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;LA21326-6&quot;, &quot;display&quot;: &quot;A Neg&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;LA21326-6&quot;&gt;&lt;display value=&quot;A Neg&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-abo-rh-type-vs"/>
+        <version value="0.1.0"/>
+        <name value="NMDPABORhTypeVS"/>
+        <title value="ABO/Rh Blood Type Value Set"/>
+        <status value="active"/>
+        <date value="2026-09-03T14:51:12+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States of America"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:a41adc8a-161f-47ab-a879-e796464d7e65"/>
+          <timestamp value="2026-09-03T14:53:20+00:00"/>
+          <total value="8"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://loinc.org|2.82"/>
+          </parameter>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA21321-7"/>
+            <display value="O Pos"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA21322-5"/>
+            <display value="O Neg"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA21327-4"/>
+            <display value="B Pos"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA21328-2"/>
+            <display value="B Neg"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA21323-3"/>
+            <display value="AB Pos"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA21324-1"/>
+            <display value="AB Neg"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA21325-8"/>
+            <display value="A Pos"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA21326-6"/>
+            <display value="A Neg"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
   <entry>
     <fullUrl value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-center-type-vs"/>
     <resource>
@@ -155,7 +440,7 @@
         <name value="NMDPCenterTypeVS"/>
         <title value="NMDP Center Type ValueSet"/>
         <status value="draft"/>
-        <date value="2026-09-02T19:29:11+00:00"/>
+        <date value="2026-09-03T14:51:12+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -164,8 +449,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5fff3d4e-2889-4a5b-84f0-66c21c95b4f9"/>
-          <timestamp value="2026-09-02T19:30:31+00:00"/>
+          <identifier value="urn:uuid:3d4b734f-b28c-4413-b46f-8e7e5fe43251"/>
+          <timestamp value="2026-09-03T14:53:20+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -218,7 +503,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs"/>
+    <fullUrl value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-cmv-status-vs"/>
     <resource>
       <ValueSet>
         <text>
@@ -226,9 +511,9 @@
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-nmdp-donor-status.html">codesystem NMDP Donor Status v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-nmdp-cmv-status.html">codesystem NMDP CMV Status Code System v0.1.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="http://terminology.nmdp.org/codesystem/donor-status|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="http://fhir.nmdp.org/CodeSystem/cmv-status|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 4 concepts</p>
@@ -255,97 +540,97 @@
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://terminology.nmdp.org/codesystem/donor-status-available"> </a>
-                  <code>http://terminology.nmdp.org/codesystem/donor-status</code>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/cmv-status-Positive"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/cmv-status</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="CodeSystem-nmdp-donor-status.html#nmdp-donor-status-available">available</a>
+                  <a href="CodeSystem-nmdp-cmv-status.html#nmdp-cmv-status-Positive">Positive</a>
                 </td>
-                <td>Available</td>
-                <td>Donor is available for search, further typing, and collection/transplant (ODS code: AV).</td>
+                <td>Positive</td>
+                <td>CMV IgG antibody detected.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.nmdp.org/codesystem/donor-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;available&quot;, &quot;display&quot;: &quot;Available&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/cmv-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Positive&quot;, &quot;display&quot;: &quot;Positive&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.nmdp.org/codesystem/donor-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;available&quot;&gt;&lt;display value=&quot;Available&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/cmv-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Positive&quot;&gt;&lt;display value=&quot;Positive&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://terminology.nmdp.org/codesystem/donor-status-temporarily-unavailable"> </a>
-                  <code>http://terminology.nmdp.org/codesystem/donor-status</code>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/cmv-status-Negative"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/cmv-status</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="CodeSystem-nmdp-donor-status.html#nmdp-donor-status-temporarily-unavailable">temporarily-unavailable</a>
+                  <a href="CodeSystem-nmdp-cmv-status.html#nmdp-cmv-status-Negative">Negative</a>
                 </td>
-                <td>Temporarily Unavailable</td>
-                <td>Donor is temporarily unavailable, typically post-collection with a future available date (ODS code: TU).</td>
+                <td>Negative</td>
+                <td>CMV IgG antibody not detected.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.nmdp.org/codesystem/donor-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;temporarily-unavailable&quot;, &quot;display&quot;: &quot;Temporarily Unavailable&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/cmv-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Negative&quot;, &quot;display&quot;: &quot;Negative&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.nmdp.org/codesystem/donor-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;temporarily-unavailable&quot;&gt;&lt;display value=&quot;Temporarily Unavailable&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/cmv-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Negative&quot;&gt;&lt;display value=&quot;Negative&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://terminology.nmdp.org/codesystem/donor-status-active"> </a>
-                  <code>http://terminology.nmdp.org/codesystem/donor-status</code>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/cmv-status-Inconclusive"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/cmv-status</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="CodeSystem-nmdp-donor-status.html#nmdp-donor-status-active">active</a>
+                  <a href="CodeSystem-nmdp-cmv-status.html#nmdp-cmv-status-Inconclusive">Inconclusive</a>
                 </td>
-                <td>Active</td>
-                <td>Donor is currently active on a search — reserved for a specific patient case (ODS code: AC).</td>
+                <td>Inconclusive</td>
+                <td>CMV IgG antibody test result is inconclusive.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.nmdp.org/codesystem/donor-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;active&quot;, &quot;display&quot;: &quot;Active&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/cmv-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Inconclusive&quot;, &quot;display&quot;: &quot;Inconclusive&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.nmdp.org/codesystem/donor-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;active&quot;&gt;&lt;display value=&quot;Active&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/cmv-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Inconclusive&quot;&gt;&lt;display value=&quot;Inconclusive&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://terminology.nmdp.org/codesystem/donor-status-permanently-unavailable"> </a>
-                  <code>http://terminology.nmdp.org/codesystem/donor-status</code>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/cmv-status-Untested"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/cmv-status</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="CodeSystem-nmdp-donor-status.html#nmdp-donor-status-permanently-unavailable">permanently-unavailable</a>
+                  <a href="CodeSystem-nmdp-cmv-status.html#nmdp-cmv-status-Untested">Untested</a>
                 </td>
-                <td>Permanently Unavailable</td>
-                <td>Donor has been permanently removed from the registry. Reasons include: not interested, permanently medically deferred, unable to contact, donor too old, or deceased (ODS code: DE).</td>
+                <td>Untested</td>
+                <td>CMV IgG antibody testing has not been performed.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.nmdp.org/codesystem/donor-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;permanently-unavailable&quot;, &quot;display&quot;: &quot;Permanently Unavailable&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/cmv-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Untested&quot;, &quot;display&quot;: &quot;Untested&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.nmdp.org/codesystem/donor-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;permanently-unavailable&quot;&gt;&lt;display value=&quot;Permanently Unavailable&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/cmv-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Untested&quot;&gt;&lt;display value=&quot;Untested&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
             </table>
           </div>
         </text>
-        <url value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs"/>
+        <url value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-cmv-status-vs"/>
         <version value="0.1.0"/>
-        <name value="NMDPDonorStatusVS"/>
-        <title value="NMDP Donor Status ValueSet"/>
-        <status value="draft"/>
-        <date value="2026-09-02T19:29:11+00:00"/>
+        <name value="NMDPCMVStatusVS"/>
+        <title value="NMDP CMV Status Value Set"/>
+        <status value="active"/>
+        <date value="2026-09-03T14:51:12+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -354,8 +639,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:64495297-5e2d-47a8-8faa-34aa306681ea"/>
-          <timestamp value="2026-09-02T19:30:31+00:00"/>
+          <identifier value="urn:uuid:aead2826-2c60-46de-bda4-157f1421d239"/>
+          <timestamp value="2026-09-03T14:53:20+00:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -376,26 +661,211 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://terminology.nmdp.org/codesystem/donor-status|0.1.0"/>
+            <valueUri value="http://fhir.nmdp.org/CodeSystem/cmv-status|0.1.0"/>
           </parameter>
           <contains>
-            <system value="http://terminology.nmdp.org/codesystem/donor-status"/>
-            <code value="available"/>
+            <system value="http://fhir.nmdp.org/CodeSystem/cmv-status"/>
+            <code value="Positive"/>
+            <display value="Positive"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.nmdp.org/CodeSystem/cmv-status"/>
+            <code value="Negative"/>
+            <display value="Negative"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.nmdp.org/CodeSystem/cmv-status"/>
+            <code value="Inconclusive"/>
+            <display value="Inconclusive"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.nmdp.org/CodeSystem/cmv-status"/>
+            <code value="Untested"/>
+            <display value="Untested"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-nmdp-donor-status.html">codesystem NMDP Donor Status v0.1.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://fhir.nmdp.org/CodeSystem/donor-status|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 4 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/donor-status-Available"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/donor-status</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-nmdp-donor-status.html#nmdp-donor-status-Available">Available</a>
+                </td>
+                <td>Available</td>
+                <td>Donor is available for search, further typing, and collection/transplant (ODS code: AV).</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/donor-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Available&quot;, &quot;display&quot;: &quot;Available&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/donor-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Available&quot;&gt;&lt;display value=&quot;Available&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/donor-status-Temporarily-Unavailable"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/donor-status</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-nmdp-donor-status.html#nmdp-donor-status-Temporarily-Unavailable">Temporarily-Unavailable</a>
+                </td>
+                <td>Temporarily Unavailable</td>
+                <td>Donor is temporarily unavailable, typically post-collection with a future available date (ODS code: TU).</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/donor-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Temporarily-Unavailable&quot;, &quot;display&quot;: &quot;Temporarily Unavailable&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/donor-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Temporarily-Unavailable&quot;&gt;&lt;display value=&quot;Temporarily Unavailable&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/donor-status-Active"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/donor-status</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-nmdp-donor-status.html#nmdp-donor-status-Active">Active</a>
+                </td>
+                <td>Active</td>
+                <td>Donor is currently active on a search — reserved for a specific patient case (ODS code: AC).</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/donor-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Active&quot;, &quot;display&quot;: &quot;Active&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/donor-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Active&quot;&gt;&lt;display value=&quot;Active&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/donor-status-Permanently-Unavailable"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/donor-status</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-nmdp-donor-status.html#nmdp-donor-status-Permanently-Unavailable">Permanently-Unavailable</a>
+                </td>
+                <td>Permanently Unavailable</td>
+                <td>Donor has been permanently removed from the registry. Reasons include: not interested, permanently medically deferred, unable to contact, donor too old, or deceased (ODS code: DE).</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/donor-status&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;Permanently-Unavailable&quot;, &quot;display&quot;: &quot;Permanently Unavailable&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/donor-status&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;Permanently-Unavailable&quot;&gt;&lt;display value=&quot;Permanently Unavailable&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs"/>
+        <version value="0.1.0"/>
+        <name value="NMDPDonorStatusVS"/>
+        <title value="NMDP Donor Status ValueSet"/>
+        <status value="draft"/>
+        <date value="2026-09-03T14:51:12+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States of America"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:f5ca8afe-47c3-4912-b058-8825689df4fd"/>
+          <timestamp value="2026-09-03T14:53:20+00:00"/>
+          <total value="4"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://fhir.nmdp.org/CodeSystem/donor-status|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://fhir.nmdp.org/CodeSystem/donor-status"/>
+            <code value="Available"/>
             <display value="Available"/>
           </contains>
           <contains>
-            <system value="http://terminology.nmdp.org/codesystem/donor-status"/>
-            <code value="temporarily-unavailable"/>
+            <system value="http://fhir.nmdp.org/CodeSystem/donor-status"/>
+            <code value="Temporarily-Unavailable"/>
             <display value="Temporarily Unavailable"/>
           </contains>
           <contains>
-            <system value="http://terminology.nmdp.org/codesystem/donor-status"/>
-            <code value="active"/>
+            <system value="http://fhir.nmdp.org/CodeSystem/donor-status"/>
+            <code value="Active"/>
             <display value="Active"/>
           </contains>
           <contains>
-            <system value="http://terminology.nmdp.org/codesystem/donor-status"/>
-            <code value="permanently-unavailable"/>
+            <system value="http://fhir.nmdp.org/CodeSystem/donor-status"/>
+            <code value="Permanently-Unavailable"/>
             <display value="Permanently Unavailable"/>
           </contains>
         </expansion>
@@ -572,7 +1042,7 @@
         <name value="NMDPHLAGeneNameVS"/>
         <title value="NMDP HLA Gene Name Value Set"/>
         <status value="active"/>
-        <date value="2026-09-02T19:29:11+00:00"/>
+        <date value="2026-09-03T14:51:12+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -581,8 +1051,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5728f014-4fa0-43da-83d3-37d6f8d3fca8"/>
-          <timestamp value="2026-09-02T19:30:31+00:00"/>
+          <identifier value="urn:uuid:aa0973e9-115f-4393-afc7-c2e9223ae27b"/>
+          <timestamp value="2026-09-03T14:53:20+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -640,6 +1110,366 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-locus-loinc-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on Loinc v2.82
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://loinc.org|2.82" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 11 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-57290-9"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/57290-9/">57290-9</a>
+                </td>
+                <td>HLA-A [Type] by High resolution</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;57290-9&quot;, &quot;display&quot;: &quot;HLA-A [Type] by High resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;57290-9&quot;&gt;&lt;display value=&quot;HLA-A [Type] by High resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-57291-7"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/57291-7/">57291-7</a>
+                </td>
+                <td>HLA-B [Type] by High resolution</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;57291-7&quot;, &quot;display&quot;: &quot;HLA-B [Type] by High resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;57291-7&quot;&gt;&lt;display value=&quot;HLA-B [Type] by High resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-57297-4"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/57297-4/">57297-4</a>
+                </td>
+                <td>HLA-Cw [Type] by High resolution</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;57297-4&quot;, &quot;display&quot;: &quot;HLA-Cw [Type] by High resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;57297-4&quot;&gt;&lt;display value=&quot;HLA-Cw [Type] by High resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-57293-3"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/57293-3/">57293-3</a>
+                </td>
+                <td>HLA-DRB1 [Type] by High resolution</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;57293-3&quot;, &quot;display&quot;: &quot;HLA-DRB1 [Type] by High resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;57293-3&quot;&gt;&lt;display value=&quot;HLA-DRB1 [Type] by High resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-57299-0"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/57299-0/">57299-0</a>
+                </td>
+                <td>HLA-DQB1 [Type] by High resolution</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;57299-0&quot;, &quot;display&quot;: &quot;HLA-DQB1 [Type] by High resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;57299-0&quot;&gt;&lt;display value=&quot;HLA-DQB1 [Type] by High resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-59017-4"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/59017-4/">59017-4</a>
+                </td>
+                <td>HLA-DPB1 [Type] by High resolution</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;59017-4&quot;, &quot;display&quot;: &quot;HLA-DPB1 [Type] by High resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;59017-4&quot;&gt;&lt;display value=&quot;HLA-DPB1 [Type] by High resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-59019-0"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/59019-0/">59019-0</a>
+                </td>
+                <td>HLA-DQA1 [Type] by High resolution</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;59019-0&quot;, &quot;display&quot;: &quot;HLA-DQA1 [Type] by High resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;59019-0&quot;&gt;&lt;display value=&quot;HLA-DQA1 [Type] by High resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-59018-2"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/59018-2/">59018-2</a>
+                </td>
+                <td>HLA-DPA1 [Type] by High resolution</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;59018-2&quot;, &quot;display&quot;: &quot;HLA-DPA1 [Type] by High resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;59018-2&quot;&gt;&lt;display value=&quot;HLA-DPA1 [Type] by High resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-57294-1"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/57294-1/">57294-1</a>
+                </td>
+                <td>HLA-DRB3 [Type] by High resolution</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;57294-1&quot;, &quot;display&quot;: &quot;HLA-DRB3 [Type] by High resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;57294-1&quot;&gt;&lt;display value=&quot;HLA-DRB3 [Type] by High resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-57295-8"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/57295-8/">57295-8</a>
+                </td>
+                <td>HLA-DRB4 [Type] by High resolution</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;57295-8&quot;, &quot;display&quot;: &quot;HLA-DRB4 [Type] by High resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;57295-8&quot;&gt;&lt;display value=&quot;HLA-DRB4 [Type] by High resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://loinc.org-57296-6"> </a>
+                  <code>http://loinc.org</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="https://loinc.org/57296-6/">57296-6</a>
+                </td>
+                <td>HLA-DRB5 [Type] by High resolution</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://loinc.org&quot;, &quot;version&quot;: &quot;2.82&quot;, &quot;code&quot;: &quot;57296-6&quot;, &quot;display&quot;: &quot;HLA-DRB5 [Type] by High resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://loinc.org&quot;&gt;&lt;version value=&quot;2.82&quot;&gt;&lt;code value=&quot;57296-6&quot;&gt;&lt;display value=&quot;HLA-DRB5 [Type] by High resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-locus-loinc-vs"/>
+        <version value="0.1.0"/>
+        <name value="NMDPHLALocusLOINCVS"/>
+        <title value="NMDP HLA Locus LOINC Value Set"/>
+        <status value="active"/>
+        <date value="2026-09-03T14:51:12+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States of America"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:93d12974-236a-4a45-90e9-a86123d67b78"/>
+          <timestamp value="2026-09-03T14:53:20+00:00"/>
+          <total value="11"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://loinc.org|2.82"/>
+          </parameter>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="57290-9"/>
+            <display value="HLA-A [Type] by High resolution"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="57291-7"/>
+            <display value="HLA-B [Type] by High resolution"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="57297-4"/>
+            <display value="HLA-Cw [Type] by High resolution"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="57293-3"/>
+            <display value="HLA-DRB1 [Type] by High resolution"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="57299-0"/>
+            <display value="HLA-DQB1 [Type] by High resolution"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="59017-4"/>
+            <display value="HLA-DPB1 [Type] by High resolution"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="59019-0"/>
+            <display value="HLA-DQA1 [Type] by High resolution"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="59018-2"/>
+            <display value="HLA-DPA1 [Type] by High resolution"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="57294-1"/>
+            <display value="HLA-DRB3 [Type] by High resolution"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="57295-8"/>
+            <display value="HLA-DRB4 [Type] by High resolution"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="57296-6"/>
+            <display value="HLA-DRB5 [Type] by High resolution"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-order-type-vs"/>
     <resource>
       <ValueSet>
@@ -650,10 +1480,10 @@
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-nmdp-order-type.html">codesystem NMDP Order Type Code System v0.1.0 (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="http://terminology.nmdp.org/codesystem/order-type|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="http://fhir.nmdp.org/CodeSystem/order-type|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
-            <p>This value set contains 5 concepts</p>
+            <p>This value set contains 9 concepts</p>
             <table class="codes" data-fhir="generated">
               <tr>
                 <td>
@@ -677,29 +1507,29 @@
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://terminology.nmdp.org/codesystem/order-type-ct"> </a>
-                  <code>http://terminology.nmdp.org/codesystem/order-type</code>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/order-type-confirmatory-typing"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/order-type</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="CodeSystem-nmdp-order-type.html#nmdp-order-type-ct">ct</a>
+                  <a href="CodeSystem-nmdp-order-type.html#nmdp-order-type-confirmatory-typing">confirmatory-typing</a>
                 </td>
                 <td>Confirmatory Typing</td>
                 <td>HLA confirmatory typing order to verify initial typing results.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.nmdp.org/codesystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ct&quot;, &quot;display&quot;: &quot;Confirmatory Typing&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;confirmatory-typing&quot;, &quot;display&quot;: &quot;Confirmatory Typing&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.nmdp.org/codesystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;ct&quot;&gt;&lt;display value=&quot;Confirmatory Typing&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;confirmatory-typing&quot;&gt;&lt;display value=&quot;Confirmatory Typing&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://terminology.nmdp.org/codesystem/order-type-idm"> </a>
-                  <code>http://terminology.nmdp.org/codesystem/order-type</code>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/order-type-idm"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/order-type</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-nmdp-order-type.html#nmdp-order-type-idm">idm</a>
@@ -708,19 +1538,19 @@
                 <td>Infectious disease marker testing order for donor clearance.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.nmdp.org/codesystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;idm&quot;, &quot;display&quot;: &quot;Infectious Disease Markers&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;idm&quot;, &quot;display&quot;: &quot;Infectious Disease Markers&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.nmdp.org/codesystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;idm&quot;&gt;&lt;display value=&quot;Infectious Disease Markers&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;idm&quot;&gt;&lt;display value=&quot;Infectious Disease Markers&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://terminology.nmdp.org/codesystem/order-type-collection"> </a>
-                  <code>http://terminology.nmdp.org/codesystem/order-type</code>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/order-type-collection"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/order-type</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-nmdp-order-type.html#nmdp-order-type-collection">collection</a>
@@ -729,19 +1559,19 @@
                 <td>Generic stem cell collection order.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.nmdp.org/codesystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;collection&quot;, &quot;display&quot;: &quot;Collection&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;collection&quot;, &quot;display&quot;: &quot;Collection&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.nmdp.org/codesystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;collection&quot;&gt;&lt;display value=&quot;Collection&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;collection&quot;&gt;&lt;display value=&quot;Collection&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://terminology.nmdp.org/codesystem/order-type-pbsc"> </a>
-                  <code>http://terminology.nmdp.org/codesystem/order-type</code>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/order-type-pbsc"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/order-type</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-nmdp-order-type.html#nmdp-order-type-pbsc">pbsc</a>
@@ -750,19 +1580,19 @@
                 <td>Peripheral blood stem cell collection via apheresis.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.nmdp.org/codesystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;pbsc&quot;, &quot;display&quot;: &quot;Peripheral Blood Stem Cell&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;pbsc&quot;, &quot;display&quot;: &quot;Peripheral Blood Stem Cell&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.nmdp.org/codesystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;pbsc&quot;&gt;&lt;display value=&quot;Peripheral Blood Stem Cell&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;pbsc&quot;&gt;&lt;display value=&quot;Peripheral Blood Stem Cell&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a name="x-http://terminology.nmdp.org/codesystem/order-type-marrow"> </a>
-                  <code>http://terminology.nmdp.org/codesystem/order-type</code>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/order-type-marrow"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/order-type</code>
                 </td>
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-nmdp-order-type.html#nmdp-order-type-marrow">marrow</a>
@@ -771,12 +1601,96 @@
                 <td>Bone marrow harvest collection.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.nmdp.org/codesystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;marrow&quot;, &quot;display&quot;: &quot;Bone Marrow&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;marrow&quot;, &quot;display&quot;: &quot;Bone Marrow&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.nmdp.org/codesystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;marrow&quot;&gt;&lt;display value=&quot;Bone Marrow&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;marrow&quot;&gt;&lt;display value=&quot;Bone Marrow&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/order-type-A-HR"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/order-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-nmdp-order-type.html#nmdp-order-type-A-HR">A-HR</a>
+                </td>
+                <td>HLA-A High Resolution</td>
+                <td>HLA-A high resolution typing order for CBU.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;A-HR&quot;, &quot;display&quot;: &quot;HLA-A High Resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;A-HR&quot;&gt;&lt;display value=&quot;HLA-A High Resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/order-type-B-HR"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/order-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-nmdp-order-type.html#nmdp-order-type-B-HR">B-HR</a>
+                </td>
+                <td>HLA-B High Resolution</td>
+                <td>HLA-B high resolution typing order for CBU.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;B-HR&quot;, &quot;display&quot;: &quot;HLA-B High Resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;B-HR&quot;&gt;&lt;display value=&quot;HLA-B High Resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/order-type-C-HR"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/order-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-nmdp-order-type.html#nmdp-order-type-C-HR">C-HR</a>
+                </td>
+                <td>HLA-C High Resolution</td>
+                <td>HLA-C high resolution typing order for CBU.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;C-HR&quot;, &quot;display&quot;: &quot;HLA-C High Resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;C-HR&quot;&gt;&lt;display value=&quot;HLA-C High Resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://fhir.nmdp.org/CodeSystem/order-type-ABC-DRB1-DQB1-DPB1-HR"> </a>
+                  <code>http://fhir.nmdp.org/CodeSystem/order-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-nmdp-order-type.html#nmdp-order-type-ABC-DRB1-DQB1-DPB1-HR">ABC-DRB1-DQB1-DPB1-HR</a>
+                </td>
+                <td>Full Panel High Resolution</td>
+                <td>Full panel high resolution typing (HLA-A, B, C, DRB1, DQB1, DPB1) order for CBU.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ABC-DRB1-DQB1-DPB1-HR&quot;, &quot;display&quot;: &quot;Full Panel High Resolution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhir.nmdp.org/CodeSystem/order-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;ABC-DRB1-DQB1-DPB1-HR&quot;&gt;&lt;display value=&quot;Full Panel High Resolution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -788,7 +1702,7 @@
         <name value="NMDPOrderTypeVS"/>
         <title value="NMDP Order Type Value Set"/>
         <status value="active"/>
-        <date value="2026-09-02T19:29:11+00:00"/>
+        <date value="2026-09-03T14:51:12+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -797,9 +1711,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:b40e289e-6ceb-4a0e-ace6-53c980a2592e"/>
-          <timestamp value="2026-09-02T19:30:31+00:00"/>
-          <total value="5"/>
+          <identifier value="urn:uuid:52d83300-9884-4a8d-9cf5-c53839feb635"/>
+          <timestamp value="2026-09-03T14:53:21+00:00"/>
+          <total value="9"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -819,32 +1733,52 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://terminology.nmdp.org/codesystem/order-type|0.1.0"/>
+            <valueUri value="http://fhir.nmdp.org/CodeSystem/order-type|0.1.0"/>
           </parameter>
           <contains>
-            <system value="http://terminology.nmdp.org/codesystem/order-type"/>
-            <code value="ct"/>
+            <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
+            <code value="confirmatory-typing"/>
             <display value="Confirmatory Typing"/>
           </contains>
           <contains>
-            <system value="http://terminology.nmdp.org/codesystem/order-type"/>
+            <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
             <code value="idm"/>
             <display value="Infectious Disease Markers"/>
           </contains>
           <contains>
-            <system value="http://terminology.nmdp.org/codesystem/order-type"/>
+            <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
             <code value="collection"/>
             <display value="Collection"/>
           </contains>
           <contains>
-            <system value="http://terminology.nmdp.org/codesystem/order-type"/>
+            <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
             <code value="pbsc"/>
             <display value="Peripheral Blood Stem Cell"/>
           </contains>
           <contains>
-            <system value="http://terminology.nmdp.org/codesystem/order-type"/>
+            <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
             <code value="marrow"/>
             <display value="Bone Marrow"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
+            <code value="A-HR"/>
+            <display value="HLA-A High Resolution"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
+            <code value="B-HR"/>
+            <display value="HLA-B High Resolution"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
+            <code value="C-HR"/>
+            <display value="HLA-C High Resolution"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
+            <code value="ABC-DRB1-DQB1-DPB1-HR"/>
+            <display value="Full Panel High Resolution"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -1041,7 +1975,7 @@
         <name value="NMDPSpecimenTypeVS"/>
         <title value="NMDP Specimen Type Value Set"/>
         <status value="active"/>
-        <date value="2026-09-02T19:29:11+00:00"/>
+        <date value="2026-09-03T14:51:12+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1050,8 +1984,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:b609ae36-56b3-4748-b7c3-5e6cc09fca52"/>
-          <timestamp value="2026-09-02T19:30:31+00:00"/>
+          <identifier value="urn:uuid:3995edd4-fae9-491c-86a5-9c7dc9fa655b"/>
+          <timestamp value="2026-09-03T14:53:21+00:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>

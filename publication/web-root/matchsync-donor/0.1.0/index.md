@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/ImplementationGuide/nmdp.fhir.donor-patient | *Version*:0.1.0 |
-| Draft as of 2026-09-02 | *Computable Name*:NMDPDonorPatient |
+| Draft as of 2026-09-03 | *Computable Name*:NMDPDonorPatient |
 
 # NMDP Donor Patient Implementation Guide
 
@@ -54,7 +54,7 @@ This IG depends on:
   "name" : "NMDPDonorPatient",
   "title" : "NMDP Donor Patient Implementation Guide",
   "status" : "draft",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -706,6 +706,38 @@ This IG depends on:
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-nmdp-abo-rh-type-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nmdp-abo-rh-type-vs"
+      },
+      "name" : "ABO/Rh Blood Type Value Set",
+      "description" : "LOINC Answer List LL2972-9 codes for ABO and Rh blood group types.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-cbu-status.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/cbu-status"
+      },
+      "name" : "CBU Status",
+      "description" : "The availability status of a Cord Blood Unit (CBU) in the NMDP registry. Conveyed as a simple string value (e.g., 'Available').",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       },
       {
@@ -716,8 +748,56 @@ This IG depends on:
         "reference" : "StructureDefinition/donor-status"
       },
       "name" : "Donor Status",
-      "description" : "The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.",
+      "description" : "The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ExampleCBUHemoglobin.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleCBUHemoglobin"
+      },
+      "name" : "Example CBU Hemoglobin Observation",
+      "description" : "An example hemoglobin observation for a Cord Blood Unit (14.2 g/dL).",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hemoglobin-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-ExampleCBUOrder.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ExampleCBUOrder"
+      },
+      "name" : "Example CBU Order",
+      "description" : "An example high resolution typing order for a Cord Blood Unit. Subject is the recipient, performer is the CBU.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-order"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-ExampleCBUPatient.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/ExampleCBUPatient"
+      },
+      "name" : "Example CBU Patient",
+      "description" : "An example Cord Blood Unit (CBU) registered in the NMDP registry, demonstrating all CBU identifier slices and demographics.",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-patient"
     },
     {
       "extension" : [{
@@ -732,7 +812,7 @@ This IG depends on:
         "reference" : "Patient/ExampleDeceasedDonor"
       },
       "name" : "Example Deceased Donor",
-      "description" : "A donor who is deceased, demonstrating the deceased[x] element with a dateTime value.",
+      "description" : "A donor who is deceased, demonstrating the donor-status extension with Permanently Unavailable.",
       "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"
     },
     {
@@ -748,8 +828,56 @@ This IG depends on:
         "reference" : "Patient/ExampleDeferredDonor"
       },
       "name" : "Example Deferred Donor",
-      "description" : "A donor who is temporarily unavailable (e.g., post-collection with a future available date).",
+      "description" : "A donor who is temporarily unavailable (e.g., post-collection).",
       "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ExampleDonorABORh.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleDonorABORh"
+      },
+      "name" : "Example Donor ABO/Rh Observation",
+      "description" : "An example ABO/Rh blood group observation for a donor (O Positive).",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-abo-rh-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ExampleDonorBodyWeight.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleDonorBodyWeight"
+      },
+      "name" : "Example Donor Body Weight Observation",
+      "description" : "An example body weight observation for a donor (82 kg).",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-body-weight-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ExampleDonorCMV.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleDonorCMV"
+      },
+      "name" : "Example Donor CMV Observation",
+      "description" : "An example CMV IgG antibody observation for a donor (Negative).",
+      "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cmv-observation"
     },
     {
       "extension" : [{
@@ -764,7 +892,7 @@ This IG depends on:
         "reference" : "ServiceRequest/ExampleDonorOrder"
       },
       "name" : "Example Donor CT Order",
-      "description" : "An example confirmatory typing order for an NMDP donor.",
+      "description" : "An example confirmatory typing order for an NMDP donor. Subject is the recipient, performer is the donor.",
       "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order"
     },
     {
@@ -795,8 +923,8 @@ This IG depends on:
       "reference" : {
         "reference" : "Patient/ExampleDonorNoGrid"
       },
-      "name" : "Example Donor Without GRID",
-      "description" : "A newly registered donor who has an NMDP Donor ID but has not yet been assigned a GRID.",
+      "name" : "Example Donor With GRID Only",
+      "description" : "A donor with a GRID identifier and no source ID yet assigned.",
       "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"
     },
     {
@@ -828,7 +956,7 @@ This IG depends on:
         "reference" : "Observation/ExampleHLAGenotypeB"
       },
       "name" : "Example HLA-B Genotype",
-      "description" : "An example HLA-B genotype observation showing a donor typed as HLA-B*07:02:01+HLA-B*44:02:01.",
+      "description" : "An example HLA-B genotype observation showing a donor typed as HLA-B*07:02+HLA-B*44:02.",
       "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"
     },
     {
@@ -844,7 +972,7 @@ This IG depends on:
         "reference" : "Observation/ExampleHLAGenotypeC"
       },
       "name" : "Example HLA-C Genotype",
-      "description" : "An example HLA-C genotype observation showing a donor typed as HLA-C*07:02:01+HLA-C*05:01:01.",
+      "description" : "An example HLA-C genotype observation showing a donor typed as HLA-C*07:01+HLA-C*05:01.",
       "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"
     },
     {
@@ -860,7 +988,7 @@ This IG depends on:
         "reference" : "Observation/ExampleHLAGenotypeDRB1"
       },
       "name" : "Example HLA-DRB1 Genotype",
-      "description" : "An example HLA-DRB1 genotype observation showing a donor typed as HLA-DRB1*15:01:01+HLA-DRB1*03:01:01.",
+      "description" : "An example HLA-DRB1 genotype observation showing a donor typed as HLA-DRB1*15:01+HLA-DRB1*03:01.",
       "exampleCanonical" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"
     },
     {
@@ -930,6 +1058,22 @@ This IG depends on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-ExampleRecipientPatient.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/ExampleRecipientPatient"
+      },
+      "name" : "Example Recipient Patient",
+      "description" : "An example recipient patient identified by RID and local ID. Used as the subject of donor and CBU orders.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       },
       {
@@ -957,6 +1101,54 @@ This IG depends on:
       },
       "name" : "MatchSync Donor Patient",
       "description" : "A minimal Patient profile used as the starting point for MatchSync donor data.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-abo-rh-observation.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-abo-rh-observation"
+      },
+      "name" : "NMDP ABO/Rh Observation",
+      "description" : "An observation representing a donor or CBU's ABO and Rh blood group type. Uses LOINC 882-1 and valueCodeableConcept with codes from LOINC Answer List LL2972-9.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-body-weight-observation.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-body-weight-observation"
+      },
+      "name" : "NMDP Body Weight Observation",
+      "description" : "An observation representing a donor's body weight. Uses LOINC 29463-7 and valueQuantity in kg.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-cbu-order.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-cbu-order"
+      },
+      "name" : "NMDP CBU Order",
+      "description" : "A profile representing a Cord Blood Unit (CBU) workup order in the NMDP system. CBU orders can include high resolution typing for individual loci or a full panel. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the CBU Patient.",
       "exampleBoolean" : false
     },
     {
@@ -994,6 +1186,70 @@ This IG depends on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-cmv-observation.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-cmv-observation"
+      },
+      "name" : "NMDP CMV Observation",
+      "description" : "An observation representing a donor or CBU's CMV IgG antibody presence status. Uses LOINC 22244-8 and valueCodeableConcept with text-only values (Positive, Negative, Inconclusive, Untested).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-nmdp-cmv-status.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nmdp-cmv-status"
+      },
+      "name" : "NMDP CMV Status Code System",
+      "description" : "Text-based status codes for CMV IgG antibody presence in donor and CBU testing.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-nmdp-cmv-status-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nmdp-cmv-status-vs"
+      },
+      "name" : "NMDP CMV Status Value Set",
+      "description" : "Allowable text-based values for CMV IgG antibody presence status used in NMDP donor and CBU payloads.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-cbu-patient.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-cbu-patient"
+      },
+      "name" : "NMDP Cord Blood Unit (CBU) Patient",
+      "description" : "A profile representing a Cord Blood Unit (CBU) in the NMDP registry. CBUs are identified by having a cbu-source-id identifier (no GRID). CBUs are not tied to a real person — they represent a cord blood unit. The Patient.id should be the CBU source ID.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
       },
       {
@@ -1020,7 +1276,7 @@ This IG depends on:
         "reference" : "StructureDefinition/nmdp-donor-order"
       },
       "name" : "NMDP Donor Order",
-      "description" : "A profile representing a donor workup or collection order in the NMDP system. Orders include confirmatory typing (CT), infectious disease markers (IDM), and stem cell collection.",
+      "description" : "A profile representing a donor workup order in the NMDP system. For donors, the ordered item is always confirmatory typing. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the donor Patient.",
       "exampleBoolean" : false
     },
     {
@@ -1036,7 +1292,7 @@ This IG depends on:
         "reference" : "StructureDefinition/nmdp-donor-patient"
       },
       "name" : "NMDP Donor Patient",
-      "description" : "A profile representing a hematopoietic cell donor registered in the NMDP registry.",
+      "description" : "A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value.",
       "exampleBoolean" : false
     },
     {
@@ -1068,7 +1324,7 @@ This IG depends on:
         "reference" : "CodeSystem/nmdp-donor-status"
       },
       "name" : "NMDP Donor Status",
-      "description" : "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05).",
+      "description" : "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05). In FHIR Donor API payloads, donor status is\nconveyed as a valueString on the donor-status extension.",
       "exampleBoolean" : false
     },
     {
@@ -1085,6 +1341,22 @@ This IG depends on:
       },
       "name" : "NMDP Donor Status ValueSet",
       "description" : "All registry status codes for NMDP registered donors. Maps to ODS\nenterprise donor status values (AV, TU, AC, DE).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-nmdp-hemoglobin-observation.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/nmdp-hemoglobin-observation"
+      },
+      "name" : "NMDP Hemoglobin Observation",
+      "description" : "An observation representing a CBU's hemoglobin level. Uses LOINC 718-7 (Hemoglobin [Mass/volume] in Blood) and valueQuantity in g/dL.",
       "exampleBoolean" : false
     },
     {
@@ -1132,7 +1404,23 @@ This IG depends on:
         "reference" : "StructureDefinition/nmdp-hla-genotype"
       },
       "name" : "NMDP HLA Genotype Observation",
-      "description" : "A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code.",
+      "description" : "A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code. The Observation.code uses a locus-specific LOINC code identifying which HLA gene was typed.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-nmdp-hla-locus-loinc-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nmdp-hla-locus-loinc-vs"
+      },
+      "name" : "NMDP HLA Locus LOINC Value Set",
+      "description" : "LOINC codes for HLA locus-specific high resolution typing observations used in NMDP donor and CBU payloads.",
       "exampleBoolean" : false
     },
     {
@@ -1164,7 +1452,7 @@ This IG depends on:
         "reference" : "CodeSystem/nmdp-order-type"
       },
       "name" : "NMDP Order Type Code System",
-      "description" : "Codes identifying the type of donor workup or collection order in the NMDP system.",
+      "description" : "Codes identifying the type of donor or CBU workup order in the NMDP system.",
       "exampleBoolean" : false
     },
     {
@@ -1282,6 +1570,15 @@ This IG depends on:
         }],
         "nameUrl" : "order-workflow.html",
         "title" : "Order Workflow",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "connecting-to-the-donor-api.html"
+        }],
+        "nameUrl" : "connecting-to-the-donor-api.html",
+        "title" : "Connecting to the Donor API",
         "generation" : "markdown"
       },
       {

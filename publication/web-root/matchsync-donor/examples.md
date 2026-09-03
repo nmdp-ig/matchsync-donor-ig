@@ -29,7 +29,7 @@ This page lists the example instances included in the NMDP Donor Patient IG and 
 This example demonstrates a fully conformant NMDP donor Patient resource including:
 
 * **NMDP Donor ID** (`1234567`) — the required registry identifier
-* **GRID** (`AAAA1111111`) — the optional ISBT 128 global identifier
+* **GRID** (`99D0BA02660443B585D525525EB3F2D2`) — the optional NMDP global identifier
 * **Demographics** — name, gender, and date of birth (all required by the profile)
 * **Race/Ethnicity** — US Core race and ethnicity extensions
 

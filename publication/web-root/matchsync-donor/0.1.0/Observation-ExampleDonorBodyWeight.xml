@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ExampleDonorBodyWeight"/>
+  <meta>
+    <profile value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-body-weight-observation"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation ExampleDonorBodyWeight</b></p><a name="ExampleDonorBodyWeight"> </a><a name="hcExampleDonorBodyWeight"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-nmdp-body-weight-observation.html">NMDP Body Weight Observation</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 29463-7}">Body weight</span></p><p><b>subject</b>: <a href="Patient-ExampleNMDPDonor.html">Marcus Reynolds  Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)</a></p><p><b>value</b>: 82 kg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codekg = 'kg')</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="29463-7"/>
+      <display value="Body weight"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ExampleNMDPDonor"/>
+  </subject>
+  <valueQuantity>
+    <value value="82"/>
+    <unit value="kg"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="kg"/>
+  </valueQuantity>
+</Observation>

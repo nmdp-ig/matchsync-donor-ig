@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.26"}
-    h3,h4,h5,h6{--heading-prefix:"9.26"}</style>
+    <style type="text/css">h2{--heading-prefix:"10.43"}
+    h3,h4,h5,h6{--heading-prefix:"10.43"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -99,6 +99,9 @@
   </li>
   <li>
     <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="connecting-to-the-donor-api.html">Connecting to the Donor API</a>
   </li>
   <li>
     <a href="security-and-privacy.html">Security and Privacy</a>
@@ -196,49 +199,25 @@
   &lt;/<a href="http://hl7.org/fhir/R4/resource.html#Observation.meta">meta</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#Observation.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Observation ExampleHLAGenotypeA&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleHLAGenotypeA&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleHLAGenotypeA&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profile: &lt;a href=&quot;StructureDefinition-nmdp-hla-genotype.html&quot;&gt;NMDP HLA Genotype Observation&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}&quot;&gt;Laboratory&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=&quot;Codes:{http://loinc.org 84413-4}&quot;&gt;Genotype display name&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-ExampleNMDPDonor.html&quot;&gt;Marcus James Reynolds  Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2026-06-15&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=&quot;Codes:{http://glstring.org hla#3.59.0#HLA-A*02:01+HLA-A*03:01}&quot;&gt;hla#3.59.0#HLA-A*02:01+HLA-A*03:01&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;Components&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://loinc.org 48018-6}&quot;&gt;Gene studied [ID]&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://terminology.nmdp.org/codesystem/hla-gene-name HGNC:4931}&quot;&gt;HLA-A&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Observation ExampleHLAGenotypeA&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleHLAGenotypeA&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleHLAGenotypeA&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profile: &lt;a href=&quot;StructureDefinition-nmdp-hla-genotype.html&quot;&gt;NMDP HLA Genotype Observation&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=&quot;Codes:{http://loinc.org 57290-9}&quot;&gt;HLA-A [Type] by High resolution&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-ExampleNMDPDonor.html&quot;&gt;Marcus Reynolds  Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=&quot;Codes:{http://glstring.org hla#3.53.0#HLA-A*02:01+HLA-A*03:01}&quot;&gt;hla#3.53.0#HLA-A*02:01+HLA-A*03:01&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#Observation.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;final&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.category">category</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;laboratory&quot;/&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/observation.html#Observation.category">category</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;84413-4&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Genotype display name&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;57290-9&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HLA-A [Type] by High resolution&quot;/&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>&gt;<a href="Patient-ExampleNMDPDonor.html" style="color: Maroon">&#x1F517;</a> 
     &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/ExampleNMDPDonor&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">effectiveDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-15&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">valueCodeableConcept</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://glstring.org&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;hla#3.59.0#HLA-A*02:01+HLA-A*03:01&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;hla#3.53.0#HLA-A*02:01+HLA-A*03:01&quot;/&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">valueCodeableConcept</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.component">component</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.component.code">code</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;48018-6&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Gene studied [ID]&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/observation.html#Observation.component.code">code</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.component.value_x_">valueCodeableConcept</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.nmdp.org/codesystem/hla-gene-name&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;HGNC:4931&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HLA-A&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/observation.html#Observation.component.value_x_">valueCodeableConcept</a>&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/observation.html#Observation.component">component</a>&gt;
 &lt;/<a href="http://hl7.org/fhir/R4/observation.html#Observation">Observation</a>&gt;</code></pre>
 
 
@@ -263,7 +242,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 14:51+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

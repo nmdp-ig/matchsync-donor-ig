@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-center-type-vs | *Version*:0.1.0 |
-| Draft as of 2026-09-02 | *Computable Name*:NMDPCenterTypeVS |
+| Draft as of 2026-09-03 | *Computable Name*:NMDPCenterTypeVS |
 
  
 All center types in the NMDP network. 
@@ -50,7 +50,7 @@ All center types in the NMDP network.
   "name" : "NMDPCenterTypeVS",
   "title" : "NMDP Center Type ValueSet",
   "status" : "draft",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

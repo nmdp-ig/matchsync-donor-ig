@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype | *Version*:0.1.0 |
-| Draft as of 2026-09-02 | *Computable Name*:NMDPHLAGenotype |
+| Draft as of 2026-09-03 | *Computable Name*:NMDPHLAGenotype |
 
  
-A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code. 
+A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code. The Observation.code uses a locus-specific LOINC code identifying which HLA gene was typed. 
 
 **Usages:**
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-hla-genotype.cs
   "name" : "NMDPHLAGenotype",
   "title" : "NMDP HLA Genotype Observation",
   "status" : "draft",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -55,7 +55,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-hla-genotype.cs
       "value" : "fhir@nmdp.org"
     }]
   }],
-  "description" : "A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code.",
+  "description" : "A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code. The Observation.code uses a locus-specific LOINC code identifying which HLA gene was typed.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -107,67 +107,29 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-hla-genotype.cs
     {
       "id" : "Observation.status",
       "path" : "Observation.status",
+      "patternCode" : "final",
       "mustSupport" : true
-    },
-    {
-      "id" : "Observation.category",
-      "path" : "Observation.category",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "pattern",
-          "path" : "$this"
-        }],
-        "rules" : "open"
-      },
-      "min" : 1,
-      "mustSupport" : true
-    },
-    {
-      "id" : "Observation.category:laboratory",
-      "path" : "Observation.category",
-      "sliceName" : "laboratory",
-      "min" : 1,
-      "max" : "1",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
-          "code" : "laboratory"
-        }]
-      }
     },
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
-      "short" : "Genotype display name (LOINC 84413-4)",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://loinc.org",
-          "code" : "84413-4",
-          "display" : "Genotype display name"
-        }]
-      },
-      "mustSupport" : true
+      "short" : "HLA locus-specific LOINC code (e.g., 57290-9 for HLA-A)",
+      "definition" : "A LOINC code identifying the specific HLA locus typed. Each locus has its own code (HLA-A: 57290-9, HLA-B: 57291-7, HLA-C: 57297-4, HLA-DRB1: 57293-3, HLA-DQB1: 57299-0, HLA-DPB1: 59017-4, HLA-DQA1: 59019-0, HLA-DPA1: 59018-2, HLA-DRB3: 57294-1, HLA-DRB4: 57295-8, HLA-DRB5: 57296-6).",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-locus-loinc-vs"
+      }
     },
     {
       "id" : "Observation.subject",
       "path" : "Observation.subject",
-      "short" : "The donor whose HLA was typed",
+      "short" : "The donor or CBU whose HLA was typed",
       "min" : 1,
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
       }],
-      "mustSupport" : true
-    },
-    {
-      "id" : "Observation.effective[x]",
-      "path" : "Observation.effective[x]",
-      "short" : "When the typing was performed",
-      "mustSupport" : true
-    },
-    {
-      "id" : "Observation.performer",
-      "path" : "Observation.performer",
       "mustSupport" : true
     },
     {
@@ -183,57 +145,6 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-hla-genotype.cs
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-glstring-vs"
-      }
-    },
-    {
-      "id" : "Observation.specimen",
-      "path" : "Observation.specimen",
-      "mustSupport" : true
-    },
-    {
-      "id" : "Observation.component",
-      "path" : "Observation.component",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "pattern",
-          "path" : "code"
-        }],
-        "rules" : "open"
-      },
-      "min" : 1
-    },
-    {
-      "id" : "Observation.component:geneStudied",
-      "path" : "Observation.component",
-      "sliceName" : "geneStudied",
-      "min" : 1,
-      "max" : "1",
-      "mustSupport" : true
-    },
-    {
-      "id" : "Observation.component:geneStudied.code",
-      "path" : "Observation.component.code",
-      "short" : "Gene studied (LOINC 48018-6)",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://loinc.org",
-          "code" : "48018-6",
-          "display" : "Gene studied [ID]"
-        }]
-      }
-    },
-    {
-      "id" : "Observation.component:geneStudied.value[x]",
-      "path" : "Observation.component.value[x]",
-      "short" : "HLA gene name (HGNC ID)",
-      "min" : 1,
-      "type" : [{
-        "code" : "CodeableConcept"
-      }],
-      "mustSupport" : true,
-      "binding" : {
-        "strength" : "required",
-        "valueSet" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-gene-name-vs"
       }
     }]
   }

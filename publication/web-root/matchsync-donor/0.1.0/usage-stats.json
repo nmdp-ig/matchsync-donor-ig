@@ -5,61 +5,17 @@
   "jurisdiction": "US",
   "extensions": [
     {
+      "url": "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/cbu-status",
+      "title": "CBU Status",
+      "types": [
+        "string"
+      ]
+    },
+    {
       "url": "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status",
       "title": "Donor Status",
       "types": [
-        "code",
-        "date",
-        "base64Binary",
-        "boolean",
-        "canonical",
-        "code",
-        "date",
-        "dateTime",
-        "decimal",
-        "id",
-        "instant",
-        "integer",
-        "markdown",
-        "oid",
-        "positiveInt",
-        "string",
-        "time",
-        "unsignedInt",
-        "uri",
-        "url",
-        "uuid",
-        "Address",
-        "Age",
-        "Annotation",
-        "Attachment",
-        "CodeableConcept",
-        "Coding",
-        "ContactPoint",
-        "Count",
-        "Distance",
-        "Duration",
-        "HumanName",
-        "Identifier",
-        "Money",
-        "Period",
-        "Quantity",
-        "Range",
-        "Ratio",
-        "Reference",
-        "SampledData",
-        "Signature",
-        "Timing",
-        "ContactDetail",
-        "Contributor",
-        "DataRequirement",
-        "Expression",
-        "ParameterDefinition",
-        "RelatedArtifact",
-        "TriggerDefinition",
-        "UsageContext",
-        "Dosage",
-        "Meta"
+        "string"
       ]
     }
   ],
@@ -68,6 +24,16 @@
       {
         "url": "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient",
         "title": "NMDP Donor Patient"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hemoglobin-observation",
+        "title": "NMDP Hemoglobin Observation"
+      },
+      {
+        "url": "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype",
+        "title": "NMDP HLA Genotype Observation"
       }
     ],
     "ServiceRequest": [
@@ -82,12 +48,6 @@
         "title": "NMDP Donor Specimen"
       }
     ],
-    "Observation": [
-      {
-        "url": "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype",
-        "title": "NMDP HLA Genotype Observation"
-      }
-    ],
     "Organization": [
       {
         "url": "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-organization",
@@ -96,6 +56,9 @@
     ]
   },
   "usage": {
+    "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/cbu-status": [
+      "Patient"
+    ],
     "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status": [
       "Patient"
     ],
@@ -110,6 +73,9 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"

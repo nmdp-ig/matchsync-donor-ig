@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://terminology.nmdp.org/codesystem/hla-gene-name | *Version*:0.1.0 |
-| Active as of 2026-09-02 | *Computable Name*:NMDPHLAGeneNameCS |
+| Active as of 2026-09-03 | *Computable Name*:NMDPHLAGeneNameCS |
 
  
 HGNC Gene IDs for HLA loci used in donor typing. Subset of HGNC relevant to NMDP operations. 
@@ -31,7 +31,7 @@ HGNC Gene IDs for HLA loci used in donor typing. Subset of HGNC relevant to NMDP
   "name" : "NMDPHLAGeneNameCS",
   "title" : "NMDP HLA Gene Name Code System",
   "status" : "active",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

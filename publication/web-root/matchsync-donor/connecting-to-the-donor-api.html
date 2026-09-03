@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Connecting to the Donor API - NMDP Donor Patient Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">NMDP Donor Patient Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="conventions.html">Conventions</a>
+  </li>
+  <li>
+    <a href="identifiers.html">Identifiers</a>
+  </li>
+  <li>
+    <a href="capability-statement.html">Capability Statement</a>
+  </li>
+  <li>
+    <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="connecting-to-the-donor-api.html">Connecting to the Donor API</a>
+  </li>
+  <li>
+    <a href="security-and-privacy.html">Security and Privacy</a>
+  </li>
+  <li>
+    <a href="related-specifications.html">Related Specifications</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Connecting to the Donor API</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">NMDP Donor Patient Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.nmdp.org/ig/donor-patient/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Connecting to the Donor API</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h1 id="connecting-to-the-donor-api">Connecting to the Donor API</h1>
+
+<p>This page is a step-by-step guide for a <strong>Transplant Center (TC)</strong> that needs to connect to the NMDP Donor API. It explains how a TC obtains credentials, requests an access token using the <strong>OAuth 2.0 Client Credentials</strong> grant, and calls the API. It also describes the <strong>two-claim authorization model</strong> that controls both <em>what operations</em> a TC can perform and <em>which donor and patient records</em> it is allowed to see.</p>
+
+<p>The Donor API is a <strong>backend, system-to-system API</strong>. There is no interactive user login and no browser redirect. A TC's own application authenticates directly with its client credentials, so this guide is written for the engineers and integrators who build and operate that application.</p>
+
+<h2 id="at-a-glance">At a Glance</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Authorization framework</td>
+      <td>OAuth 2.0</td>
+    </tr>
+    <tr>
+      <td>Grant type</td>
+      <td><code class="language-plaintext highlighter-rouge">client_credentials</code></td>
+    </tr>
+    <tr>
+      <td>Authorization server</td>
+      <td>Okta</td>
+    </tr>
+    <tr>
+      <td>Token format</td>
+      <td>JWT (JSON Web Token) access token</td>
+    </tr>
+    <tr>
+      <td>Credential type</td>
+      <td><code class="language-plaintext highlighter-rouge">client_id</code> + <code class="language-plaintext highlighter-rouge">client_secret</code> (one set per TC)</td>
+    </tr>
+    <tr>
+      <td>Client authentication</td>
+      <td>HTTP Basic (client credentials in the <code class="language-plaintext highlighter-rouge">Authorization</code> header)</td>
+    </tr>
+    <tr>
+      <td>Transport</td>
+      <td>HTTPS with TLS 1.2 or higher (required)</td>
+    </tr>
+    <tr>
+      <td>API style</td>
+      <td>FHIR R4, read-only</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Exact hostnames, the Okta authorization server ID, and the granted scopes are provided by NMDP during onboarding and differ between the test/sandbox and production environments. Treat every value shown below as a placeholder unless NMDP supplied it to you directly.</p>
+
+<h2 id="how-authorization-works">How Authorization Works</h2>
+
+<p>Two independent controls decide the outcome of every request. Understanding the difference between them is the key to a smooth integration.</p>
+
+<ol>
+  <li><strong>Scopes</strong> decide <em>what a TC can do</em> — which FHIR resource types and operations (for example, reading and searching <code class="language-plaintext highlighter-rouge">Patient</code>) the token is permitted to use.</li>
+  <li><strong>The Transplant Center affiliation claim</strong> decides <em>what data a TC can see</em> — the API filters every response so a TC only receives donors and patients associated with its own center.</li>
+</ol>
+
+<p>Because these are separate controls, holding a valid token is never enough on its own to reach another center's data. Even a broad scope only returns records that the TC affiliation claim allows.</p>
+
+<h3 id="the-two-claim-model">The Two-Claim Model</h3>
+
+<p>NMDP's Okta authorization servers carry <strong>two custom claims</strong> in the access token for the Donor API. This mirrors the pattern already used by other NMDP FHIR integrations (such as MatchSync Patient Import).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Claim</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Authorization claim</td>
+      <td>Confirms the client is entitled to the Donor API and which access level it was granted. Derived from the client's assigned Okta scope and group membership.</td>
+      <td><code class="language-plaintext highlighter-rouge">authz_donor_fhir_client</code></td>
+    </tr>
+    <tr>
+      <td>TC affiliation claim</td>
+      <td>Identifies the transplant center (or centers) the client acts on behalf of. The API uses this to filter results.</td>
+      <td><code class="language-plaintext highlighter-rouge">tc_id: "TC-123"</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A single physical TC that operates under <strong>multiple center IDs</strong> is supported by carrying multiple values in the TC affiliation claim. During onboarding, tell NMDP every center ID your application needs to act for so the claim is provisioned correctly.</p>
+
+<h2 id="connection-flow">Connection Flow</h2>
+
+<p>The end-to-end sequence for a TC application is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Transplant Center App
+        |
+        |  1. Request token (client_id + client_secret, grant_type=client_credentials)
+        v
+      Okta  (Authorization Server)
+        |
+        |  2. Access token (JWT) with authorization claim + TC affiliation claim
+        v
+Transplant Center App
+        |
+        |  3. Call the Donor API with:  Authorization: Bearer &lt;access_token&gt;
+        v
+   Donor API  (FHIR R4 server, behind the NMDP API gateway)
+        |
+        |  4. Gateway validates the token and scopes;
+        |     API reads the TC affiliation claim and filters the response
+        v
+   FHIR response containing only the TC's own donors / patients
+</code></pre></div></div>
+
+<h2 id="step-1--onboard-and-receive-credentials">Step 1 — Onboard and Receive Credentials</h2>
+
+<p>Before you can request a token, NMDP registers your application as an Okta client. During onboarding, NMDP will:</p>
+
+<ul>
+  <li>Create an Okta client and issue a <strong><code class="language-plaintext highlighter-rouge">client_id</code></strong> and <strong><code class="language-plaintext highlighter-rouge">client_secret</code></strong> unique to your center.</li>
+  <li>Assign the Donor API <strong>scope(s)</strong> your application is entitled to.</li>
+  <li>Provision the <strong>TC affiliation claim</strong> with your center ID (or IDs).</li>
+  <li>Provide the <strong>token endpoint URL</strong> and the <strong>Donor API base URL</strong> for each environment (test and production).</li>
+</ul>
+
+<p>You will typically be given values shaped like the following. NMDP supplies the real values:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Example placeholder</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Token endpoint</td>
+      <td><code class="language-plaintext highlighter-rouge">https://nmdp.okta.com/oauth2/&lt;authz-server-id&gt;/v1/token</code></td>
+    </tr>
+    <tr>
+      <td>Donor API base URL</td>
+      <td><code class="language-plaintext highlighter-rouge">https://api.nmdp.org/donor/fhir/r4</code></td>
+    </tr>
+    <tr>
+      <td>Client ID</td>
+      <td><code class="language-plaintext highlighter-rouge">0oa&lt;random&gt;</code></td>
+    </tr>
+    <tr>
+      <td>Client secret</td>
+      <td>(secret string — store securely)</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td><code class="language-plaintext highlighter-rouge">system/Patient.rs system/Observation.rs system/ServiceRequest.rs</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Store the <code class="language-plaintext highlighter-rouge">client_secret</code> in a secrets manager or equivalent secure store. Never embed it in source control, client-side code, or logs.</p>
+
+<h2 id="step-2--request-an-access-token">Step 2 — Request an Access Token</h2>
+
+<p>Send a <code class="language-plaintext highlighter-rouge">POST</code> to the Okta token endpoint using the Client Credentials grant. Client credentials are sent using HTTP Basic authentication — the header value is <code class="language-plaintext highlighter-rouge">Basic </code> followed by the base64 encoding of <code class="language-plaintext highlighter-rouge">client_id:client_secret</code>.</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">/oauth2/&lt;authz-server-id&gt;/v1/token</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">nmdp.okta.com</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Basic &lt;base64(client_id:client_secret)&gt;</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
+
+grant_type=client_credentials&amp;scope=system/Patient.rs system/Observation.rs system/ServiceRequest.rs
+</code></pre></div></div>
+
+<p>Equivalent <code class="language-plaintext highlighter-rouge">curl</code> request:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://nmdp.okta.com/oauth2/&lt;authz-server-id&gt;/v1/token"</span> <span class="se">\</span>
+  <span class="nt">-u</span> <span class="s2">"&lt;client_id&gt;:&lt;client_secret&gt;"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s2">"grant_type=client_credentials"</span> <span class="se">\</span>
+  <span class="nt">--data-urlencode</span> <span class="s2">"scope=system/Patient.rs system/Observation.rs system/ServiceRequest.rs"</span>
+</code></pre></div></div>
+
+<p>A successful response returns a bearer token:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJraWQiOiJ...&lt;jwt&gt;..."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system/Patient.rs system/Observation.rs system/ServiceRequest.rs"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">access_token</code> is a JWT. When decoded, its payload contains the authorization claim and the TC affiliation claim described above, along with standard fields such as <code class="language-plaintext highlighter-rouge">exp</code> (expiry) and the granted <code class="language-plaintext highlighter-rouge">scp</code> (scopes). Your application does not need to inspect the token to use it, but doing so is useful when troubleshooting.</p>
+
+<h2 id="step-3--call-the-donor-api">Step 3 — Call the Donor API</h2>
+
+<p>Include the token as a bearer credential on every request to the Donor API:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">/donor/fhir/r4/Patient?identifier=http://terminology.nmdp.org/identifier/donor-id|1234567</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.nmdp.org</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer &lt;access_token&gt;</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/fhir+json</span>
+</code></pre></div></div>
+
+<p>Equivalent <code class="language-plaintext highlighter-rouge">curl</code> request:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="s2">"https://api.nmdp.org/donor/fhir/r4/Patient?identifier=http://terminology.nmdp.org/identifier/donor-id|1234567"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;access_token&gt;"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span>
+</code></pre></div></div>
+
+<p>The response contains only the records your center is authorized to see. A search that would match records belonging to another center simply omits those records rather than returning them.</p>
+
+<h2 id="token-lifecycle-and-reuse">Token Lifecycle and Reuse</h2>
+
+<ul>
+  <li><strong>Cache and reuse tokens.</strong> A token is valid until it expires (<code class="language-plaintext highlighter-rouge">expires_in</code>, commonly one hour). Request a new token only when the current one is close to expiring, not on every API call. Requesting a token per request will trigger rate limiting.</li>
+  <li><strong>Refresh proactively.</strong> Obtain a new token shortly before the current one expires so in-flight requests are not interrupted.</li>
+  <li><strong>No refresh tokens.</strong> The Client Credentials grant does not issue refresh tokens. To get a new access token, repeat Step 2.</li>
+</ul>
+
+<h2 id="handling-errors">Handling Errors</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>HTTP status</th>
+      <th>Meaning</th>
+      <th>What to check</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">400 Bad Request</code> (from Okta)</td>
+      <td>Malformed token request</td>
+      <td><code class="language-plaintext highlighter-rouge">grant_type</code>, <code class="language-plaintext highlighter-rouge">Content-Type</code>, and scope formatting</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">401 Unauthorized</code></td>
+      <td>Missing, expired, or invalid token</td>
+      <td>That the <code class="language-plaintext highlighter-rouge">Authorization: Bearer</code> header is present and the token has not expired; request a new token</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">403 Forbidden</code></td>
+      <td>Token is valid but the operation or record is not permitted</td>
+      <td>Whether the request needs a scope you were not granted, or targets data outside your TC affiliation</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">429 Too Many Requests</code></td>
+      <td>Rate limit exceeded</td>
+      <td>Token caching and reuse; back off and retry</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A <code class="language-plaintext highlighter-rouge">403</code> is expected — not an error to route around — when a request reaches beyond a center's authorized scope or data. The Donor API returns a FHIR <code class="language-plaintext highlighter-rouge">OperationOutcome</code> in the response body describing the reason.</p>
+
+<h2 id="security-requirements-for-transplant-centers">Security Requirements for Transplant Centers</h2>
+
+<ul>
+  <li><strong>Protect the client secret.</strong> Treat it like a password. Store it in a secrets manager, rotate it on the schedule NMDP specifies, and never commit it to source control.</li>
+  <li><strong>Use HTTPS with TLS 1.2+</strong> for every request to both the token endpoint and the Donor API. This is mandatory for any transmission of donor or patient information.</li>
+  <li><strong>Request only the scopes you need.</strong> Align with the HIPAA minimum necessary principle and request only the resource access your use case requires.</li>
+  <li><strong>Log access on your side</strong> consistent with NMDP's audit expectations. See <a href="security-and-privacy.html">Security and Privacy</a> for the classification of Donor API data and the audit log format NMDP recommends.</li>
+</ul>
+
+<h2 id="related-pages">Related Pages</h2>
+
+<ul>
+  <li><a href="security-and-privacy.html">Security and Privacy</a> — data sensitivity classification, TC-scoped authorization policy, transport security, and audit requirements.</li>
+  <li><a href="identifiers.html">Identifiers</a> — the identifier systems (Donor ID, GRID, Center ID) you will use in search parameters.</li>
+  <li><a href="order-workflow.html">Order Workflow</a> — how orders relate to the donors and patients returned by the API.</li>
+  <li><a href="capability-statement.html">Capability Statement</a> — the FHIR interactions the Donor API server supports.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 14:51+0000">2026-09-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

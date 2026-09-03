@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="nmdp-hla-locus-loinc-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet nmdp-hla-locus-loinc-vs</b></p><a name="nmdp-hla-locus-loinc-vs"> </a><a name="hcnmdp-hla-locus-loinc-vs"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/57290-9/">57290-9</a></td><td>HLA-A [Type] by High resolution</td></tr><tr><td><a href="https://loinc.org/57291-7/">57291-7</a></td><td>HLA-B [Type] by High resolution</td></tr><tr><td><a href="https://loinc.org/57297-4/">57297-4</a></td><td>HLA-Cw [Type] by High resolution</td></tr><tr><td><a href="https://loinc.org/57293-3/">57293-3</a></td><td>HLA-DRB1 [Type] by High resolution</td></tr><tr><td><a href="https://loinc.org/57299-0/">57299-0</a></td><td>HLA-DQB1 [Type] by High resolution</td></tr><tr><td><a href="https://loinc.org/59017-4/">59017-4</a></td><td>HLA-DPB1 [Type] by High resolution</td></tr><tr><td><a href="https://loinc.org/59019-0/">59019-0</a></td><td>HLA-DQA1 [Type] by High resolution</td></tr><tr><td><a href="https://loinc.org/59018-2/">59018-2</a></td><td>HLA-DPA1 [Type] by High resolution</td></tr><tr><td><a href="https://loinc.org/57294-1/">57294-1</a></td><td>HLA-DRB3 [Type] by High resolution</td></tr><tr><td><a href="https://loinc.org/57295-8/">57295-8</a></td><td>HLA-DRB4 [Type] by High resolution</td></tr><tr><td><a href="https://loinc.org/57296-6/">57296-6</a></td><td>HLA-DRB5 [Type] by High resolution</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-locus-loinc-vs"/>
+  <version value="0.1.0"/>
+  <name value="NMDPHLALocusLOINCVS"/>
+  <title value="NMDP HLA Locus LOINC Value Set"/>
+  <status value="active"/>
+  <date value="2026-09-03T14:51:12+00:00"/>
+  <publisher value="National Marrow Donor Program (NMDP)"/>
+  <contact>
+    <name value="National Marrow Donor Program (NMDP)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nmdp.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@nmdp.org"/>
+    </telecom>
+  </contact>
+  <description value="LOINC codes for HLA locus-specific high resolution typing observations used in NMDP donor and CBU payloads."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="57290-9"/>
+        <display value="HLA-A [Type] by High resolution"/>
+      </concept>
+      <concept>
+        <code value="57291-7"/>
+        <display value="HLA-B [Type] by High resolution"/>
+      </concept>
+      <concept>
+        <code value="57297-4"/>
+        <display value="HLA-Cw [Type] by High resolution"/>
+      </concept>
+      <concept>
+        <code value="57293-3"/>
+        <display value="HLA-DRB1 [Type] by High resolution"/>
+      </concept>
+      <concept>
+        <code value="57299-0"/>
+        <display value="HLA-DQB1 [Type] by High resolution"/>
+      </concept>
+      <concept>
+        <code value="59017-4"/>
+        <display value="HLA-DPB1 [Type] by High resolution"/>
+      </concept>
+      <concept>
+        <code value="59019-0"/>
+        <display value="HLA-DQA1 [Type] by High resolution"/>
+      </concept>
+      <concept>
+        <code value="59018-2"/>
+        <display value="HLA-DPA1 [Type] by High resolution"/>
+      </concept>
+      <concept>
+        <code value="57294-1"/>
+        <display value="HLA-DRB3 [Type] by High resolution"/>
+      </concept>
+      <concept>
+        <code value="57295-8"/>
+        <display value="HLA-DRB4 [Type] by High resolution"/>
+      </concept>
+      <concept>
+        <code value="57296-6"/>
+        <display value="HLA-DRB5 [Type] by High resolution"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

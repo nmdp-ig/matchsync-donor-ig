@@ -8,15 +8,13 @@
 
 Profile: [NMDP Donor Patient](StructureDefinition-nmdp-donor-patient.md)
 
-Marcus James Reynolds Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)
+Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)
 
 -------
 
 | | |
 | :--- | :--- |
-| Deceased: | false |
-| Other Id: | `http://www.isbt128.org/uri/GRID`/AAAA1111111 |
-| Language: | English |
+| Other Id: | `http://nmdp.org/identifier/source-id`/SRC-77412 |
 | Links: | * Managing Organization: [Organization Minneapolis Blood Center](Organization-ExampleNMDPDonorCenter.md)
  |
 | US Core Ethnicity Extension: | * ombCategory: [CDC Race and Ethnicity: 2186-5](http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2186-5) (Not Hispanic or Latino)
@@ -25,8 +23,7 @@ Marcus James Reynolds Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identi
 | US Core Race Extension: | * ombCategory: [CDC Race and Ethnicity: 2106-3](http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2106-3) (White)
 * text: White
  |
-| Donor Status: | * status: active
- |
+| [Donor Status](StructureDefinition-donor-status.md) | Available |
 
 
 
@@ -40,11 +37,8 @@ Marcus James Reynolds Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identi
     "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"]
   },
   "extension" : [{
-    "extension" : [{
-      "url" : "status",
-      "valueCode" : "active"
-    }],
-    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status"
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status",
+    "valueString" : "Available"
   },
   {
     "extension" : [{
@@ -77,29 +71,19 @@ Marcus James Reynolds Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identi
     "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
   }],
   "identifier" : [{
-    "system" : "http://terminology.nmdp.org/identifier/donor",
-    "value" : "1234567"
+    "system" : "http://nmdp.org/identifier/grid",
+    "value" : "99D0BA02660443B585D525525EB3F2D2"
   },
   {
-    "system" : "http://www.isbt128.org/uri/GRID",
-    "value" : "AAAA1111111"
+    "system" : "http://nmdp.org/identifier/source-id",
+    "value" : "SRC-77412"
   }],
   "name" : [{
     "family" : "Reynolds",
-    "given" : ["Marcus", "James"]
+    "given" : ["Marcus"]
   }],
   "gender" : "male",
   "birthDate" : "1985-03-15",
-  "deceasedBoolean" : false,
-  "communication" : [{
-    "language" : {
-      "coding" : [{
-        "system" : "urn:ietf:bcp:47",
-        "code" : "en",
-        "display" : "English"
-      }]
-    }
-  }],
   "managingOrganization" : {
     "reference" : "Organization/ExampleNMDPDonorCenter"
   }

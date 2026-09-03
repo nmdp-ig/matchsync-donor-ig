@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.17"}
-    h3,h4,h5,h6{--heading-prefix:"9.17"}</style>
+    <style type="text/css">h2{--heading-prefix:"10.28"}
+    h3,h4,h5,h6{--heading-prefix:"10.28"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -99,6 +99,9 @@
   </li>
   <li>
     <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="connecting-to-the-donor-api.html">Connecting to the Donor API</a>
   </li>
   <li>
     <a href="security-and-privacy.html">Security and Privacy</a>
@@ -186,7 +189,7 @@
         
           Draft
           
-            as of 2026-09-02
+            as of 2026-09-03
           
         
       </td>
@@ -207,14 +210,14 @@
   "<a href="http://hl7.org/fhir/R4/resource.html#CodeSystem.id">id</a>" : "nmdp-donor-status",
   "<a href="http://hl7.org/fhir/R4/domainresource.html#CodeSystem.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem nmdp-donor-status&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;nmdp-donor-status\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcnmdp-donor-status\&quot;&gt; &lt;/a&gt;&lt;p&gt;This case-sensitive code system &lt;code&gt;http://terminology.nmdp.org/codesystem/donor-status&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;available&lt;a name=\&quot;nmdp-donor-status-available\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Available&lt;/td&gt;&lt;td&gt;Donor is available for search, further typing, and collection/transplant (ODS code: AV).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;temporarily-unavailable&lt;a name=\&quot;nmdp-donor-status-temporarily-unavailable\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Temporarily Unavailable&lt;/td&gt;&lt;td&gt;Donor is temporarily unavailable, typically post-collection with a future available date (ODS code: TU).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;active&lt;a name=\&quot;nmdp-donor-status-active\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Active&lt;/td&gt;&lt;td&gt;Donor is currently active on a search — reserved for a specific patient case (ODS code: AC).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;permanently-unavailable&lt;a name=\&quot;nmdp-donor-status-permanently-unavailable\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Permanently Unavailable&lt;/td&gt;&lt;td&gt;Donor has been permanently removed from the registry. Reasons include: not interested, permanently medically deferred, unable to contact, donor too old, or deceased (ODS code: DE).&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem nmdp-donor-status&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;nmdp-donor-status\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcnmdp-donor-status\&quot;&gt; &lt;/a&gt;&lt;p&gt;This case-insensitive code system &lt;code&gt;http://fhir.nmdp.org/CodeSystem/donor-status&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Available&lt;a name=\&quot;nmdp-donor-status-Available\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Available&lt;/td&gt;&lt;td&gt;Donor is available for search, further typing, and collection/transplant (ODS code: AV).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Temporarily-Unavailable&lt;a name=\&quot;nmdp-donor-status-Temporarily-Unavailable\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Temporarily Unavailable&lt;/td&gt;&lt;td&gt;Donor is temporarily unavailable, typically post-collection with a future available date (ODS code: TU).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Active&lt;a name=\&quot;nmdp-donor-status-Active\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Active&lt;/td&gt;&lt;td&gt;Donor is currently active on a search — reserved for a specific patient case (ODS code: AC).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Permanently-Unavailable&lt;a name=\&quot;nmdp-donor-status-Permanently-Unavailable\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Permanently Unavailable&lt;/td&gt;&lt;td&gt;Donor has been permanently removed from the registry. Reasons include: not interested, permanently medically deferred, unable to contact, donor too old, or deceased (ODS code: DE).&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
-  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>" : "http://terminology.nmdp.org/codesystem/donor-status",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>" : "http://fhir.nmdp.org/CodeSystem/donor-status",
   "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a>" : "0.1.0",
   "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">name</a>" : "NMDPDonorStatusCS",
   "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">title</a>" : "NMDP Donor Status",
   "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a>" : "2026-09-02T19:29:11+00:00",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a>" : "2026-09-03T14:51:12+00:00",
   "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">publisher</a>" : "National Marrow Donor Program (NMDP)",
   "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>" : [
     {
@@ -231,7 +234,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">description</a>" : "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05).",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">description</a>" : "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05). In FHIR Donor API payloads, donor status is\nconveyed as a valueString on the donor-status extension.",
   "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.jurisdiction">jurisdiction</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
@@ -243,27 +246,27 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : false,
   "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">content</a>" : "complete",
   "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">count</a>" : 4,
   "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>" : [
     {
-      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "available",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Available",
       "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Available",
       "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Donor is available for search, further typing, and collection/transplant (ODS code: AV)."
     },
     {
-      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "temporarily-unavailable",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Temporarily-Unavailable",
       "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Temporarily Unavailable",
       "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Donor is temporarily unavailable, typically post-collection with a future available date (ODS code: TU)."
     },
     {
-      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "active",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Active",
       "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Active",
       "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Donor is currently active on a search — reserved for a specific patient case (ODS code: AC)."
     },
     {
-      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "permanently-unavailable",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Permanently-Unavailable",
       "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Permanently Unavailable",
       "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Donor has been permanently removed from the registry. Reasons include: not interested, permanently medically deferred, unable to contact, donor too old, or deceased (ODS code: DE)."
     }
@@ -292,7 +295,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 14:51+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

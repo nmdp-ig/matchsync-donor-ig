@@ -6,29 +6,26 @@
     <profile value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-idm-order"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest ExampleIDMOrder</b></p><a name="ExampleIDMOrder"> </a><a name="hcExampleIDMOrder"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-nmdp-idm-order.html">NMDP IDM Order</a></p></div><p><b>identifier</b>: <code>http://terminology.nmdp.org/identifier/order</code>/ORD-2026-005678</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://terminology.nmdp.org/codesystem/order-type idm}">Infectious Disease Markers</span></p><p><b>subject</b>: <a href="Patient-ExampleNMDPDonor.html">Marcus James Reynolds  Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)</a></p><p><b>authoredOn</b>: 2026-07-20</p><p><b>requester</b>: <a href="Organization-ExampleNMDPDonorCenter.html">Organization Minneapolis Blood Center</a></p><p><b>performer</b>: <a href="Organization-ExampleNMDPDonorCenter.html">Organization Minneapolis Blood Center</a></p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest ExampleIDMOrder</b></p><a name="ExampleIDMOrder"> </a><a name="hcExampleIDMOrder"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-nmdp-idm-order.html">NMDP IDM Order</a></p></div><p><b>identifier</b>: <code>http://nmdp.org/identifier/matchsource-order</code>/MS-ORD-2026-55678</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://fhir.nmdp.org/CodeSystem/order-type idm}">Infectious Disease Markers</span></p><p><b>subject</b>: <a href="Patient-ExampleRecipientPatient.html">Maria Garcia  Female, DoB: 1975-06-20 ( http://nmdp.org/identifier/rid#RID-9988776)</a></p><p><b>authoredOn</b>: 2026-07-20</p><p><b>performer</b>: <a href="Patient-ExampleNMDPDonor.html">Marcus Reynolds  Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)</a></p></div>
   </text>
   <identifier>
-    <system value="http://terminology.nmdp.org/identifier/order"/>
-    <value value="ORD-2026-005678"/>
+    <system value="http://nmdp.org/identifier/matchsource-order"/>
+    <value value="MS-ORD-2026-55678"/>
   </identifier>
   <status value="active"/>
   <intent value="order"/>
   <code>
     <coding>
-      <system value="http://terminology.nmdp.org/codesystem/order-type"/>
+      <system value="http://fhir.nmdp.org/CodeSystem/order-type"/>
       <code value="idm"/>
       <display value="Infectious Disease Markers"/>
     </coding>
   </code>
   <subject>
-    <reference value="Patient/ExampleNMDPDonor"/>
+    <reference value="Patient/ExampleRecipientPatient"/>
   </subject>
   <authoredOn value="2026-07-20"/>
-  <requester>
-    <reference value="Organization/ExampleNMDPDonorCenter"/>
-  </requester>
   <performer>
-    <reference value="Organization/ExampleNMDPDonorCenter"/>
+    <reference value="Patient/ExampleNMDPDonor"/>
   </performer>
 </ServiceRequest>

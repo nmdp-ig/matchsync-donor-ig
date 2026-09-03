@@ -1,5 +1,17 @@
 {
   "codeSystems" : [{
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-abo-rh-type-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPABORhTypeVS",
+    "title" : "ABO/Rh Blood Type Value Set",
+    "description" : "LOINC Answer List LL2972-9 codes for ABO and Rh blood group types.",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation"
+  },
+  {
     "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-center-type-vs",
     "version" : "0.1.0",
     "status" : "draft",
@@ -12,16 +24,22 @@
     "StructureDefinition-nmdp-organization.html" : "NMDP Organization"
   },
   {
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-cmv-status-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPCMVStatusVS",
+    "title" : "NMDP CMV Status Value Set",
+    "description" : "Allowable text-based values for CMV IgG antibody presence status used in NMDP donor and CBU payloads.",
+    "systems" : ["http://fhir.nmdp.org/CodeSystem/cmv-status"]
+  },
+  {
     "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs",
     "version" : "0.1.0",
     "status" : "draft",
     "name" : "NMDPDonorStatusVS",
     "title" : "NMDP Donor Status ValueSet",
     "description" : "All registry status codes for NMDP registered donors. Maps to ODS\nenterprise donor status values (AV, TU, AC, DE).",
-    "systems" : ["http://terminology.nmdp.org/codesystem/donor-status"],
-    "uses" : {
-    },
-    "StructureDefinition-donor-status.html" : "Donor Status"
+    "systems" : ["http://fhir.nmdp.org/CodeSystem/donor-status"]
   },
   {
     "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-glstring-vs",
@@ -42,7 +60,16 @@
     "name" : "NMDPHLAGeneNameVS",
     "title" : "NMDP HLA Gene Name Value Set",
     "description" : "HLA gene names (HGNC IDs) for loci typed in NMDP donor operations.",
-    "systems" : ["http://terminology.nmdp.org/codesystem/hla-gene-name"],
+    "systems" : ["http://terminology.nmdp.org/codesystem/hla-gene-name"]
+  },
+  {
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-locus-loinc-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "NMDPHLALocusLOINCVS",
+    "title" : "NMDP HLA Locus LOINC Value Set",
+    "description" : "LOINC codes for HLA locus-specific high resolution typing observations used in NMDP donor and CBU payloads.",
+    "systems" : ["http://loinc.org"],
     "uses" : {
     },
     "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
@@ -54,9 +81,10 @@
     "name" : "NMDPOrderTypeVS",
     "title" : "NMDP Order Type Value Set",
     "description" : "All codes from the NMDP Order Type code system.",
-    "systems" : ["http://terminology.nmdp.org/codesystem/order-type"],
+    "systems" : ["http://fhir.nmdp.org/CodeSystem/order-type"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
   },
@@ -84,6 +112,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.69"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient"
   },
   {
@@ -98,6 +127,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.67"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient"
   },
   {
@@ -112,6 +142,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.1"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient",
     "StructureDefinition-matchsync-donor-patient.html" : "MatchSync Donor Patient"
   },
@@ -127,10 +158,15 @@
     "sources" : ["2.16.840.1.113883.4.642.3.141"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
+    "StructureDefinition-nmdp-hemoglobin-observation.html" : "NMDP Hemoglobin Observation",
+    "StructureDefinition-nmdp-cmv-observation.html" : "NMDP CMV Observation",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order",
-    "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation",
-    "StructureDefinition-nmdp-donor-specimen.html" : "NMDP Donor Specimen"
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation",
+    "StructureDefinition-nmdp-body-weight-observation.html" : "NMDP Body Weight Observation",
+    "StructureDefinition-nmdp-donor-specimen.html" : "NMDP Donor Specimen",
+    "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/contact-point-system",
@@ -144,6 +180,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.71"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient"
   },
   {
@@ -158,6 +195,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.73"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient"
   },
   {
@@ -186,6 +224,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.5"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-hemoglobin-observation.html" : "NMDP Hemoglobin Observation",
+    "StructureDefinition-nmdp-cmv-observation.html" : "NMDP CMV Observation",
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation",
+    "StructureDefinition-nmdp-body-weight-observation.html" : "NMDP Body Weight Observation",
     "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
   },
   {
@@ -200,10 +242,12 @@
     "sources" : ["2.16.840.1.113883.4.642.3.45"],
     "uses" : {
     },
-    "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient",
-    "StructureDefinition-nmdp-organization.html" : "NMDP Organization",
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
-    "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
+    "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order",
+    "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient",
+    "StructureDefinition-nmdp-organization.html" : "NMDP Organization"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -217,10 +261,12 @@
     "sources" : ["2.16.840.1.113883.4.642.3.57"],
     "uses" : {
     },
-    "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient",
-    "StructureDefinition-nmdp-organization.html" : "NMDP Organization",
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
-    "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
+    "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order",
+    "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient",
+    "StructureDefinition-nmdp-organization.html" : "NMDP Organization"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -234,13 +280,19 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient",
-    "StructureDefinition-nmdp-organization.html" : "NMDP Organization",
-    "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
-    "StructureDefinition-matchsync-donor-patient.html" : "MatchSync Donor Patient",
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
+    "StructureDefinition-nmdp-cmv-observation.html" : "NMDP CMV Observation",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order",
-    "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation",
-    "StructureDefinition-nmdp-donor-specimen.html" : "NMDP Donor Specimen"
+    "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient",
+    "StructureDefinition-matchsync-donor-patient.html" : "MatchSync Donor Patient",
+    "StructureDefinition-nmdp-organization.html" : "NMDP Organization",
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation",
+    "StructureDefinition-nmdp-body-weight-observation.html" : "NMDP Body Weight Observation",
+    "StructureDefinition-nmdp-donor-specimen.html" : "NMDP Donor Specimen",
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
+    "StructureDefinition-nmdp-hemoglobin-observation.html" : "NMDP Hemoglobin Observation",
+    "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
+    "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -254,6 +306,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.423"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient",
     "StructureDefinition-matchsync-donor-patient.html" : "MatchSync Donor Patient"
   },
@@ -270,6 +323,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.29"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient",
     "StructureDefinition-matchsync-donor-patient.html" : "MatchSync Donor Patient"
   },
@@ -285,6 +339,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.96"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
   },
@@ -300,6 +355,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.65"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient",
     "StructureDefinition-matchsync-donor-patient.html" : "MatchSync Donor Patient"
   },
@@ -315,6 +371,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.403"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-hemoglobin-observation.html" : "NMDP Hemoglobin Observation",
+    "StructureDefinition-nmdp-cmv-observation.html" : "NMDP CMV Observation",
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation",
+    "StructureDefinition-nmdp-body-weight-observation.html" : "NMDP Body Weight Observation",
     "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
   },
   {
@@ -329,6 +389,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.396"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-hemoglobin-observation.html" : "NMDP Hemoglobin Observation",
+    "StructureDefinition-nmdp-cmv-observation.html" : "NMDP CMV Observation",
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation",
+    "StructureDefinition-nmdp-body-weight-observation.html" : "NMDP Body Weight Observation",
     "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
   },
   {
@@ -343,6 +407,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.399"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-hemoglobin-observation.html" : "NMDP Hemoglobin Observation",
+    "StructureDefinition-nmdp-cmv-observation.html" : "NMDP CMV Observation",
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation",
+    "StructureDefinition-nmdp-body-weight-observation.html" : "NMDP Body Weight Observation",
     "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
   },
   {
@@ -357,6 +425,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.395"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-hemoglobin-observation.html" : "NMDP Hemoglobin Observation",
+    "StructureDefinition-nmdp-cmv-observation.html" : "NMDP CMV Observation",
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation",
+    "StructureDefinition-nmdp-body-weight-observation.html" : "NMDP Body Weight Observation",
     "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
   },
   {
@@ -371,6 +443,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.400"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-hemoglobin-observation.html" : "NMDP Hemoglobin Observation",
+    "StructureDefinition-nmdp-cmv-observation.html" : "NMDP CMV Observation",
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation",
+    "StructureDefinition-nmdp-body-weight-observation.html" : "NMDP Body Weight Observation",
     "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
   },
   {
@@ -385,6 +461,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.152"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
   },
@@ -400,6 +477,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.1130"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient",
     "StructureDefinition-matchsync-donor-patient.html" : "MatchSync Donor Patient"
   },
@@ -415,8 +493,24 @@
     "sources" : ["2.16.840.1.113883.4.642.3.432"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "QuantityComparator",
+    "title" : "QuantityComparator",
+    "description" : "How the Quantity should be understood and represented.",
+    "systems" : ["http://hl7.org/fhir/quantity-comparator"],
+    "oids" : ["2.16.840.1.113883.4.642.3.59"],
+    "sources" : ["2.16.840.1.113883.4.642.3.59"],
+    "uses" : {
+    },
+    "StructureDefinition-nmdp-hemoglobin-observation.html" : "NMDP Hemoglobin Observation",
+    "StructureDefinition-nmdp-body-weight-observation.html" : "NMDP Body Weight Observation"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
@@ -431,6 +525,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.407"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-hemoglobin-observation.html" : "NMDP Hemoglobin Observation",
+    "StructureDefinition-nmdp-cmv-observation.html" : "NMDP CMV Observation",
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation",
+    "StructureDefinition-nmdp-body-weight-observation.html" : "NMDP Body Weight Observation",
     "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
   },
   {
@@ -445,6 +543,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.397"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-hemoglobin-observation.html" : "NMDP Hemoglobin Observation",
+    "StructureDefinition-nmdp-cmv-observation.html" : "NMDP CMV Observation",
+    "StructureDefinition-nmdp-abo-rh-observation.html" : "NMDP ABO/Rh Observation",
+    "StructureDefinition-nmdp-body-weight-observation.html" : "NMDP Body Weight Observation",
     "StructureDefinition-nmdp-hla-genotype.html" : "NMDP HLA Genotype Observation"
   },
   {
@@ -459,6 +561,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.113"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
   },
@@ -474,6 +577,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.115"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
   },
@@ -489,6 +593,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.111"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
   },
@@ -504,6 +609,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.434"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
   },
@@ -519,6 +625,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.435"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
   },
@@ -588,6 +695,7 @@
     "systems" : ["urn:ietf:bcp:47"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient"
   },
   {
@@ -602,6 +710,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.40"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-patient.html" : "NMDP Cord Blood Unit (CBU) Patient",
     "StructureDefinition-nmdp-donor-patient.html" : "NMDP Donor Patient"
   },
   {
@@ -658,6 +767,7 @@
     "sources" : ["2.16.840.1.113883.1.11.17660"],
     "uses" : {
     },
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
     "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
     "StructureDefinition-nmdp-idm-order.html" : "NMDP IDM Order"
   }]

@@ -8,21 +8,20 @@
 
 Profile: [NMDP Donor Patient](StructureDefinition-nmdp-donor-patient.md)
 
-Lisa Chen Female, DoB: 1992-08-22 ( http://terminology.nmdp.org/identifier/donor#7654321)
+Lisa Chen Female, DoB: 1992-08-22 ( http://nmdp.org/identifier/grid#A1B2C3D4E5F60718293A4B5C6D7E8F90)
 
 -------
 
 | | |
 | :--- | :--- |
+| Other Id: | `http://nmdp.org/identifier/source-id`/SRC-76543 |
 | US Core Ethnicity Extension: | * ombCategory: [CDC Race and Ethnicity: 2135-2](http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2135-2) (Hispanic or Latino)
 * text: Hispanic or Latino
  |
 | US Core Race Extension: | * ombCategory: [CDC Race and Ethnicity: 2028-9](http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2028-9) (Asian)
 * text: Asian
  |
-| Donor Status: | * status: temporarily-unavailable
-* availableDate: 2027-03-15
- |
+| [Donor Status](StructureDefinition-donor-status.md) | Temporarily Unavailable |
 
 
 
@@ -36,15 +35,8 @@ Lisa Chen Female, DoB: 1992-08-22 ( http://terminology.nmdp.org/identifier/donor
     "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient"]
   },
   "extension" : [{
-    "extension" : [{
-      "url" : "status",
-      "valueCode" : "temporarily-unavailable"
-    },
-    {
-      "url" : "availableDate",
-      "valueDate" : "2027-03-15"
-    }],
-    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status"
+    "url" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status",
+    "valueString" : "Temporarily Unavailable"
   },
   {
     "extension" : [{
@@ -77,8 +69,12 @@ Lisa Chen Female, DoB: 1992-08-22 ( http://terminology.nmdp.org/identifier/donor
     "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
   }],
   "identifier" : [{
-    "system" : "http://terminology.nmdp.org/identifier/donor",
-    "value" : "7654321"
+    "system" : "http://nmdp.org/identifier/grid",
+    "value" : "A1B2C3D4E5F60718293A4B5C6D7E8F90"
+  },
+  {
+    "system" : "http://nmdp.org/identifier/source-id",
+    "value" : "SRC-76543"
   }],
   "name" : [{
     "family" : "Chen",

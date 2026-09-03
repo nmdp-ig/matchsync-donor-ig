@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-specimen | *Version*:0.1.0 |
-| Draft as of 2026-09-02 | *Computable Name*:NMDPDonorSpecimen |
+| Draft as of 2026-09-03 | *Computable Name*:NMDPDonorSpecimen |
 
  
 A profile representing a testing specimen (blood tube, buccal swab, etc.) collected from a donor for HLA typing or infectious disease marker testing. Specimens are identified by Order Number + Donor GRID rather than individual specimen IDs. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-specimen.
   "name" : "NMDPDonorSpecimen",
   "title" : "NMDP Donor Specimen",
   "status" : "draft",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

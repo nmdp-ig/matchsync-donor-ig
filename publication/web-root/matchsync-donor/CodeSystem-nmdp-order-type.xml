@@ -3,14 +3,14 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="nmdp-order-type"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nmdp-order-type</b></p><a name="nmdp-order-type"> </a><a name="hcnmdp-order-type"> </a><p>This case-sensitive code system <code>http://terminology.nmdp.org/codesystem/order-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">ct<a name="nmdp-order-type-ct"> </a></td><td>Confirmatory Typing</td><td>HLA confirmatory typing order to verify initial typing results.</td></tr><tr><td style="white-space:nowrap">idm<a name="nmdp-order-type-idm"> </a></td><td>Infectious Disease Markers</td><td>Infectious disease marker testing order for donor clearance.</td></tr><tr><td style="white-space:nowrap">collection<a name="nmdp-order-type-collection"> </a></td><td>Collection</td><td>Generic stem cell collection order.</td></tr><tr><td style="white-space:nowrap">pbsc<a name="nmdp-order-type-pbsc"> </a></td><td>Peripheral Blood Stem Cell</td><td>Peripheral blood stem cell collection via apheresis.</td></tr><tr><td style="white-space:nowrap">marrow<a name="nmdp-order-type-marrow"> </a></td><td>Bone Marrow</td><td>Bone marrow harvest collection.</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nmdp-order-type</b></p><a name="nmdp-order-type"> </a><a name="hcnmdp-order-type"> </a><p>This case-sensitive code system <code>http://fhir.nmdp.org/CodeSystem/order-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">confirmatory-typing<a name="nmdp-order-type-confirmatory-typing"> </a></td><td>Confirmatory Typing</td><td>HLA confirmatory typing order to verify initial typing results.</td></tr><tr><td style="white-space:nowrap">idm<a name="nmdp-order-type-idm"> </a></td><td>Infectious Disease Markers</td><td>Infectious disease marker testing order for donor clearance.</td></tr><tr><td style="white-space:nowrap">collection<a name="nmdp-order-type-collection"> </a></td><td>Collection</td><td>Generic stem cell collection order.</td></tr><tr><td style="white-space:nowrap">pbsc<a name="nmdp-order-type-pbsc"> </a></td><td>Peripheral Blood Stem Cell</td><td>Peripheral blood stem cell collection via apheresis.</td></tr><tr><td style="white-space:nowrap">marrow<a name="nmdp-order-type-marrow"> </a></td><td>Bone Marrow</td><td>Bone marrow harvest collection.</td></tr><tr><td style="white-space:nowrap">A-HR<a name="nmdp-order-type-A-HR"> </a></td><td>HLA-A High Resolution</td><td>HLA-A high resolution typing order for CBU.</td></tr><tr><td style="white-space:nowrap">B-HR<a name="nmdp-order-type-B-HR"> </a></td><td>HLA-B High Resolution</td><td>HLA-B high resolution typing order for CBU.</td></tr><tr><td style="white-space:nowrap">C-HR<a name="nmdp-order-type-C-HR"> </a></td><td>HLA-C High Resolution</td><td>HLA-C high resolution typing order for CBU.</td></tr><tr><td style="white-space:nowrap">ABC-DRB1-DQB1-DPB1-HR<a name="nmdp-order-type-ABC-DRB1-DQB1-DPB1-HR"> </a></td><td>Full Panel High Resolution</td><td>Full panel high resolution typing (HLA-A, B, C, DRB1, DQB1, DPB1) order for CBU.</td></tr></table></div>
   </text>
-  <url value="http://terminology.nmdp.org/codesystem/order-type"/>
+  <url value="http://fhir.nmdp.org/CodeSystem/order-type"/>
   <version value="0.1.0"/>
   <name value="NMDPOrderTypeCS"/>
   <title value="NMDP Order Type Code System"/>
   <status value="active"/>
-  <date value="2026-09-02T19:29:11+00:00"/>
+  <date value="2026-09-03T14:51:12+00:00"/>
   <publisher value="National Marrow Donor Program (NMDP)"/>
   <contact>
     <name value="National Marrow Donor Program (NMDP)"/>
@@ -23,7 +23,7 @@
       <value value="fhir@nmdp.org"/>
     </telecom>
   </contact>
-  <description value="Codes identifying the type of donor workup or collection order in the NMDP system."/>
+  <description value="Codes identifying the type of donor or CBU workup order in the NMDP system."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -33,9 +33,9 @@
   </jurisdiction>
   <caseSensitive value="true"/>
   <content value="complete"/>
-  <count value="5"/>
+  <count value="9"/>
   <concept>
-    <code value="ct"/>
+    <code value="confirmatory-typing"/>
     <display value="Confirmatory Typing"/>
     <definition value="HLA confirmatory typing order to verify initial typing results."/>
   </concept>
@@ -58,5 +58,25 @@
     <code value="marrow"/>
     <display value="Bone Marrow"/>
     <definition value="Bone marrow harvest collection."/>
+  </concept>
+  <concept>
+    <code value="A-HR"/>
+    <display value="HLA-A High Resolution"/>
+    <definition value="HLA-A high resolution typing order for CBU."/>
+  </concept>
+  <concept>
+    <code value="B-HR"/>
+    <display value="HLA-B High Resolution"/>
+    <definition value="HLA-B high resolution typing order for CBU."/>
+  </concept>
+  <concept>
+    <code value="C-HR"/>
+    <display value="HLA-C High Resolution"/>
+    <definition value="HLA-C high resolution typing order for CBU."/>
+  </concept>
+  <concept>
+    <code value="ABC-DRB1-DQB1-DPB1-HR"/>
+    <display value="Full Panel High Resolution"/>
+    <definition value="Full panel high resolution typing (HLA-A, B, C, DRB1, DQB1, DPB1) order for CBU."/>
   </concept>
 </CodeSystem>

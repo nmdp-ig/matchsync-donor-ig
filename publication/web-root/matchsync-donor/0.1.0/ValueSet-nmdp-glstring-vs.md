@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-glstring-vs | *Version*:0.1.0 |
-| Active as of 2026-09-02 | *Computable Name*:NMDPGLStringVS |
+| Active as of 2026-09-03 | *Computable Name*:NMDPGLStringVS |
 
  
 Genotype List String Codes from glstring.org. Codes represent HLA genotypes in GL String format (e.g., hla#3.25.0#HLA-A**01:01:01:01+HLA-A**01:02). 
@@ -52,7 +52,7 @@ No Expansion for this valueset (Unknown Code System)
   "name" : "NMDPGLStringVS",
   "title" : "GL String Code Value Set",
   "status" : "active",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

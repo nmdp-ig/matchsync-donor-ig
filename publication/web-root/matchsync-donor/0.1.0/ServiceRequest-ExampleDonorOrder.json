@@ -6,29 +6,27 @@
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ExampleDonorOrder</b></p><a name=\"ExampleDonorOrder\"> </a><a name=\"hcExampleDonorOrder\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-order.html\">NMDP Donor Order</a></p></div><p><b>identifier</b>: <code>http://terminology.nmdp.org/identifier/order</code>/ORD-2026-001234</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://terminology.nmdp.org/codesystem/order-type ct}\">Confirmatory Typing</span></p><p><b>subject</b>: <a href=\"Patient-ExampleNMDPDonor.html\">Marcus James Reynolds  Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)</a></p><p><b>authoredOn</b>: 2026-07-15</p><p><b>requester</b>: <a href=\"Organization-ExampleNMDPDonorCenter.html\">Organization Minneapolis Blood Center</a></p><p><b>performer</b>: <a href=\"Organization-ExampleNMDPDonorCenter.html\">Organization Minneapolis Blood Center</a></p></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ExampleDonorOrder</b></p><a name=\"ExampleDonorOrder\"> </a><a name=\"hcExampleDonorOrder\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-order.html\">NMDP Donor Order</a></p></div><p><b>identifier</b>: <code>http://nmdp.org/identifier/matchsource-order</code>/MS-ORD-2026-44321</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://fhir.nmdp.org/CodeSystem/order-type confirmatory-typing}\">Confirmatory Typing</span></p><p><b>subject</b>: <a href=\"Patient-ExampleRecipientPatient.html\">Maria Garcia  Female, DoB: 1975-06-20 ( http://nmdp.org/identifier/rid#RID-9988776)</a></p><p><b>occurrence</b>: 2026-07-20 09:00:00+0000</p><p><b>authoredOn</b>: 2026-07-01 10:00:00+0000</p><p><b>performer</b>: <a href=\"Patient-ExampleNMDPDonor.html\">Marcus Reynolds  Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)</a></p></div>"
   },
   "identifier" : [{
-    "system" : "http://terminology.nmdp.org/identifier/order",
-    "value" : "ORD-2026-001234"
+    "system" : "http://nmdp.org/identifier/matchsource-order",
+    "value" : "MS-ORD-2026-44321"
   }],
   "status" : "active",
   "intent" : "order",
   "code" : {
     "coding" : [{
-      "system" : "http://terminology.nmdp.org/codesystem/order-type",
-      "code" : "ct",
+      "system" : "http://fhir.nmdp.org/CodeSystem/order-type",
+      "code" : "confirmatory-typing",
       "display" : "Confirmatory Typing"
     }]
   },
   "subject" : {
-    "reference" : "Patient/ExampleNMDPDonor"
+    "reference" : "Patient/ExampleRecipientPatient"
   },
-  "authoredOn" : "2026-07-15",
-  "requester" : {
-    "reference" : "Organization/ExampleNMDPDonorCenter"
-  },
+  "occurrenceDateTime" : "2026-07-20T09:00:00Z",
+  "authoredOn" : "2026-07-01T10:00:00Z",
   "performer" : [{
-    "reference" : "Organization/ExampleNMDPDonorCenter"
+    "reference" : "Patient/ExampleNMDPDonor"
   }]
 }

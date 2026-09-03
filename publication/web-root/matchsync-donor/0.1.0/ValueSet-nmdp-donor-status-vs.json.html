@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.12"}
-    h3,h4,h5,h6{--heading-prefix:"9.12"}</style>
+    <style type="text/css">h2{--heading-prefix:"10.21"}
+    h3,h4,h5,h6{--heading-prefix:"10.21"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -99,6 +99,9 @@
   </li>
   <li>
     <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="connecting-to-the-donor-api.html">Connecting to the Donor API</a>
   </li>
   <li>
     <a href="security-and-privacy.html">Security and Privacy</a>
@@ -186,7 +189,7 @@
         
           Draft
           
-            as of 2026-09-02
+            as of 2026-09-03
           
         
       </td>
@@ -207,14 +210,14 @@
   "<a href="http://hl7.org/fhir/R4/resource.html#ValueSet.id">id</a>" : "nmdp-donor-status-vs",
   "<a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet nmdp-donor-status-vs&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;nmdp-donor-status-vs\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcnmdp-donor-status-vs\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;a href=\&quot;CodeSystem-nmdp-donor-status.html\&quot;&gt;&lt;code&gt;http://terminology.nmdp.org/codesystem/donor-status&lt;/code&gt;&lt;/a&gt;&lt;span title=\&quot;Version is not explicitly stated, which means it is fixed to the version provided in this specification\&quot;&gt; version &amp;#x1F4E6;0.1.0&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet nmdp-donor-status-vs&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;nmdp-donor-status-vs\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcnmdp-donor-status-vs\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;a href=\&quot;CodeSystem-nmdp-donor-status.html\&quot;&gt;&lt;code&gt;http://fhir.nmdp.org/CodeSystem/donor-status&lt;/code&gt;&lt;/a&gt;&lt;span title=\&quot;Version is not explicitly stated, which means it is fixed to the version provided in this specification\&quot;&gt; version &amp;#x1F4E6;0.1.0&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "0.1.0",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "NMDPDonorStatusVS",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "NMDP Donor Status ValueSet",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2026-09-02T19:29:11+00:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2026-09-03T14:51:12+00:00",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "National Marrow Donor Program (NMDP)",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
     {
@@ -246,7 +249,7 @@
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
     "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
       {
-        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://terminology.nmdp.org/codesystem/donor-status"
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://fhir.nmdp.org/CodeSystem/donor-status"
       }
     ]
   }
@@ -274,7 +277,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 14:51+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

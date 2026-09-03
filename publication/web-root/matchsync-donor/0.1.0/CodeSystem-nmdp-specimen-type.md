@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://terminology.nmdp.org/codesystem/specimen-type | *Version*:0.1.0 |
-| Active as of 2026-09-02 | *Computable Name*:NMDPSpecimenTypeCS |
+| Active as of 2026-09-03 | *Computable Name*:NMDPSpecimenTypeCS |
 
  
 Codes identifying the type of specimen collected from a donor for HLA typing or infectious disease marker testing. 
@@ -31,7 +31,7 @@ Codes identifying the type of specimen collected from a donor for HLA typing or 
   "name" : "NMDPSpecimenTypeCS",
   "title" : "NMDP Specimen Type Code System",
   "status" : "active",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

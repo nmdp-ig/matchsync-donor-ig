@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.22"}
-    h3,h4,h5,h6{--heading-prefix:"9.22"}</style>
+    <style type="text/css">h2{--heading-prefix:"10.36"}
+    h3,h4,h5,h6{--heading-prefix:"10.36"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -97,6 +97,9 @@
   </li>
   <li>
     <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="connecting-to-the-donor-api.html">Connecting to the Donor API</a>
   </li>
   <li>
     <a href="security-and-privacy.html">Security and Privacy</a>
@@ -186,13 +189,13 @@
 
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><a name="ExampleDeferredDonor"> </a><a name="hcExampleDeferredDonor"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-nmdp-donor-patient.html">NMDP Donor Patient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Lisa Chen  Female, DoB: 1992-08-22 ( http://terminology.nmdp.org/identifier/donor#7654321)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.">US Core Ethnicity Extension:</td><td colspan="3"><ul><li>ombCategory: <a href="http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2135-2">CDC Race and Ethnicity: 2135-2</a> (Hispanic or Latino)</li><li>text: Hispanic or Latino</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:
+  <div xmlns="http://www.w3.org/1999/xhtml"><a name="ExampleDeferredDonor"> </a><a name="hcExampleDeferredDonor"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-nmdp-donor-patient.html">NMDP Donor Patient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Lisa Chen  Female, DoB: 1992-08-22 ( http://nmdp.org/identifier/grid#A1B2C3D4E5F60718293A4B5C6D7E8F90)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3"><code>http://nmdp.org/identifier/source-id</code>/SRC-76543</td></tr><tr><td style="background-color: #f3f5da" title="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.">US Core Ethnicity Extension:</td><td colspan="3"><ul><li>ombCategory: <a href="http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2135-2">CDC Race and Ethnicity: 2135-2</a> (Hispanic or Latino)</li><li>text: Hispanic or Latino</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:
 
  - American Indian or Alaska Native
  - Asian
  - Black or African American
  - Native Hawaiian or Other Pacific Islander
- - White.">US Core Race Extension:</td><td colspan="3"><ul><li>ombCategory: <a href="http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2028-9">CDC Race and Ethnicity: 2028-9</a> (Asian)</li><li>text: Asian</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.">Donor Status:</td><td colspan="3"><ul><li>status: temporarily-unavailable</li><li>availableDate: 2027-03-15</li></ul></td></tr></table></div>
+ - White.">US Core Race Extension:</td><td colspan="3"><ul><li>ombCategory: <a href="http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2028-9">CDC Race and Ethnicity: 2028-9</a> (Asian)</li><li>text: Asian</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable')."><a href="StructureDefinition-donor-status.html">Donor Status</a></td><td colspan="3">Temporarily Unavailable</td></tr></table></div>
 
   
 
@@ -217,7 +220,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 14:51+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

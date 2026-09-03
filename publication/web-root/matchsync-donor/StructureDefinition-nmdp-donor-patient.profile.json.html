@@ -49,8 +49,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.4"}
-    h3,h4,h5,h6{--heading-prefix:"9.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"10.9"}
+    h3,h4,h5,h6{--heading-prefix:"10.9"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -105,6 +105,9 @@
   </li>
   <li>
     <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="connecting-to-the-donor-api.html">Connecting to the Donor API</a>
   </li>
   <li>
     <a href="security-and-privacy.html">Security and Privacy</a>
@@ -220,7 +223,7 @@
         
           Draft
           
-            as of 2026-09-02
+            as of 2026-09-03
           
         
       </td>
@@ -243,14 +246,14 @@
   "<a href="http://hl7.org/fhir/R4/resource.html#StructureDefinition.id">id</a>" : "nmdp-donor-patient",
   "<a href="http://hl7.org/fhir/R4/domainresource.html#StructureDefinition.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: StructureDefinition nmdp-donor-patient&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;nmdp-donor-patient\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcnmdp-donor-patient\&quot;&gt; &lt;/a&gt;&lt;table border=\&quot;0\&quot; cellpadding=\&quot;0\&quot; cellspacing=\&quot;0\&quot; style=\&quot;border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\&quot;&gt;&lt;tr style=\&quot;border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\&quot;&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;The logical name of the element\&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Information about the use of the element\&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Minimum and Maximum # of times the element can appear in the instance\&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Reference to the type of the element\&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Additional information about the element\&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=\&quot;float: right\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_resource.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient\&quot;&gt;Patient&lt;/a&gt;&lt;a name=\&quot;Patient\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html\&quot;&gt;USCorePatientProfile&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Information about an individual or animal receiving health care services&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck13.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Slice Definition\&quot; class=\&quot;hierarchy\&quot;/&gt; Slices for extension&lt;a name=\&quot;Patient.extension\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;Content/Rules for all slices&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck134.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_slicer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice_item.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Slice Item\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.extension:race\&quot; title=\&quot;Slice race\&quot;&gt;extension:race&lt;/a&gt;&lt;a name=\&quot;Patient.extension:race\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-race.html\&quot; title=\&quot;Extension\&quot;&gt;USCoreRaceExtension&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;US Core Race&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck134.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_slicer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice_item.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Slice Item\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.extension:ethnicity\&quot; title=\&quot;Slice ethnicity\&quot;&gt;extension:ethnicity&lt;/a&gt;&lt;a name=\&quot;Patient.extension:ethnicity\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-ethnicity.html\&quot; title=\&quot;Extension\&quot;&gt;USCoreEthnicityExtension&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;US Core Ethnicity&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end_slicer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice_item.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Slice Item\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.extension:donorStatus\&quot; title=\&quot;Extension URL = http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status\&quot;&gt;extension:donorStatus&lt;/a&gt;&lt;a name=\&quot;Patient.extension:donorStatus\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;0..1&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;(Complex)&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;Donor registry status&lt;br/&gt;&lt;span style=\&quot;font-weight:bold\&quot;&gt;URL: &lt;/span&gt;&lt;a href=\&quot;StructureDefinition-donor-status.html\&quot;&gt;http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck13.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Slice Definition\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a style=\&quot;font-style: italic; font-style: italic\&quot; href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier\&quot;&gt;Slices for identifier&lt;/a&gt;&lt;a name=\&quot;Patient.identifier\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;font-style: italic\&quot;/&gt;&lt;span style=\&quot;opacity: 0.5; font-style: italic\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5; font-style: italic\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5; font-style: italic\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; font-style: italic; opacity: 0.5; font-style: italic\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Identifier\&quot;&gt;Identifier&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5; font-style: italic\&quot;&gt;(USCDI) An identifier for this patient&lt;/span&gt;&lt;br style=\&quot;font-style: italic\&quot;/&gt;&lt;span style=\&quot;font-weight:bold; font-style: italic\&quot;&gt;Slice: &lt;/span&gt;&lt;span style=\&quot;font-style: italic\&quot;&gt;Unordered, Open by pattern:system&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck135.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_slicer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice_item.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Slice Item\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:nmdpDonorId\&quot; title=\&quot;Slice nmdpDonorId: The unique identifier assigned to a donor by the National Marrow Donor Program.\&quot;&gt;identifier:nmdpDonorId&lt;/a&gt;&lt;a name=\&quot;Patient.identifier:nmdpDonorId\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..1&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Identifier\&quot;&gt;Identifier&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;NMDP Donor ID&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1340.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline_slicer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end_slice.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:nmdpDonorId.system\&quot;&gt;system&lt;/a&gt;&lt;a name=\&quot;Patient.identifier:nmdpDonorId.system\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#uri\&quot;&gt;uri&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;(USCDI) The namespace for the identifier value&lt;/span&gt;&lt;br/&gt;&lt;span style=\&quot;font-weight:bold\&quot;&gt;Required Pattern: &lt;/span&gt;&lt;span style=\&quot;color: darkgreen\&quot;&gt;http://terminology.nmdp.org/identifier/donor&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck125.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end_slicer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice_item.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Slice Item\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:grid\&quot; title=\&quot;Slice grid: The ISBT 128 Global Registration Identifier for Donors.\&quot;&gt;identifier:grid&lt;/a&gt;&lt;a name=\&quot;Patient.identifier:grid\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;0..1&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Identifier\&quot;&gt;Identifier&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;Global Registration Identifier for Donors (GRID)&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1240.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end_slice.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:grid.system\&quot;&gt;system&lt;/a&gt;&lt;a name=\&quot;Patient.identifier:grid.system\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#uri\&quot;&gt;uri&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;(USCDI) The namespace for the identifier value&lt;/span&gt;&lt;br/&gt;&lt;span style=\&quot;font-weight:bold\&quot;&gt;Required Pattern: &lt;/span&gt;&lt;span style=\&quot;color: darkgreen\&quot;&gt;http://www.isbt128.org/uri/GRID&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.birthDate\&quot;&gt;birthDate&lt;/a&gt;&lt;a name=\&quot;Patient.birthDate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#date\&quot;&gt;date&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;(USCDI) The date of birth for the individual&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.deceased[x]\&quot; title=\&quot;Indicates if the donor is deceased, either as a boolean flag or a dateTime of death.\&quot;&gt;deceased[x]&lt;/a&gt;&lt;a name=\&quot;Patient.deceased_x_\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#boolean\&quot;&gt;boolean&lt;/a&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;, &lt;/span&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#dateTime\&quot;&gt;dateTime&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;Indicates if the donor is deceased&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.communication\&quot;&gt;communication&lt;/a&gt;&lt;a name=\&quot;Patient.communication\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#BackboneElement\&quot;&gt;BackboneElement&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;(USCDI) A language which may be used to communicate with the patient about his or her health&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.managingOrganization\&quot; title=\&quot;The NMDP-affiliated organization (typically a donor center) that manages this donor's registration.\&quot;&gt;managingOrganization&lt;/a&gt;&lt;a name=\&quot;Patient.managingOrganization\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-nmdp-organization.html\&quot;&gt;NMDP Organization&lt;/a&gt;)&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;Donor center managing this donor&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr&gt;&lt;td colspan=\&quot;5\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;br/&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: StructureDefinition nmdp-donor-patient&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;nmdp-donor-patient\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcnmdp-donor-patient\&quot;&gt; &lt;/a&gt;&lt;table border=\&quot;0\&quot; cellpadding=\&quot;0\&quot; cellspacing=\&quot;0\&quot; style=\&quot;border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\&quot;&gt;&lt;tr style=\&quot;border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\&quot;&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;The logical name of the element\&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Information about the use of the element\&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Minimum and Maximum # of times the element can appear in the instance\&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Reference to the type of the element\&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Additional information about the element\&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=\&quot;float: right\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_resource.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient\&quot;&gt;Patient&lt;/a&gt;&lt;a name=\&quot;Patient\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html\&quot;&gt;USCorePatientProfile&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Information about an individual or animal receiving health care services&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck13.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Slice Definition\&quot; class=\&quot;hierarchy\&quot;/&gt; Slices for extension&lt;a name=\&quot;Patient.extension\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;Content/Rules for all slices&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end_slicer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice_item.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Slice Item\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.extension:donorStatus\&quot; title=\&quot;Extension URL = http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status\&quot;&gt;extension:donorStatus&lt;/a&gt;&lt;a name=\&quot;Patient.extension:donorStatus\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;0..1&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#string\&quot;&gt;string&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;Donor registry status&lt;br/&gt;&lt;span style=\&quot;font-weight:bold\&quot;&gt;URL: &lt;/span&gt;&lt;a href=\&quot;StructureDefinition-donor-status.html\&quot;&gt;http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck13.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Slice Definition\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a style=\&quot;font-style: italic; font-style: italic\&quot; href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier\&quot;&gt;Slices for identifier&lt;/a&gt;&lt;a name=\&quot;Patient.identifier\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;font-style: italic\&quot;/&gt;&lt;span style=\&quot;opacity: 0.5; font-style: italic\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5; font-style: italic\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5; font-style: italic\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; font-style: italic; opacity: 0.5; font-style: italic\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Identifier\&quot;&gt;Identifier&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5; font-style: italic\&quot;&gt;(USCDI) An identifier for this patient&lt;/span&gt;&lt;br style=\&quot;font-style: italic\&quot;/&gt;&lt;span style=\&quot;font-weight:bold; font-style: italic\&quot;&gt;Slice: &lt;/span&gt;&lt;span style=\&quot;font-style: italic\&quot;&gt;Unordered, Open by pattern:system&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck135.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_slicer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice_item.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Slice Item\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:grid\&quot; title=\&quot;Slice grid: The NMDP GRID identifier that uniquely identifies a donor. A 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. 99D0BA02660443B585D525525EB3F2D2. System: http://nmdp.org/identifier/grid\&quot;&gt;identifier:grid&lt;/a&gt;&lt;a name=\&quot;Patient.identifier:grid\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..1&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Identifier\&quot;&gt;Identifier&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;NMDP GRID (Global Registration Identifier for Donors)&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1340.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline_slicer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end_slice.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:grid.system\&quot;&gt;system&lt;/a&gt;&lt;a name=\&quot;Patient.identifier:grid.system\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#uri\&quot;&gt;uri&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;(USCDI) The namespace for the identifier value&lt;/span&gt;&lt;br/&gt;&lt;span style=\&quot;font-weight:bold\&quot;&gt;Required Pattern: &lt;/span&gt;&lt;span style=\&quot;color: darkgreen\&quot;&gt;http://nmdp.org/identifier/grid&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck125.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end_slicer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_slice_item.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Slice Item\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:sourceId\&quot; title=\&quot;Slice sourceId: The source identifier for the donor in the originating registry. System: http://nmdp.org/identifier/source-id\&quot;&gt;identifier:sourceId&lt;/a&gt;&lt;a name=\&quot;Patient.identifier:sourceId\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;0..1&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Identifier\&quot;&gt;Identifier&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;Donor source ID&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1240.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end_slice.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.identifier:sourceId.system\&quot;&gt;system&lt;/a&gt;&lt;a name=\&quot;Patient.identifier:sourceId.system\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#uri\&quot;&gt;uri&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;(USCDI) The namespace for the identifier value&lt;/span&gt;&lt;br/&gt;&lt;span style=\&quot;font-weight:bold\&quot;&gt;Required Pattern: &lt;/span&gt;&lt;span style=\&quot;color: darkgreen\&quot;&gt;http://nmdp.org/identifier/source-id&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.birthDate\&quot;&gt;birthDate&lt;/a&gt;&lt;a name=\&quot;Patient.birthDate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#date\&quot;&gt;date&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;(USCDI) The date of birth for the individual&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient-definitions.html#Patient.managingOrganization\&quot; title=\&quot;The NMDP donor center (identified by ION/DC ID) responsible for this donor.\&quot;&gt;managingOrganization&lt;/a&gt;&lt;a name=\&quot;Patient.managingOrganization\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-nmdp-organization.html\&quot;&gt;NMDP Organization&lt;/a&gt;)&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;Donor center (ION/DC ID)&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr&gt;&lt;td colspan=\&quot;5\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;br/&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.url">url</a>" : "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a>" : "0.1.0",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">name</a>" : "NMDPDonorPatient",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">title</a>" : "NMDP Donor Patient",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2026-09-02T19:29:11+00:00",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2026-09-03T14:51:12+00:00",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "National Marrow Donor Program (NMDP)",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
     {
@@ -267,7 +270,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.description">description</a>" : "A profile representing a hematopoietic cell donor registered in the NMDP registry.",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.description">description</a>" : "A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value.",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.jurisdiction">jurisdiction</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
@@ -678,7 +681,7 @@
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "race",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "US Core Race",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "(USCDI) US Core Race Extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n   - American Indian or Alaska Native\n   - Asian\n   - Black or African American\n   - Native Hawaiian or Other Pacific Islander\n   - White.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
@@ -717,7 +720,13 @@
           }
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "argonaut-dq-dstu2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient.extension"
+          }
+        ]
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.extension:ethnicity",
@@ -729,7 +738,7 @@
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "ethnicity",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "US Core Ethnicity",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "(USCDI) US Core ethnicity Extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
@@ -768,7 +777,13 @@
           }
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "argonaut-dq-dstu2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient.extension"
+          }
+        ]
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.extension:tribalAffiliation",
@@ -989,7 +1004,7 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "donorStatus",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Donor registry status",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The current registration status of the donor (e.g., Available, Temporarily Unavailable, Active, Permanently Unavailable).",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
@@ -1566,486 +1581,6 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:nmdpDonorId",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "nmdpDonorId",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "NMDP Donor ID",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The unique identifier assigned to a donor by the National Marrow Donor Program.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Patients are almost always assigned specific numerical identifiers.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Patient.identifier",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Identifier"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "FiveWs.identifier"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "PID-3"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "id"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "cda",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".id"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "argonaut-dq-dstu2",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient.identifier"
-          }
-        ]
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:nmdpDonorId.id",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.id",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
-          "xmlAttr"
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Unique id for inter-element referencing",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
-              {
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "string"
-              }
-            ],
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
-          }
-        ]
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:nmdpDonorId.extension",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.extension",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">type</a>" : "value",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">path</a>" : "url"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.description">description</a>" : "Extensions are always sliced by (at least) url",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional content defined by implementations",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
-          "extensions",
-          "user content"
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \&quot;value\&quot;)])",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
-          }
-        ]
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:nmdpDonorId.use",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.use",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "usual | official | temp | secondary | old (If known)",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The purpose of this identifier.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.use",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifierReason">isModifierReason</a>" : "This is labeled as \&quot;Is Modifier\&quot; because applications should not mistake a temporary id for a permanent one.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "IdentifierUse"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Identifies the purpose for this identifier, if known .",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">valueSet</a>" : "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Role.code or implied by context"
-          }
-        ]
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:nmdpDonorId.type",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.type",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Description of identifier",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Allows users to make use of identifiers when the identifier system is not known.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.type",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "IdentifierType"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "extensible",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">valueSet</a>" : "http://hl7.org/fhir/ValueSet/identifier-type"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CX.5"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Role.code or implied by context"
-          }
-        ]
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:nmdpDonorId.system",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.system",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "(USCDI) The namespace for the identifier value",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "Identifier.system is always case sensitive.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.system",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.pattern_x_">patternUri</a>" : "http://terminology.nmdp.org/identifier/donor",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example">example</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example.label">label</a>" : "General",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example.value_x_">valueUri</a>" : "http://www.acme.com/identifiers/patient"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CX.4 / EI-2-4"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "II.root or Role.id.root"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./IdentifierType"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "argonaut-dq-dstu2",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient.identifier.system"
-          }
-        ]
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:nmdpDonorId.value",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.value",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "(USCDI) The value that is unique within the system.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.value",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example">example</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example.label">label</a>" : "General",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example.value_x_">valueString</a>" : "123456"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CX.1 / EI.1"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./Value"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "argonaut-dq-dstu2",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient.identifier.value"
-          }
-        ]
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:nmdpDonorId.period",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.period",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Time period when id is/was valid for use",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Time period during which identifier is/was valid for use.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.period",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Period"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CX.7 + CX.8"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Role.effectiveTime or implied by context"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./StartDate and ./EndDate"
-          }
-        ]
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:nmdpDonorId.assigner",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.assigner",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Organization that issued id (may be just text)",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Organization that issued/manages the identifier.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.assigner",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
-        },
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="http://hl7.org/fhir/R4/organization.html" style="color: Maroon">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CX.4 / (CX.4,CX.9,CX.10)"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./IdentifierIssuingAuthority"
-          }
-        ]
-      },
-      {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:grid",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
@@ -2055,10 +1590,10 @@
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "grid",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Global Registration Identifier for Donors (GRID)",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The ISBT 128 Global Registration Identifier for Donors.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "NMDP GRID (Global Registration Identifier for Donors)",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The NMDP GRID identifier that uniquely identifies a donor. A 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. 99D0BA02660443B585D525525EB3F2D2. System: http://nmdp.org/identifier/grid",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Patients are almost always assigned specific numerical identifiers.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Patient.identifier",
@@ -2332,7 +1867,7 @@
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
           }
         ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.pattern_x_">patternUri</a>" : "http://www.isbt128.org/uri/GRID",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.pattern_x_">patternUri</a>" : "http://nmdp.org/identifier/grid",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example">example</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example.label">label</a>" : "General",
@@ -2479,6 +2014,486 @@
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:grid.assigner",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.assigner",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Organization that issued id (may be just text)",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Organization that issued/manages the identifier.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.assigner",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
+              <a href="http://hl7.org/fhir/R4/organization.html" style="color: Maroon">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CX.4 / (CX.4,CX.9,CX.10)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./IdentifierIssuingAuthority"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:sourceId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "sourceId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Donor source ID",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The source identifier for the donor in the originating registry. System: http://nmdp.org/identifier/source-id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Patients are almost always assigned specific numerical identifiers.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Patient.identifier",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Identifier"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "FiveWs.identifier"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "PID-3"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "id"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "cda",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".id"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "argonaut-dq-dstu2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient.identifier"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:sourceId.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+          "xmlAttr"
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Unique id for inter-element referencing",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "string"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:sourceId.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">type</a>" : "value",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">path</a>" : "url"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.description">description</a>" : "Extensions are always sliced by (at least) url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional content defined by implementations",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content"
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \&quot;value\&quot;)])",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:sourceId.use",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.use",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "usual | official | temp | secondary | old (If known)",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The purpose of this identifier.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.use",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifierReason">isModifierReason</a>" : "This is labeled as \&quot;Is Modifier\&quot; because applications should not mistake a temporary id for a permanent one.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "IdentifierUse"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Identifies the purpose for this identifier, if known .",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">valueSet</a>" : "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Role.code or implied by context"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:sourceId.type",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.type",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Description of identifier",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Allows users to make use of identifiers when the identifier system is not known.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.type",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "IdentifierType"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "extensible",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">valueSet</a>" : "http://hl7.org/fhir/ValueSet/identifier-type"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CX.5"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Role.code or implied by context"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:sourceId.system",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.system",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "(USCDI) The namespace for the identifier value",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "Identifier.system is always case sensitive.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.system",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.pattern_x_">patternUri</a>" : "http://nmdp.org/identifier/source-id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example">example</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example.label">label</a>" : "General",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example.value_x_">valueUri</a>" : "http://www.acme.com/identifiers/patient"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CX.4 / EI-2-4"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "II.root or Role.id.root"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./IdentifierType"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "argonaut-dq-dstu2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient.identifier.system"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:sourceId.value",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.value",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "(USCDI) The value that is unique within the system.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.value",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example">example</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example.label">label</a>" : "General",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.example.value_x_">valueString</a>" : "123456"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CX.1 / EI.1"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./Value"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "argonaut-dq-dstu2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient.identifier.value"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:sourceId.period",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.period",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Time period when id is/was valid for use",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Time period during which identifier is/was valid for use.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Identifier.period",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Period"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CX.7 + CX.8"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Role.effectiveTime or implied by context"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./StartDate and ./EndDate"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:sourceId.assigner",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.assigner",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Organization that issued id (may be just text)",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Organization that issued/manages the identifier.",
@@ -3666,8 +3681,8 @@
           }
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.deceased[x]",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Indicates if the donor is deceased",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Indicates if the donor is deceased, either as a boolean flag or a dateTime of death.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "(USCDI) Indicates if the individual is deceased or not",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Indicates if the individual is deceased or not.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
@@ -3695,7 +3710,6 @@
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifierReason">isModifierReason</a>" : "This element is labeled as a modifier because once a patient is marked as deceased, the actions that are appropriate to perform on the patient may be significantly different.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
@@ -5194,7 +5208,7 @@
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
@@ -5511,8 +5525,8 @@
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.managingOrganization",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.managingOrganization",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Donor center managing this donor",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The NMDP-affiliated organization (typically a donor center) that manages this donor's registration.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Donor center (ION/DC ID)",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The NMDP donor center (identified by ION/DC ID) responsible for this donor.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association).",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Need to know who recognizes this patient record, manages and updates it.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
@@ -5848,22 +5862,11 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient"
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.extension:race",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.extension",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "race",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "US Core Race"
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.extension:ethnicity",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.extension",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "ethnicity",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "US Core Ethnicity"
-      },
-      {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.extension:donorStatus",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "donorStatus",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Donor registry status",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The current registration status of the donor (e.g., Available, Temporarily Unavailable, Active, Permanently Unavailable).",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
@@ -5890,34 +5893,34 @@
         }
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:nmdpDonorId",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "nmdpDonorId",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "NMDP Donor ID",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The unique identifier assigned to a donor by the National Marrow Donor Program.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:nmdpDonorId.system",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.system",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.pattern_x_">patternUri</a>" : "http://terminology.nmdp.org/identifier/donor"
-      },
-      {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:grid",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "grid",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Global Registration Identifier for Donors (GRID)",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The ISBT 128 Global Registration Identifier for Donors.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "NMDP GRID (Global Registration Identifier for Donors)",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The NMDP GRID identifier that uniquely identifies a donor. A 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. 99D0BA02660443B585D525525EB3F2D2. System: http://nmdp.org/identifier/grid",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:grid.system",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.system",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.pattern_x_">patternUri</a>" : "http://www.isbt128.org/uri/GRID"
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.pattern_x_">patternUri</a>" : "http://nmdp.org/identifier/grid"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:sourceId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "sourceId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Donor source ID",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The source identifier for the donor in the originating registry. System: http://nmdp.org/identifier/source-id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.identifier:sourceId.system",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.identifier.system",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.pattern_x_">patternUri</a>" : "http://nmdp.org/identifier/source-id"
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.birthDate",
@@ -5925,22 +5928,10 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.deceased[x]",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.deceased[x]",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Indicates if the donor is deceased",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Indicates if the donor is deceased, either as a boolean flag or a dateTime of death.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.communication",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.communication",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
-      },
-      {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "Patient.managingOrganization",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Patient.managingOrganization",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Donor center managing this donor",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The NMDP-affiliated organization (typically a donor center) that manages this donor's registration.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Donor center (ION/DC ID)",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The NMDP donor center (identified by ION/DC ID) responsible for this donor.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
@@ -5980,7 +5971,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 14:51+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

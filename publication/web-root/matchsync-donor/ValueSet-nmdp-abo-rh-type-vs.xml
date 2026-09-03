@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="nmdp-abo-rh-type-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet nmdp-abo-rh-type-vs</b></p><a name="nmdp-abo-rh-type-vs"> </a><a name="hcnmdp-abo-rh-type-vs"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/LA21321-7/">LA21321-7</a></td><td>O Pos</td></tr><tr><td><a href="https://loinc.org/LA21322-5/">LA21322-5</a></td><td>O Neg</td></tr><tr><td><a href="https://loinc.org/LA21327-4/">LA21327-4</a></td><td>B Pos</td></tr><tr><td><a href="https://loinc.org/LA21328-2/">LA21328-2</a></td><td>B Neg</td></tr><tr><td><a href="https://loinc.org/LA21323-3/">LA21323-3</a></td><td>AB Pos</td></tr><tr><td><a href="https://loinc.org/LA21324-1/">LA21324-1</a></td><td>AB Neg</td></tr><tr><td><a href="https://loinc.org/LA21325-8/">LA21325-8</a></td><td>A Pos</td></tr><tr><td><a href="https://loinc.org/LA21326-6/">LA21326-6</a></td><td>A Neg</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-abo-rh-type-vs"/>
+  <version value="0.1.0"/>
+  <name value="NMDPABORhTypeVS"/>
+  <title value="ABO/Rh Blood Type Value Set"/>
+  <status value="active"/>
+  <date value="2026-09-03T14:51:12+00:00"/>
+  <publisher value="National Marrow Donor Program (NMDP)"/>
+  <contact>
+    <name value="National Marrow Donor Program (NMDP)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nmdp.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@nmdp.org"/>
+    </telecom>
+  </contact>
+  <description value="LOINC Answer List LL2972-9 codes for ABO and Rh blood group types."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="LA21321-7"/>
+        <display value="O Pos"/>
+      </concept>
+      <concept>
+        <code value="LA21322-5"/>
+        <display value="O Neg"/>
+      </concept>
+      <concept>
+        <code value="LA21327-4"/>
+        <display value="B Pos"/>
+      </concept>
+      <concept>
+        <code value="LA21328-2"/>
+        <display value="B Neg"/>
+      </concept>
+      <concept>
+        <code value="LA21323-3"/>
+        <display value="AB Pos"/>
+      </concept>
+      <concept>
+        <code value="LA21324-1"/>
+        <display value="AB Neg"/>
+      </concept>
+      <concept>
+        <code value="LA21325-8"/>
+        <display value="A Pos"/>
+      </concept>
+      <concept>
+        <code value="LA21326-6"/>
+        <display value="A Neg"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-idm-order | *Version*:0.1.0 |
-| Draft as of 2026-09-02 | *Computable Name*:NMDPIDMOrder |
+| Draft as of 2026-09-03 | *Computable Name*:NMDPIDMOrder |
 
  
 A profile for Infectious Disease Marker (IDM) orders. IDM testing is required for donor clearance before stem cell collection. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-idm-order.csv),
   "name" : "NMDPIDMOrder",
   "title" : "NMDP IDM Order",
   "status" : "draft",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -102,21 +102,13 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-idm-order.csv),
       "id" : "ServiceRequest.code",
       "path" : "ServiceRequest.code",
       "short" : "Fixed to IDM order type",
-      "min" : 1,
       "patternCodeableConcept" : {
         "coding" : [{
-          "system" : "http://terminology.nmdp.org/codesystem/order-type",
+          "system" : "http://fhir.nmdp.org/CodeSystem/order-type",
           "code" : "idm",
           "display" : "Infectious Disease Markers"
         }]
       }
-    },
-    {
-      "id" : "ServiceRequest.specimen",
-      "path" : "ServiceRequest.specimen",
-      "short" : "Blood specimens for IDM testing",
-      "definition" : "References to specimens collected for infectious disease marker testing.",
-      "mustSupport" : true
     }]
   }
 }

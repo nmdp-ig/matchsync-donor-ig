@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleCBUPatient> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleCBUPatient"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-patient" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-patient>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleCBUPatient</b></p><a name=\"ExampleCBUPatient\"> </a><a name=\"hcExampleCBUPatient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-cbu-patient.html\">NMDP Cord Blood Unit (CBU) Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Unit20180415 CordUnit  Female, DoB: 2018-04-15 ( http://nmdp.org/identifier/cbu-source-id#CBU-SRC-20180415-001)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>http://nmdp.org/identifier/cbu-registry-id</code>/REG-CBU-887744</li><li><code>http://nmdp.org/identifier/cbb-id</code>/CBB-5521</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.\">US Core Ethnicity Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2186-5\">CDC Race and Ethnicity: 2186-5</a> (Not Hispanic or Latino)</li><li>text: Not Hispanic or Latino</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The availability status of a Cord Blood Unit (CBU) in the NMDP registry. Conveyed as a simple string value (e.g., 'Available').\"><a href=\"StructureDefinition-cbu-status.html\">CBU Status</a></td><td colspan=\"3\">Available</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:#xA;#xA; - American Indian or Alaska Native#xA; - Asian#xA; - Black or African American#xA; - Native Hawaiian or Other Pacific Islander#xA; - White.\">US Core Race Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2054-5\">CDC Race and Ethnicity: 2054-5</a> (Black or African American)</li><li>text: Black or African American</li></ul></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/cbu-status" ] ;
+     fhir:Extension.valueString [ fhir:value "Available" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "ombCategory" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ] ;
+         fhir:Coding.code [ fhir:value "2054-5" ] ;
+         fhir:Coding.display [ fhir:value "Black or African American" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:Extension.url [ fhir:value "text" ] ;
+       fhir:Extension.valueString [ fhir:value "Black or African American" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race" ]
+  ], [
+     fhir:index 2 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "ombCategory" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ] ;
+         fhir:Coding.code [ fhir:value "2186-5" ] ;
+         fhir:Coding.display [ fhir:value "Not Hispanic or Latino" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:Extension.url [ fhir:value "text" ] ;
+       fhir:Extension.valueString [ fhir:value "Not Hispanic or Latino" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity" ]
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://nmdp.org/identifier/cbu-source-id" ] ;
+     fhir:Identifier.value [ fhir:value "CBU-SRC-20180415-001" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.system [ fhir:value "http://nmdp.org/identifier/cbu-registry-id" ] ;
+     fhir:Identifier.value [ fhir:value "REG-CBU-887744" ]
+  ], [
+     fhir:index 2 ;
+     fhir:Identifier.system [ fhir:value "http://nmdp.org/identifier/cbb-id" ] ;
+     fhir:Identifier.value [ fhir:value "CBB-5521" ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.family [ fhir:value "CordUnit" ] ;
+     fhir:HumanName.given [
+       fhir:value "Unit20180415" ;
+       fhir:index 0
+     ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "female"] ;
+  fhir:Patient.birthDate [ fhir:value "2018-04-15"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleCBUPatient.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"7"}
-    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -97,6 +97,9 @@
   </li>
   <li>
     <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="connecting-to-the-donor-api.html">Connecting to the Donor API</a>
   </li>
   <li>
     <a href="security-and-privacy.html">Security and Privacy</a>
@@ -168,7 +171,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         </ul>
       </li>
       <li><a href="#us-core-610" id="markdown-toc-us-core-610">US Core 6.1.0</a></li>
-      <li><a href="#isbt-128" id="markdown-toc-isbt-128">ISBT 128</a></li>
+      <li><a href="#nmdp-grid" id="markdown-toc-nmdp-grid">NMDP GRID</a></li>
     </ul>
   </li>
 </ul>
@@ -252,18 +255,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>See <a href="https://github.com/ericbfriday/nmdp-donor-patient-ig/blob/main/docs/adr/0005-extend-uscore-patient.md">ADR-0005</a> for the decision rationale.</p>
 
-<h2 id="isbt-128">ISBT 128</h2>
+<h2 id="nmdp-grid">NMDP GRID</h2>
 
-<p>The <a href="https://www.iccbba.org/tech-library/iccbba-documents/databases-702/grid-database">ISBT 128</a> standard defines the Global Registration Identifier for Donors (GRID), used in this IG as a donor identifier:</p>
+<p>NMDP defines the Global Registration Identifier for Donors (GRID), used in this IG as a donor identifier:</p>
 
 <ul>
-  <li><strong>System URI:</strong> <code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/grid</code></li>
-  <li><strong>Format:</strong> 19-character alphanumeric string with a check character</li>
-  <li><strong>Purpose:</strong> Internationally unique, persistent identifier for donors across registries worldwide</li>
-  <li><strong>Issuing authority:</strong> World Marrow Donor Association (WMDA) via ICCBBA</li>
+  <li><strong>System URI:</strong> <code class="language-plaintext highlighter-rouge">http://nmdp.org/identifier/grid</code></li>
+  <li><strong>Format:</strong> 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. <code class="language-plaintext highlighter-rouge">99D0BA02660443B585D525525EB3F2D2</code></li>
+  <li><strong>Purpose:</strong> Uniquely identifies a donor across NMDP systems and orders</li>
+  <li><strong>Issuing authority:</strong> NMDP</li>
 </ul>
 
-<p>The GRID enables unambiguous donor identification across international registry boundaries without exposing registry-internal identifiers.</p>
+<p>The GRID enables unambiguous donor identification without exposing registry-internal identifiers.</p>
 
 
 
@@ -284,7 +287,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 14:51+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

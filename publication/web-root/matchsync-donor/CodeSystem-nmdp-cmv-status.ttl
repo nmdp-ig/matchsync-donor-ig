@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-cmv-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "nmdp-cmv-status"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nmdp-cmv-status</b></p><a name=\"nmdp-cmv-status\"> </a><a name=\"hcnmdp-cmv-status\"> </a><p>This case-insensitive code system <code>http://fhir.nmdp.org/CodeSystem/cmv-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Positive<a name=\"nmdp-cmv-status-Positive\"> </a></td><td>CMV IgG antibody detected.</td></tr><tr><td style=\"white-space:nowrap\">Negative<a name=\"nmdp-cmv-status-Negative\"> </a></td><td>CMV IgG antibody not detected.</td></tr><tr><td style=\"white-space:nowrap\">Inconclusive<a name=\"nmdp-cmv-status-Inconclusive\"> </a></td><td>CMV IgG antibody test result is inconclusive.</td></tr><tr><td style=\"white-space:nowrap\">Untested<a name=\"nmdp-cmv-status-Untested\"> </a></td><td>CMV IgG antibody testing has not been performed.</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://fhir.nmdp.org/CodeSystem/cmv-status"] ;
+  fhir:CodeSystem.version [ fhir:value "0.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "NMDPCMVStatusCS"] ;
+  fhir:CodeSystem.title [ fhir:value "NMDP CMV Status Code System"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-03T14:51:12+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "National Marrow Donor Program (NMDP)"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "National Marrow Donor Program (NMDP)" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.nmdp.org" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "fhir@nmdp.org" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Text-based status codes for CMV IgG antibody presence in donor and CBU testing."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "US" ] ;
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "4"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Positive" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Positive" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "CMV IgG antibody detected." ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Negative" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Negative" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "CMV IgG antibody not detected." ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Inconclusive" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Inconclusive" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "CMV IgG antibody test result is inconclusive." ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Untested" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Untested" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "CMV IgG antibody testing has not been performed." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/CodeSystem/nmdp-cmv-status.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

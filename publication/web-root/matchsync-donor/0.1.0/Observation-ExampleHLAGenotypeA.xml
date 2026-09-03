@@ -6,46 +6,23 @@
     <profile value="http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation ExampleHLAGenotypeA</b></p><a name="ExampleHLAGenotypeA"> </a><a name="hcExampleHLAGenotypeA"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-nmdp-hla-genotype.html">NMDP HLA Genotype Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 84413-4}">Genotype display name</span></p><p><b>subject</b>: <a href="Patient-ExampleNMDPDonor.html">Marcus James Reynolds  Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)</a></p><p><b>effective</b>: 2026-06-15</p><p><b>value</b>: <span title="Codes:{http://glstring.org hla#3.59.0#HLA-A*02:01+HLA-A*03:01}">hla#3.59.0#HLA-A*02:01+HLA-A*03:01</span></p><h3>Components</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://loinc.org 48018-6}">Gene studied [ID]</span></td><td><span title="Codes:{http://terminology.nmdp.org/codesystem/hla-gene-name HGNC:4931}">HLA-A</span></td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation ExampleHLAGenotypeA</b></p><a name="ExampleHLAGenotypeA"> </a><a name="hcExampleHLAGenotypeA"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-nmdp-hla-genotype.html">NMDP HLA Genotype Observation</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 57290-9}">HLA-A [Type] by High resolution</span></p><p><b>subject</b>: <a href="Patient-ExampleNMDPDonor.html">Marcus Reynolds  Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)</a></p><p><b>value</b>: <span title="Codes:{http://glstring.org hla#3.53.0#HLA-A*02:01+HLA-A*03:01}">hla#3.53.0#HLA-A*02:01+HLA-A*03:01</span></p></div>
   </text>
   <status value="final"/>
-  <category>
-    <coding>
-      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
-      <code value="laboratory"/>
-    </coding>
-  </category>
   <code>
     <coding>
       <system value="http://loinc.org"/>
-      <code value="84413-4"/>
-      <display value="Genotype display name"/>
+      <code value="57290-9"/>
+      <display value="HLA-A [Type] by High resolution"/>
     </coding>
   </code>
   <subject>
     <reference value="Patient/ExampleNMDPDonor"/>
   </subject>
-  <effectiveDateTime value="2026-06-15"/>
   <valueCodeableConcept>
     <coding>
       <system value="http://glstring.org"/>
-      <code value="hla#3.59.0#HLA-A*02:01+HLA-A*03:01"/>
+      <code value="hla#3.53.0#HLA-A*02:01+HLA-A*03:01"/>
     </coding>
   </valueCodeableConcept>
-  <component>
-    <code>
-      <coding>
-        <system value="http://loinc.org"/>
-        <code value="48018-6"/>
-        <display value="Gene studied [ID]"/>
-      </coding>
-    </code>
-    <valueCodeableConcept>
-      <coding>
-        <system value="http://terminology.nmdp.org/codesystem/hla-gene-name"/>
-        <code value="HGNC:4931"/>
-        <display value="HLA-A"/>
-      </coding>
-    </valueCodeableConcept>
-  </component>
 </Observation>

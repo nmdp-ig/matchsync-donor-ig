@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Example Donor Without GRID - TTL Representation - NMDP Donor Patient Implementation Guide v0.1.0</title>
+    <title>Example Donor With GRID Only - TTL Representation - NMDP Donor Patient Implementation Guide v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.25"}
-    h3,h4,h5,h6{--heading-prefix:"9.25"}</style>
+    <style type="text/css">h2{--heading-prefix:"10.42"}
+    h3,h4,h5,h6{--heading-prefix:"10.42"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -101,6 +101,9 @@
     <a href="order-workflow.html">Order Workflow</a>
   </li>
   <li>
+    <a href="connecting-to-the-donor-api.html">Connecting to the Donor API</a>
+  </li>
+  <li>
     <a href="security-and-privacy.html">Security and Privacy</a>
   </li>
   <li>
@@ -124,7 +127,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Example Donor Without GRID</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Example Donor With GRID Only</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -177,7 +180,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Example Donor Without GRID - TTL Representation</h2>
+<h2 id="root">: Example Donor With GRID Only - TTL Representation</h2>
 
 
 <p><a href="Patient-ExampleDonorNoGrid.ttl" no-download="true">Raw ttl</a> | <a href="Patient-ExampleDonorNoGrid.ttl" download>Download</a></p>
@@ -207,21 +210,17 @@
   ] ;
   <a href="http://hl7.org/fhir/R4/domainresource.html#Patient.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Patient ExampleDonorNoGrid&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleDonorNoGrid\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleDonorNoGrid\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient.html\&quot;&gt;NMDP Donor Patient&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p style=\&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\&quot;&gt;Adaeze Okafor  Female, DoB: 1998-11-02 ( http://terminology.nmdp.org/identifier/donor#9876543)&lt;/p&gt;&lt;hr/&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: #f3f5da\&quot; title=\&quot;Language spoken\&quot;&gt;Language:&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;&lt;span title=\&quot;Codes:{urn:ietf:bcp:47 en}\&quot;&gt;English&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: #f3f5da\&quot; title=\&quot;The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.\&quot;&gt;Donor Status:&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;&lt;ul&gt;&lt;li&gt;status: active&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Patient ExampleDonorNoGrid&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleDonorNoGrid\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleDonorNoGrid\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-nmdp-donor-patient.html\&quot;&gt;NMDP Donor Patient&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p style=\&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\&quot;&gt;Adaeze Okafor  Female, DoB: 1998-11-02 ( http://nmdp.org/identifier/grid#7C4E9A21D0B53F86E1A2C3D4B5F60798)&lt;/p&gt;&lt;hr/&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: #f3f5da\&quot; title=\&quot;The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').\&quot;&gt;&lt;a href=\&quot;StructureDefinition-donor-status.html\&quot;&gt;Donor Status&lt;/a&gt;&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;Active&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
   ] ;
   <a href="http://hl7.org/fhir/R4/domainresource.html#Patient.extension">fhir:DomainResource.extension</a> [
      <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
-     <a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">fhir:Element.extension</a> [
-       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
-       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;status&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot; ]
-     ] ;
-     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status&quot; ]
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Active&quot; ]
   ] ;
   <a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">fhir:Patient.identifier</a> [
      <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
-     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.nmdp.org/identifier/donor&quot; ] ;
-     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;9876543&quot; ]
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://nmdp.org/identifier/grid&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;7C4E9A21D0B53F86E1A2C3D4B5F60798&quot; ]
   ] ;
   <a href="http://hl7.org/fhir/R4/patient.html#Patient.name">fhir:Patient.name</a> [
      <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
@@ -232,18 +231,7 @@
      ]
   ] ;
   <a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">fhir:Patient.gender</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;female&quot;] ;
-  <a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">fhir:Patient.birthDate</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#date">fhir:value</a> &quot;1998-11-02&quot;^^xsd:date] ;
-  <a href="http://hl7.org/fhir/R4/patient.html#Patient.communication">fhir:Patient.communication</a> [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
-     <a href="http://hl7.org/fhir/R4/patient.html#Patient.communication.language">fhir:Patient.communication.language</a> [
-       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
-         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
-         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:ietf:bcp:47&quot; ] ;
-         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;en&quot; ] ;
-         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;English&quot; ]
-       ]
-     ]
-  ] .
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">fhir:Patient.birthDate</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#date">fhir:value</a> &quot;1998-11-02&quot;^^xsd:date] .
 
 # - ontology header ------------------------------------------------------------
 
@@ -276,7 +264,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 14:51+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

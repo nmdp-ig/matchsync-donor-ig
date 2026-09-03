@@ -1,0 +1,83 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "nmdp-hla-locus-loinc-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet nmdp-hla-locus-loinc-vs</b></p><a name=\"nmdp-hla-locus-loinc-vs\"> </a><a name=\"hcnmdp-hla-locus-loinc-vs\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/57290-9/\">57290-9</a></td><td>HLA-A [Type] by High resolution</td></tr><tr><td><a href=\"https://loinc.org/57291-7/\">57291-7</a></td><td>HLA-B [Type] by High resolution</td></tr><tr><td><a href=\"https://loinc.org/57297-4/\">57297-4</a></td><td>HLA-Cw [Type] by High resolution</td></tr><tr><td><a href=\"https://loinc.org/57293-3/\">57293-3</a></td><td>HLA-DRB1 [Type] by High resolution</td></tr><tr><td><a href=\"https://loinc.org/57299-0/\">57299-0</a></td><td>HLA-DQB1 [Type] by High resolution</td></tr><tr><td><a href=\"https://loinc.org/59017-4/\">59017-4</a></td><td>HLA-DPB1 [Type] by High resolution</td></tr><tr><td><a href=\"https://loinc.org/59019-0/\">59019-0</a></td><td>HLA-DQA1 [Type] by High resolution</td></tr><tr><td><a href=\"https://loinc.org/59018-2/\">59018-2</a></td><td>HLA-DPA1 [Type] by High resolution</td></tr><tr><td><a href=\"https://loinc.org/57294-1/\">57294-1</a></td><td>HLA-DRB3 [Type] by High resolution</td></tr><tr><td><a href=\"https://loinc.org/57295-8/\">57295-8</a></td><td>HLA-DRB4 [Type] by High resolution</td></tr><tr><td><a href=\"https://loinc.org/57296-6/\">57296-6</a></td><td>HLA-DRB5 [Type] by High resolution</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-hla-locus-loinc-vs",
+  "version" : "0.1.0",
+  "name" : "NMDPHLALocusLOINCVS",
+  "title" : "NMDP HLA Locus LOINC Value Set",
+  "status" : "active",
+  "date" : "2026-09-03T14:51:12+00:00",
+  "publisher" : "National Marrow Donor Program (NMDP)",
+  "contact" : [{
+    "name" : "National Marrow Donor Program (NMDP)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nmdp.org"
+    },
+    {
+      "system" : "email",
+      "value" : "fhir@nmdp.org"
+    }]
+  }],
+  "description" : "LOINC codes for HLA locus-specific high resolution typing observations used in NMDP donor and CBU payloads.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US",
+      "display" : "United States of America"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "57290-9",
+        "display" : "HLA-A [Type] by High resolution"
+      },
+      {
+        "code" : "57291-7",
+        "display" : "HLA-B [Type] by High resolution"
+      },
+      {
+        "code" : "57297-4",
+        "display" : "HLA-Cw [Type] by High resolution"
+      },
+      {
+        "code" : "57293-3",
+        "display" : "HLA-DRB1 [Type] by High resolution"
+      },
+      {
+        "code" : "57299-0",
+        "display" : "HLA-DQB1 [Type] by High resolution"
+      },
+      {
+        "code" : "59017-4",
+        "display" : "HLA-DPB1 [Type] by High resolution"
+      },
+      {
+        "code" : "59019-0",
+        "display" : "HLA-DQA1 [Type] by High resolution"
+      },
+      {
+        "code" : "59018-2",
+        "display" : "HLA-DPA1 [Type] by High resolution"
+      },
+      {
+        "code" : "57294-1",
+        "display" : "HLA-DRB3 [Type] by High resolution"
+      },
+      {
+        "code" : "57295-8",
+        "display" : "HLA-DRB4 [Type] by High resolution"
+      },
+      {
+        "code" : "57296-6",
+        "display" : "HLA-DRB5 [Type] by High resolution"
+      }]
+    }]
+  }
+}

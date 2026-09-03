@@ -10,14 +10,14 @@
   fhir:Resource.id [ fhir:value "nmdp-donor-status"] ;
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ] ;
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nmdp-donor-status</b></p><a name=\"nmdp-donor-status\"> </a><a name=\"hcnmdp-donor-status\"> </a><p>This case-sensitive code system <code>http://terminology.nmdp.org/codesystem/donor-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">available<a name=\"nmdp-donor-status-available\"> </a></td><td>Available</td><td>Donor is available for search, further typing, and collection/transplant (ODS code: AV).</td></tr><tr><td style=\"white-space:nowrap\">temporarily-unavailable<a name=\"nmdp-donor-status-temporarily-unavailable\"> </a></td><td>Temporarily Unavailable</td><td>Donor is temporarily unavailable, typically post-collection with a future available date (ODS code: TU).</td></tr><tr><td style=\"white-space:nowrap\">active<a name=\"nmdp-donor-status-active\"> </a></td><td>Active</td><td>Donor is currently active on a search — reserved for a specific patient case (ODS code: AC).</td></tr><tr><td style=\"white-space:nowrap\">permanently-unavailable<a name=\"nmdp-donor-status-permanently-unavailable\"> </a></td><td>Permanently Unavailable</td><td>Donor has been permanently removed from the registry. Reasons include: not interested, permanently medically deferred, unable to contact, donor too old, or deceased (ODS code: DE).</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nmdp-donor-status</b></p><a name=\"nmdp-donor-status\"> </a><a name=\"hcnmdp-donor-status\"> </a><p>This case-insensitive code system <code>http://fhir.nmdp.org/CodeSystem/donor-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Available<a name=\"nmdp-donor-status-Available\"> </a></td><td>Available</td><td>Donor is available for search, further typing, and collection/transplant (ODS code: AV).</td></tr><tr><td style=\"white-space:nowrap\">Temporarily-Unavailable<a name=\"nmdp-donor-status-Temporarily-Unavailable\"> </a></td><td>Temporarily Unavailable</td><td>Donor is temporarily unavailable, typically post-collection with a future available date (ODS code: TU).</td></tr><tr><td style=\"white-space:nowrap\">Active<a name=\"nmdp-donor-status-Active\"> </a></td><td>Active</td><td>Donor is currently active on a search — reserved for a specific patient case (ODS code: AC).</td></tr><tr><td style=\"white-space:nowrap\">Permanently-Unavailable<a name=\"nmdp-donor-status-Permanently-Unavailable\"> </a></td><td>Permanently Unavailable</td><td>Donor has been permanently removed from the registry. Reasons include: not interested, permanently medically deferred, unable to contact, donor too old, or deceased (ODS code: DE).</td></tr></table></div>"
   ] ;
-  fhir:CodeSystem.url [ fhir:value "http://terminology.nmdp.org/codesystem/donor-status"] ;
+  fhir:CodeSystem.url [ fhir:value "http://fhir.nmdp.org/CodeSystem/donor-status"] ;
   fhir:CodeSystem.version [ fhir:value "0.1.0"] ;
   fhir:CodeSystem.name [ fhir:value "NMDPDonorStatusCS"] ;
   fhir:CodeSystem.title [ fhir:value "NMDP Donor Status"] ;
   fhir:CodeSystem.status [ fhir:value "draft"] ;
-  fhir:CodeSystem.date [ fhir:value "2026-09-02T19:29:11+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-03T14:51:12+00:00"^^xsd:dateTime] ;
   fhir:CodeSystem.publisher [ fhir:value "National Marrow Donor Program (NMDP)"] ;
   fhir:CodeSystem.contact [
      fhir:index 0 ;
@@ -32,7 +32,7 @@
        fhir:ContactPoint.value [ fhir:value "fhir@nmdp.org" ]
      ]
   ] ;
-  fhir:CodeSystem.description [ fhir:value "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05)."] ;
+  fhir:CodeSystem.description [ fhir:value "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05). In FHIR Donor API payloads, donor status is\nconveyed as a valueString on the donor-status extension."] ;
   fhir:CodeSystem.jurisdiction [
      fhir:index 0 ;
      fhir:CodeableConcept.coding [
@@ -42,27 +42,27 @@
        fhir:Coding.display [ fhir:value "United States of America" ]
      ]
   ] ;
-  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean] ;
   fhir:CodeSystem.content [ fhir:value "complete"] ;
   fhir:CodeSystem.count [ fhir:value "4"^^xsd:nonNegativeInteger] ;
   fhir:CodeSystem.concept [
      fhir:index 0 ;
-     fhir:CodeSystem.concept.code [ fhir:value "available" ] ;
+     fhir:CodeSystem.concept.code [ fhir:value "Available" ] ;
      fhir:CodeSystem.concept.display [ fhir:value "Available" ] ;
      fhir:CodeSystem.concept.definition [ fhir:value "Donor is available for search, further typing, and collection/transplant (ODS code: AV)." ]
   ], [
      fhir:index 1 ;
-     fhir:CodeSystem.concept.code [ fhir:value "temporarily-unavailable" ] ;
+     fhir:CodeSystem.concept.code [ fhir:value "Temporarily-Unavailable" ] ;
      fhir:CodeSystem.concept.display [ fhir:value "Temporarily Unavailable" ] ;
      fhir:CodeSystem.concept.definition [ fhir:value "Donor is temporarily unavailable, typically post-collection with a future available date (ODS code: TU)." ]
   ], [
      fhir:index 2 ;
-     fhir:CodeSystem.concept.code [ fhir:value "active" ] ;
+     fhir:CodeSystem.concept.code [ fhir:value "Active" ] ;
      fhir:CodeSystem.concept.display [ fhir:value "Active" ] ;
      fhir:CodeSystem.concept.definition [ fhir:value "Donor is currently active on a search — reserved for a specific patient case (ODS code: AC)." ]
   ], [
      fhir:index 3 ;
-     fhir:CodeSystem.concept.code [ fhir:value "permanently-unavailable" ] ;
+     fhir:CodeSystem.concept.code [ fhir:value "Permanently-Unavailable" ] ;
      fhir:CodeSystem.concept.display [ fhir:value "Permanently Unavailable" ] ;
      fhir:CodeSystem.concept.definition [ fhir:value "Donor has been permanently removed from the registry. Reasons include: not interested, permanently medically deferred, unable to contact, donor too old, or deceased (ODS code: DE)." ]
   ] .

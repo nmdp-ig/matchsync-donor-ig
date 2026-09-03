@@ -99,6 +99,9 @@
     <a href="order-workflow.html">Order Workflow</a>
   </li>
   <li>
+    <a href="connecting-to-the-donor-api.html">Connecting to the Donor API</a>
+  </li>
+  <li>
     <a href="security-and-privacy.html">Security and Privacy</a>
   </li>
   <li>
@@ -207,9 +210,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td>GRID</td>
-      <td><code class="language-plaintext highlighter-rouge">http://www.isbt128.org/uri/GRID</code></td>
+      <td><code class="language-plaintext highlighter-rouge">http://nmdp.org/identifier/grid</code></td>
       <td>0..1 (MS)</td>
-      <td><code class="language-plaintext highlighter-rouge">AAAA1111111</code></td>
+      <td><code class="language-plaintext highlighter-rouge">99D0BA02660443B585D525525EB3F2D2</code></td>
       <td>Direct identifier</td>
     </tr>
   </tbody>
@@ -232,12 +235,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="grid-global-registration-identifier-for-donors">GRID (Global Registration Identifier for Donors)</h3>
 
-<p>The ISBT 128 Global Registration Identifier for Donors — a globally unique identifier that follows the donor across registries and international borders.</p>
+<p>The NMDP GRID — a globally unique identifier that follows the donor across NMDP systems and orders.</p>
 
 <ul>
-  <li><strong>System:</strong> <code class="language-plaintext highlighter-rouge">http://www.isbt128.org/uri/GRID</code></li>
-  <li><strong>Format:</strong> 4 alpha characters + 7 numeric characters (e.g., <code class="language-plaintext highlighter-rouge">AAAA1111111</code>)</li>
-  <li><strong>Assigned by:</strong> WMDA via the national registry</li>
+  <li><strong>System:</strong> <code class="language-plaintext highlighter-rouge">http://nmdp.org/identifier/grid</code></li>
+  <li><strong>Format:</strong> 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. <code class="language-plaintext highlighter-rouge">99D0BA02660443B585D525525EB3F2D2</code></li>
+  <li><strong>Assigned by:</strong> NMDP</li>
   <li><strong>Cardinality:</strong> 0..1 (optional but must-support)</li>
 </ul>
 
@@ -344,7 +347,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 14:51+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

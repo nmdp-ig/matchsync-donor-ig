@@ -8,7 +8,7 @@
 
 Profile: [NMDP Donor Order](StructureDefinition-nmdp-donor-order.md)
 
-**identifier**: `http://terminology.nmdp.org/identifier/order`/ORD-2026-001234
+**identifier**: `http://nmdp.org/identifier/matchsource-order`/MS-ORD-2026-44321
 
 **status**: Active
 
@@ -16,13 +16,13 @@ Profile: [NMDP Donor Order](StructureDefinition-nmdp-donor-order.md)
 
 **code**: Confirmatory Typing
 
-**subject**: [Marcus James Reynolds Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)](Patient-ExampleNMDPDonor.md)
+**subject**: [Maria Garcia Female, DoB: 1975-06-20 ( http://nmdp.org/identifier/rid#RID-9988776)](Patient-ExampleRecipientPatient.md)
 
-**authoredOn**: 2026-07-15
+**occurrence**: 2026-07-20 09:00:00+0000
 
-**requester**: [Organization Minneapolis Blood Center](Organization-ExampleNMDPDonorCenter.md)
+**authoredOn**: 2026-07-01 10:00:00+0000
 
-**performer**: [Organization Minneapolis Blood Center](Organization-ExampleNMDPDonorCenter.md)
+**performer**: [Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)](Patient-ExampleNMDPDonor.md)
 
 
 
@@ -36,27 +36,25 @@ Profile: [NMDP Donor Order](StructureDefinition-nmdp-donor-order.md)
     "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order"]
   },
   "identifier" : [{
-    "system" : "http://terminology.nmdp.org/identifier/order",
-    "value" : "ORD-2026-001234"
+    "system" : "http://nmdp.org/identifier/matchsource-order",
+    "value" : "MS-ORD-2026-44321"
   }],
   "status" : "active",
   "intent" : "order",
   "code" : {
     "coding" : [{
-      "system" : "http://terminology.nmdp.org/codesystem/order-type",
-      "code" : "ct",
+      "system" : "http://fhir.nmdp.org/CodeSystem/order-type",
+      "code" : "confirmatory-typing",
       "display" : "Confirmatory Typing"
     }]
   },
   "subject" : {
-    "reference" : "Patient/ExampleNMDPDonor"
+    "reference" : "Patient/ExampleRecipientPatient"
   },
-  "authoredOn" : "2026-07-15",
-  "requester" : {
-    "reference" : "Organization/ExampleNMDPDonorCenter"
-  },
+  "occurrenceDateTime" : "2026-07-20T09:00:00Z",
+  "authoredOn" : "2026-07-01T10:00:00Z",
   "performer" : [{
-    "reference" : "Organization/ExampleNMDPDonorCenter"
+    "reference" : "Patient/ExampleNMDPDonor"
   }]
 }
 

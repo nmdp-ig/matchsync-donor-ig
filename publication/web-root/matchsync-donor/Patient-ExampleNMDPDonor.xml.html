@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.32"}
-    h3,h4,h5,h6{--heading-prefix:"9.32"}</style>
+    <style type="text/css">h2{--heading-prefix:"10.49"}
+    h3,h4,h5,h6{--heading-prefix:"10.49"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -99,6 +99,9 @@
   </li>
   <li>
     <a href="order-workflow.html">Order Workflow</a>
+  </li>
+  <li>
+    <a href="connecting-to-the-donor-api.html">Connecting to the Donor API</a>
   </li>
   <li>
     <a href="security-and-privacy.html">Security and Privacy</a>
@@ -196,19 +199,17 @@
   &lt;/<a href="http://hl7.org/fhir/R4/resource.html#Patient.meta">meta</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#Patient.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Patient ExampleNMDPDonor&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleNMDPDonor&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleNMDPDonor&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profile: &lt;a href=&quot;StructureDefinition-nmdp-donor-patient.html&quot;&gt;NMDP Donor Patient&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p style=&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;&quot;&gt;Marcus James Reynolds  Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)&lt;/p&gt;&lt;hr/&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Known status of Patient&quot;&gt;Deceased:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Other Id (see the one above)&quot;&gt;Other Id:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;code&gt;http://www.isbt128.org/uri/GRID&lt;/code&gt;/AAAA1111111&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Language spoken&quot;&gt;Language:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;span title=&quot;Codes:{urn:ietf:bcp:47 en}&quot;&gt;English&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Patient Links&quot;&gt;Links:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;Managing Organization: &lt;a href=&quot;Organization-ExampleNMDPDonorCenter.html&quot;&gt;Organization Minneapolis Blood Center&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.&quot;&gt;US Core Ethnicity Extension:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;ombCategory: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2186-5&quot;&gt;CDC Race and Ethnicity: 2186-5&lt;/a&gt; (Not Hispanic or Latino)&lt;/li&gt;&lt;li&gt;text: Not Hispanic or Latino&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Patient ExampleNMDPDonor&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleNMDPDonor&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleNMDPDonor&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profile: &lt;a href=&quot;StructureDefinition-nmdp-donor-patient.html&quot;&gt;NMDP Donor Patient&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p style=&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;&quot;&gt;Marcus Reynolds  Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)&lt;/p&gt;&lt;hr/&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Other Id (see the one above)&quot;&gt;Other Id:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;code&gt;http://nmdp.org/identifier/source-id&lt;/code&gt;/SRC-77412&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Patient Links&quot;&gt;Links:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;Managing Organization: &lt;a href=&quot;Organization-ExampleNMDPDonorCenter.html&quot;&gt;Organization Minneapolis Blood Center&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.&quot;&gt;US Core Ethnicity Extension:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;ombCategory: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2186-5&quot;&gt;CDC Race and Ethnicity: 2186-5&lt;/a&gt; (Not Hispanic or Latino)&lt;/li&gt;&lt;li&gt;text: Not Hispanic or Latino&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:
 
  - American Indian or Alaska Native
  - Asian
  - Black or African American
  - Native Hawaiian or Other Pacific Islander
- - White.&quot;&gt;US Core Race Extension:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;ombCategory: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2106-3&quot;&gt;CDC Race and Ethnicity: 2106-3&lt;/a&gt; (White)&lt;/li&gt;&lt;li&gt;text: White&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;The registration status of a donor in the NMDP registry, with an optional available date for temporarily unavailable donors.&quot;&gt;Donor Status:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;status: active&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+ - White.&quot;&gt;US Core Race Extension:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;ombCategory: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2106-3&quot;&gt;CDC Race and Ethnicity: 2106-3&lt;/a&gt; (White)&lt;/li&gt;&lt;li&gt;text: White&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').&quot;&gt;&lt;a href=&quot;StructureDefinition-donor-status.html&quot;&gt;Donor Status&lt;/a&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Available&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#Patient.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#Patient.extension">extension</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status&quot;&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;status&quot;&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Available&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#Patient.extension">extension</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#Patient.extension">extension</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-race&quot;&gt;
@@ -237,30 +238,19 @@
     &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#Patient.extension">extension</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.nmdp.org/identifier/donor&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1234567&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://nmdp.org/identifier/grid&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;99D0BA02660443B585D525525EB3F2D2&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://www.isbt128.org/uri/GRID&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;AAAA1111111&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://nmdp.org/identifier/source-id&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;SRC-77412&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Reynolds&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Marcus&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;James&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;male&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a> <a href="http://hl7.org/fhir/R4/datatypes.html#date">value</a>=&quot;1985-03-15&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.deceased_x_">deceasedBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.communication">communication</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.communication.language">language</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:ietf:bcp:47&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;en&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;English&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.communication.language">language</a>&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.communication">communication</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.managingOrganization">managingOrganization</a>&gt;<a href="Organization-ExampleNMDPDonorCenter.html" style="color: Maroon">&#x1F517;</a> 
     &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/ExampleNMDPDonorCenter&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.managingOrganization">managingOrganization</a>&gt;
@@ -288,7 +278,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2026 19:29+0000">2026-09-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 14:51+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

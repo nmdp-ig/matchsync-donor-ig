@@ -10,22 +10,11 @@ Profile: [NMDP HLA Genotype Observation](StructureDefinition-nmdp-hla-genotype.m
 
 **status**: Final
 
-**category**: Laboratory
+**code**: HLA-B [Type] by High resolution
 
-**code**: Genotype display name
+**subject**: [Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)](Patient-ExampleNMDPDonor.md)
 
-**subject**: [Marcus James Reynolds Male, DoB: 1985-03-15 ( http://terminology.nmdp.org/identifier/donor#1234567)](Patient-ExampleNMDPDonor.md)
-
-**effective**: 2026-06-15
-
-**value**: hla#3.59.0#HLA-B*07:02:01+HLA-B*44:02:01
-
-### Components
-
-| | | |
-| :--- | :--- | :--- |
-| - | **Code** | **Value[x]** |
-| * | Gene studied [ID] | HLA-B |
+**value**: hla#3.53.0#HLA-B*07:02+HLA-B*44:02
 
 
 
@@ -39,45 +28,22 @@ Profile: [NMDP HLA Genotype Observation](StructureDefinition-nmdp-hla-genotype.m
     "profile" : ["http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype"]
   },
   "status" : "final",
-  "category" : [{
-    "coding" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
-      "code" : "laboratory"
-    }]
-  }],
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
-      "code" : "84413-4",
-      "display" : "Genotype display name"
+      "code" : "57291-7",
+      "display" : "HLA-B [Type] by High resolution"
     }]
   },
   "subject" : {
     "reference" : "Patient/ExampleNMDPDonor"
   },
-  "effectiveDateTime" : "2026-06-15",
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://glstring.org",
-      "code" : "hla#3.59.0#HLA-B*07:02:01+HLA-B*44:02:01"
+      "code" : "hla#3.53.0#HLA-B*07:02+HLA-B*44:02"
     }]
-  },
-  "component" : [{
-    "code" : {
-      "coding" : [{
-        "system" : "http://loinc.org",
-        "code" : "48018-6",
-        "display" : "Gene studied [ID]"
-      }]
-    },
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://terminology.nmdp.org/codesystem/hla-gene-name",
-        "code" : "HGNC:4932",
-        "display" : "HLA-B"
-      }]
-    }
-  }]
+  }
 }
 
 ```

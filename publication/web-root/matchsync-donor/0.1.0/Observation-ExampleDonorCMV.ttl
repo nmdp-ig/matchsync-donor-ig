@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/Observation/ExampleDonorCMV> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleDonorCMV"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cmv-observation" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cmv-observation>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleDonorCMV</b></p><a name=\"ExampleDonorCMV\"> </a><a name=\"hcExampleDonorCMV\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-cmv-observation.html\">NMDP CMV Observation</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22244-8}\">CMV IgG Ab [Presence] in Serum</span></p><p><b>subject</b>: <a href=\"Patient-ExampleNMDPDonor.html\">Marcus Reynolds  Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)</a></p><p><b>value</b>: <span title=\"Codes:\">Negative</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:22244-8 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "22244-8" ] ;
+       fhir:Coding.display [ fhir:value "CMV IgG Ab [Presence] in Serum" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <http://fhir.nmdp.org/ig/donor-patient/Patient/ExampleNMDPDonor> ;
+     fhir:Reference.reference [ fhir:value "Patient/ExampleNMDPDonor" ]
+  ] ;
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.text [ fhir:value "Negative" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.nmdp.org/ig/donor-patient/Observation/ExampleDonorCMV.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

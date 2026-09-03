@@ -8,11 +8,11 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://terminology.nmdp.org/codesystem/donor-status | *Version*:0.1.0 |
-| Draft as of 2026-09-02 | *Computable Name*:NMDPDonorStatusCS |
+| *Official URL*:http://fhir.nmdp.org/CodeSystem/donor-status | *Version*:0.1.0 |
+| Draft as of 2026-09-03 | *Computable Name*:NMDPDonorStatusCS |
 
  
-Status codes for NMDP registered donors. These codes represent the enterprise Registry Status maintained by NMDP, indicating a donor's availability for patient search, matching, and product request activities. Source: ODS DonorWithSampleResponse (v05). 
+Status codes for NMDP registered donors. These codes represent the enterprise Registry Status maintained by NMDP, indicating a donor's availability for patient search, matching, and product request activities. Source: ODS DonorWithSampleResponse (v05). In FHIR Donor API payloads, donor status is conveyed as a valueString on the donor-status extension. 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -26,12 +26,12 @@ Status codes for NMDP registered donors. These codes represent the enterprise Re
 {
   "resourceType" : "CodeSystem",
   "id" : "nmdp-donor-status",
-  "url" : "http://terminology.nmdp.org/codesystem/donor-status",
+  "url" : "http://fhir.nmdp.org/CodeSystem/donor-status",
   "version" : "0.1.0",
   "name" : "NMDPDonorStatusCS",
   "title" : "NMDP Donor Status",
   "status" : "draft",
-  "date" : "2026-09-02T19:29:11+00:00",
+  "date" : "2026-09-03T14:51:12+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -44,7 +44,7 @@ Status codes for NMDP registered donors. These codes represent the enterprise Re
       "value" : "fhir@nmdp.org"
     }]
   }],
-  "description" : "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05).",
+  "description" : "Status codes for NMDP registered donors. These codes represent the\nenterprise Registry Status maintained by NMDP, indicating a donor's availability\nfor patient search, matching, and product request activities. Source: ODS\nDonorWithSampleResponse (v05). In FHIR Donor API payloads, donor status is\nconveyed as a valueString on the donor-status extension.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -52,26 +52,26 @@ Status codes for NMDP registered donors. These codes represent the enterprise Re
       "display" : "United States of America"
     }]
   }],
-  "caseSensitive" : true,
+  "caseSensitive" : false,
   "content" : "complete",
   "count" : 4,
   "concept" : [{
-    "code" : "available",
+    "code" : "Available",
     "display" : "Available",
     "definition" : "Donor is available for search, further typing, and collection/transplant (ODS code: AV)."
   },
   {
-    "code" : "temporarily-unavailable",
+    "code" : "Temporarily-Unavailable",
     "display" : "Temporarily Unavailable",
     "definition" : "Donor is temporarily unavailable, typically post-collection with a future available date (ODS code: TU)."
   },
   {
-    "code" : "active",
+    "code" : "Active",
     "display" : "Active",
     "definition" : "Donor is currently active on a search — reserved for a specific patient case (ODS code: AC)."
   },
   {
-    "code" : "permanently-unavailable",
+    "code" : "Permanently-Unavailable",
     "display" : "Permanently Unavailable",
     "definition" : "Donor has been permanently removed from the registry. Reasons include: not interested, permanently medically deferred, unable to contact, donor too old, or deceased (ODS code: DE)."
   }]
