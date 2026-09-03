@@ -2,43 +2,22 @@ Profile: NMDPHLAGenotype
 Parent: Observation
 Id: nmdp-hla-genotype
 Title: "NMDP HLA Genotype Observation"
-Description: "A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code."
+Description: "A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code. The Observation.code uses a locus-specific LOINC code identifying which HLA gene was typed."
 
 * status MS
-* category 1..* MS
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category contains laboratory 1..1
-* category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
+* status = #final
 
 * code 1..1 MS
-* code = $loinc#84413-4 "Genotype display name"
-* code ^short = "Genotype display name (LOINC 84413-4)"
+* code from NMDPHLALocusLOINCVS (required)
+* code ^short = "HLA locus-specific LOINC code (e.g., 57290-9 for HLA-A)"
+* code ^definition = "A LOINC code identifying the specific HLA locus typed. Each locus has its own code (HLA-A: 57290-9, HLA-B: 57291-7, HLA-C: 57297-4, HLA-DRB1: 57293-3, HLA-DQB1: 57299-0, HLA-DPB1: 59017-4, HLA-DQA1: 59019-0, HLA-DPA1: 59018-2, HLA-DRB3: 57294-1, HLA-DRB4: 57295-8, HLA-DRB5: 57296-6)."
 
 * subject 1..1 MS
 * subject only Reference(Patient)
-* subject ^short = "The donor whose HLA was typed"
-
-* effective[x] 0..1 MS
-* effective[x] ^short = "When the typing was performed"
+* subject ^short = "The donor or CBU whose HLA was typed"
 
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
 * valueCodeableConcept from NMDPGLStringVS (required)
 * valueCodeableConcept ^short = "GL String Code representing the genotype"
 * valueCodeableConcept ^definition = "The genotype expressed as a GL String Code from http://glstring.org. Format: hla#<IMGT/HLA-version>#<GL-String>"
-
-* component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
-* component ^slicing.rules = #open
-* component contains geneStudied 1..1 MS
-* component[geneStudied].code = $loinc#48018-6 "Gene studied [ID]"
-* component[geneStudied].code ^short = "Gene studied (LOINC 48018-6)"
-* component[geneStudied].value[x] 1..1 MS
-* component[geneStudied].value[x] only CodeableConcept
-* component[geneStudied].valueCodeableConcept from NMDPHLAGeneNameVS (required)
-* component[geneStudied].valueCodeableConcept ^short = "HLA gene name (HGNC ID)"
-
-* specimen 0..1 MS
-* performer 0..* MS
