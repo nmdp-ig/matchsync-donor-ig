@@ -64,7 +64,7 @@ All canonical URIs referenced across FSH files are defined as aliases in `input/
 | `$nmdp-order` | `http://terminology.nmdp.org/identifier/order` | Order ID |
 | `$nmdp-hmlid` | `http://terminology.nmdp.org/identifier/hmlid` | HML message ID |
 | `$nmdp-specimen` | `http://terminology.nmdp.org/identifier/specimen` | Specimen ID |
-| `$isbt-grid` | `http://www.isbt128.org/uri/GRID` | ISBT 128 GRID |
+| `$nmdp-id-grid` | `http://nmdp.org/identifier/grid` | NMDP GRID |
 | `$cibmtr-crid` | `http://terminology.cibmtr.org/identifier/CRID` | CIBMTR CRID |
 
 ### Code System Aliases

@@ -47,13 +47,13 @@ The `NMDPDonorPatient` profile extends `USCorePatientProfile`, inheriting its re
 
 See [ADR-0005](https://github.com/ericbfriday/nmdp-donor-patient-ig/blob/main/docs/adr/0005-extend-uscore-patient.md) for the decision rationale.
 
-## ISBT 128
+## NMDP GRID
 
-The [ISBT 128](https://www.iccbba.org/tech-library/iccbba-documents/databases-702/grid-database) standard defines the Global Registration Identifier for Donors (GRID), used in this IG as a donor identifier:
+NMDP defines the Global Registration Identifier for Donors (GRID), used in this IG as a donor identifier:
 
-- **System URI:** `http://terminology.nmdp.org/identifier/grid`
-- **Format:** 19-character alphanumeric string with a check character
-- **Purpose:** Internationally unique, persistent identifier for donors across registries worldwide
-- **Issuing authority:** World Marrow Donor Association (WMDA) via ICCBBA
+- **System URI:** `http://nmdp.org/identifier/grid`
+- **Format:** 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. `99D0BA02660443B585D525525EB3F2D2`
+- **Purpose:** Uniquely identifies a donor across NMDP systems and orders
+- **Issuing authority:** NMDP
 
-The GRID enables unambiguous donor identification across international registry boundaries without exposing registry-internal identifiers.
+The GRID enables unambiguous donor identification without exposing registry-internal identifiers.

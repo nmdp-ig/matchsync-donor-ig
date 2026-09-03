@@ -9,7 +9,7 @@ NMDP identifiers have nuanced sensitivity classifications. The NMDP Security Arc
 | Identifier System URI | Classification | Notes |
 |---|---|---|
 | `http://terminology.nmdp.org/identifier/donor-id` | PHI when combined with health info | Re-identification number per 2016 Security Architecture ruling. De-identified in isolation; constitutes PHI when bundled with demographics or HLA data. |
-| `http://terminology.nmdp.org/identifier/grid` | PII/PHI in operational practice | Internationally unique identifier (ISBT 128). Treated as PII/PHI in all NMDP systems due to global uniqueness and linkability to an individual. |
+| `http://nmdp.org/identifier/grid` | PII/PHI in operational practice | NMDP GRID — globally unique donor identifier. Treated as PII/PHI in all NMDP systems due to global uniqueness and linkability to an individual. |
 | HLA typing data (GL String values) | GDPR Article 9 genetic data | Not HIPAA PHI by itself, but classified as genetic data under GDPR Article 9 for international donors. NMDP recognizes HLA can be re-identifying. |
 | `http://terminology.nmdp.org/identifier/center-id` | Internal Use | Does not identify an individual. Lower sensitivity; used to identify transplant centers and donor centers. |
 

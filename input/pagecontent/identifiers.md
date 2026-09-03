@@ -9,7 +9,7 @@ The [NMDPDonorPatient](StructureDefinition-nmdp-donor-patient.html) profile requ
 | Identifier | System URI | Cardinality | Example Value | PHI Sensitivity |
 |------------|-----------|-------------|---------------|-----------------|
 | NMDP Donor ID | `http://terminology.nmdp.org/identifier/donor` | 1..1 (MS) | `1234567` | Indirect identifier |
-| GRID | `http://www.isbt128.org/uri/GRID` | 0..1 (MS) | `AAAA1111111` | Direct identifier |
+| GRID | `http://nmdp.org/identifier/grid` | 0..1 (MS) | `99D0BA02660443B585D525525EB3F2D2` | Direct identifier |
 
 The identifier slice is `open`, allowing additional identifier systems beyond the two named slices.
 
@@ -26,11 +26,11 @@ The unique numeric identifier assigned to a donor by the National Marrow Donor P
 
 ### GRID (Global Registration Identifier for Donors)
 
-The ISBT 128 Global Registration Identifier for Donors — a globally unique identifier that follows the donor across registries and international borders.
+The NMDP GRID — a globally unique identifier that follows the donor across NMDP systems and orders.
 
-- **System:** `http://www.isbt128.org/uri/GRID`
-- **Format:** 4 alpha characters + 7 numeric characters (e.g., `AAAA1111111`)
-- **Assigned by:** WMDA via the national registry
+- **System:** `http://nmdp.org/identifier/grid`
+- **Format:** 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. `99D0BA02660443B585D525525EB3F2D2`
+- **Assigned by:** NMDP
 - **Cardinality:** 0..1 (optional but must-support)
 
 ## Additional Identifier Systems (aliases.fsh)
