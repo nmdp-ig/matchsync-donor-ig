@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cmv-observation | *Version*:0.1.0 |
-| Draft as of 2026-09-03 | *Computable Name*:NMDPCMVObservation |
+| Draft as of 2026-09-22 | *Computable Name*:NMDPCMVObservation |
 
  
 An observation representing a donor or CBU's CMV IgG antibody presence status. Uses LOINC 22244-8 and valueCodeableConcept with text-only values (Positive, Negative, Inconclusive, Untested). 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-cmv-observation
   "name" : "NMDPCMVObservation",
   "title" : "NMDP CMV Observation",
   "status" : "draft",
-  "date" : "2026-09-03T16:43:13+00:00",
+  "date" : "2026-09-22T13:14:09+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

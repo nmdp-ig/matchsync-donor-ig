@@ -165,14 +165,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#identifiers" id="markdown-toc-identifiers">Identifiers</a>    <ul>
       <li><a href="#identifier-systems-on-nmdpdonorpatient" id="markdown-toc-identifier-systems-on-nmdpdonorpatient">Identifier Systems on NMDPDonorPatient</a></li>
+      <li><a href="#identifier-systems-on-nmdpcbupatient" id="markdown-toc-identifier-systems-on-nmdpcbupatient">Identifier Systems on NMDPCBUPatient</a></li>
       <li><a href="#identifier-descriptions" id="markdown-toc-identifier-descriptions">Identifier Descriptions</a>        <ul>
-          <li><a href="#nmdp-donor-id" id="markdown-toc-nmdp-donor-id">NMDP Donor ID</a></li>
+          <li><a href="#donor-id-source-id" id="markdown-toc-donor-id-source-id">Donor ID (source-id)</a></li>
+          <li><a href="#cbu-id-cbu-source-id" id="markdown-toc-cbu-id-cbu-source-id">CBU ID (cbu-source-id)</a></li>
           <li><a href="#grid-global-registration-identifier-for-donors" id="markdown-toc-grid-global-registration-identifier-for-donors">GRID (Global Registration Identifier for Donors)</a></li>
         </ul>
       </li>
       <li><a href="#additional-identifier-systems-aliasesfsh" id="markdown-toc-additional-identifier-systems-aliasesfsh">Additional Identifier Systems (aliases.fsh)</a></li>
       <li><a href="#phi-sensitivity" id="markdown-toc-phi-sensitivity">PHI Sensitivity</a>        <ul>
-          <li><a href="#indirect-identifier--nmdp-donor-id" id="markdown-toc-indirect-identifier--nmdp-donor-id">Indirect Identifier — NMDP Donor ID</a></li>
+          <li><a href="#indirect-identifier--donor-id--cbu-id-source-ids" id="markdown-toc-indirect-identifier--donor-id--cbu-id-source-ids">Indirect Identifier — Donor ID / CBU ID (source IDs)</a></li>
           <li><a href="#direct-identifier--grid" id="markdown-toc-direct-identifier--grid">Direct Identifier — GRID</a></li>
           <li><a href="#implementation-guidance" id="markdown-toc-implementation-guidance">Implementation Guidance</a></li>
         </ul>
@@ -185,6 +187,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h1 id="identifiers">Identifiers</h1>
 
 <p>This page describes the identifier systems used in the NMDP Donor Patient IG, their cardinality, and PHI sensitivity classification.</p>
+
+<p>NMDP uses two distinct source identifiers to identify a subject: the <strong>Donor ID</strong> (<code class="language-plaintext highlighter-rouge">source-id</code>) identifies a donor, and the <strong>CBU ID</strong> (<code class="language-plaintext highlighter-rouge">cbu-source-id</code>) identifies a cord blood unit.</p>
 
 <h2 id="identifier-systems-on-nmdpdonorpatient">Identifier Systems on NMDPDonorPatient</h2>
 
@@ -202,35 +206,83 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td>NMDP Donor ID</td>
-      <td><code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/donor</code></td>
-      <td>1..1 (MS)</td>
-      <td><code class="language-plaintext highlighter-rouge">1234567</code></td>
-      <td>Indirect identifier</td>
-    </tr>
-    <tr>
       <td>GRID</td>
       <td><code class="language-plaintext highlighter-rouge">http://nmdp.org/identifier/grid</code></td>
-      <td>0..1 (MS)</td>
-      <td><code class="language-plaintext highlighter-rouge">99D0BA02660443B585D525525EB3F2D2</code></td>
+      <td>1..1 (MS)</td>
+      <td><code class="language-plaintext highlighter-rouge">6939DKM001392612726</code></td>
       <td>Direct identifier</td>
+    </tr>
+    <tr>
+      <td>Donor ID (source-id)</td>
+      <td><code class="language-plaintext highlighter-rouge">http://nmdp.org/identifier/source-id</code></td>
+      <td>0..1 (MS)</td>
+      <td><code class="language-plaintext highlighter-rouge">SRC-77412</code></td>
+      <td>Indirect identifier</td>
     </tr>
   </tbody>
 </table>
 
 <p>The identifier slice is <code class="language-plaintext highlighter-rouge">open</code>, allowing additional identifier systems beyond the two named slices.</p>
 
+<h2 id="identifier-systems-on-nmdpcbupatient">Identifier Systems on NMDPCBUPatient</h2>
+
+<p>The <a href="StructureDefinition-nmdp-cbu-patient.html">NMDPCBUPatient</a> profile requires at least one identifier and defines three named slices:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>System URI</th>
+      <th>Cardinality</th>
+      <th>Example Value</th>
+      <th>PHI Sensitivity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CBU ID (cbu-source-id)</td>
+      <td><code class="language-plaintext highlighter-rouge">http://nmdp.org/identifier/cbu-source-id</code></td>
+      <td>1..1 (MS)</td>
+      <td><code class="language-plaintext highlighter-rouge">CBU-SRC-20180415-001</code></td>
+      <td>Indirect identifier</td>
+    </tr>
+    <tr>
+      <td>CBU Registry ID</td>
+      <td><code class="language-plaintext highlighter-rouge">http://nmdp.org/identifier/cbu-registry-id</code></td>
+      <td>0..1 (MS)</td>
+      <td><code class="language-plaintext highlighter-rouge">REG-CBU-887744</code></td>
+      <td>Indirect identifier</td>
+    </tr>
+    <tr>
+      <td>Cord Blood Bank ID</td>
+      <td><code class="language-plaintext highlighter-rouge">http://nmdp.org/identifier/cbb-id</code></td>
+      <td>0..1 (MS)</td>
+      <td><code class="language-plaintext highlighter-rouge">CBB-1042</code></td>
+      <td>Internal use</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="identifier-descriptions">Identifier Descriptions</h2>
 
-<h3 id="nmdp-donor-id">NMDP Donor ID</h3>
+<h3 id="donor-id-source-id">Donor ID (source-id)</h3>
 
-<p>The unique numeric identifier assigned to a donor by the National Marrow Donor Program upon registration. Every donor in the NMDP registry has exactly one Donor ID.</p>
+<p>The source identifier assigned to a donor in the originating NMDP registry. This is the NMDP identifier used to identify a <strong>donor</strong> (distinct from the CBU source ID used for cord blood units).</p>
 
 <ul>
-  <li><strong>System:</strong> <code class="language-plaintext highlighter-rouge">http://terminology.nmdp.org/identifier/donor</code></li>
-  <li><strong>Format:</strong> Numeric string (typically 7 digits)</li>
-  <li><strong>Assigned by:</strong> NMDP at time of registration</li>
-  <li><strong>Cardinality:</strong> 1..1 (required)</li>
+  <li><strong>System:</strong> <code class="language-plaintext highlighter-rouge">http://nmdp.org/identifier/source-id</code></li>
+  <li><strong>Assigned by:</strong> NMDP</li>
+  <li><strong>Cardinality:</strong> 0..1 (optional but must-support)</li>
+</ul>
+
+<h3 id="cbu-id-cbu-source-id">CBU ID (cbu-source-id)</h3>
+
+<p>The source identifier assigned to a <strong>cord blood unit</strong> in the originating NMDP registry. This is the NMDP identifier used to identify a CBU (distinct from the donor source ID). It is required on the <a href="StructureDefinition-nmdp-cbu-patient.html">NMDPCBUPatient</a> profile.</p>
+
+<ul>
+  <li><strong>System:</strong> <code class="language-plaintext highlighter-rouge">http://nmdp.org/identifier/cbu-source-id</code></li>
+  <li><strong>Assigned by:</strong> NMDP</li>
+  <li><strong>Cardinality:</strong> 1..1 (required on NMDPCBUPatient)</li>
 </ul>
 
 <h3 id="grid-global-registration-identifier-for-donors">GRID (Global Registration Identifier for Donors)</h3>
@@ -239,7 +291,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><strong>System:</strong> <code class="language-plaintext highlighter-rouge">http://nmdp.org/identifier/grid</code></li>
-  <li><strong>Format:</strong> 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. <code class="language-plaintext highlighter-rouge">99D0BA02660443B585D525525EB3F2D2</code></li>
+  <li><strong>Format:</strong> 19-character ISBT 128 identifier composed of a 4-digit Issuing Organization Number (ION), a donor registration number, and check characters, e.g. <code class="language-plaintext highlighter-rouge">6939DKM001392612726</code></li>
   <li><strong>Assigned by:</strong> NMDP</li>
   <li><strong>Cardinality:</strong> 0..1 (optional but must-support)</li>
 </ul>
@@ -299,9 +351,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Implementers <strong>MUST</strong> handle donor identifiers according to their PHI classification:</p>
 
-<h3 id="indirect-identifier--nmdp-donor-id">Indirect Identifier — NMDP Donor ID</h3>
+<h3 id="indirect-identifier--donor-id--cbu-id-source-ids">Indirect Identifier — Donor ID / CBU ID (source IDs)</h3>
 
-<p>The NMDP Donor ID is classified as an <strong>indirect identifier</strong>. On its own, it does not identify an individual. However, when combined with demographic information (name, date of birth, address), it becomes Protected Health Information (PHI) under HIPAA.</p>
+<p>The Donor ID (<code class="language-plaintext highlighter-rouge">source-id</code>) and CBU ID (<code class="language-plaintext highlighter-rouge">cbu-source-id</code>) are classified as <strong>indirect identifiers</strong>. On their own, they do not identify an individual. However, when combined with demographic information (name, date of birth, address), they become Protected Health Information (PHI) under HIPAA.</p>
 
 <ul>
   <li>On its own: Not PHI</li>
@@ -322,10 +374,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="implementation-guidance">Implementation Guidance</h3>
 
 <ol>
-  <li><strong>Logging:</strong> Never log GRID values in plain text. NMDP Donor IDs may be logged for operational purposes but should be excluded from broadly accessible log aggregation.</li>
+  <li><strong>Logging:</strong> Never log GRID values in plain text. Donor IDs and CBU IDs may be logged for operational purposes but should be excluded from broadly accessible log aggregation.</li>
   <li><strong>API responses:</strong> Include identifiers only when the consumer has appropriate authorization. Consider identifier-specific scoping in SMART on FHIR access tokens.</li>
-  <li><strong>Storage:</strong> Both identifier types should be encrypted at rest in production systems.</li>
-  <li><strong>De-identification:</strong> When de-identifying data for research, both the NMDP Donor ID and GRID must be removed or replaced with opaque tokens.</li>
+  <li><strong>Storage:</strong> All identifier types should be encrypted at rest in production systems.</li>
+  <li><strong>De-identification:</strong> When de-identifying data for research, the Donor ID, CBU ID, and GRID must be removed or replaced with opaque tokens.</li>
 </ol>
 
 
@@ -347,7 +399,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 16:43+0000">2026-09-03</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 22, 2026 13:14+0000">2026-09-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

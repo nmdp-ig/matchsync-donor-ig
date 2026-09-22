@@ -9,34 +9,53 @@
 
 This page describes the identifier systems used in the NMDP Donor Patient IG, their cardinality, and PHI sensitivity classification.
 
+NMDP uses two distinct source identifiers to identify a subject: the **Donor ID** (`source-id`) identifies a donor, and the **CBU ID** (`cbu-source-id`) identifies a cord blood unit.
+
 ## Identifier Systems on NMDPDonorPatient
 
 The [NMDPDonorPatient](StructureDefinition-nmdp-donor-patient.md) profile requires at least one identifier and defines two named slices:
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| NMDP Donor ID | `http://terminology.nmdp.org/identifier/donor` | 1..1 (MS) | `1234567` | Indirect identifier |
-| GRID | `http://nmdp.org/identifier/grid` | 0..1 (MS) | `99D0BA02660443B585D525525EB3F2D2` | Direct identifier |
+| GRID | `http://nmdp.org/identifier/grid` | 1..1 (MS) | `6939DKM001392612726` | Direct identifier |
+| Donor ID (source-id) | `http://nmdp.org/identifier/source-id` | 0..1 (MS) | `SRC-77412` | Indirect identifier |
 
 The identifier slice is `open`, allowing additional identifier systems beyond the two named slices.
 
+## Identifier Systems on NMDPCBUPatient
+
+The [NMDPCBUPatient](StructureDefinition-nmdp-cbu-patient.md) profile requires at least one identifier and defines three named slices:
+
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| CBU ID (cbu-source-id) | `http://nmdp.org/identifier/cbu-source-id` | 1..1 (MS) | `CBU-SRC-20180415-001` | Indirect identifier |
+| CBU Registry ID | `http://nmdp.org/identifier/cbu-registry-id` | 0..1 (MS) | `REG-CBU-887744` | Indirect identifier |
+| Cord Blood Bank ID | `http://nmdp.org/identifier/cbb-id` | 0..1 (MS) | `CBB-1042` | Internal use |
+
 ## Identifier Descriptions
 
-### NMDP Donor ID
+### Donor ID (source-id)
 
-The unique numeric identifier assigned to a donor by the National Marrow Donor Program upon registration. Every donor in the NMDP registry has exactly one Donor ID.
+The source identifier assigned to a donor in the originating NMDP registry. This is the NMDP identifier used to identify a **donor** (distinct from the CBU source ID used for cord blood units).
 
-* **System:** `http://terminology.nmdp.org/identifier/donor`
-* **Format:** Numeric string (typically 7 digits)
-* **Assigned by:** NMDP at time of registration
-* **Cardinality:** 1..1 (required)
+* **System:** `http://nmdp.org/identifier/source-id`
+* **Assigned by:** NMDP
+* **Cardinality:** 0..1 (optional but must-support)
+
+### CBU ID (cbu-source-id)
+
+The source identifier assigned to a **cord blood unit** in the originating NMDP registry. This is the NMDP identifier used to identify a CBU (distinct from the donor source ID). It is required on the [NMDPCBUPatient](StructureDefinition-nmdp-cbu-patient.md) profile.
+
+* **System:** `http://nmdp.org/identifier/cbu-source-id`
+* **Assigned by:** NMDP
+* **Cardinality:** 1..1 (required on NMDPCBUPatient)
 
 ### GRID (Global Registration Identifier for Donors)
 
 The NMDP GRID — a globally unique identifier that follows the donor across NMDP systems and orders.
 
 * **System:** `http://nmdp.org/identifier/grid`
-* **Format:** 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. `99D0BA02660443B585D525525EB3F2D2`
+* **Format:** 19-character ISBT 128 identifier composed of a 4-digit Issuing Organization Number (ION), a donor registration number, and check characters, e.g. `6939DKM001392612726`
 * **Assigned by:** NMDP
 * **Cardinality:** 0..1 (optional but must-support)
 
@@ -58,9 +77,9 @@ The following identifier systems are defined in `aliases.fsh` for use in related
 
 Implementers **MUST** handle donor identifiers according to their PHI classification:
 
-### Indirect Identifier — NMDP Donor ID
+### Indirect Identifier — Donor ID / CBU ID (source IDs)
 
-The NMDP Donor ID is classified as an **indirect identifier**. On its own, it does not identify an individual. However, when combined with demographic information (name, date of birth, address), it becomes Protected Health Information (PHI) under HIPAA.
+The Donor ID (`source-id`) and CBU ID (`cbu-source-id`) are classified as **indirect identifiers**. On their own, they do not identify an individual. However, when combined with demographic information (name, date of birth, address), they become Protected Health Information (PHI) under HIPAA.
 
 * On its own: Not PHI
 * Combined with demographics: PHI
@@ -76,8 +95,8 @@ The GRID is classified as a **direct patient identifier**. Because it is globall
 
 ### Implementation Guidance
 
-1. **Logging:**Never log GRID values in plain text. NMDP Donor IDs may be logged for operational purposes but should be excluded from broadly accessible log aggregation.
+1. **Logging:**Never log GRID values in plain text. Donor IDs and CBU IDs may be logged for operational purposes but should be excluded from broadly accessible log aggregation.
 1. **API responses:**Include identifiers only when the consumer has appropriate authorization. Consider identifier-specific scoping in SMART on FHIR access tokens.
-1. **Storage:**Both identifier types should be encrypted at rest in production systems.
-1. **De-identification:**When de-identifying data for research, both the NMDP Donor ID and GRID must be removed or replaced with opaque tokens.
+1. **Storage:**All identifier types should be encrypted at rest in production systems.
+1. **De-identification:**When de-identifying data for research, the Donor ID, CBU ID, and GRID must be removed or replaced with opaque tokens.
 

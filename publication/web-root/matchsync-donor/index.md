@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/ImplementationGuide/nmdp.fhir.donor-patient | *Version*:0.1.0 |
-| Draft as of 2026-09-03 | *Computable Name*:NMDPDonorPatient |
+| Draft as of 2026-09-22 | *Computable Name*:NMDPDonorPatient |
 
 # NMDP Donor Patient Implementation Guide
 
@@ -18,9 +18,11 @@ This Implementation Guide defines the FHIR profiles for representing hematopoiet
 
 The Donor Patient IG covers:
 
-* **Donor demographics** — name, date of birth, gender, race, ethnicity
-* **Donor identifiers** — NMDP Donor ID, GRID (Global Registration Identifier for Donors)
-* **Donor status** — active, inactive, deferred, unavailable
+* **Donor demographics** — Date of Birth, Gender, Race, Ethnicity, HLA, Blood Type, Abo/Rh/CMV, Weight
+* **Cord Blood Unit demographics** — Date of Birth, Gender, Race, Ethnicity, HLA, Blood Type, ABO/Rh/CMV, Hemoglobin
+* **Donor identifiers** — Donor ID (source-id), GRID (Global Registration Identifier for Donors), ION ID (Issuing Organization Number)
+* **CBU identifiers** — Registry ID, CBU Source ID, CBB (Cord Blood Bank) ID
+* **Donor/CBU status** — active, inactive, deferred, unavailable
 
 ## Profiles
 
@@ -54,7 +56,7 @@ This IG depends on:
   "name" : "NMDPDonorPatient",
   "title" : "NMDP Donor Patient Implementation Guide",
   "status" : "draft",
-  "date" : "2026-09-03T16:43:13+00:00",
+  "date" : "2026-09-22T13:14:09+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -86,7 +88,7 @@ This IG depends on:
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.3.0"
+    "version" : "7.4.0"
   },
   {
     "id" : "hl7ext",

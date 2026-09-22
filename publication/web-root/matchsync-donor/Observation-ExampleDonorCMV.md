@@ -12,7 +12,7 @@ Profile: [NMDP CMV Observation](StructureDefinition-nmdp-cmv-observation.md)
 
 **code**: CMV IgG Ab [Presence] in Serum
 
-**subject**: [Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)](Patient-ExampleNMDPDonor.md)
+**subject**: [Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#6939DKM001392612726)](Patient-ExampleNMDPDonor.md)
 
 **value**: Negative
 

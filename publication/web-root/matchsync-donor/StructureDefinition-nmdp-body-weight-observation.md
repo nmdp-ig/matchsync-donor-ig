@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-body-weight-observation | *Version*:0.1.0 |
-| Draft as of 2026-09-03 | *Computable Name*:NMDPBodyWeightObservation |
+| Draft as of 2026-09-22 | *Computable Name*:NMDPBodyWeightObservation |
 
  
 An observation representing a donor's body weight. Uses LOINC 29463-7 and valueQuantity in kg. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-body-weight-obs
   "name" : "NMDPBodyWeightObservation",
   "title" : "NMDP Body Weight Observation",
   "status" : "draft",
-  "date" : "2026-09-03T16:43:13+00:00",
+  "date" : "2026-09-22T13:14:09+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

@@ -17,7 +17,7 @@
   ] ;
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ] ;
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleDeceasedDonor</b></p><a name=\"ExampleDeceasedDonor\"> </a><a name=\"hcExampleDeceasedDonor\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-patient.html\">NMDP Donor Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Erik Johansson  Male, DoB: 1970-04-10 ( http://nmdp.org/identifier/grid#3F7A1C9E5B2D8046AF13CE79B0D4E2A1)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://nmdp.org/identifier/source-id</code>/SRC-55123</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').\"><a href=\"StructureDefinition-donor-status.html\">Donor Status</a></td><td colspan=\"3\">Permanently Unavailable</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleDeceasedDonor</b></p><a name=\"ExampleDeceasedDonor\"> </a><a name=\"hcExampleDeceasedDonor\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-nmdp-donor-patient.html\">NMDP Donor Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Erik Johansson  Male, DoB: 1970-04-10 ( http://nmdp.org/identifier/grid#3553DKM004182337541)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://nmdp.org/identifier/source-id</code>/SRC-55123</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').\"><a href=\"StructureDefinition-donor-status.html\">Donor Status</a></td><td colspan=\"3\">Permanently Unavailable</td></tr></table></div>"
   ] ;
   fhir:DomainResource.extension [
      fhir:index 0 ;
@@ -27,7 +27,7 @@
   fhir:Patient.identifier [
      fhir:index 0 ;
      fhir:Identifier.system [ fhir:value "http://nmdp.org/identifier/grid" ] ;
-     fhir:Identifier.value [ fhir:value "3F7A1C9E5B2D8046AF13CE79B0D4E2A1" ]
+     fhir:Identifier.value [ fhir:value "3553DKM004182337541" ]
   ], [
      fhir:index 1 ;
      fhir:Identifier.system [ fhir:value "http://nmdp.org/identifier/source-id" ] ;

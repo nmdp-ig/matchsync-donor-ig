@@ -127,7 +127,7 @@
           {
             "name": "identifier",
             "in": "query",
-            "description": "Search by NMDP Donor ID or GRID",
+            "description": "Search by GRID, Donor ID (source-id), or CBU ID (cbu-source-id)",
             "schema": {
               "type": "string"
             }

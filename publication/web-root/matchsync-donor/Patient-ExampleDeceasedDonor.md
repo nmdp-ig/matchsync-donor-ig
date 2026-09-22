@@ -8,7 +8,7 @@
 
 Profile: [NMDP Donor Patient](StructureDefinition-nmdp-donor-patient.md)
 
-Erik Johansson Male, DoB: 1970-04-10 ( http://nmdp.org/identifier/grid#3F7A1C9E5B2D8046AF13CE79B0D4E2A1)
+Erik Johansson Male, DoB: 1970-04-10 ( http://nmdp.org/identifier/grid#3553DKM004182337541)
 
 -------
 
@@ -34,7 +34,7 @@ Erik Johansson Male, DoB: 1970-04-10 ( http://nmdp.org/identifier/grid#3F7A1C9E5
   }],
   "identifier" : [{
     "system" : "http://nmdp.org/identifier/grid",
-    "value" : "3F7A1C9E5B2D8046AF13CE79B0D4E2A1"
+    "value" : "3553DKM004182337541"
   },
   {
     "system" : "http://nmdp.org/identifier/source-id",

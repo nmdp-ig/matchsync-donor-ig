@@ -59,7 +59,7 @@ See [ADR-0005](https://github.com/ericbfriday/nmdp-donor-patient-ig/blob/main/do
 NMDP defines the Global Registration Identifier for Donors (GRID), used in this IG as a donor identifier:
 
 * **System URI:** `http://nmdp.org/identifier/grid`
-* **Format:** 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. `99D0BA02660443B585D525525EB3F2D2`
+* **Format:** 19-character ISBT 128 identifier composed of a 4-digit Issuing Organization Number (ION), a donor registration number, and check characters, e.g. `6939DKM001392612726`
 * **Purpose:** Uniquely identifies a donor across NMDP systems and orders
 * **Issuing authority:** NMDP
 

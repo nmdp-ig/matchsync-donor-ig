@@ -8,7 +8,7 @@
 
 Profile: [NMDP Donor Patient](StructureDefinition-nmdp-donor-patient.md)
 
-Lisa Chen Female, DoB: 1992-08-22 ( http://nmdp.org/identifier/grid#A1B2C3D4E5F60718293A4B5C6D7E8F90)
+Lisa Chen Female, DoB: 1992-08-22 ( http://nmdp.org/identifier/grid#3553DKM007655109283)
 
 -------
 
@@ -70,7 +70,7 @@ Lisa Chen Female, DoB: 1992-08-22 ( http://nmdp.org/identifier/grid#A1B2C3D4E5F6
   }],
   "identifier" : [{
     "system" : "http://nmdp.org/identifier/grid",
-    "value" : "A1B2C3D4E5F60718293A4B5C6D7E8F90"
+    "value" : "3553DKM007655109283"
   },
   {
     "system" : "http://nmdp.org/identifier/source-id",

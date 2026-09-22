@@ -8,7 +8,7 @@
 
 Profile: [NMDP Donor Patient](StructureDefinition-nmdp-donor-patient.md)
 
-Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)
+Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#6939DKM001392612726)
 
 -------
 
@@ -72,7 +72,7 @@ Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02
   }],
   "identifier" : [{
     "system" : "http://nmdp.org/identifier/grid",
-    "value" : "99D0BA02660443B585D525525EB3F2D2"
+    "value" : "6939DKM001392612726"
   },
   {
     "system" : "http://nmdp.org/identifier/source-id",

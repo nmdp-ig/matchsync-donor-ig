@@ -12,7 +12,7 @@ Profile: [NMDP HLA Genotype Observation](StructureDefinition-nmdp-hla-genotype.m
 
 **code**: HLA-A [Type] by High resolution
 
-**subject**: [Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)](Patient-ExampleNMDPDonor.md)
+**subject**: [Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#6939DKM001392612726)](Patient-ExampleNMDPDonor.md)
 
 **value**: hla#3.53.0#HLA-A*02:01+HLA-A*03:01
 

@@ -12,7 +12,7 @@ Profile: [NMDP ABO/Rh Observation](StructureDefinition-nmdp-abo-rh-observation.m
 
 **code**: ABO and Rh group [Type] in Blood
 
-**subject**: [Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#99D0BA02660443B585D525525EB3F2D2)](Patient-ExampleNMDPDonor.md)
+**subject**: [Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#6939DKM001392612726)](Patient-ExampleNMDPDonor.md)
 
 **value**: O Pos
 

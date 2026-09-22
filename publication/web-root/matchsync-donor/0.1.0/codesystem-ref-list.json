@@ -53,8 +53,8 @@
     "oids" : ["2.16.840.1.113883.6.1"],
     "uses" : {
     },
-    "ValueSet-nmdp-hla-locus-loinc-vs.html" : "NMDP HLA Locus LOINC Value Set",
-    "ValueSet-nmdp-abo-rh-type-vs.html" : "ABO/Rh Blood Type Value Set"
+    "ValueSet-nmdp-abo-rh-type-vs.html" : "ABO/Rh Blood Type Value Set",
+    "ValueSet-nmdp-hla-locus-loinc-vs.html" : "NMDP HLA Locus LOINC Value Set"
   },
   {
     "url" : "http://terminology.nmdp.org/codesystem/hla-gene-name",

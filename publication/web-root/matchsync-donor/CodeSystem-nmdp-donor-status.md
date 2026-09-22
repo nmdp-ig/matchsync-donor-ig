@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/CodeSystem/donor-status | *Version*:0.1.0 |
-| Draft as of 2026-09-03 | *Computable Name*:NMDPDonorStatusCS |
+| Draft as of 2026-09-22 | *Computable Name*:NMDPDonorStatusCS |
 
  
 Status codes for NMDP registered donors. These codes represent the enterprise Registry Status maintained by NMDP, indicating a donor's availability for patient search, matching, and product request activities. Source: ODS DonorWithSampleResponse (v05). In FHIR Donor API payloads, donor status is conveyed as a valueString on the donor-status extension. 
@@ -31,7 +31,7 @@ Status codes for NMDP registered donors. These codes represent the enterprise Re
   "name" : "NMDPDonorStatusCS",
   "title" : "NMDP Donor Status",
   "status" : "draft",
-  "date" : "2026-09-03T16:43:13+00:00",
+  "date" : "2026-09-22T13:14:09+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

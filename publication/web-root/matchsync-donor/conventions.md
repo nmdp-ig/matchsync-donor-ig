@@ -74,6 +74,10 @@ All canonical URIs referenced across FSH files are defined as aliases in `input/
 | `$nmdp-hmlid` | `http://terminology.nmdp.org/identifier/hmlid` | HML message ID |
 | `$nmdp-specimen` | `http://terminology.nmdp.org/identifier/specimen` | Specimen ID |
 | `$nmdp-id-grid` | `http://nmdp.org/identifier/grid` | NMDP GRID |
+| `$nmdp-id-source-id` | `http://nmdp.org/identifier/source-id` | Donor ID (source ID for a donor) |
+| `$nmdp-id-cbu-source-id` | `http://nmdp.org/identifier/cbu-source-id` | CBU ID (source ID for a cord blood unit) |
+| `$nmdp-id-cbu-registry-id` | `http://nmdp.org/identifier/cbu-registry-id` | CBU Registry ID |
+| `$nmdp-id-cbb-id` | `http://nmdp.org/identifier/cbb-id` | Cord Blood Bank ID |
 | `$cibmtr-crid` | `http://terminology.cibmtr.org/identifier/CRID` | CIBMTR CRID |
 
 ### Code System Aliases

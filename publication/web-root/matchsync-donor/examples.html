@@ -258,8 +258,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>This example demonstrates a fully conformant NMDP donor Patient resource including:</p>
 
 <ul>
-  <li><strong>NMDP Donor ID</strong> (<code class="language-plaintext highlighter-rouge">1234567</code>) — the required registry identifier</li>
-  <li><strong>GRID</strong> (<code class="language-plaintext highlighter-rouge">99D0BA02660443B585D525525EB3F2D2</code>) — the optional NMDP global identifier</li>
+  <li><strong>GRID</strong> (<code class="language-plaintext highlighter-rouge">6939DKM001392612726</code>) — the required NMDP global donor identifier</li>
+  <li><strong>Donor ID / source-id</strong> (<code class="language-plaintext highlighter-rouge">SRC-77412</code>) — the NMDP donor source identifier</li>
   <li><strong>Demographics</strong> — name, gender, and date of birth (all required by the profile)</li>
   <li><strong>Race/Ethnicity</strong> — US Core race and ethnicity extensions</li>
 </ul>
@@ -278,15 +278,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="exampledonornogrid">ExampleDonorNoGrid</h3>
 
-<p>This example demonstrates a newly registered donor who has not yet been assigned a GRID:</p>
+<p>This example demonstrates a donor identified by GRID with no donor source ID yet assigned:</p>
 
 <ul>
-  <li><strong>NMDP Donor ID only</strong> — no GRID slice present</li>
+  <li><strong>GRID only</strong> — no source-id slice present</li>
   <li><strong>Donor Status</strong> — <code class="language-plaintext highlighter-rouge">#active</code></li>
   <li><strong>Communication</strong> — English language preference</li>
 </ul>
 
-<p>This is common for donors early in the registration process before international identifiers are assigned.</p>
+<p>This is common for donors early in the registration process before a source ID is assigned.</p>
 
 <h3 id="exampledeceaseddonor">ExampleDeceasedDonor</h3>
 
@@ -295,7 +295,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>deceasedDateTime</strong> — date of death (<code class="language-plaintext highlighter-rouge">2025-06-15</code>)</li>
   <li><strong>Donor Status</strong> — <code class="language-plaintext highlighter-rouge">#unavailable</code></li>
-  <li><strong>Both identifiers</strong> — NMDP Donor ID and GRID present</li>
+  <li><strong>Both identifiers</strong> — GRID and Donor ID (source-id) present</li>
 </ul>
 
 <h3 id="exampledonororder">ExampleDonorOrder</h3>
@@ -434,7 +434,7 @@ Description: "Description of what this example demonstrates."
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 3, 2026 16:43+0000">2026-09-03</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 22, 2026 13:14+0000">2026-09-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-hla-genotype | *Version*:0.1.0 |
-| Draft as of 2026-09-03 | *Computable Name*:NMDPHLAGenotype |
+| Draft as of 2026-09-22 | *Computable Name*:NMDPHLAGenotype |
 
  
 A profile for HLA genotype observations. Each instance represents a genotype for a single HLA locus, expressed as a GL String Code. The Observation.code uses a locus-specific LOINC code identifying which HLA gene was typed. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-hla-genotype.cs
   "name" : "NMDPHLAGenotype",
   "title" : "NMDP HLA Genotype Observation",
   "status" : "draft",
-  "date" : "2026-09-03T16:43:13+00:00",
+  "date" : "2026-09-22T13:14:09+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

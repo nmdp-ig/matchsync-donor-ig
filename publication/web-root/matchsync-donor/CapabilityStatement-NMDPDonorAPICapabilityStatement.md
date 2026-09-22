@@ -70,7 +70,7 @@ This CapabilityStatement describes the expected capabilities of a server impleme
       "searchParam" : [{
         "name" : "identifier",
         "type" : "token",
-        "documentation" : "Search by NMDP Donor ID or GRID"
+        "documentation" : "Search by GRID, Donor ID (source-id), or CBU ID (cbu-source-id)"
       },
       {
         "name" : "_id",

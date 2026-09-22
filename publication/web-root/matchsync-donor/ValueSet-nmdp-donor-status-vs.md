@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-donor-status-vs | *Version*:0.1.0 |
-| Draft as of 2026-09-03 | *Computable Name*:NMDPDonorStatusVS |
+| Draft as of 2026-09-22 | *Computable Name*:NMDPDonorStatusVS |
 
  
 All registry status codes for NMDP registered donors. Maps to ODS enterprise donor status values (AV, TU, AC, DE). 
@@ -50,7 +50,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "NMDPDonorStatusVS",
   "title" : "NMDP Donor Status ValueSet",
   "status" : "draft",
-  "date" : "2026-09-03T16:43:13+00:00",
+  "date" : "2026-09-22T13:14:09+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

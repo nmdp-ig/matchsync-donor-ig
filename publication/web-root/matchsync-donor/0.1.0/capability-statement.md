@@ -39,7 +39,7 @@ Represents hematopoietic cell donors registered in the NMDP registry.
 
 | | | |
 | :--- | :--- | :--- |
-| `identifier` | token | Search by NMDP Donor ID or GRID |
+| `identifier` | token | Search by GRID, Donor ID (source-id), or CBU ID (cbu-source-id) |
 | `_id` | token | Search by logical resource ID |
 
 ### Observation (NMDPHLAGenotype)

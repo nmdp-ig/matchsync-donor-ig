@@ -221,9 +221,9 @@
     "oids" : ["2.16.840.1.113883.6.1"],
     "uses" : {
     },
-    "ValueSet-nmdp-hla-locus-loinc-vs.html" : "NMDP HLA Locus LOINC Value Set",
     "ValueSet-nmdp-abo-rh-type-vs.html" : "ABO/Rh Blood Type Value Set",
-    "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes"
+    "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
+    "ValueSet-nmdp-hla-locus-loinc-vs.html" : "NMDP HLA Locus LOINC Value Set"
   },
   {
     "url" : "http://snomed.info/sct",
@@ -235,16 +235,16 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
+    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
     "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
     "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
-    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
     "http://hl7.org/fhir/R4/valueset-specimen-collection-method.html" : "FHIR Specimen Collection Method",
     "http://hl7.org/fhir/R4/valueset-specimen-container-type.html" : "Specimen Container Type",
-    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
-    "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
-    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles"
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/contactentity-type",
@@ -328,7 +328,7 @@
     "oids" : ["2.16.840.1.113883.18.229"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.3.0/ValueSet-v2-0371.html" : "hl7VS-additivePreservative"
+    "http://terminology.hl7.org/7.4.0/ValueSet-v2-0371.html" : "hl7VS-additivePreservative"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v2-0373",
@@ -352,7 +352,7 @@
     "oids" : ["2.16.840.1.113883.18.317"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.3.0/ValueSet-v2-0493.html" : "hl7VS-specimenCondition"
+    "http://terminology.hl7.org/7.4.0/ValueSet-v2-0493.html" : "hl7VS-specimenCondition"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v2-0916",
@@ -364,7 +364,7 @@
     "oids" : ["2.16.840.1.113883.18.422"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.3.0/ValueSet-v2-0916.html" : "hl7VS-relevantClincialInformation"
+    "http://terminology.hl7.org/7.4.0/ValueSet-v2-0916.html" : "hl7VS-relevantClincialInformation"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
@@ -412,7 +412,7 @@
     "oids" : ["2.16.840.1.113883.5.111"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.3.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType"
+    "http://terminology.hl7.org/7.4.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType"
   },
   {
     "url" : "http://terminology.nmdp.org/codesystem/hla-gene-name",
@@ -446,7 +446,7 @@
     "oids" : ["2.16.840.1.113883.6.121"],
     "uses" : {
     },
-    "http://hl7.org/fhir/us/core/STU6.1/ValueSet-simple-language.html" : "Language codes with language and optionally a region modifier",
-    "http://hl7.org/fhir/R4/valueset-languages.html" : "Common Languages"
+    "http://hl7.org/fhir/R4/valueset-languages.html" : "Common Languages",
+    "http://hl7.org/fhir/us/core/STU6.1/ValueSet-simple-language.html" : "Language codes with language and optionally a region modifier"
   }]
 }

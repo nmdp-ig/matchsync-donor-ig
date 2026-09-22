@@ -8,7 +8,7 @@
 
 Profile: [NMDP Donor Patient](StructureDefinition-nmdp-donor-patient.md)
 
-Adaeze Okafor Female, DoB: 1998-11-02 ( http://nmdp.org/identifier/grid#7C4E9A21D0B53F86E1A2C3D4B5F60798)
+Adaeze Okafor Female, DoB: 1998-11-02 ( http://nmdp.org/identifier/grid#3553DKM002948175630)
 
 -------
 
@@ -33,7 +33,7 @@ Adaeze Okafor Female, DoB: 1998-11-02 ( http://nmdp.org/identifier/grid#7C4E9A21
   }],
   "identifier" : [{
     "system" : "http://nmdp.org/identifier/grid",
-    "value" : "7C4E9A21D0B53F86E1A2C3D4B5F60798"
+    "value" : "3553DKM002948175630"
   }],
   "name" : [{
     "family" : "Okafor",

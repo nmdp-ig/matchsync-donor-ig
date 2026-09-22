@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-order | *Version*:0.1.0 |
-| Draft as of 2026-09-03 | *Computable Name*:NMDPDonorOrder |
+| Draft as of 2026-09-22 | *Computable Name*:NMDPDonorOrder |
 
  
 A profile representing a donor workup order in the NMDP system. For donors, the ordered item is always confirmatory typing. ServiceRequest.subject references the recipient Patient, and ServiceRequest.performer references the donor Patient. 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-order.csv
   "name" : "NMDPDonorOrder",
   "title" : "NMDP Donor Order",
   "status" : "draft",
-  "date" : "2026-09-03T16:43:13+00:00",
+  "date" : "2026-09-22T13:14:09+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

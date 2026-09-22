@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient | *Version*:0.1.0 |
-| Draft as of 2026-09-03 | *Computable Name*:NMDPDonorPatient |
+| Draft as of 2026-09-22 | *Computable Name*:NMDPDonorPatient |
 
  
 A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-patient.c
   "name" : "NMDPDonorPatient",
   "title" : "NMDP Donor Patient",
   "status" : "draft",
-  "date" : "2026-09-03T16:43:13+00:00",
+  "date" : "2026-09-22T13:14:09+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -130,7 +130,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-patient.c
       "path" : "Patient.identifier",
       "sliceName" : "grid",
       "short" : "NMDP GRID (Global Registration Identifier for Donors)",
-      "definition" : "The NMDP GRID identifier that uniquely identifies a donor. A 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. 99D0BA02660443B585D525525EB3F2D2. System: http://nmdp.org/identifier/grid",
+      "definition" : "The NMDP GRID identifier that uniquely identifies a donor. A 19-character ISBT 128 identifier composed of a 4-digit Issuing Organization Number (ION), a donor registration number, and check characters, e.g. 6939DKM001392612726. System: http://nmdp.org/identifier/grid",
       "min" : 1,
       "max" : "1",
       "mustSupport" : true
