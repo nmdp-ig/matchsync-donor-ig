@@ -28,7 +28,7 @@ Description: "Describes the expected capabilities of the NMDP Donor API FHIR ser
 * rest[0].resource[0].interaction[1].code = #search-type
 * rest[0].resource[0].searchParam[0].name = "identifier"
 * rest[0].resource[0].searchParam[0].type = #token
-* rest[0].resource[0].searchParam[0].documentation = "Search by NMDP Donor ID or GRID"
+* rest[0].resource[0].searchParam[0].documentation = "Search by GRID, Donor ID (source-id), or CBU ID (cbu-source-id)"
 * rest[0].resource[0].searchParam[1].name = "_id"
 * rest[0].resource[0].searchParam[1].type = #token
 

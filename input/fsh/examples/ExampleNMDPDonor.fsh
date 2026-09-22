@@ -4,7 +4,7 @@ Usage: #example
 Title: "Example NMDP Donor"
 Description: "An example donor registered in the NMDP registry."
 * identifier[grid].system = $nmdp-id-grid
-* identifier[grid].value = "99D0BA02660443B585D525525EB3F2D2"
+* identifier[grid].value = "6939DKM001392612726"
 * identifier[sourceId].system = $nmdp-id-source-id
 * identifier[sourceId].value = "SRC-77412"
 * name[0].family = "Reynolds"

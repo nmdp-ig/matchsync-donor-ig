@@ -6,9 +6,11 @@ This Implementation Guide defines the FHIR profiles for representing hematopoiet
 
 The Donor Patient IG covers:
 
-- **Donor demographics** — name, date of birth, gender, race, ethnicity
-- **Donor identifiers** — NMDP Donor ID, GRID (Global Registration Identifier for Donors)
-- **Donor status** — active, inactive, deferred, unavailable
+- **Donor demographics** — Date of Birth, Gender, Race, Ethnicity, HLA, Blood Type, Abo/Rh/CMV, Weight
+- **Cord Blood Unit demographics** — Date of Birth, Gender, Race, Ethnicity, HLA, Blood Type, ABO/Rh/CMV, Hemoglobin
+- **Donor identifiers** — Donor ID (source-id), GRID (Global Registration Identifier for Donors), ION ID (Issuing Organization Number)
+- **CBU identifiers** — Registry ID, CBU Source ID, CBB (Cord Blood Bank) ID
+- **Donor/CBU status** — active, inactive, deferred, unavailable
 
 ## Profiles
 

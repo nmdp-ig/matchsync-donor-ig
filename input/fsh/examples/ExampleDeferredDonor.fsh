@@ -4,7 +4,7 @@ Usage: #example
 Title: "Example Deferred Donor"
 Description: "A donor who is temporarily unavailable (e.g., post-collection)."
 * identifier[grid].system = $nmdp-id-grid
-* identifier[grid].value = "A1B2C3D4E5F60718293A4B5C6D7E8F90"
+* identifier[grid].value = "3553DKM007655109283"
 * identifier[sourceId].system = $nmdp-id-source-id
 * identifier[sourceId].value = "SRC-76543"
 * name[0].family = "Chen"

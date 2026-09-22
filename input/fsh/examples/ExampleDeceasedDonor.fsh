@@ -4,7 +4,7 @@ Usage: #example
 Title: "Example Deceased Donor"
 Description: "A donor who is deceased, demonstrating the donor-status extension with Permanently Unavailable."
 * identifier[grid].system = $nmdp-id-grid
-* identifier[grid].value = "3F7A1C9E5B2D8046AF13CE79B0D4E2A1"
+* identifier[grid].value = "3553DKM004182337541"
 * identifier[sourceId].system = $nmdp-id-source-id
 * identifier[sourceId].value = "SRC-55123"
 * name[0].family = "Johansson"
