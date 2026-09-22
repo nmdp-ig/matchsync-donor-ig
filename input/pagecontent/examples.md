@@ -21,8 +21,8 @@ This page lists the example instances included in the NMDP Donor Patient IG and 
 
 This example demonstrates a fully conformant NMDP donor Patient resource including:
 
-- **NMDP Donor ID** (`1234567`) — the required registry identifier
-- **GRID** (`99D0BA02660443B585D525525EB3F2D2`) — the optional NMDP global identifier
+- **GRID** (`6939DKM001392612726`) — the required NMDP global donor identifier
+- **Donor ID / source-id** (`SRC-77412`) — the NMDP donor source identifier
 - **Demographics** — name, gender, and date of birth (all required by the profile)
 - **Race/Ethnicity** — US Core race and ethnicity extensions
 
@@ -38,13 +38,13 @@ This example demonstrates a donor who is temporarily deferred:
 
 ### ExampleDonorNoGrid
 
-This example demonstrates a newly registered donor who has not yet been assigned a GRID:
+This example demonstrates a donor identified by GRID with no donor source ID yet assigned:
 
-- **NMDP Donor ID only** — no GRID slice present
+- **GRID only** — no source-id slice present
 - **Donor Status** — `#active`
 - **Communication** — English language preference
 
-This is common for donors early in the registration process before international identifiers are assigned.
+This is common for donors early in the registration process before a source ID is assigned.
 
 ### ExampleDeceasedDonor
 
@@ -52,7 +52,7 @@ This example demonstrates the `deceased[x]` element:
 
 - **deceasedDateTime** — date of death (`2025-06-15`)
 - **Donor Status** — `#unavailable`
-- **Both identifiers** — NMDP Donor ID and GRID present
+- **Both identifiers** — GRID and Donor ID (source-id) present
 
 ### ExampleDonorOrder
 

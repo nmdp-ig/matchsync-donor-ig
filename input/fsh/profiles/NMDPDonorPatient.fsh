@@ -16,7 +16,7 @@ Description: "A profile representing a hematopoietic cell donor registered in th
 * identifier[grid].system = $nmdp-id-grid
 * identifier[grid].value 1..1
 * identifier[grid] ^short = "NMDP GRID (Global Registration Identifier for Donors)"
-* identifier[grid] ^definition = "The NMDP GRID identifier that uniquely identifies a donor. A 32-character uppercase alphanumeric string (0-9 and A-F, no dashes or spaces), e.g. 99D0BA02660443B585D525525EB3F2D2. System: http://nmdp.org/identifier/grid"
+* identifier[grid] ^definition = "The NMDP GRID identifier that uniquely identifies a donor. A 19-character ISBT 128 identifier composed of a 4-digit Issuing Organization Number (ION), a donor registration number, and check characters, e.g. 6939DKM001392612726. System: http://nmdp.org/identifier/grid"
 * identifier[sourceId].system 1..1
 * identifier[sourceId].system = $nmdp-id-source-id
 * identifier[sourceId].value 1..1
