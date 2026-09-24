@@ -1,6 +1,8 @@
 # Capability Statement
 
-The [NMDP Donor API Capability Statement](CapabilityStatement-nmdp-donor-api.html) describes the expected capabilities of a server implementing the NMDP Donor API FHIR interface. The server provides read and search access to donor demographics, HLA typing results, and order information for authorized transplant centers.
+The [NMDP Donor API Capability Statement](CapabilityStatement-NMDPDonorAPICapabilityStatement.html) describes the expected capabilities of a server implementing the NMDP Donor API FHIR interface. The server provides read and search access to donor demographics, HLA typing results, and order information for authorized transplant centers.
+
+The summary below mirrors that generated artifact so the key capabilities live on this page. See the [full generated Capability Statement](CapabilityStatement-NMDPDonorAPICapabilityStatement.html) for the complete machine-readable definition (also linked from the Artifacts tab).
 
 ## Server Summary
 
