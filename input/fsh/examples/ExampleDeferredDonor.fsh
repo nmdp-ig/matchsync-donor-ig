@@ -3,10 +3,8 @@ InstanceOf: NMDPDonorPatient
 Usage: #example
 Title: "Example Deferred Donor"
 Description: "A donor who is temporarily unavailable (e.g., post-collection)."
-* identifier[grid].system = $nmdp-id-grid
-* identifier[grid].value = "3553DKM007655109283"
-* identifier[sourceId].system = $nmdp-id-source-id
-* identifier[sourceId].value = "SRC-76543"
+* identifier.system = $nmdp-id-grid
+* identifier.value = "3553DKM007655109283"
 * name[0].family = "Chen"
 * name[0].given[0] = "Lisa"
 * gender = #female

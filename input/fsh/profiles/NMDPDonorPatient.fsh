@@ -4,24 +4,15 @@ Id: nmdp-donor-patient
 Title: "NMDP Donor Patient"
 Description: "A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value."
 
-* identifier 1..* MS
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.description = "Slice on identifier system"
-* identifier contains
-    grid 1..1 MS and
-    sourceId 0..1 MS
-* identifier[grid].system 1..1
-* identifier[grid].system = $nmdp-id-grid
-* identifier[grid].value 1..1
-* identifier[grid] ^short = "NMDP GRID (Global Registration Identifier for Donors)"
-* identifier[grid] ^definition = "The NMDP GRID identifier that uniquely identifies a donor. A 19-character ISBT 128 identifier composed of a 4-digit Issuing Organization Number (ION), a donor registration number, and check characters, e.g. 6939DKM001392612726. System: http://nmdp.org/identifier/grid"
-* identifier[sourceId].system 1..1
-* identifier[sourceId].system = $nmdp-id-source-id
-* identifier[sourceId].value 1..1
-* identifier[sourceId] ^short = "Donor source ID"
-* identifier[sourceId] ^definition = "The source identifier for the donor in the originating registry. System: http://nmdp.org/identifier/source-id"
+// Remove US Core Patient extensions not used by this profile
+* extension[tribalAffiliation] 0..0
+* extension[birthsex] 0..0
+* extension[sex] 0..0
+* extension[genderIdentity] 0..0
+
+* identifier 1..1 MS
+* identifier ^short = "Donor identifier"
+* identifier ^definition = "An identifier for the donor. May be any of the supported NMDP identifiers (e.g. GRID, Donor source ID). The identifier system distinguishes which identifier type is present."
 
 * gender 1..1 MS
 * birthDate 1..1 MS

@@ -3,10 +3,8 @@ InstanceOf: NMDPDonorPatient
 Usage: #example
 Title: "Example NMDP Donor"
 Description: "An example donor registered in the NMDP registry."
-* identifier[grid].system = $nmdp-id-grid
-* identifier[grid].value = "6939DKM001392612726"
-* identifier[sourceId].system = $nmdp-id-source-id
-* identifier[sourceId].value = "SRC-77412"
+* identifier.system = $nmdp-id-grid
+* identifier.value = "6939DKM001392612726"
 * name[0].family = "Reynolds"
 * name[0].given[0] = "Marcus"
 * gender = #male
