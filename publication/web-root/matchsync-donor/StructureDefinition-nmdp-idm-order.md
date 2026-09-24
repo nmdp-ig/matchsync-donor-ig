@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-idm-order | *Version*:0.1.0 |
-| Draft as of 2026-09-22 | *Computable Name*:NMDPIDMOrder |
+| Draft as of 2026-09-24 | *Computable Name*:NMDPIDMOrder |
 
  
 A profile for Infectious Disease Marker (IDM) orders. IDM testing is required for donor clearance before stem cell collection. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-idm-order.csv),
   "name" : "NMDPIDMOrder",
   "title" : "NMDP IDM Order",
   "status" : "draft",
-  "date" : "2026-09-22T13:14:09+00:00",
+  "date" : "2026-09-24T13:17:04+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

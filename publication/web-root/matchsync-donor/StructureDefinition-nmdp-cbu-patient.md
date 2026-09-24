@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-cbu-patient | *Version*:0.1.0 |
-| Draft as of 2026-09-22 | *Computable Name*:NMDPCBUPatient |
+| Draft as of 2026-09-24 | *Computable Name*:NMDPCBUPatient |
 
  
 A profile representing a Cord Blood Unit (CBU) in the NMDP registry. CBUs are identified by having a cbu-source-id identifier (no GRID). CBUs are not tied to a real person — they represent a cord blood unit. The Patient.id should be the CBU source ID. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-cbu-patient.csv
   "name" : "NMDPCBUPatient",
   "title" : "NMDP Cord Blood Unit (CBU) Patient",
   "status" : "draft",
-  "date" : "2026-09-22T13:14:09+00:00",
+  "date" : "2026-09-24T13:17:04+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

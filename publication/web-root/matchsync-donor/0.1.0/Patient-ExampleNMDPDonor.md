@@ -14,7 +14,6 @@ Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#6939DKM0
 
 | | |
 | :--- | :--- |
-| Other Id: | `http://nmdp.org/identifier/source-id`/SRC-77412 |
 | Links: | * Managing Organization: [Organization Minneapolis Blood Center](Organization-ExampleNMDPDonorCenter.md)
  |
 | US Core Ethnicity Extension: | * ombCategory: [CDC Race and Ethnicity: 2186-5](http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2186-5) (Not Hispanic or Latino)
@@ -73,10 +72,6 @@ Marcus Reynolds Male, DoB: 1985-03-15 ( http://nmdp.org/identifier/grid#6939DKM0
   "identifier" : [{
     "system" : "http://nmdp.org/identifier/grid",
     "value" : "6939DKM001392612726"
-  },
-  {
-    "system" : "http://nmdp.org/identifier/source-id",
-    "value" : "SRC-77412"
   }],
   "name" : [{
     "family" : "Reynolds",

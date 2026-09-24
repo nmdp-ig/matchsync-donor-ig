@@ -1,10 +1,10 @@
 NMDPDonorPatient : Validation Results
 =========================================
 
-err = 23, warn = 82, info = 29
+err = 23, warn = 79, info = 27
 IG Publisher Version: 2.3.3 Out of date - current version is 2.3.4
-Generated Tue Sep 22 13:33:44 UTC 2026. FHIR version 4.0.1 for nmdp.fhir.donor-patient#0.1.0 (canonical = http://fhir.nmdp.org/ig/donor-patient)
- Build Errors : 1 / 4 / 0
+Generated Thu Sep 24 13:19:05 UTC 2026. FHIR version 4.0.1 for nmdp.fhir.donor-patient#0.1.0 (canonical = http://fhir.nmdp.org/ig/donor-patient)
+ Build Errors : 0 / 4 / 0
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CapabilityStatement-NMDPDonorAPICapabilityStatement : 3 / 0 / 2
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-center-type : 0 / 2 / 1
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-cmv-status : 2 / 2 / 1
@@ -23,11 +23,11 @@ Generated Tue Sep 22 13:33:44 UTC 2026. FHIR version 4.0.1 for nmdp.fhir.donor-p
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Observation-ExampleHLAGenotypeDRB1 : 0 / 3 / 1
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Organization-ExampleNMDPDonorCenter : 0 / 1 / 1
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleCBUPatient : 0 / 3 / 1
- /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleDeceasedDonor : 0 / 2 / 1
- /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleDeferredDonor : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleDeceasedDonor : 0 / 1 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleDeferredDonor : 0 / 1 / 1
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleDonorNoGrid : 0 / 1 / 1
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleMatchSyncDonorPatient : 0 / 0 / 1
- /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleNMDPDonor : 0 / 2 / 1
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleNMDPDonor : 0 / 1 / 1
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/Patient-ExampleRecipientPatient : 0 / 2 / 1
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ServiceRequest-ExampleCBUOrder : 0 / 1 / 1
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ServiceRequest-ExampleDonorOrder : 0 / 1 / 1
@@ -42,7 +42,7 @@ Generated Tue Sep 22 13:33:44 UTC 2026. FHIR version 4.0.1 for nmdp.fhir.donor-p
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-cbu-patient : 0 / 0 / 4
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-cmv-observation : 2 / 0 / 2
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-donor-order : 0 / 1 / 4
- /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-donor-patient : 0 / 0 / 4
+ /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-donor-patient : 0 / 0 / 2
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-donor-specimen : 0 / 3 / 2
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-hemoglobin-observation : 0 / 0 / 2
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/StructureDefinition-nmdp-hla-genotype : 0 / 2 / 2
@@ -59,7 +59,6 @@ Generated Tue Sep 22 13:33:44 UTC 2026. FHIR version 4.0.1 for nmdp.fhir.donor-p
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/ValueSet-nmdp-specimen-type-vs : 0 / 2 / 1
 </table>
 == n/a ==
-ERROR: capability-statement.html#/html/body/div/div/div/div/div/p/a at Line 183, column 9: The link 'CapabilityStatement-nmdp-donor-api.html' for "NMDP Donor API Capability Statement" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
@@ -145,16 +144,13 @@ WARNING: Patient/ExampleCBUPatient: Patient.identifier[1].system: No definition 
 WARNING: Patient/ExampleCBUPatient: Patient.identifier[2].system: No definition could be found for URL value 'http://nmdp.org/identifier/cbb-id'
 == fsh-generated/resources/Patient-ExampleDeceasedDonor.json ==
 WARNING: Patient/ExampleDeceasedDonor: Patient.identifier[0].system: No definition could be found for URL value 'http://nmdp.org/identifier/grid'
-WARNING: Patient/ExampleDeceasedDonor: Patient.identifier[1].system: No definition could be found for URL value 'http://nmdp.org/identifier/source-id'
 == fsh-generated/resources/Patient-ExampleDeferredDonor.json ==
 WARNING: Patient/ExampleDeferredDonor: Patient.identifier[0].system: No definition could be found for URL value 'http://nmdp.org/identifier/grid'
-WARNING: Patient/ExampleDeferredDonor: Patient.identifier[1].system: No definition could be found for URL value 'http://nmdp.org/identifier/source-id'
 == fsh-generated/resources/Patient-ExampleDonorNoGrid.json ==
 WARNING: Patient/ExampleDonorNoGrid: Patient.identifier[0].system: No definition could be found for URL value 'http://nmdp.org/identifier/grid'
 == fsh-generated/resources/Patient-ExampleMatchSyncDonorPatient.json ==
 == fsh-generated/resources/Patient-ExampleNMDPDonor.json ==
 WARNING: Patient/ExampleNMDPDonor: Patient.identifier[0].system: No definition could be found for URL value 'http://nmdp.org/identifier/grid'
-WARNING: Patient/ExampleNMDPDonor: Patient.identifier[1].system: No definition could be found for URL value 'http://nmdp.org/identifier/source-id'
 == fsh-generated/resources/Patient-ExampleRecipientPatient.json ==
 WARNING: Patient/ExampleRecipientPatient: Patient.identifier[0].system: No definition could be found for URL value 'http://nmdp.org/identifier/rid'
 WARNING: Patient/ExampleRecipientPatient: Patient.identifier[1].system: No definition could be found for URL value 'http://nmdp.org/identifier/local-id'
@@ -195,8 +191,6 @@ INFORMATION: StructureDefinition/nmdp-donor-order: StructureDefinition.different
 INFORMATION: StructureDefinition/nmdp-donor-order: StructureDefinition.snapshot.element[9].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: Resource: The resource StructureDefinition/nmdp-donor-order could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-nmdp-donor-patient.json ==
-INFORMATION: StructureDefinition/nmdp-donor-patient: StructureDefinition.differential.element[2].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/nmdp-donor-patient: StructureDefinition.snapshot.element[16].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: Resource: The resource StructureDefinition/nmdp-donor-patient could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-nmdp-donor-specimen.json ==
 WARNING: StructureDefinition/nmdp-donor-specimen: StructureDefinition.snapshot.element[28].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v2-0916'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.4.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v2-0916' to 'http://terminology.hl7.org/ValueSet/v2-0916|3.0.0'

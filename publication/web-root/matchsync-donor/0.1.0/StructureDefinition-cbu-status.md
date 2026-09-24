@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/cbu-status | *Version*:0.1.0 |
-| Draft as of 2026-09-22 | *Computable Name*:CBUStatus |
+| Draft as of 2026-09-24 | *Computable Name*:CBUStatus |
 
 The availability status of a Cord Blood Unit (CBU) in the NMDP registry. Conveyed as a simple string value (e.g., 'Available').
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-cbu-status.csv), [Ex
   "name" : "CBUStatus",
   "title" : "CBU Status",
   "status" : "draft",
-  "date" : "2026-09-22T13:14:09+00:00",
+  "date" : "2026-09-24T13:17:04+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

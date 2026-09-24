@@ -14,7 +14,6 @@ Lisa Chen Female, DoB: 1992-08-22 ( http://nmdp.org/identifier/grid#3553DKM00765
 
 | | |
 | :--- | :--- |
-| Other Id: | `http://nmdp.org/identifier/source-id`/SRC-76543 |
 | US Core Ethnicity Extension: | * ombCategory: [CDC Race and Ethnicity: 2135-2](http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2135-2) (Hispanic or Latino)
 * text: Hispanic or Latino
  |
@@ -71,10 +70,6 @@ Lisa Chen Female, DoB: 1992-08-22 ( http://nmdp.org/identifier/grid#3553DKM00765
   "identifier" : [{
     "system" : "http://nmdp.org/identifier/grid",
     "value" : "3553DKM007655109283"
-  },
-  {
-    "system" : "http://nmdp.org/identifier/source-id",
-    "value" : "SRC-76543"
   }],
   "name" : [{
     "family" : "Chen",

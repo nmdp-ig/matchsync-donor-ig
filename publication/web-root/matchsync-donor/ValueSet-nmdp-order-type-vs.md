@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-order-type-vs | *Version*:0.1.0 |
-| Active as of 2026-09-22 | *Computable Name*:NMDPOrderTypeVS |
+| Active as of 2026-09-24 | *Computable Name*:NMDPOrderTypeVS |
 
  
 All codes from the NMDP Order Type code system. 
@@ -51,7 +51,7 @@ All codes from the NMDP Order Type code system.
   "name" : "NMDPOrderTypeVS",
   "title" : "NMDP Order Type Value Set",
   "status" : "active",
-  "date" : "2026-09-22T13:14:09+00:00",
+  "date" : "2026-09-24T13:17:04+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

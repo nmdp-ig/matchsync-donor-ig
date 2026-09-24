@@ -14,7 +14,6 @@ Erik Johansson Male, DoB: 1970-04-10 ( http://nmdp.org/identifier/grid#3553DKM00
 
 | | |
 | :--- | :--- |
-| Other Id: | `http://nmdp.org/identifier/source-id`/SRC-55123 |
 | [Donor Status](StructureDefinition-donor-status.md) | Permanently Unavailable |
 
 
@@ -35,10 +34,6 @@ Erik Johansson Male, DoB: 1970-04-10 ( http://nmdp.org/identifier/grid#3553DKM00
   "identifier" : [{
     "system" : "http://nmdp.org/identifier/grid",
     "value" : "3553DKM004182337541"
-  },
-  {
-    "system" : "http://nmdp.org/identifier/source-id",
-    "value" : "SRC-55123"
   }],
   "name" : [{
     "family" : "Johansson",

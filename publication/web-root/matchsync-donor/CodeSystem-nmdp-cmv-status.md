@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/CodeSystem/cmv-status | *Version*:0.1.0 |
-| Active as of 2026-09-22 | *Computable Name*:NMDPCMVStatusCS |
+| Active as of 2026-09-24 | *Computable Name*:NMDPCMVStatusCS |
 
  
 Text-based status codes for CMV IgG antibody presence in donor and CBU testing. 
@@ -31,7 +31,7 @@ Text-based status codes for CMV IgG antibody presence in donor and CBU testing.
   "name" : "NMDPCMVStatusCS",
   "title" : "NMDP CMV Status Code System",
   "status" : "active",
-  "date" : "2026-09-22T13:14:09+00:00",
+  "date" : "2026-09-24T13:17:04+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

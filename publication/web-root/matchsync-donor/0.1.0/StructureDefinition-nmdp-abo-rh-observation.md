@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-abo-rh-observation | *Version*:0.1.0 |
-| Draft as of 2026-09-22 | *Computable Name*:NMDPABORhObservation |
+| Draft as of 2026-09-24 | *Computable Name*:NMDPABORhObservation |
 
  
 An observation representing a donor or CBU's ABO and Rh blood group type. Uses LOINC 882-1 and valueCodeableConcept with codes from LOINC Answer List LL2972-9. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-abo-rh-observat
   "name" : "NMDPABORhObservation",
   "title" : "NMDP ABO/Rh Observation",
   "status" : "draft",
-  "date" : "2026-09-22T13:14:09+00:00",
+  "date" : "2026-09-24T13:17:04+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

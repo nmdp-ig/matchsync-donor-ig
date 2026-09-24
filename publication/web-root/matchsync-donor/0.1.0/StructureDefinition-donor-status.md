@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/donor-status | *Version*:0.1.0 |
-| Draft as of 2026-09-22 | *Computable Name*:DonorStatus |
+| Draft as of 2026-09-24 | *Computable Name*:DonorStatus |
 
 The registration status of a donor in the NMDP registry. Conveyed as a simple string value (e.g., 'Available', 'Temporarily Unavailable', 'Active', 'Permanently Unavailable').
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-donor-status.csv), [
   "name" : "DonorStatus",
   "title" : "Donor Status",
   "status" : "draft",
-  "date" : "2026-09-22T13:14:09+00:00",
+  "date" : "2026-09-24T13:17:04+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

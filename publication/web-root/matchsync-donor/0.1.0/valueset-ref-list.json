@@ -84,8 +84,8 @@
     "systems" : ["http://fhir.nmdp.org/CodeSystem/order-type"],
     "uses" : {
     },
-    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order",
-    "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order"
+    "StructureDefinition-nmdp-donor-order.html" : "NMDP Donor Order",
+    "StructureDefinition-nmdp-cbu-order.html" : "NMDP CBU Order"
   },
   {
     "url" : "http://fhir.nmdp.org/ig/donor-patient/ValueSet/nmdp-specimen-type-vs",

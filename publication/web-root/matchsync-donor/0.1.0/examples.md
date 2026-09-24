@@ -9,6 +9,8 @@
 
 This page lists the example instances included in the NMDP Donor Patient IG and describes how to use them for validation testing.
 
+For a representative **response** returned by the Donor API (a search-result `Bundle`, which clients receive rather than send), see [Example Donor API Response](#example-donor-api-response) at the bottom of this page.
+
 ## Example Instances
 
 | | | |
@@ -168,4 +170,461 @@ Key requirements:
 * `Usage: #example` marks it as an example (included in the IG narrative but not as a conformance resource)
 * All required elements per the profile must be populated
 * Use aliases from `aliases.fsh` for system URIs
+
+## Example Donor API Response
+
+This section shows a representative **response** returned by the NMDP Donor API for a single donor search. It is provided purely to illustrate the shape of the data a client receives.
+
+> **This is API output, not input.** Clients do **not** send this Bundle to the API. It is an example of what the Donor API returns. A client issues a search (for example, a `GET` against the Patient endpoint with the appropriate search parameters) and the server responds with a `Bundle` of type `collection` like the one below. Do not treat any part of this example as a required request payload.
+
+### What the response contains
+
+The response is a FHIR `Bundle` (`type: collection`). In this condensed example it carries **two donor Patients**, each accompanied by the Observations that describe that donor:
+
+* **Donor `1ABCD2345EF6GH7`** — an adult male donor, with ABO/Rh, CMV, body weight, and HLA-A/B/DRB1 typing results.
+* **Donor `9ZYXW8765VU4TS3`** — an adult female donor, with ABO/Rh, CMV, body weight, and HLA-A/B/DRB1 typing results.
+
+Each `Observation` references its donor through the entry `fullUrl` using `subject.reference`. A full production response may contain additional donors, Cord Blood Units, recipients, and order (`ServiceRequest`) resources; those have been omitted here to keep the example focused on the donor data.
+
+### Example response Bundle
+
+```
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:22222222-2222-2222-2222-222222222222",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1ABCD2345EF6GH7",
+        "identifier": [
+          {
+            "system": "http://nmdp.org/identifier/grid",
+            "value": "1ABCD2345EF6GH7"
+          },
+          {
+            "system": "http://nmdp.org/identifier/source-id",
+            "value": "DON-SRC-4401"
+          }
+        ],
+        "birthDate": "1994-06-12",
+        "gender": "male",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.nmdp.org/StructureDefinition/donor-status",
+            "valueString": "available"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-2222-2222-222222222222a1",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "882-1",
+              "display": "ABO and Rh group [Type] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:22222222-2222-2222-2222-222222222222"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA21325-8",
+              "display": "A Pos"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-2222-2222-222222222222a2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22244-8",
+              "display": "CMV IgG Ab [Presence] in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:22222222-2222-2222-2222-222222222222"
+        },
+        "valueCodeableConcept": {
+          "text": "Negative"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-2222-2222-222222222222a3",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:22222222-2222-2222-2222-222222222222"
+        },
+        "valueQuantity": {
+          "value": 82,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-2222-2222-222222222222b1",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57290-9",
+              "display": "HLA-A [Type] by High resolution"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:22222222-2222-2222-2222-222222222222"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://glstring.org",
+              "code": "HLA-A*01:01+HLA-A*02:01"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-2222-2222-222222222222b2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57291-7",
+              "display": "HLA-B [Type] by High resolution"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:22222222-2222-2222-2222-222222222222"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://glstring.org",
+              "code": "HLA-B*07:02+HLA-B*08:01"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-2222-2222-222222222222b3",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57293-3",
+              "display": "HLA-DRB1 [Type] by High resolution"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:22222222-2222-2222-2222-222222222222"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://glstring.org",
+              "code": "HLA-DRB1*15:01+HLA-DRB1*03:01"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44444444-4444-4444-4444-444444444444",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "9ZYXW8765VU4TS3",
+        "identifier": [
+          {
+            "system": "http://nmdp.org/identifier/grid",
+            "value": "9ZYXW8765VU4TS3"
+          },
+          {
+            "system": "http://nmdp.org/identifier/source-id",
+            "value": "DON-SRC-4402"
+          }
+        ],
+        "birthDate": "1988-11-30",
+        "gender": "female",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2054-5",
+                  "display": "Black or African American"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Black or African American"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.nmdp.org/StructureDefinition/donor-status",
+            "valueString": "available"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44444444-4444-4444-4444-444444444444a1",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "882-1",
+              "display": "ABO and Rh group [Type] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:44444444-4444-4444-4444-444444444444"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA21321-7",
+              "display": "O Pos"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44444444-4444-4444-4444-444444444444a2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22244-8",
+              "display": "CMV IgG Ab [Presence] in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:44444444-4444-4444-4444-444444444444"
+        },
+        "valueCodeableConcept": {
+          "text": "Positive"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44444444-4444-4444-4444-444444444444a3",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:44444444-4444-4444-4444-444444444444"
+        },
+        "valueQuantity": {
+          "value": 65,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44444444-4444-4444-4444-444444444444b1",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57290-9",
+              "display": "HLA-A [Type] by High resolution"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:44444444-4444-4444-4444-444444444444"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://glstring.org",
+              "code": "HLA-A*03:01+HLA-A*24:02"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44444444-4444-4444-4444-444444444444b2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57291-7",
+              "display": "HLA-B [Type] by High resolution"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:44444444-4444-4444-4444-444444444444"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://glstring.org",
+              "code": "HLA-B*15:01+HLA-B*44:02"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44444444-4444-4444-4444-444444444444b3",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57293-3",
+              "display": "HLA-DRB1 [Type] by High resolution"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:44444444-4444-4444-4444-444444444444"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://glstring.org",
+              "code": "HLA-DRB1*04:01+HLA-DRB1*07:01"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+
+```
 

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient | *Version*:0.1.0 |
-| Draft as of 2026-09-22 | *Computable Name*:NMDPDonorPatient |
+| Draft as of 2026-09-24 | *Computable Name*:NMDPDonorPatient |
 
  
 A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-patient.c
   "name" : "NMDPDonorPatient",
   "title" : "NMDP Donor Patient",
   "status" : "draft",
-  "date" : "2026-09-22T13:14:09+00:00",
+  "date" : "2026-09-24T13:17:04+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -101,6 +101,30 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-patient.c
       "path" : "Patient"
     },
     {
+      "id" : "Patient.extension:tribalAffiliation",
+      "path" : "Patient.extension",
+      "sliceName" : "tribalAffiliation",
+      "max" : "0"
+    },
+    {
+      "id" : "Patient.extension:birthsex",
+      "path" : "Patient.extension",
+      "sliceName" : "birthsex",
+      "max" : "0"
+    },
+    {
+      "id" : "Patient.extension:sex",
+      "path" : "Patient.extension",
+      "sliceName" : "sex",
+      "max" : "0"
+    },
+    {
+      "id" : "Patient.extension:genderIdentity",
+      "path" : "Patient.extension",
+      "sliceName" : "genderIdentity",
+      "max" : "0"
+    },
+    {
       "id" : "Patient.extension:donorStatus",
       "path" : "Patient.extension",
       "sliceName" : "donorStatus",
@@ -116,44 +140,9 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-patient.c
     {
       "id" : "Patient.identifier",
       "path" : "Patient.identifier",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "pattern",
-          "path" : "system"
-        }],
-        "description" : "Slice on identifier system",
-        "rules" : "open"
-      }
-    },
-    {
-      "id" : "Patient.identifier:grid",
-      "path" : "Patient.identifier",
-      "sliceName" : "grid",
-      "short" : "NMDP GRID (Global Registration Identifier for Donors)",
-      "definition" : "The NMDP GRID identifier that uniquely identifies a donor. A 19-character ISBT 128 identifier composed of a 4-digit Issuing Organization Number (ION), a donor registration number, and check characters, e.g. 6939DKM001392612726. System: http://nmdp.org/identifier/grid",
-      "min" : 1,
-      "max" : "1",
-      "mustSupport" : true
-    },
-    {
-      "id" : "Patient.identifier:grid.system",
-      "path" : "Patient.identifier.system",
-      "patternUri" : "http://nmdp.org/identifier/grid"
-    },
-    {
-      "id" : "Patient.identifier:sourceId",
-      "path" : "Patient.identifier",
-      "sliceName" : "sourceId",
-      "short" : "Donor source ID",
-      "definition" : "The source identifier for the donor in the originating registry. System: http://nmdp.org/identifier/source-id",
-      "min" : 0,
-      "max" : "1",
-      "mustSupport" : true
-    },
-    {
-      "id" : "Patient.identifier:sourceId.system",
-      "path" : "Patient.identifier.system",
-      "patternUri" : "http://nmdp.org/identifier/source-id"
+      "short" : "Donor identifier",
+      "definition" : "An identifier for the donor. May be any of the supported NMDP identifiers (e.g. GRID, Donor source ID). The identifier system distinguishes which identifier type is present.",
+      "max" : "1"
     },
     {
       "id" : "Patient.birthDate",
