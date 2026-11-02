@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/StructureDefinition/nmdp-donor-patient | *Version*:0.1.0 |
-| Draft as of 2026-09-24 | *Computable Name*:NMDPDonorPatient |
+| Draft as of 2026-11-02 | *Computable Name*:NMDPDonorPatient |
 
  
 A profile representing a hematopoietic cell donor registered in the NMDP registry. Donors are identified by having an NMDP GRID identifier. The Patient.id should be the GRID value. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-nmdp-donor-patient.c
   "name" : "NMDPDonorPatient",
   "title" : "NMDP Donor Patient",
   "status" : "draft",
-  "date" : "2026-09-24T13:17:04+00:00",
+  "date" : "2026-11-02T20:16:31+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",

@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.nmdp.org/ig/donor-patient/ImplementationGuide/nmdp.fhir.donor-patient | *Version*:0.1.0 |
-| Draft as of 2026-09-24 | *Computable Name*:NMDPDonorPatient |
+| Draft as of 2026-11-02 | *Computable Name*:NMDPDonorPatient |
 
 # NMDP Donor Patient Implementation Guide
 
@@ -56,7 +56,7 @@ This IG depends on:
   "name" : "NMDPDonorPatient",
   "title" : "NMDP Donor Patient Implementation Guide",
   "status" : "draft",
-  "date" : "2026-09-24T13:17:04+00:00",
+  "date" : "2026-11-02T20:16:31+00:00",
   "publisher" : "National Marrow Donor Program (NMDP)",
   "contact" : [{
     "name" : "National Marrow Donor Program (NMDP)",
@@ -88,7 +88,7 @@ This IG depends on:
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.4.0"
+    "version" : "7.5.0"
   },
   {
     "id" : "hl7ext",
@@ -98,7 +98,7 @@ This IG depends on:
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.3.0"
+    "version" : "5.4.0"
   },
   {
     "id" : "hl7_fhir_us_core",

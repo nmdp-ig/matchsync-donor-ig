@@ -85,36 +85,59 @@ You will typically be given values shaped like the following. NMDP supplies the 
 
 | | |
 | :--- | :--- |
-| Token endpoint | `https://nmdp.okta.com/oauth2/<authz-server-id>/v1/token` |
-| Donor API base URL | `https://api.nmdp.org/donor/fhir/r4` |
+| Token endpoint | `https://oktapreview.nmdp.org/oauth2/aus2gkqgfiffGB4VY0h8/v1/token` |
+| Donor API base URL | `https://int-api.nmdp.org/int_msync_donor/1.0` |
 | Client ID | `0oa<random>` |
 | Client secret | (secret string — store securely) |
-| Scope | `system/Patient.rs system/Observation.rs system/ServiceRequest.rs` |
+| Scope | `int_matchsync_donor_detail_read` |
 
 Store the `client_secret` in a secrets manager or equivalent secure store. Never embed it in source control, client-side code, or logs.
+
+### Environment URLs and Scopes
+
+NMDP provides two environments: a **Preproduction (Preprod)** environment for integration and testing, and a **Production (Prod)** environment for live operations. Each has its own token endpoint, Donor API base URL, and credentials — a `client_id` and `client_secret` issued for one environment do **not** work against the other. Complete and validate your integration against Preprod before requesting Production access.
+
+The Donor API base URL and the granted scope differ per environment. Use the Preprod values for integration and testing, and the Production values once NMDP grants you Production access.
+
+#### Preproduction (Preprod)
+
+| | |
+| :--- | :--- |
+| Token endpoint | `https://oktapreview.nmdp.org/oauth2/aus2gkqgfiffGB4VY0h8/v1/token` |
+| Donor API base URL | `https://int-api.nmdp.org/int_msync_donor/1.0` |
+| Scope | `int_matchsync_donor_detail_read` |
+
+#### Production (Prod)
+
+| | |
+| :--- | :--- |
+| Donor API base URL | **Not yet available — NMDP will provide the Production URL during onboarding.** |
+| Scope | `p_matchsync_donor_detail_read` |
+
+The Okta token endpoint and your `client_id` / `client_secret` are issued separately per environment during onboarding; a credential issued for Preprod does not work against Production.
 
 ## Step 2 — Request an Access Token
 
 Send a `POST` to the Okta token endpoint using the Client Credentials grant. Client credentials are sent using HTTP Basic authentication — the header value is `Basic ` followed by the base64 encoding of `client_id:client_secret`.
 
 ```
-POST /oauth2/<authz-server-id>/v1/token HTTP/1.1
-Host: nmdp.okta.com
+POST /oauth2/aus2gkqgfiffGB4VY0h8/v1/token HTTP/1.1
+Host: oktapreview.nmdp.org
 Authorization: Basic <base64(client_id:client_secret)>
 Content-Type: application/x-www-form-urlencoded
 
-grant_type=client_credentials&scope=system/Patient.rs system/Observation.rs system/ServiceRequest.rs
+grant_type=client_credentials&scope=int_matchsync_donor_detail_read
 
 ```
 
 Equivalent `curl` request:
 
 ```
-curl -X POST "https://nmdp.okta.com/oauth2/<authz-server-id>/v1/token" \
+curl -X POST "https://oktapreview.nmdp.org/oauth2/aus2gkqgfiffGB4VY0h8/v1/token" \
   -u "<client_id>:<client_secret>" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "grant_type=client_credentials" \
-  --data-urlencode "scope=system/Patient.rs system/Observation.rs system/ServiceRequest.rs"
+  --data-urlencode "scope=int_matchsync_donor_detail_read"
 
 ```
 
@@ -125,7 +148,7 @@ A successful response returns a bearer token:
   "token_type": "Bearer",
   "expires_in": 3600,
   "access_token": "eyJraWQiOiJ...<jwt>...",
-  "scope": "system/Patient.rs system/Observation.rs system/ServiceRequest.rs"
+  "scope": "int_matchsync_donor_detail_read"
 }
 
 ```
@@ -137,8 +160,8 @@ The `access_token` is a JWT. When decoded, its payload contains the authorizatio
 Include the token as a bearer credential on every request to the Donor API:
 
 ```
-GET /donor/fhir/r4/Patient?identifier=http://terminology.nmdp.org/identifier/donor-id|1234567 HTTP/1.1
-Host: api.nmdp.org
+GET /int_msync_donor/1.0/Patient?identifier=http://terminology.nmdp.org/identifier/donor-id|1234567 HTTP/1.1
+Host: int-api.nmdp.org
 Authorization: Bearer <access_token>
 Accept: application/fhir+json
 
@@ -147,7 +170,7 @@ Accept: application/fhir+json
 Equivalent `curl` request:
 
 ```
-curl "https://api.nmdp.org/donor/fhir/r4/Patient?identifier=http://terminology.nmdp.org/identifier/donor-id|1234567" \
+curl "https://int-api.nmdp.org/int_msync_donor/1.0/Patient?identifier=http://terminology.nmdp.org/identifier/donor-id|1234567" \
   -H "Authorization: Bearer <access_token>" \
   -H "Accept: application/fhir+json"
 

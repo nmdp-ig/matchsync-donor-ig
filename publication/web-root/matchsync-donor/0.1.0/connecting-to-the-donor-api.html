@@ -161,8 +161,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#connecting-to-the-donor-api" id="markdown-toc-connecting-to-the-donor-api">Connecting to the Donor API</a>    <ul>
+      <li><a href="#at-a-glance" id="markdown-toc-at-a-glance">At a Glance</a></li>
+      <li><a href="#how-authorization-works" id="markdown-toc-how-authorization-works">How Authorization Works</a>        <ul>
+          <li><a href="#the-two-claim-model" id="markdown-toc-the-two-claim-model">The Two-Claim Model</a></li>
+        </ul>
+      </li>
+      <li><a href="#connection-flow" id="markdown-toc-connection-flow">Connection Flow</a></li>
+      <li><a href="#step-1--onboard-and-receive-credentials" id="markdown-toc-step-1--onboard-and-receive-credentials">Step 1 — Onboard and Receive Credentials</a>        <ul>
+          <li><a href="#environment-urls-and-scopes" id="markdown-toc-environment-urls-and-scopes">Environment URLs and Scopes</a></li>
+        </ul>
+      </li>
+      <li><a href="#step-2--request-an-access-token" id="markdown-toc-step-2--request-an-access-token">Step 2 — Request an Access Token</a></li>
+      <li><a href="#step-3--call-the-donor-api" id="markdown-toc-step-3--call-the-donor-api">Step 3 — Call the Donor API</a></li>
+      <li><a href="#token-lifecycle-and-reuse" id="markdown-toc-token-lifecycle-and-reuse">Token Lifecycle and Reuse</a></li>
+      <li><a href="#handling-errors" id="markdown-toc-handling-errors">Handling Errors</a></li>
+      <li><a href="#security-requirements-for-transplant-centers" id="markdown-toc-security-requirements-for-transplant-centers">Security Requirements for Transplant Centers</a></li>
+      <li><a href="#related-pages" id="markdown-toc-related-pages">Related Pages</a></li>
+    </ul>
+  </li>
+</ul>
+
 </div>
 <h1 id="connecting-to-the-donor-api">Connecting to the Donor API</h1>
 
@@ -303,11 +324,11 @@ Transplant Center App
   <tbody>
     <tr>
       <td>Token endpoint</td>
-      <td><code class="language-plaintext highlighter-rouge">https://nmdp.okta.com/oauth2/&lt;authz-server-id&gt;/v1/token</code></td>
+      <td><code class="language-plaintext highlighter-rouge">https://oktapreview.nmdp.org/oauth2/aus2gkqgfiffGB4VY0h8/v1/token</code></td>
     </tr>
     <tr>
       <td>Donor API base URL</td>
-      <td><code class="language-plaintext highlighter-rouge">https://api.nmdp.org/donor/fhir/r4</code></td>
+      <td><code class="language-plaintext highlighter-rouge">https://int-api.nmdp.org/int_msync_donor/1.0</code></td>
     </tr>
     <tr>
       <td>Client ID</td>
@@ -319,32 +340,86 @@ Transplant Center App
     </tr>
     <tr>
       <td>Scope</td>
-      <td><code class="language-plaintext highlighter-rouge">system/Patient.rs system/Observation.rs system/ServiceRequest.rs</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int_matchsync_donor_detail_read</code></td>
     </tr>
   </tbody>
 </table>
 
 <p>Store the <code class="language-plaintext highlighter-rouge">client_secret</code> in a secrets manager or equivalent secure store. Never embed it in source control, client-side code, or logs.</p>
 
+<h3 id="environment-urls-and-scopes">Environment URLs and Scopes</h3>
+
+<p>NMDP provides two environments: a <strong>Preproduction (Preprod)</strong> environment for integration and testing, and a <strong>Production (Prod)</strong> environment for live operations. Each has its own token endpoint, Donor API base URL, and credentials — a <code class="language-plaintext highlighter-rouge">client_id</code> and <code class="language-plaintext highlighter-rouge">client_secret</code> issued for one environment do <strong>not</strong> work against the other. Complete and validate your integration against Preprod before requesting Production access.</p>
+
+<p>The Donor API base URL and the granted scope differ per environment. Use the Preprod values for integration and testing, and the Production values once NMDP grants you Production access.</p>
+
+<h4 id="preproduction-preprod">Preproduction (Preprod)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Token endpoint</td>
+      <td><code class="language-plaintext highlighter-rouge">https://oktapreview.nmdp.org/oauth2/aus2gkqgfiffGB4VY0h8/v1/token</code></td>
+    </tr>
+    <tr>
+      <td>Donor API base URL</td>
+      <td><code class="language-plaintext highlighter-rouge">https://int-api.nmdp.org/int_msync_donor/1.0</code></td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td><code class="language-plaintext highlighter-rouge">int_matchsync_donor_detail_read</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="production-prod">Production (Prod)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Donor API base URL</td>
+      <td><em>Not yet available — NMDP will provide the Production URL during onboarding.</em></td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td><code class="language-plaintext highlighter-rouge">p_matchsync_donor_detail_read</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Okta token endpoint and your <code class="language-plaintext highlighter-rouge">client_id</code> / <code class="language-plaintext highlighter-rouge">client_secret</code> are issued separately per environment during onboarding; a credential issued for Preprod does not work against Production.</p>
+
 <h2 id="step-2--request-an-access-token">Step 2 — Request an Access Token</h2>
 
 <p>Send a <code class="language-plaintext highlighter-rouge">POST</code> to the Okta token endpoint using the Client Credentials grant. Client credentials are sent using HTTP Basic authentication — the header value is <code class="language-plaintext highlighter-rouge">Basic </code> followed by the base64 encoding of <code class="language-plaintext highlighter-rouge">client_id:client_secret</code>.</p>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">/oauth2/&lt;authz-server-id&gt;/v1/token</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">nmdp.okta.com</span>
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">/oauth2/aus2gkqgfiffGB4VY0h8/v1/token</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">oktapreview.nmdp.org</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Basic &lt;base64(client_id:client_secret)&gt;</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
 
-grant_type=client_credentials&amp;scope=system/Patient.rs system/Observation.rs system/ServiceRequest.rs
+grant_type=client_credentials&amp;scope=int_matchsync_donor_detail_read
 </code></pre></div></div>
 
 <p>Equivalent <code class="language-plaintext highlighter-rouge">curl</code> request:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://nmdp.okta.com/oauth2/&lt;authz-server-id&gt;/v1/token"</span> <span class="se">\</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://oktapreview.nmdp.org/oauth2/aus2gkqgfiffGB4VY0h8/v1/token"</span> <span class="se">\</span>
   <span class="nt">-u</span> <span class="s2">"&lt;client_id&gt;:&lt;client_secret&gt;"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   <span class="nt">-d</span> <span class="s2">"grant_type=client_credentials"</span> <span class="se">\</span>
-  <span class="nt">--data-urlencode</span> <span class="s2">"scope=system/Patient.rs system/Observation.rs system/ServiceRequest.rs"</span>
+  <span class="nt">--data-urlencode</span> <span class="s2">"scope=int_matchsync_donor_detail_read"</span>
 </code></pre></div></div>
 
 <p>A successful response returns a bearer token:</p>
@@ -353,7 +428,7 @@ grant_type=client_credentials&amp;scope=system/Patient.rs system/Observation.rs 
   </span><span class="nl">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w">
   </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJraWQiOiJ...&lt;jwt&gt;..."</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system/Patient.rs system/Observation.rs system/ServiceRequest.rs"</span><span class="w">
+  </span><span class="nl">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int_matchsync_donor_detail_read"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
@@ -363,15 +438,15 @@ grant_type=client_credentials&amp;scope=system/Patient.rs system/Observation.rs 
 
 <p>Include the token as a bearer credential on every request to the Donor API:</p>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">/donor/fhir/r4/Patient?identifier=http://terminology.nmdp.org/identifier/donor-id|1234567</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api.nmdp.org</span>
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">/int_msync_donor/1.0/Patient?identifier=http://terminology.nmdp.org/identifier/donor-id|1234567</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">int-api.nmdp.org</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer &lt;access_token&gt;</span>
 <span class="na">Accept</span><span class="p">:</span> <span class="s">application/fhir+json</span>
 </code></pre></div></div>
 
 <p>Equivalent <code class="language-plaintext highlighter-rouge">curl</code> request:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="s2">"https://api.nmdp.org/donor/fhir/r4/Patient?identifier=http://terminology.nmdp.org/identifier/donor-id|1234567"</span> <span class="se">\</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="s2">"https://int-api.nmdp.org/int_msync_donor/1.0/Patient?identifier=http://terminology.nmdp.org/identifier/donor-id|1234567"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;access_token&gt;"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span>
 </code></pre></div></div>
@@ -459,7 +534,7 @@ grant_type=client_credentials&amp;scope=system/Patient.rs system/Observation.rs 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 24, 2026 13:17+0000">2026-09-24</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nmdp.org">National Marrow Donor Program (NMDP)</a>.  Package nmdp.fhir.donor-patient#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 2, 2026 20:16+0000">2026-11-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
