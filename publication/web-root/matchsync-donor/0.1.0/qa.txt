@@ -2,8 +2,8 @@ NMDPDonorPatient : Validation Results
 =========================================
 
 err = 23, warn = 79, info = 27
-IG Publisher Version: 2.3.3 Out of date - current version is 3.0.2
-Generated Mon Nov 02 20:18:47 UTC 2026. FHIR version 4.0.1 for nmdp.fhir.donor-patient#0.1.0 (canonical = http://fhir.nmdp.org/ig/donor-patient)
+IG Publisher Version: 2.3.3 Out of date - current version is 3.0.5
+Generated Tue Nov 24 17:57:31 UTC 2026. FHIR version 4.0.1 for nmdp.fhir.donor-patient#0.1.0 (canonical = http://fhir.nmdp.org/ig/donor-patient)
  Build Errors : 0 / 4 / 0
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CapabilityStatement-NMDPDonorAPICapabilityStatement : 3 / 0 / 2
  /home/runner/work/matchsync-donor-ig/matchsync-donor-ig/fsh-generated/resources/CodeSystem-nmdp-center-type : 0 / 2 / 1
